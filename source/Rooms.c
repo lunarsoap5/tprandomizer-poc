@@ -163,11 +163,12 @@ Room Rooms []
     },
     { //8
         "lakebed_temple_11",
-        new list<*Room> {}, //(lakebed_temple_02_03, lakebed_temple_12),
+        new list<*Room> {}, //(lakebed_temple_02_03, lakebed_temple_12, lakebed_temple_13),
         new list<list<Requirement>> 
         {
             new list<Requirement> {Requirement.Clawshot, Requirement.can_lauch_bombs},
             new list<Requirement> {},
+            new list<Requirement> {Requirement.Clawshot, Requirement.can_lauch_bombs},
         },
         false,
         new list<Check> 
@@ -187,7 +188,7 @@ Room Rooms []
         {
             new list<Requirement> {Requirement.Clawshot},
             new list<Requirement> {},
-			new list<Requirement> {Requirement.Clawshot, Requirement.can_lauch_bombs},
+			new list<Requirement> {Requirement.Clawshot},
         },
         false,
         new list<Check> 
@@ -221,7 +222,7 @@ Room Rooms []
         new list<*Room> {}, //(lakebed_temple_09),
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_deku_toad, Requirement.Clawshot}
+            new list<Requirement> {Requirement.Can_Defeat_Deku_Toad, Requirement.Clawshot}
         },
         false,
         new list<Check> 
@@ -237,7 +238,7 @@ Room Rooms []
         new list<*Room> {}, //(lake_hylia),
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_morpheel}
+            new list<Requirement> {Requirement.Can_Defeat_Morpheel}
         },
         false,
         new list<Check> {}, 
@@ -269,7 +270,6 @@ Room Rooms []
         {
             new list<Requirement> {},
             new list<Requirement> {Requirement.goron_mines_1_small_key},
-            new list<Requirement> {Requirement.goron_mines_1_small_key, Requirement.Iron_Boots},
             new list<Requirement> {Requirement.goron_mines_1_small_key, Requirement.Iron_Boots},
         },
         false,
@@ -331,7 +331,8 @@ Room Rooms []
         new list<Check> 
         {
             checks.Goron_Mines_Outside_Beamos_Chest,
-            checks.Goron_Mines_Outside_Underwater_Chest
+            checks.Goron_Mines_Outside_Underwater_Chest,
+            checks.Goron_Mines_Outside_Clawshot_Chest
         }, 
         
         false,
@@ -440,7 +441,7 @@ Room Rooms []
         new list<*Room> {}, //(kakariko_village),
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_fyrus}
+            new list<Requirement> {Requirement.Can_Defeat_Fyrus}
         },
         false,
         new list<Check> {}, 
@@ -453,8 +454,8 @@ Room Rooms []
         new list<*Room> {}, //(goron_mines_09, goron_mines_11),
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_dangoro},
-            new list<Requirement> {Requirement.can_defeat_dangoro},
+            new list<Requirement> {Requirement.Can_Defeat_Dangoro},
+            new list<Requirement> {Requirement.Can_Defeat_Dangoro},
         },
         false,
         new list<Check> {}, 

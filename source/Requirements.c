@@ -26,44 +26,69 @@ bool ganondorfDefeated;
 /*Check requirement identification */
 enum Requirement
 {
+    /*Boss Logic Requirements*/
+    Can_Defeat_Ook,
+    Can_Defeat_Dangoro,
+    Can_Defeat_Carrier_Kargarok,
+    Can_Defeat_Twilit_Bloat,
+    Can_Defeat_Deku_Toad,
+    Can_Defeat_Skull_Kid_1,
+    Can_Defeat_Skull_Kid_2,
+    Can_Defeat_King_Bublin_2,
+    Can_Defeat_King_Bublin_3,
+    Can_Defeat_King_Bublin_4,
+    Can_Defeat_Death_Sword,
+    Can_Defeat_Darkhammer,
+    Can_Defeat_Phantom_Zant,
+    Can_Defeat_Diababa,
+    Can_Defeat_Fyrus,
+    Can_Defeat_Morpheel,
+    Can_Defeat_Stallord,
+    Can_Defeat_Blizzeta,
+    Can_Defeat_Armogohma,
+    Can_Defeat_Argorok,
+    Can_Defeat_Zant,
+    Can_Defeat_Ganondorf,
+
+    /*Check Logic*/
     Gift_From_Rusl,
     South_Faron_Cave_Chest,
-    North_Faron_Cave_Open_Chest,
-    North_Faron_Cave_Lantern_Chest,
+    Faron_Mist_Cave_Open_Chest,
+    Faron_Mist_Cave_Lantern_Chest,
     North_Faron_Woods_Deku_Baba_Chest,
     Links_Basement_Chest,
-    FT_Entrance_Vine_Chest,
-    FT_Central_Chest_Behind_Stairs,
-    FT_Central_North_Chest,
-    FT_Windless_Bridge_Chest,
-    FT_Second_Monkey_Under_Bridge_Chest,
-    FT_Totem_Pole_Chest,
-    FT_West_Tile_Worm_Vines_Chest,
-    FT_West_Deku_Like_Chest,
-    FT_West_Tile_Worm_Chest_Behind_Stairs,
-    FT_Central_Chest_Hanging_From_Web,
-    FT_Big_Key_Chest,
-    FT_East_Water_Cave_Chest,
-    FT_North_Deku_Like_Chest,
-    FT_East_Tile_Worm_Chest,
+    Forest_Temple_Entrance_Vine_Chest,
+    Forest_Temple_Central_Chest_Behind_Stairs,
+    Forest_Temple_Central_North_Chest,
+    Forest_Temple_Windless_Bridge_Chest,
+    Forest_Temple_Second_Monkey_Under_Bridge_Chest,
+    Forest_Temple_Totem_Pole_Chest,
+    Forest_Temple_West_Tile_Worm_Room_Vines_Chest,
+    Forest_Temple_West_Deku_Like_Chest,
+    Forest_Temple_West_Tile_Worm_Chest_Behind_Stairs,
+    Forest_Temple_Central_Chest_Hanging_From_Web,
+    Forest_Temple_Big_Key_Chest,
+    Forest_Temple_East_Water_Cave_Chest,
+    Forest_Temple_North_Deku_Like_Chest,
+    Forest_Temple_East_Tile_Worm_Chest,
     Kakariko_Inn_Ches,
     Wrestling_With_Bo,
-    GM_Entrance_Chest,
-    GM_Main_Magnet_Room_Bottom_Chest,
-    GM_Gor_Amato_Chest,
-    GM_Gor_Amato_Small_Chest,
-    GM_Magnet_Maze_Chest,
-    GM_Crystal_Switch_Room_Underwater_Chest,
-    GM_Crystal_Switch_Room_Small_Chest,
-    GM_After_Crystal_Switch_Room_Magnet_Wall_Chest,
-    GM_Outside_Beamos_Chest,
-    GM_Gor_Ebizo_Chest,
-    GM_Chest_Before_Dangoro,
-    GM_Dangoro_Chest,
-    GM_Beamos_Room_Chest,
-    GM_Gor_Liggs_Chest,
-    GM_Main_Magnet_Room_Top_Chest,
-    GM_Outside_Underwater_Chest,
+    Goron_Mines_Entrance_Chest,
+    Goron_Mines_Main_Magnet_Room_Bottom_Chest,
+    Goron_Mines_Gor_Amato_Chest,
+    Goron_Mines_Gor_Amato_Small_Chest,
+    Goron_Mines_Magnet_Maze_Chest,
+    Goron_Mines_Crystal_Switch_Room_Underwater_Chest,
+    Goron_Mines_Crystal_Switch_Room_Small_Chest,
+    Goron_Mines_After_Crystal_Switch_Room_Magnet_Wall_Chest,
+    Goron_Mines_Outside_Beamos_Chest,
+    Goron_Mines_Gor_Ebizo_Chest,
+    Goron_Mines_Chest_Before_Dangoro,
+    Goron_Mines_Dangoro_Chest,
+    Goron_Mines_Beamos_Room_Chest,
+    Goron_Mines_Gor_Liggs_Chest,
+    Goron_Mines_Main_Magnet_Room_Top_Chest,
+    Goron_Mines_Outside_Underwater_Chest,
     Eldin_Spring_Underwater_Chest,
     Kakariko_Graveyard_Lantern_Chest,
     Kakariko_Watchtower_Chest,
@@ -72,32 +97,32 @@ enum Requirement
     ZD_Chest_By_Mother_and_Child_Isles,
     ZD_Chest_Behind_Waterfall,
     Lake_Hylia_Underwater_Chest,
-    LBT_Lobby_Left_Chest,
-    LBT_Lobby_Rear_Chest,
-    LBT_Stalactite_Room_Chest,
-    LBT_Central_Room_Small_Chest,
-    LBT_Central_Room_Chest,
-    LBT_East_Lower_Waterwheel_Stalactite_Chest,
-    LBT_East_Second_Floor_Southwest_Chest,
-    LBT_East_Second_Floor_Southeast_Chest,
-    LBT_East_Water_Supply_Small_Chest,
-    LBT_Before_Deku_Toad_Chest,
-    LBT_Before_Deku_Toad_Underwater_Left_Chest,
-    LBT_Before_Deku_Toad_Underwater_Right_Chest,
-    LBT_Deku_Toad_Chest,
-    LBT_Chandelier_Chest,
-    LBT_East_Water_Supply_Clawshot_Chest,
-    LBT_Central_Room_Center_Spire_Chest,
-    LBT_West_Lower_Small_Chest,
-    LBT_West_Water_Supply_Small_Chest,
-    LBT_West_Water_Supply_Small_Chest,
-    LBT_West_Second_Floor_Southwest_Underwater_Chest,
-    LBT_West_Second_Floor_Central_Small_Chest,
-    LBT_West_Second_Floor_Northeast_Chest,
-    LBT_West_Second_Floor_Southeast_Chest,
-    LBT_Big_Key_Chest,
-    LBT_Underwater_Maze_Small_Chest,
-    LBT_East_Stalactite_Bridge_Chest,
+    Lakebed_Temple_Lobby_Left_Chest,
+    Lakebed_Temple_Lobby_Rear_Chest,
+    Lakebed_Temple_Stalactite_Room_Chest,
+    Lakebed_Temple_Central_Room_Small_Chest,
+    Lakebed_Temple_Central_Room_Chest,
+    Lakebed_Temple_East_Lower_Waterwheel_Stalactite_Chest,
+    Lakebed_Temple_East_Second_Floor_Southwest_Chest,
+    Lakebed_Temple_East_Second_Floor_Southeast_Chest,
+    Lakebed_Temple_East_Water_Supply_Small_Chest,
+    Lakebed_Temple_Before_Deku_Toad_Alcove_Chest,
+    Lakebed_Temple_Before_Deku_Toad_Underwater_Left_Chest,
+    Lakebed_Temple_Before_Deku_Toad_Underwater_Right_Chest,
+    Lakebed_Temple_Deku_Toad_Chest,
+    Lakebed_Temple_Chandelier_Chest,
+    Lakebed_Temple_East_Water_Supply_Clawshot_Chest,
+    Lakebed_Temple_Central_Room_Center_Spire_Chest,
+    Lakebed_Temple_West_Lower_Small_Chest,
+    Lakebed_Temple_West_Water_Supply_Small_Chest,
+    Lakebed_Temple_West_Water_Supply_Chest,
+    Lakebed_Temple_West_Second_Floor_Southwest_Underwater_Chest,
+    Lakebed_Temple_West_Second_Floor_Central_Small_Chest,
+    Lakebed_Temple_West_Second_Floor_Northeast_Chest,
+    Lakebed_Temple_West_Second_Floor_Southeast_Chest,
+    Lakebed_Temple_Big_Key_Chest,
+    Lakebed_Temple_Underwater_Maze_Small_Chest,
+    Lakebed_Temple_East_Lower_Waterwheel_Bridge_Chest,
     Sacred_Grove_Deku_Baba_Grotto_Chest,
     West_Hyrule_Field_Helmasaur_Grotto_Chest,
     Lake_Lantern_Cave_First_Chest,
@@ -123,14 +148,14 @@ enum Requirement
     Lanayru_Spring_Back_Room_Left_Chest,
     Lanayru_Spring_Back_Room_Right_Chest,
     Lanayru_Spring_Back_Room_Lantern_Chest,
-    Flight_By_Fowl_Top_Platform,
-    Flight_By_Fowl_2nd_Level,
-    Flight_By_Fowl_3rd_Level,
-    Flight_By_Fowl_4th_Level,
-    Flight_By_Fowl_5th_Level,
+    Flight_By_Fowl_Top_Platform_Chest,
+    Flight_By_Fowl_Second_Platform_Chest,
+    Flight_By_Fowl_Third_Platform_Chest,
+    Flight_By_Fowl_Fourth_Platform_Chest,
+    Flight_By_Fowl_Fifth_Platform_Chest,
     Lake_Hylia_Shell_Blade_Grotto_Chest,
-    ZD_Light_All_Torches,
-    ZD_Extinguish_All_Torches,
+    ZD_Light_All_Torches_Chest,
+    ZD_Extinguish_All_Torches_Chest,
     Lanayru_Field_Skulltula_Grotto_Chest,
     Lanayru_Field_Behind_Gate_Underwater_Chest,
     Lake_Hylia_Bridge_Vines_Chest,
@@ -140,12 +165,12 @@ enum Requirement
     Faron_Field_Corner_Grotto_Right_Chest,
     Faron_Field_Corner_Grotto_Rear_Chest,
     Faron_Field_Corner_Grotto_Left_Chest,
-    Death_Mountain_Alcove_Heart_Piece_Chest,
-    GM_Outside_Clawshot_Chest,
+    Death_Mountain_Alcove_Chest,
+    Goron_Mines_Outside_Clawshot_Chest,
     Eldin_Lantern_Cave_First_Chest,
-    Eldin_Lantern_Cave_Heart_Piece_Chest,
+    Eldin_Lantern_Cave_Lantern_Chest,
     Eldin_Lantern_Cave_Second_Chest,
-    South_Castle_Field_Tightrope_Chest,
+    Outside_South_Castle_Town_Field_Tightrope_Chest,
     Outside_South_Castle_Town_Tetike_Grotto_Chest,
     Eldin_Field_Bomskit_Grotto_Left_Chest,
     Eldin_Field_Bomskit_Grotto_Lantern_Chest,
@@ -161,33 +186,33 @@ enum Requirement
     Gerudo_Desert_Poe_Grotto_Lantern_Chest,
     Gerudo_Desert_Northeast_Chest_Behind_Gates,
     Gerudo_Desert_South_Chest_Behind_Wooden_Gates,
-    Gerudo_Desert_Campfire_north_Chest,
-    Gerudo_Desert_Campfire_east_Chest,
-    Gerudo_Desert_Campfire_west_Chest,
+    Gerudo_Desert_Campfire_North_Chest,
+    Gerudo_Desert_Campfire_East_Chest,
+    Gerudo_Desert_Campfire_West_Chest,
     Gerudo_Desert_Northwest_Chest_Behind_Gates,
-    North_Small_Chest_before_Bublin_Camp,
-    Bublin_Camp_First_Chest_under_Tower_at_Entrance,
-    Bublin_Camp_Small_Chest_In_Back_of_Camp,
-    Outside_AG_Chest,
-    AG_Lobby_Chest,
-    AG_East_Lower_Turnable_Redead_Chest,
-    AG_Torch_Room_East_Chest,
-    AG_Torch_Room_West_Chest,
-    AG_East_Upper_Turnable_Chest,
-    AG_East_Upper_Turnable_Redead_Chest,
-    AG_Ghoul_Rat_Room_Chest,
-    AG_West_Small_Chest_Behind_Block,
-    AG_West_Chandelier_Chest,
-    AG_West_Stalfos_North_Chest,
-    AG_West_Stalfos_Southeast_Small_Chest,
-    AG_North_Turning_Room_Chest,
-    Spinner_Chest,
-    AG_Spinner_Room_First_Small_Chest,
-    AG_Spinner_Room_Second_Small_Chest,
-    AG_Spinner_Room_Lower_Central_Small_Chest,
-    AG_Spinner_Room_Stalfos_Alcove_Chest,
-    AG_Spinner_Room_Lower_North_Chest,
-    AG_Big_Key_Chest,
+    North_Small_Chest_Before_Bublin_Camp,
+    Bublin_Camp_First_Chest_Under_Tower_at_Entrance,
+    Bublin_Camp_Small_Chest_in_Back_of_Camp,
+    Outside_Arbiters_Grounds_Lantern_Chest,
+    Arbiters_Grounds_Lobby_Chest,
+    Arbiters_Grounds_East_Lower_Turnable_Redead_Chest,
+    Arbiters_Grounds_Torch_Room_East_Chest,
+    Arbiters_Grounds_Torch_Room_West_Chest,
+    Arbiters_Grounds_East_Upper_Turnable_Chest,
+    Arbiters_Grounds_East_Upper_Turnable_Redead_Chest,
+    Arbiters_Grounds_Ghoul_Rat_Room_Chest,
+    Arbiters_Grounds_West_Small_Chest_Behind_Block,
+    Arbiters_Grounds_West_Chandelier_Chest,
+    Arbiters_Grounds_West_Stalfos_North_Chest,
+    Arbiters_Grounds_West_Stalfos_Southeast_Chest,
+    Arbiters_Grounds_North_Turning_Room_Chest,
+    Arbiters_Grounds_Death_Sword_Chest,
+    Arbiters_Grounds_Spinner_Room_First_Small_Chest,
+    Arbiters_Grounds_Spinner_Room_Second_Small_Chest,
+    Arbiters_Grounds_Spinner_Room_Lower_Central_Small_Chest,
+    Arbiters_Grounds_Spinner_Room_Stalfos_Alcove_Chest,
+    Arbiters_Grounds_Spinner_Room_Lower_North_Chest,
+    Arbiters_Grounds_Big_Key_Chest,
     Lanayru_Field_Spinner_Track_Chest,
     Lanayru_Field_Stalfos_Grotto_Right_Small_Chest,
     Lanayru_Field_Stalfos_Grotto_Left_Small_Chest,
@@ -197,45 +222,45 @@ enum Requirement
     Faron_Mist_Stump_Chest,
     Faron_Mist_North_Chest,
     Faron_Mist_South_Chest,
-    SPR_West_Courtyard_Buried_Chest,
-    SPR_East_Courtyard_Buried_Chest,
-    SPR_Ordon_Pumpkin_Chest,
-    SPR_East_Courtyard_Chest,
-    SPR_Wooden_Beam_Central_Chest,
-    SPR_Wooden_Beam_Northwest_Chest,
-    SPR_Courtyard_Central_Chest,
-    SPR_Chest_After_Darkhammer,
-    SPR_Broken_Floor_Chest,
-    SPR_Wooden_Beam_Chandelier_Chest,
-    SPR_Lobby_Chandelier_Chest,
-    SPR_Lobby_West_Armor_Chest,
-    SPR_Lobby_East_Armor_Chest,
-    SPR_Northeast_Chandelier_Chest,
-    SPR_West_Cannon_Room_Central_Chest,
-    SPR_West_Cannon_Room_Corner_Chest,
-    SPR_Chapel_Chest,
+    Snowpeak_Ruins_West_Courtyard_Buried_Chest,
+    Snowpeak_Ruins_East_Courtyard_Buried_Chest,
+    Snowpeak_Ruins_Ordon_Pumpkin_Chest,
+    Snowpeak_Ruins_East_Courtyard_Chest,
+    Snowpeak_Ruins_Wooden_Beam_Central_Chest,
+    Snowpeak_Ruins_Wooden_Beam_Northwest_Chest,
+    Snowpeak_Ruins_Courtyard_Central_Chest,
+    Snowpeak_Ruins_Chest_After_Darkhammer,
+    Snowpeak_Ruins_Broken_Floor_Chest,
+    Snowpeak_Ruins_Wooden_Beam_Chandelier_Chest,
+    Snowpeak_Ruins_Lobby_Chandelier_Chest,
+    Snowpeak_Ruins_Lobby_West_Armor_Chest,
+    Snowpeak_Ruins_Lobby_East_Armor_Chest,
+    Snowpeak_Ruins_Northeast_Chandelier_Chest,
+    Snowpeak_Ruins_West_Cannon_Room_Central_Chest,
+    Snowpeak_Ruins_West_Cannon_Room_Corner_Chest,
+    Snowpeak_Ruins_Chapel_Chest,
     Snowpeak_Cave_Ice_Lantern_Chest,
     Snowpeak_Freezard_Grotto_Chest,
     Lanayru_Ice_Block_Puzzle_Cave_Chest,
     Lost_Woods_Lantern_Chest,
     Sacred_Grove_Spinner_Chest,
-    ToT_Lobby_Lantern_Chest,
-    ToT_First_Staircase_Gohma_Gate_Chest,
-    ToT_First_Staircase_Window_Chest,
-    ToT_First_Staircase_Armos_Chest,
-    ToT_Statue_Throws_Room_East_Chest,
-    ToT_Moving_Wall_Beamos_Room_Chest,
-    ToT_Scales_Gohma_Chest,
-    ToT_Gilloutine_Chest,
-    ToT_Chest_Before_Midboss,
-    ToT_Darknut_Chest,
-    ToT_Scales_Upper_Chest,
-    ToT_BK_Room_Upper_Chest,
-    ToT_Big_Key_Chest,
-    ToT_Moving_Wall_Dinalfos_Room_Chest,
-    ToT_Armos_Room_North_Chest,
-    ToT_Armos_Room_Statue_Chest,
-    Sacred_Grove_Past_Owl_Statue_Heart_Piece_Chest,
+    Temple_of_Time_Lobby_Lantern_Chest,
+    Temple_of_Time_First_Staircase_Gohma_Gate_Chest,
+    Temple_of_Time_First_Staircase_Window_Chest,
+    Temple_of_Time_First_Staircase_Armos_Chest,
+    Temple_of_Time_Statue_Throws_Room_East_Chest,
+    Temple_of_Time_Moving_Wall_Beamos_Room_Chest,
+    Temple_of_Time_Scales_Gohma_Chest,
+    Temple_of_Time_Gilloutine_Chest,
+    Temple_of_Time_Chest_Before_Midboss,
+    Temple_of_Time_Darknut_Chest,
+    Temple_of_Time_Scales_Upper_Chest,
+    Temple_of_Time_Big_Key_Chest_Room_Upper_Chest,
+    Temple_of_Time_Big_Key_Chest,
+    Temple_of_Time_Moving_Wall_Dinalfos_Room_Chest,
+    Temple_of_Time_Statue_Throws_Room_North_Chest,
+    Temple_of_Time_Statue_Throws_Room_Statue_Chest,
+    Sacred_Grove_Past_Owl_Statue_Chest,
     Doctors_Office_Balcony_Chest,
     Bridge_of_Eldin_Owl_Statue_Chest,
     Kakariko_Gorge_Owl_Statue_Chest,
@@ -243,79 +268,151 @@ enum Requirement
     Lake_Hylia_Bridge_Owl_Statue_Chest,
     Faron_Woods_Owl_Statue_Chest,
     Gerudo_Desert_Owl_Statue_Chest,
-    CiTS_Underwater_West_Chest,
-    CiTS_Underwater_East_Chest,
-    CiTS_West_Wing_First_Chest,
-    CiTS_East_First_Wing_Chest_After_Fans,
-    CiTS_Tile_Worm_Small_Chest,
-    CiTS_East_Wing_after_Dinalfos_Alcove_Chest,
-    CiTS_East_Wing_after_Dinalfos_Ledge_Chest,
-    CiTS_Aeralfos_Chest,
-    CiTS_East_Wing_Lower_Level_Chest,
-    CiTS_West_Wing_Baba_Balcony_Chest,
-    CiTS_West_Wing_Narrow_Ledge_Chest,
-    CiTS_West_Wing_Tile_Worm_Chest,
-    CiTS_Baba_Tower_Top_Small_Chest,
-    CiTS_Baba_Tower_Narrow_Ledge_Chest,
-    CiTS_Baba_Tower_Alcove_Chest,
-    CiTS_West_Garden_Corner_Chest,
-    CiTS_West_Gardens_Lone_Island_Chest,
-    CiTS_West_Garden_Lower_Chest,
-    CiTS_West_Garden_Ledge_Chest,
-    CiTS_Central_Outside_Chest,
-    CiTS_Central_Outside_Poe_Island_Chest,
-    CiTS_Boss_Key_Chest,
-    CiTS_Chest_Below_Boss_Key,
-    CiTS_Chest_Behind_North_Fan,
-    Kakariko_Gorge_DCS_Chest,
-    Lanayru_Spring_East_DCS_Chest,
-    Lanayru_Spring_West_DCS_Chest,
-    South_of_Castle_Town_DCS_Chasm_Chest,
-    PoT_West_Wing_First_Room_Central_Chest,
-    PoT_West_Wing_Second_Room_Central_Chest,
-    PoT_West_Wing_Second_Room_Lower_South_Chest,
-    PoT_West_Wing_Second_Room_Southeast_Chest,
-    PoT_West_Wing_Chest_Behind_Wall_of_Darkness,
-    PoT_East_First_Room_North_Small_Chest,
-    PoT_East_First_Room_North_Chest,
-    PoT_East_Second_Room_North_East_Chest,
-    PoT_East_Second_Room_North_West_Chest,
-    PoT_East_Second_Room_Southwest_Chest,
-    PoT_East_Second_Room_Southeast_Chest,
-    PoT_East_First_Room_East_Alcove,
-    PoT_East_First_Room_West_Alcove,
-    PoT_Central_First_Room_Chest,
-    PoT_Big_Key_Chest,
-    PoT_Central_Outdoor_Chest,
-    PoT_Central_Tower_Chest,
-    HC_Graveyard_Grave_Switch_Room_Right_Chest,
-    HC_Graveyard_Grave_Switch_Room_Front_Left_Chest,
-    HC_Graveyard_Grave_Switch_Room_Back_Left_Chest,
-    HC_Graveyard_Owl_Statue_Chest,
-    HC_East_Wing_Boomerang_Puzzle_Chest,
-    HC_East_Castle_Balcony_Chest,
-    HC_West_Courtyard_Northern_Small_Chest,
-    HC_West_Courtyard_Central_Small_Chest,
-    HC_Main_Hall_Northeast_Chest,
-    HC_Lantern_Staircase_Chest,
-    HC_Main_Hall_Southwest_Chest,
-    HC_Main_Hall_Northwest_Chest,
-    HC_Southeast_Balcony_Tower_Chest,
-    HC_Big_Key_Chest,
-    HC_Treasure_Room_Eighth_Small_Chest,
-    HC_Treasure_Room_Seventh_Small_Chest,
-    HC_Treasure_Room_Sixth_Small_Chest,
-    HC_Treasure_Room_Fifth_Small_Chest,
-    HC_Treasure_Room_Fourth_Small_Chest,
-    HC_Treasure_Room_Third_Small_Chest,
-    HC_Treasure_Room_Second_Small_Chest,
-    HC_Treasure_Room_First_Small_Chest,
-    HC_Treasure_Room_Fifth_Chest,
-    HC_Treasure_Room_Fourth_Chest,
-    HC_Treasure_Room_Third_Chest,
-    HC_Treasure_Room_Second_Chest,
-    HC_Treasure_Room_First_Chest
+    City_in_The_Sky_Underwater_West_Chest,
+    City_in_The_Sky_Underwater_East_Chest,
+    City_in_The_Sky_West_Wing_First_Chest,
+    City_in_The_Sky_East_First_Wing_Chest_After_Fans,
+    City_in_The_Sky_East_Tile_Worm_Small_Chest,
+    City_in_The_Sky_East_Wing_After_Dinalfos_Alcove_Chest,
+    City_in_The_Sky_East_Wing_After_Dinalfos_Ledge_Chest,
+    City_in_The_Sky_Aeralfos_Chest,
+    City_in_The_Sky_East_Wing_Lower_Level_Chest,
+    City_in_The_Sky_West_Wing_Baba_Balcony_Chest,
+    City_in_The_Sky_West_Wing_Narrow_Ledge_Chest,
+    City_in_The_Sky_West_Wing_Tile_Worm_Chest,
+    City_in_The_Sky_Baba_Tower_Top_Small_Chest,
+    City_in_The_Sky_Baba_Tower_Narrow_Ledge_Chest,
+    City_in_The_Sky_Baba_Tower_Alcove_Chest,
+    City_in_The_Sky_West_Garden_Corner_Chest,
+    City_in_The_Sky_West_Garden_Lone_Island_Chest,
+    City_in_The_Sky_West_Garden_Lower_Chest,
+    City_in_The_Sky_West_Garden_Ledge_Chest,
+    City_in_The_Sky_Central_Outside_Ledge_Chest,
+    City_in_The_Sky_Central_Outside_Poe_Island_Chest,
+    City_in_The_Sky_Big_Key_Chest,
+    City_in_The_Sky_Chest_Below_Big_Key_Chest,
+    City_in_The_Sky_Chest_Behind_North_Fan,
+    Kakariko_Gorge_Double_Clawshot_Chest,
+    Lanayru_Spring_East_Double_Clawshot_Chest,
+    Lanayru_Spring_West_Double_Clawshot_Chest,
+    South_of_Castle_Town_Double_Clawshot_Chasm_Chest,
+    Palace_of_Twilight_West_Wing_First_Room_Central_Chest,
+    Palace_of_Twilight_West_Wing_Second_Room_Central_Chest,
+    Palace_of_Twilight_West_Wing_Second_Room_Lower_South_Chest,
+    Palace_of_Twilight_West_Wing_Second_Room_Southeast_Chest,
+    Palace_of_Twilight_West_Wing_Chest_Behind_Wall_of_Darkness,
+    Palace_of_Twilight_East_Wing_First_Room_North_Small_Chest,
+    Palace_of_Twilight_East_Wing_First_Room_Zant_Head_Chest,
+    Palace_of_Twilight_East_Wing_Second_Room_Northeast_Chest,
+    Palace_of_Twilight_East_Wing_Second_Room_Northwest_Chest,
+    Palace_of_Twilight_East_Wing_Second_Room_Southwest_Chest,
+    Palace_of_Twilight_East_Wing_Second_Room_Southeast_Chest,
+    Palace_of_Twilight_East_Wing_First_Room_East_Alcove,
+    Palace_of_Twilight_East_Wing_First_Room_West_Alcove,
+    Palace_of_Twilight_Central_First_Room_Chest,
+    Palace_of_Twilight_Big_Key_Chest,
+    Palace_of_Twilight_Central_Outdoor_Chest,
+    Palace_of_Twilight_Central_Tower_Chest,
+    Hyrule_Castle_Graveyard_Grave_Switch_Room_Right_Chest,
+    Hyrule_Castle_Graveyard_Grave_Switch_Room_Front_Left_Chest,
+    Hyrule_Castle_Graveyard_Grave_Switch_Room_Back_Left_Chest,
+    Hyrule_Castle_Graveyard_Owl_Statue_Chest,
+    Hyrule_Castle_East_Wing_Boomerang_Puzzle_Chest,
+    Hyrule_Castle_East_Wing_Balcony_Chest,
+    Hyrule_Castle_West_Courtyard_North_Small_Chest,
+    Hyrule_Castle_West_Courtyard_Central_Small_Chest,
+    Hyrule_Castle_Main_Hall_Northeast_Chest,
+    Hyrule_Castle_Lantern_Staircase_Chest,
+    Hyrule_Castle_Main_Hall_Southwest_Chest,
+    Hyrule_Castle_Main_Hall_Northwest_Chest,
+    Hyrule_Castle_Southeast_Balcony_Tower_Chest,
+    Hyrule_Castle_Big_Key_Chest,
+    Hyrule_Castle_Treasure_Room_Eighth_Small_Chest,
+    Hyrule_Castle_Treasure_Room_Seventh_Small_Chest,
+    Hyrule_Castle_Treasure_Room_Sixth_Small_Chest,
+    Hyrule_Castle_Treasure_Room_Fifth_Small_Chest,
+    Hyrule_Castle_Treasure_Room_Fourth_Small_Chest,
+    Hyrule_Castle_Treasure_Room_Third_Small_Chest,
+    Hyrule_Castle_Treasure_Room_Second_Small_Chest,
+    Hyrule_Castle_Treasure_Room_First_Small_Chest,
+    Hyrule_Castle_Treasure_Room_Fifth_Chest,
+    Hyrule_Castle_Treasure_Room_Fourth_Chest,
+    Hyrule_Castle_Treasure_Room_Third_Chest,
+    Hyrule_Castle_Treasure_Room_Second_Chest,
+    Hyrule_Castle_Treasure_Room_First_Chest,
+    Kakariko_Village_Bomb_Rock_Spire_Heart_Piece,
+    Faron_Field_Tree_Heart_Piece,
+    Kakariko_Gorge_Spire_Heart_Piece,
+    Zant_Heart_Container,
+    Fishing_Hole_Heart_Piece,
+    Cats_Hide_and_Seek_Minigame,
 
+    /*Entrance Logic*/
+    Lakebed_Temple_00_01_to_02_03,
+
+    Lakebed_Temple_02_03_to_07,
+    Lakebed_Temple_02_03_to_12,
+    Can_Access_Morpheel,
+
+    Lakebed_Temple_05_to_06,
+
+    Lakebed_Temple_07_to_10,
+    Lakebed_Temple_07_to_08,
+
+    Lakebed_Temple_08_to_09,
+
+    Lakebed_Temple_09_to_Deku_Toad,
+
+    Lakebed_Temple_11_to_02_03,
+    Lakebed_Temple_11_to_13,
+    
+    Lakebed_Temple_12_to_11,
+    Lakebed_Temple_12_to_05,
+
+    Deku_Toad_to_Lakebed_Temple_09,
+
+    Goron_Mines_01_to_03,
+
+    Goron_Mines_03_to_04_05,
+    Goron_Mines_03_to_06,
+
+    Goron_Mines_04_05_to_14,
+
+    Goron_Mines_06_to_07,
+
+    Goron_Mines_07_to_09_17,
+    Goron_Mines_07_to_12,
+
+    Goron_Mines_09_17_to_Dangoro,
+
+    Goron_Mines_11_to_13,
+    Goron_Mines_11_to_16,
+
+    Can_Access_Fyrus,
+
+    Goron_Mines_13_to_03,
+
+    Forest_Temple_00_01_to_02,
+    Forest_Temple_00_01_to_03,
+    Forest_Temple_00_01_to_09,
+    Forest_Temple_00_01_to_Ook,
+
+    Forest_Temple_02_to_01,
+
+    Forest_Temple_03_to_05,
+    Forest_Temple_03_to_07,
+    Forest_Temple_03_to_Ook,
+
+    Forest_Temple_09_to_10,
+    Forest_Temple_09_to_11,
+    Forest_Temple_09_to_12,
+
+    Forest_Temple_12_to_19,
+    Can_Access_Diababa,
+
+    Forest_Temple_22_to_00_01,
+
+    
 }
 
 
@@ -1731,7 +1828,267 @@ bool isRequirementMet(Requirement requirment)
             checkIfItemIsInList(items::Goron_Bomb_Bag,PlacedImportantItems));
             break;
 
-    
+        /* Enemy Logic */
+        case Requirement.can_defeat_aeralfos:
+            return canDefeatAeralfos();
+            break;
+        case Requirement.can_defeat_armos:
+            return canDefeatArmos();
+            break;
+        case Requirement.can_defeat_baba_serpent:
+            return canDefeatBabaSerpent();
+            break;
+        case Requirement.can_defeat_baby_gohma:
+            return canDefeatBabyGohma();
+            break;
+        case Requirement.can_defeat_bari:
+            return canDefeatBari();
+            break;
+        case Requirement.can_defeat_beamos:
+            return canDefeatBeamos();
+            break;
+        case Requirement.can_defeat_big_baba:
+            return canDefeatBigBaba();
+            break;
+        case Requirement.can_defeat_chu:
+            return canDefeatChu();
+            break;
+        case Requirement.can_defeat_bokoblin:
+            return canDefeatBokoblin();
+            break;
+        case Requirement.can_defeat_bombfish:
+            return canDefeatBombfish();
+            break;
+        case Requirement.can_defeat_bombling:
+            return canDefeatBombling();
+            break;
+        case Requirement.can_defeat_bombskit:
+            return canDefeatBombskit();
+            break;
+        case Requirement.can_defeat_bubble:
+            return canDefeatBubble();
+            break;
+        case Requirement.can_defeat_bublin:
+            return canDefeatBublin();
+            break;
+        case Requirement.can_defeat_chilfos:
+            return canDefeatChilfos();
+            break;
+        case Requirement.can_defeat_chu_worm:
+            return canDefeatChuWorm();            
+            break;
+        case Requirement.can_defeat_darknut:
+            return canDefeatDarknut();
+            break;
+        case Requirement.can_defeat_deku_baba:
+            return canDefeatDekuBaba();
+            break;
+        case Requirement.can_defeat_deku_like:
+            return canDefeatDekuLike();
+            break;
+        case Requirement.can_defeat_dodongo:
+            return canDefeatDodongo();
+            break;
+        case Requirement.can_defeat_dinalfos:
+            return canDefeat_Dinalfos();
+            break;
+        case Requirement.can_defeat_fire_bubble:
+            return canDefeatFireBubble();
+            break;
+        case Requirement.can_defeat_fire_keese:
+            return canDefeatFireKeese();
+            break;
+        case Requirement.can_defeat_fire_toadpoli:
+            return canDefeatFireToadpoli();
+            break;
+        case Requirement.can_defeat_freezard:
+            return canDefeatFreezard();
+            break;
+        case Requirement.can_defeat_goron:
+            return canDefeatGoron();
+            break;
+        case Requirement.can_defeat_ghoul_rat:
+            return canDefeatGhoulRat();
+            break;
+        case Requirement.can_defeat_guay:
+            return canDefeatGuay();
+            break;
+        case Requirement.can_defeat_helmasaur:
+            return canDefeatHelmasaur();
+            break;
+        case Requirement.can_defeat_helmasaurus:
+            return canDefeatHelmasaurus();
+            break;
+        case Requirement.can_defeat_ice_bubble:
+            return canDefeatIceBubble();
+            break;
+        case Requirement.can_defeat_ice_keese:
+            return canDefeatIceKeese();
+            break;
+        case Requirement.can_defeat_poe:
+            return canDefeatPoe();
+            break;
+        case Requirement.can_defeat_kargarok:
+            return canDefeatKargarok();
+            break;
+        case Requirement.can_defeat_keese:
+            return canDefeatKeese();
+            break;
+        case Requirement.can_defeat_leever:
+            return canDefeatLeever();
+            break;
+        case Requirement.can_defeat_lizalfos
+            return canDefeatLizalfos();
+            break;
+        case Requirement.can_defeat_mini_freezard:
+            return canDefeatMiniFreezard();
+            break;
+        case Requirement.can_defeat_moldorm:
+            return canDefeatMoldorm();
+            break;
+        case Requirement.can_defeat_poison_mite:
+            return canDefeatPoisonMite();
+            break;
+        case Requirement.can_defeat_puppet:
+            return canDefeatPuppet();
+            break;
+        case Requirement.can_defeat_rat:
+            return canDefeatRat();
+            break;
+        case Requirement.can_defeat_redead_knight:
+            return canDefeatRedeadKnight();
+            break;
+        case Requirement.can_defeat_shadow_beast:
+            return canDefeatShadowBeast();
+            break;
+        case Requirement.can_defeat_shadow_bublin:
+            return canDefeatShadowBublin();
+            break;
+        case Requirement.can_defeat_shadow_deku_baba:
+            return canDefeatShadowDekuBaba();
+            break;
+        case Requirement.can_defeat_shadow_insect:
+            return canDefeatShadowInsect();
+        case Requirement.can_defeat_shadow_kargarok:
+            return canDefeatShadowKargarok();
+            break;
+        case Requirement.can_defeat_shadow_keese:
+            return canDefeatShadowKeese();
+            break;
+        case Requirement.can_defeat_shadow_vermin:
+            return canDefeatShadowVermin();
+            break;
+        case Requirement.can_defeat_shell_blade:
+            return canDefeatShellBlade();
+            break;
+        case Requirement.can_defeat_skullfish:
+            return canDefeatSkullfish();
+            break;
+        case Requirement.can_defeat_skulltula:
+            return canDefeatSkulltula();
+            break;
+        case Requirement.can_defeat_stalfos:
+            return canDefeatStalfos();
+            break;
+        case Requirement.can_defeat_stalhound:
+            return canDefeatStalhound();
+            break;
+        case Requirement.can_defeat_stalchild:
+            return canDefeatStalchild();
+            break;
+        case Requirement.can_defeat_tetike:
+            return canDefeatTetike();
+            break;
+        case Requirement.can_defeat_tile_worm:
+            return canDefeatTileWorm();
+            break;
+        case Requirement.can_defeat_toado:
+            return canDefeatToado();
+            break;
+        case Requirement.can_defeat_water_toadpoli:
+            return canDefeatWaterToadpoli();
+            break;
+        case Requirement.can_defeat_torch_slug:
+            return canDefeatTorchSlug();
+            break;
+        case Requirement.can_defeat_walltula:
+            return canDefeatWalltula();
+            break;
+        case Requirement.can_defeat_white_wolfos:
+            return canDefeatWhiteWolfos();
+            break;
+        case Requirement.can_defeat_young_gohma:
+            return canDefeatYoungGohma();
+            break;
+        case Requirement.can_defeat_zant_head:
+            return canDefeatZantHead();
+            break;
+        case Requirement.can_defeat_ook:
+            return canDefeatOok();
+            break;
+        case Requirement.can_defeat_dangoro:
+            return canDefeatDangoro();
+            break;
+        case Requirement.can_defeat_carrier_kargarok:
+            return canDefeatCarrierKargarok();
+            break;
+        case Requirement.can_defeat_twilit_bloat:
+            return canDefeatTwilitBloat();
+            break;
+        case Requirement.can_defeat_deku_toad:
+            return canDefeatDekuToad();
+            break;
+        case Requirement.can_defeat_skull_kid_1:
+            return canDefeatSkullKid1();
+            break;
+        case Requirement.can_defeat_skull_kid_2:
+            return canDefeatSkullKid2();
+            break;
+        case Requirement.can_defeat_king_bublin_2:
+            return canDefeatKingBublin2();
+            break;
+        case Requirement.can_defeat_king_bublin_3:
+            return canDefeatKingBublin3();
+            break;
+        case Requirement.can_defeat_king_bublin_4:
+            return canDefeatKingBublin4();
+            break;
+        case Requirement.can_defeat_death_sword:
+            return canDefeatDeathSword();
+            break;
+        case Requirement.can_defeat_darkhammer:
+            return canDefeatDarkhammer();
+            break;
+        case Requirement.can_defeat_phantom_zant:
+            return canDefeatPhantomZant();
+            break;
+        case Requirement.can_defeat_diababa:
+            return canDefeatDiababa();
+            break;
+        case Requirement.can_defeat_fyrus:
+            return canDefeatFyrus();
+            break;
+        case Requirement.can_defeat_morpheel:
+            return canDefeatMorpheel();
+            break;
+        case Requirement.can_defeat_stallord:
+            return canDefeatStallord();
+            break;
+        case Requirement.can_defeat_blizzeta:
+            return canDefeatBlizzeta();
+            break;
+        case Requirement.can_defeat_armogohma:
+            return canDefeatArmogohma();
+            break;
+        case Requirement.can_defeat_argorok:
+            return canDefeatArgorok();
+            break;
+        case Requirement.can_defeat_zant:
+            return canDefeatZant();
+            break;
+        case Requirement.can_defeat_ganondorf:
+            return canDefeatGanondorf();
+            break;
         
         case Requirement.can_cut_hanging_web:
             return (checkIfItemIsInList(items::Clawshot,PlacedImportantItems) ||
@@ -1740,15 +2097,7 @@ bool isRequirementMet(Requirement requirment)
             checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems));
             break
         case Requirement.can_defeat_bombling_or_burn_webs:
-            return ((hasSword() ||
-            checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
-            checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems) ||
-            checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems) ||
-            checkIfItemIsInList(items::Spinner,PlacedImportantItems) ||
-            checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems)) || 
-            (checkIfItemIsInList(items::Lantern,PlacedImportantItems) ||
-            checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
-            checkIfItemIsInList(items::Goron_Bomb_Bag,PlacedImportantItems)));
+            return (canDefeatBombling() || canBurnWebs());
             break;
         case Requirement.can_press_mines_switch:
             return (checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
@@ -2685,4 +3034,160 @@ bool canDefeatGanondorf()
     return (checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems) &&
     checkIfItemIsInList(items::Master_Sword,PlacedImportantItems) &&
     checkIfItemIsInList(0xE1,PlacedImportantItems));
+    }
+
+bool canFreeAllMonkeys()
+{
+            return ((checkIfItemIsInList(items::Clawshot,PlacedImportantItems) ||
+            checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems) ||
+            checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems) ||
+            checkIfItemIsInList(items::Spinner,PlacedImportantItems) ||
+            checkIfItemIsInList(items::Shield_Attack,PlacedImportantItems) ||
+            checkIfItemIsInList(items::Goron_Bomb_Bag,PlacedImportantItems) ||
+            checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
+            hasSword()) &&
+            (forestTempleSmallKeyCount >= 4) &&
+            checkIfItemIsInList(items::Lantern,PlacedImportantItems) &&
+            checkIfItemIsInList(items::Boomerang,PlacedImportantItems));
+}
+
+bool canSmash()
+{
+        return (checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
+        checkIfItemIsInList(items::Goron_Bomb_Bag,PlacedImportantItems));
+}
+
+bool canBurnWebs()
+{
+    return (checkIfItemIsInList(items::Ball_and_Chain) ||
+    checkIfItemIsInList(items::Lantern,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Goron_Bomb_Bag,PlacedImportantItems));
+    }
+
+bool hasRangedItem()
+{
+    return (checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Slingshot,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Clawshot,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Boomerang,PlacedImportantItems));
+    }
+
+bool hasSheild()
+{
+    return (checkIfItemIsInList(0x2A,PlacedImportantItems) ||
+    checkIfItemIsInList(0x2B,PlacedImportantItems) ||
+    checkIfItemIsInList(0x2C,PlacedImportantItems));
+    }
+bool canLaunchBombs()
+{
+    return ((checkIfItemIsInList(items::Boomerang,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems)) &&
+    checkIfItemIsInList(items::Goron_Bomb_Bag,PlacedImportantItems));
+    }
+
+bool canCutHangingWeb()
+{
+    return (checkIfItemIsInList(items::Clawshot,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Boomerang,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems));
+}
+
+bool canDefeatBomblingOrBurnWebs()
+{
+    return (canDefeatBombling() || canBurnWebs());
+    }
+
+bool canPressMinesSwitch()
+{
+    return (checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems));
+    }
+bool canKnockDownHangingBaba()
+{
+    return (checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Clawshot,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Boomerang,PlacedImportantItems));
+    }
+
+bool canBeatMinesOrClawshot()
+{
+    return (checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems) &&
+    ((checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems) &&
+    hasSword()) || 
+    checkIfItemIsInList(items::Clawshot,PlacedImportantItems)));
+    }
+
+bool canBreakWoodenDoor()
+{
+    return (checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems) ||
+    hasSword() ||
+    (checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Goron_Bomb_Bag,PlacedImportantItems)));
+    }
+bool canBreakSnowpeakRuinsCentralIce()
+{
+    return (checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
+    (checkIfItemIsInList(items::Goron_Bomb_Bag,PlacedImportantItems) &&
+    (snowpeakRuinsSmallKeyCount >=4)));
+    }
+
+bool canKnockDownHCPainting()
+{
+    return (checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Goron_Bomb_Bag,PlacedImportantItems));
+    }
+
+bool clawshotOrBoomerang()
+{
+    return (checkIfItemIsInList(items::Boomerang,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
+    }
+
+bool hasSwordAndIronsOrBow()
+{
+    return ((hasSword() &&
+    checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems)) ||
+    checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems));
+    }
+
+bool canFreeSecondMonkeyOrClawshot()
+{
+    return (((hasSword() ||
+    checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Spinner,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems)) &&
+    (forestTempleSmallKeyCount >= 4)) ||
+    checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
+    }
+
+bool canBreakMonkeyCage()
+{
+    return (hasSword() ||
+    checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Spinner,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
+    }
+bool clawshotOrBow()
+{
+    return (checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
+    }
+
+bool crystalOrBallAndChain()
+{
+    return (checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems) ||
+    checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems));
+    }
+
+bool canAccessDarkhammer()
+{
+    return (checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
+    (checkIfItemIsInList(items::Goron_Bomb_Bag,PlacedImportantItems) &&
+    (snowpeakRuinsSmallKeyCount >= 4)));
     }

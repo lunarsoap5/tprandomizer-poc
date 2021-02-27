@@ -887,7 +887,7 @@ Check Checks []
         0x21
     },
     {
-        "Flight_By_Fowl_Top_Platform"
+        "Flight_By_Fowl_Top_Platform_Chest"
         true,
         new list<Requirement> {Requirement.Lanayru_Vessel_of_Light},
         F3CC,
@@ -896,7 +896,7 @@ Check Checks []
         0x06
     },
     {
-        "Flight_By_Fowl_Second_Platform"
+        "Flight_By_Fowl_Second_Platform_Chest"
         true,
         new list<Requirement> {Requirement.Lanayru_Vessel_of_Light},
         4003,
@@ -905,7 +905,7 @@ Check Checks []
         0x21
     },
     {
-        "Flight_By_Fowl_Third_Platform"
+        "Flight_By_Fowl_Third_Platform_Chest"
         true,
         new list<Requirement> {Requirement.Lanayru_Vessel_of_Light},
         FAEB,
@@ -914,7 +914,7 @@ Check Checks []
         0x05
     },
     {
-        "Flight_By_Fowl_Fourth_Platform"
+        "Flight_By_Fowl_Fourth_Platform_Chest"
         true,
         new list<Requirement> {Requirement.Lanayru_Vessel_of_Light},
         DD8C,
@@ -923,7 +923,7 @@ Check Checks []
         0x04
     },
     {
-        "Flight_By_Fowl_Fifth_Platform"
+        "Flight_By_Fowl_Fifth_Platform_Chest"
         true,
         new list<Requirement> {Requirement.Lanayru_Vessel_of_Light},
         6633,
@@ -958,7 +958,6 @@ Check Checks []
         new list<String> {"Chest", "Lanayru Province"},
         0x05
     },
-
     {
         "Lanayru_Field_Skulltula_Grotto_Chest"
         true,
@@ -1050,6 +1049,15 @@ Check Checks []
         0x21
     },
     {
+        "Goron_Mines_Outside_Clawshot_Chest"
+        true,
+        new list<Requirement> {Requirement.Clawshot},
+        9377,
+        false,
+        new list<String> {"Chest", "Goron Mines"},
+        0x05
+    },
+    {
         "Eldin_Lantern_Cave_First_Chest"
         true,
         new list<Requirement> {Requirement.can_burn_webs},
@@ -1077,7 +1085,7 @@ Check Checks []
         0x21
     },
     {
-        "South_Castle_Field_Tightrope_Chest",
+        "Outside_South_Castle_Town_Field_Tightrope_Chest",
         true,
         new list<Requirement> {Requirement.Clawshot, Requirement.Shadow_Crystal},
         79AC,
@@ -1401,7 +1409,7 @@ Check Checks []
         0x88
     },
     {
-        "Death_Sword_Chest",
+        "Arbiters_Grounds_Death_Sword_Chest",
         true,
         new list<Requirement> {Requirement.can_defeat_death_sword},
         8318,
@@ -2149,7 +2157,7 @@ Check Checks []
         0x05
     },
     {
-        "City_in_The_Sky_Big_Key_Chest_Chest"
+        "City_in_The_Sky_Big_Key_Chest"
         true,
         new list<Requirement> {Requirement.Double_Clawshot, Requirement.can_defeat_dinalfos, Requirement.can_defeat_kargorok, Requirement.can_defeat_walltula, Requirement.Shadow Crystal, Requirement.Iron_Boots},
         AAD2,
@@ -2608,7 +2616,7 @@ Check Checks []
         0x06
     },
     {
-        "Kakariko_Bomb_Rock_Spire_Heart_Piece",
+        "Kakariko_Village_Bomb_Rock_Spire_Heart_Piece",
         true,
         new list<Requirement> {Requirement.Bombs, Requirement.can_launch_bombs},
         A573,

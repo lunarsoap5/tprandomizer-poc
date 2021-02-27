@@ -76,6 +76,7 @@ void restAllRoomsVisited()
 	
     rooms[8].neighbours.add(rooms[1]);
 	rooms[8].neighbours.add(rooms[9]);
+	rooms[8].neighbours.add(rooms[10]);
 	
     rooms[9].neighbours.add(rooms[8]);
 	rooms[9].neighbours.add(rooms[1]);

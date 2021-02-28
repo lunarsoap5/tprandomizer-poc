@@ -1,2 +1,2 @@
 # tprandomizer-poc
-Twilight Princess Randomizer Program Proof-of-Concept
+Twilight Princess Randomizer Seed Generator Program Proof-of-Concept

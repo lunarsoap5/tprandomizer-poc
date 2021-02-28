@@ -656,7 +656,7 @@ Room Rooms []
         new list<*Room> {}, //(forest_temple_03),
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_ook, Requirement.Boomerang}
+            new list<Requirement> {Requirement.Can_Defeat_Ook, Requirement.Boomerang}
         },
         false,
         new list<Check> {}, 
@@ -669,7 +669,7 @@ Room Rooms []
         new list<*Room> {}, //(south_faron_woods),
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_diababa}
+            new list<Requirement> {Requirement.Can_Defeat_Diababa}
         },
         false,
         new list<Check> {}, 
@@ -838,7 +838,7 @@ Room Rooms []
         new list<*Room> {}, //(temple_of_time_07),
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_darknut, Requirement.Dominion_Rod}
+            new list<Requirement> {Requirement.Can_Defeat_Darknut, Requirement.Dominion_Rod}
         },
         false,
         new list<Check> 
@@ -854,7 +854,7 @@ Room Rooms []
         new list<*Room> {}, //(sacred_grove_temple_of_time),
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_armogohma}
+            new list<Requirement> {Requirement.Can_Defeat_Armogohma}
         },
         false,
         new list<Check> {}, 
@@ -1108,7 +1108,7 @@ Room Rooms []
         new list<*Room> {}, //(city_in_the_sky_00_16),
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_argorok}
+            new list<Requirement> {Requirement.Can_Defeat_Argorok}
         },
         false,
         new list<Check> {}, 
@@ -1812,7 +1812,7 @@ Room Rooms []
     	new list<*Room> {}, //(mirror_chamber)
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_stallord}
+            new list<Requirement> {Requirement.Can_Defeat_Stallord}
         },
     	false,
     	new list<Check> {}, 
@@ -1825,7 +1825,7 @@ Room Rooms []
 	    new list<*Room> {}, //(arbiters_grounds_11)
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_death_sword},
+            new list<Requirement> {Requirement.Can_Defeat_Death_Sword},
         },
 	    false,
 	    new list<Check> 
@@ -2037,7 +2037,7 @@ Room Rooms []
     	new list<*Room> {}, //(snowpeak_summit)
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_blizzeta}
+            new list<Requirement> {Requirement.Can_Defeat_Blizzeta}
         },
     	false,
     	new list<Check> {}, 
@@ -2050,7 +2050,7 @@ Room Rooms []
 	    new list<*Room> {}, //(snowpeak_ruins_04_W)
         new list<list<Requirement>> 
         {
-            new list<Requirement> {Requirement.can_defeat_darkhammer}
+            new list<Requirement> {Requirement.Can_Defeat_Darkhammer}
         },
 	    false,
 	    new list<Check> 

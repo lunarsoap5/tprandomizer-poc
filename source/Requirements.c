@@ -412,9 +412,167 @@ enum Requirement
 
     Forest_Temple_22_to_00_01,
 
+    Temple_of_Time_00_to_01,
+    Temple_of_Time_00_to_08,
     
-}
+    Temple_of_Time_01_to_02,
 
+    Temple_of_Time_02_to_03,
+    Temple_of_Time_02_to_04,
+
+    Temple_of_Time_04_to_05,
+    
+    Temple_of_Time_05_to_06,
+
+    Temple_of_Time_07_to_darknut,
+
+    Can_Access_Armogohma,
+
+    City_in_The_Sky_00_16_to_Lake_Hylia,
+    City_in_The_Sky_00_06_to_01,
+
+    City_in_The_Sky_01_to_02_03_14,
+
+    City_in_The_Sky_02_03_14_to_04,
+    City_in_The_Sky_02_03_14_to_06,
+    City_in_The_Sky_02_03_14_to_13,
+    City_in_The_Sky_02_03_14_to_15,
+
+    City_in_The_Sky_04_to_07_lower,
+
+    City_in_The_Sky_05_to_Aeralfos,
+    City_in_The_Sky_05_to_04,
+
+    City_in_The_Sky_06_to_10,
+
+    City_in_The_Sky_07_lower_to_08,
+
+    City_in_The_Sky_07_upper_to_05,
+
+    City_in_The_Sky_08_to_07_upper,
+
+    City_in_The_Sky_10_to_11,
+
+    City_in_The_Sky_11_to_12,
+
+    City_in_The_Sky_12_to_13,
+
+    City_in_The_Sky_13_to_02,
+
+    Can_Access_Argorok,
+
+    Aeralfos_to_City_in_The_Sky_05,
+
+    Palace_of_Twilight_00_01_to_02,
+    Palace_of_Twilight_00_01_to_04,
+    Palace_of_Twilight_00_01_to_07,
+
+    Palace_of_Twilight_02_to_Phantom_Zant_1,
+
+    Palace_of_Twilight_04_to_05,
+
+    Palace_of_Twilight_05_to_Phantom_Zant_2,
+
+    Palace_of_Twilight_07_to_11,
+
+    Palace_of_Twilight_08_to_09,
+
+    Can_Access_Zant,
+
+    Palace_of_Twilight_11_to_08,
+
+    Hyrule_Castle_01_to_02,
+
+    Hyrule_Castle_02_to_03,
+    Hyrule_Castle_02_to_05,
+
+    Hyrule_Castle_03_to_04,
+
+    Hyrule_Castle_04_to_01,
+    Hyrule_Castle_04_to_15,
+
+    Hyrule_Castle_05_to_06,
+
+    Hyrule_Castle_06_to_01,
+    Hyrule_Castle_06_to_15,
+
+    Hyrule_Castle_09_to_14,
+
+    Hyrule_Castle_11_to_01,
+    Hyrule_Castle_11_to_13,
+    Hyrule_Castle_11_to_14,
+    Hyrule_Castle_12_to_08,
+    Can_Access_Ganondorf,
+
+    Hyrule_Castle_14_to_09,
+
+    Hyrule_Castle_15_to_04,
+    Hyrule_Castle_15_to_06,
+    Hyrule_Castle_15_to_12,
+
+    Arbiters_Grounds_00_to_01,
+
+    Arbiters_Grounds_01_to_02_06_15,
+
+    Arbiters_Grounds_02_06_15_to_07,
+    Arbiters_Grounds_02_06_15_to_03,
+    Arbiters_Grounds_02_06_15_to_04,
+    Arbiters_Grounds_02_06_15_to_09,
+
+    Arbiters_Grounds_04_to_05,
+
+    Arbiters_Grounds_05_to_14,
+
+    Arbiters_Grounds_07_to_12,
+
+    Arbiters_Grounds_08_to_12,
+    Arbiters_Grounds_08_to_07,
+
+    Arbiters_Grounds_09_to_16,
+    Arbiters_Grounds_09_to_13, //Only used in Glitched Logic or tricks
+
+    Arbiters_Grounds_10_to_11,
+
+    Arbiters_Grounds_11_to_death_sword,
+    Arbiters_Grounds_11_to_13,
+
+    Arbiters_Grounds_12_to_08,
+    Arbiters_Grounds_13_to_09,
+
+    Arbiters_Grounds_14_to_02_06_15,
+
+    Arbiters_Grounds_16_to_10,
+
+    Snowpeak_Ruins_00_01_02_03_to_07,
+    Snowpeak_Ruins_00_01_02_03_to_04_W,
+    Snowpeak_Ruins_00_01_02_03_to_04_E,
+
+    Snowpeak_Ruins_04_E_to_04_W,
+    Snowpeak_Ruins_04_E_to_13,
+
+    Snowpeak_Ruins_04_W_to_04_E,
+    Snowpeak_Ruins_04_W_to_09,
+    Snowpeak_Ruins_04_W_to_11,
+    Snowpeak_Ruins_04_W_to_Darkhammer,
+    Snowpeak_Ruins_04_W_to_Blizzeta,
+
+    Snowpeak_Ruins_05_Lower_to_00_01_02_03,
+    Snowpeak_Ruins_05_Upper_to_00_01_02_03,
+
+    Snowpeak_Ruins_06_to_04_E,
+    Snowpeak_Ruins_06_to_05_Upper,
+    Snowpeak_Ruins_06_to_07,
+
+    Snowpeak_Ruins_07_to_06,
+
+    Snowpeak_Ruins_09_to_08,
+
+    Snowpeak_Ruins_11_to_04_W,
+
+    Snowpeak_Ruins_13_to_05_Lower,
+    
+
+}
 
 //Give all possible items you could use/need to meet the requirement. Only really used in Forward fill, but could be useful. Will keep for now.
 list<uint8_t> getRequirementItems(Requirement requirment)

@@ -570,8 +570,104 @@ enum Requirement
     Snowpeak_Ruins_11_to_04_W,
 
     Snowpeak_Ruins_13_to_05_Lower,
-    
 
+    Cave_of_Ordeals_01_11_to_12_21,
+
+    Cave_of_Ordeals_12_21_to_22_31,
+
+    Cave_of_Ordeals_22_31_to_32_41,
+
+    Cave_of_Ordeals_32_41_to_42_50,
+
+    Can_Complete_Cave_of_Ordeals,
+
+    South_Faron_Woods_Cave_to_Faron_Mist_Area,
+
+    Ordon_Province_to_South_Faron_Woods,
+
+    South_Faron_Woods_to_Faron_Field,
+    South_Faron_Woods_to_South_Faron_Woods_Cave,
+    South_Faron_Woods_to_Faron_Mist_Area,
+
+    Faron_Mist_Area_to_Faron_Mist_Cave,
+    Faron_Mist_Area_to_North_Faron_Woods,
+
+    North_Faron_Woods_to_Forest_Temple,
+    North_Faron_Woods_to_Lost_Woods,
+
+    Kakariko_Village_to_Eldin_Field,
+    Kakariko_Village_to_Lake_Hylia,
+
+    Death_Mountain_Trail_to_Volcano,
+
+    Death_Mountain_Volcano_to_Interiors,
+
+    Zoras_Domain_to_Snowpeak,
+
+    Snowpeak_Climb_to_Snowpeak_Summit,
+    Snowpeak_Climb_to_Grotto_4_2,
+
+    Snowpeak_Summit_to_Snowpeak_Climb,
+    Snowpeak_Summit_to_Snowpeak_Ruins,
+
+    Lake_Hylia_to_Gerudo_Desert,
+    Lake_Hylia_to_Lake_Hylia_Long_Cave,
+    Lake_Hylia_to_Grotto_5_2, 
+    Lake_Hylia_to_Grotto_5_4,
+    Lake_Hylia_to_Lakebed_Temple,
+    Lake_Hylia_to_City_in_The_Sky,
+    Lake_Hylia_to_Lake_Hylia_Bridge,
+    Lake_Hylia_to_Zoras_Domain,
+
+    Castle_Town_to_Hyrule_Castle,
+
+    Lost_Woods_to_Sacred_Grove_Master_Sword,
+
+    Sacred_Grove_Master_Sword_to_Sacred_Grove_Temple_of_Time,
+    Sacred_Grove_Master_Sword_to_Grotto_2_2,
+
+    Sacred_Grove_Temple_of_Time_to_Temple_of_Time,
+
+    Bublin_Camp_to_Outside_Arbiters_Grounds,
+
+    Eldin_Field_to_Kakariko_Gorge,
+    Eldin_Field_to_Goron_Stockcave,
+    Eldin_Field_to_Castle_Town,
+    Eldin_Field_to_Lanayru_Field,
+    Eldin_Field_to_Grotto_5_3,
+    Eldin_Field_to_Grotto_1_1,
+
+    Kakariko_Gorge_to_Eldin_Field,
+    Kakariko_Gorge_to_Eldin_Long_Cave,
+
+    Faron_Field_to_Outside_Castle_Town_South,
+    Faron_Field_to_Lake_Hylia_Bridge,
+    Faron_Field_to_Grotto_2_1,
+
+    Lanayru_Field_to_Eldin_Field,
+    Lanayru_Field_to_Zoras_Domain,
+    Lanayru_Field_to_Lanayru_Ice_Puzzle_Cave,
+    Lanayru_Field_to_Lake_Hylia_Bridge, 
+    Lanayru_Field_to_Hidden_Village,
+    Lanayru_Field_to_Grotto_2_0,
+    Lanayru_Field_to_Grotto_4_3,
+    Lanayru_Field_to_Grotto_1_3,
+
+    Lake_Hylia_Bridge_to_Faron_Field,
+    Lake_Hylia_Bridge_to_Lanayru_Field,
+    Lake_Hylia_Bridge_to_Grotto_4_0,
+
+    Outside_Castle_Town_West_to_Grotto_1_0,
+
+    Outside_Castle_Town_South_to_Faron_Field,
+    Outside_Castle_Town_South_to_Grotto_5_0,
+
+    Gerudo_Desert_to_Cave_of_Ordeals,
+    Gerudo_Desert_to_Bublin_Camp,
+    Gerudo_Desert_to_Grotto_3_0,
+    Gerudo_Desert_to_Grotto_4_1,
+    Mirror_Chamber_to_Palace_of_Twilight,
+    
 }
 
 //Give all possible items you could use/need to meet the requirement. Only really used in Forward fill, but could be useful. Will keep for now.

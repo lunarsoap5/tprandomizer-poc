@@ -1,4 +1,5 @@
-using includes.Items;
+using System;
+using Items;
 
 int forestTempleSmallKeyCount;
 int goronMinesSmallKeyCount;
@@ -22,7 +23,6 @@ bool armogohmaDefeated;
 bool argorokDefeated;
 bool zantDefeated;
 bool ganondorfDefeated;
-
 /*Check requirement identification */
 enum Requirement
 {
@@ -1866,863 +1866,863 @@ bool isRequirementMet(Requirement requirment)
             return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
             break;
         case Requirement.Forest_Temple_Windless_Bridge_Chest: 
-            return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Forest_Temple_Second_Monkey_Under_Bridge_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Forest_Temple_Totem_Pole_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Forest_Temple_West_Tile_Worm_Room_Vines_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Forest_Temple_West_Deku_Like_Chest: 
-            return checkIfItemIsInList();
-            break
+            return canDefeatBombling();
+            break;
         case Requirement.Forest_Temple_West_Tile_Worm_Chest_Behind_Stairs: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Boomerang,PlacedImportantItems);
+            break;
         case Requirement.Forest_Temple_Central_Chest_Hanging_From_Web: 
-            return checkIfItemIsInList();
-            break
+            return canCutHangingWeb();
+            break;
         case Requirement.Forest_Temple_Big_Key_Chest: 
-            return checkIfItemIsInList();
-            break
+            return ((canDefeatBombling() || canBurnWebs()) && checkIfItemIsInList(items::Boomerang,PlacedImportantItems));
+            break;
         case Requirement.Forest_Temple_East_Water_Cave_Chest: 
-            return checkIfItemIsInList();
-            break
+            return (canDefeatBombling() || canBurnWebs());
+            break;
         case Requirement.Forest_Temple_North_Deku_Like_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Boomerang,PlacedImportantItems);
+            break;
         case Requirement.Forest_Temple_East_Tile_Worm_Chest: 
-            return checkIfItemIsInList();
-            break
+            return (canDefeatTileWorm() && canDefeatSkulltula() && canDefeatWalltula());
+            break;
         case Requirement.Kakariko_Inn_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Wrestling_With_Bo: 
-            return checkIfItemIsInList();
-            break
+            return (diababaDefeated == true);
+            break;
         case Requirement.Goron_Mines_Entrance_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(canPressMinesSwitch());
+            break;
         case Requirement.Goron_Mines_Main_Magnet_Room_Bottom_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Goron_Mines_Gor_Amato_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Goron_Mines_Gor_Amato_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Goron_Mines_Magnet_Maze_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
+            break;
         case Requirement.Goron_Mines_Crystal_Switch_Room_Underwater_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
+            break;
         case Requirement.Goron_Mines_Crystal_Switch_Room_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
+            break;
         case Requirement.Goron_Mines_After_Crystal_Switch_Room_Magnet_Wall_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
+            break;
         case Requirement.Goron_Mines_Outside_Beamos_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Goron_Mines_Gor_Ebizo_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Goron_Mines_Chest_Before_Dangoro: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
+            break;
         case Requirement.Goron_Mines_Dangoro_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Goron_Mines_Beamos_Room_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems);
+            break;
         case Requirement.Goron_Mines_Gor_Liggs_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Goron_Mines_Main_Magnet_Room_Top_Chest: 
-            return checkIfItemIsInList();
-            break
+            return (checkIfItemIsInList(items::Bow,PlacedImportantItems) && checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems) && canDefeatDangoro() && (goronMinesSmallKeyCount >= 3));
+            break;
         case Requirement.Goron_Mines_Outside_Underwater_Chest: 
-            return checkIfItemIsInList();
-            break
+            return (hasSword() && checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems));
+            break;
         case Requirement.Eldin_Spring_Underwater_Chest: 
-            return checkIfItemIsInList();
-            break
+            return (canSmash() && checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems));
+            break;
         case Requirement.Kakariko_Graveyard_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
+            break;
         case Requirement.Kakariko_Watchtower_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Kakariko_Watchtower_Alcove_Chest: 
-            return checkIfItemIsInList();
-            break
+            return canSmash();
+            break;
         case Requirement.Eldin_Field_Bomb_Rock_Chest: 
-            return checkIfItemIsInList();
-            break
+            return canSmash();
+            break;
         case Requirement.Zoras_Domain_Chest_By_Mother_and_Child_Isles: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Zoras_Domain_Chest_Behind_Waterfall: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems);
+            break;
         case Requirement.Lake_Hylia_Underwater_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
+            break;
         case Requirement.Lakebed_Temple_Lobby_Left_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items.Zora_Armor,PlacedImportantItems);
+            break;
         case Requirement.Lakebed_Temple_Lobby_Rear_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(Items.Zora_Armor,PlacedImportantItems);
+            break;
         case Requirement.Lakebed_Temple_Stalactite_Room_Chest: 
-            return checkIfItemIsInList();
-            break
+            return canLaunchBombs();
+            break;
         case Requirement.Lakebed_Temple_Central_Room_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Lakebed_Temple_Central_Room_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Lakebed_Temple_East_Lower_Waterwheel_Stalactite_Chest: 
-            return checkIfItemIsInList();
-            break
+            return canLaunchBombs();
+            break;
         case Requirement.Lakebed_Temple_East_Second_Floor_Southwest_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Lakebed_Temple_East_Second_Floor_Southeast_Chest: 
-            return checkIfItemIsInList();
-            break
+            return canLaunchBombs();
+            break;
         case Requirement.Lakebed_Temple_East_Water_Supply_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return (lakebedTempleSmallKeyCount >= 3);
+            break;
         case Requirement.Lakebed_Temple_Before_Deku_Toad_Alcove_Chest: 
-            return checkIfItemIsInList();
-            break
+            return true;
+            break;
         case Requirement.Lakebed_Temple_Before_Deku_Toad_Underwater_Left_Chest: 
-            return checkIfItemIsInList();
-            break
+            return (checkIfItemIsInList(items::Zora_Armor,PlacedImportantItems) && checkIfItemIsInList(items.Iron_Boots,PlacedImportantItems));
+            break;
         case Requirement.Lakebed_Temple_Before_Deku_Toad_Underwater_Right_Chest: 
-            return checkIfItemIsInList();
-            break
+            return (checkIfItemIsInList(items::Zora_Armor,PlacedImportantItems) && checkIfItemIsInList(items.Iron_Boots,PlacedImportantItems));
+            break;
         case Requirement.Lakebed_Temple_Deku_Toad_Chest: 
-            return checkIfItemIsInList();
-            break
+            return canDefeatDekuToad();
+            break;
         case Requirement.Lakebed_Temple_Chandelier_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
+            break;
         case Requirement.Lakebed_Temple_East_Water_Supply_Clawshot_Chest: 
-            return checkIfItemIsInList();
-            break
+            return ((lakebedTempleSmallKeyCount >= 3) && checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
+            break;
         case Requirement.Lakebed_Temple_Central_Room_Center_Spire_Chest: 
-            return checkIfItemIsInList();
-            break
+            return ((lakebedTempleSmallKeyCount >= 3) && checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems) && canLaunchBombs());
+            break;
         case Requirement.Lakebed_Temple_West_Lower_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
+            break;
         case Requirement.Lakebed_Temple_West_Water_Supply_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
+            break;
         case Requirement.Lakebed_Temple_West_Water_Supply_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
+            break;
         case Requirement.Lakebed_Temple_West_Second_Floor_Southwest_Underwater_Chest: 
-            return checkIfItemIsInList();
-            break
+            return (checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && checkIfItemIsInList(items:Iron_Boots,PlacedImportantItems));
+            break;
         case Requirement.Lakebed_Temple_West_Second_Floor_Central_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
+            break;
         case Requirement.Lakebed_Temple_West_Second_Floor_Northeast_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
+            break;
         case Requirement.Lakebed_Temple_West_Second_Floor_Southeast_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
+            break;
         case Requirement.Lakebed_Temple_Big_Key_Chest: 
-            return checkIfItemIsInList();
-            break
+            return (checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && checkIfItemIsInList(Items::Water_Bombs,PlacedImportantItems));
+            break;
         case Requirement.Lakebed_Temple_Underwater_Maze_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList(items::Zora_Armor,PlacedImportantItems);
+            break;
         case Requirement.Lakebed_Temple_East_Lower_Waterwheel_Bridge_Chest: 
-            return checkIfItemIsInList();
-            break
+            return (checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && (lakebedTempleSmallKeyCount >= 3) && canLaunchBombs());
+            break;
         case Requirement.Sacred_Grove_Deku_Baba_Grotto_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.West_Hyrule_Field_Helmasaur_Grotto_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_First_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Second_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Third_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Fourth_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Fifth_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Sixth_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Seventh_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Eighth_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Ninth_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Tenth_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Eleventh_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Twelfth_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Thirtennth_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_Fourteenth_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Lantern_Cave_End_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Hylia_Water_Toadpoli_Grotto_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Outside_Lanayru_Spring_Left_Statue_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Outside_Lanayru_Spring_Right_Statue_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Spring_Underwater_Left_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Spring_Underwater_Right_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Spring_Back_Room_Left_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Spring_Back_Room_Right_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Spring_Back_Room_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Flight_By_Fowl_Top_Platform_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Flight_By_Fowl_Second_Platform_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Flight_By_Fowl_Third_Platform_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Flight_By_Fowl_Fourth_Platform_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Flight_By_Fowl_Fifth_Platform_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Hylia_Shell_Blade_Grotto_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Zoras_Domain_Light_All_Torches_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Zoras_Domain_Extinguish_All_Torches_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Field_Skulltula_Grotto_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Field_Behind_Gate_Underwater_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Hylia_Bridge_Vines_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Hylia_Bridge_Bubble_Grotto_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Hylia_Bridge_Cliff_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Faron_Field_Bridge_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Faron_Field_Corner_Grotto_Right_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Faron_Field_Corner_Grotto_Rear_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Faron_Field_Corner_Grotto_Left_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Death_Mountain_Alcove_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Goron_Mines_Outside_Clawshot_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Eldin_Lantern_Cave_First_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Eldin_Lantern_Cave_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Eldin_Lantern_Cave_Second_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Outside_South_Castle_Town_Field_Tightrope_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Outside_South_Castle_Town_Tetike_Grotto_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Eldin_Field_Bomskit_Grotto_Left_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Eldin_Field_Bomskit_Grotto_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Eldin_Field_Water_Bomb_Fish_Grotto_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_Skulltula_Grotto_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_Peahat_Ledge_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_East_Canyon_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_Lone_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Eldin_Stockcave_Upper_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Eldin_Stockcave_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Eldin_Stockcave_Lowest_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_West_Canyon_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_Poe_Grotto_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_Northeast_Chest_Behind_Gates: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_South_Chest_Behind_Wooden_Gates: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_Campfire_North_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_Campfire_East_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_Campfire_West_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_Northwest_Chest_Behind_Gates: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.North_Small_Chest_Before_Bublin_Camp: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Bublin_Camp_First_Chest_Under_Tower_at_Entrance: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Bublin_Camp_Small_Chest_in_Back_of_Camp: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Outside_Arbiters_Grounds_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_Lobby_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_East_Lower_Turnable_Redead_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_Torch_Room_East_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_Torch_Room_West_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_East_Upper_Turnable_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_East_Upper_Turnable_Redead_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_Ghoul_Rat_Room_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_West_Small_Chest_Behind_Block: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_West_Chandelier_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_West_Stalfos_North_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_West_Stalfos_Southeast_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_North_Turning_Room_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_Death_Sword_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_Spinner_Room_First_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_Spinner_Room_Second_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_Spinner_Room_Lower_Central_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_Spinner_Room_Stalfos_Alcove_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_Spinner_Room_Lower_North_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Arbiters_Grounds_Big_Key_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Field_Spinner_Track_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Field_Stalfos_Grotto_Right_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Field_Stalfos_Grotto_Left_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Field_Stalfos_Grotto_Stalfos_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Outside_South_Castle_Town_Fountain_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Ordon_Ranch_Grotto_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Faron_Mist_Stump_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Faron_Mist_North_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Faron_Mist_South_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_West_Courtyard_Buried_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_East_Courtyard_Buried_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Ordon_Pumpkin_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_East_Courtyard_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Wooden_Beam_Central_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Wooden_Beam_Northwest_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Courtyard_Central_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Chest_After_Darkhammer: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Broken_Floor_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Wooden_Beam_Chandelier_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Lobby_Chandelier_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Lobby_West_Armor_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Lobby_East_Armor_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Northeast_Chandelier_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_West_Cannon_Room_Central_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_West_Cannon_Room_Corner_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Ruins_Chapel_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Cave_Ice_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Snowpeak_Freezard_Grotto_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Ice_Block_Puzzle_Cave_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lost_Woods_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Sacred_Grove_Spinner_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Lobby_Lantern_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_First_Staircase_Gohma_Gate_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_First_Staircase_Window_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_First_Staircase_Armos_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Statue_Throws_Room_East_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Moving_Wall_Beamos_Room_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Scales_Gohma_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Gilloutine_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Chest_Before_Midboss: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Darknut_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Scales_Upper_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Big_Key_Chest_Room_Upper_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Big_Key_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Moving_Wall_Dinalfos_Room_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Statue_Throws_Room_North_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Temple_of_Time_Statue_Throws_Room_Statue_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Sacred_Grove_Past_Owl_Statue_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Doctors_Office_Balcony_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Bridge_of_Eldin_Owl_Statue_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Kakariko_Gorge_Owl_Statue_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Field_Ampitheater_Owl_Statue_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lake_Hylia_Bridge_Owl_Statue_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Faron_Woods_Owl_Statue_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Gerudo_Desert_Owl_Statue_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_Underwater_West_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_Underwater_East_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_West_Wing_First_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_East_First_Wing_Chest_After_Fans: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_East_Tile_Worm_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_East_Wing_After_Dinalfos_Alcove_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_East_Wing_After_Dinalfos_Ledge_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_Aeralfos_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_East_Wing_Lower_Level_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_West_Wing_Baba_Balcony_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_West_Wing_Narrow_Ledge_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_West_Wing_Tile_Worm_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_Baba_Tower_Top_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_Baba_Tower_Narrow_Ledge_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_Baba_Tower_Alcove_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_West_Garden_Corner_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_West_Garden_Lone_Island_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_West_Garden_Lower_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_West_Garden_Ledge_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_Central_Outside_Ledge_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_Central_Outside_Poe_Island_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_Big_Key_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_Chest_Below_Big_Key_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.City_in_The_Sky_Chest_Behind_North_Fan: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Kakariko_Gorge_Double_Clawshot_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Spring_East_Double_Clawshot_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Lanayru_Spring_West_Double_Clawshot_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.South_of_Castle_Town_Double_Clawshot_Chasm_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_West_Wing_First_Room_Central_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_West_Wing_Second_Room_Central_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_West_Wing_Second_Room_Lower_South_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_West_Wing_Second_Room_Southeast_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_West_Wing_Chest_Behind_Wall_of_Darkness: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_East_Wing_First_Room_North_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_East_Wing_First_Room_Zant_Head_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Northeast_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Northwest_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Southwest_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Southeast_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_East_Wing_First_Room_East_Alcove: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_East_Wing_First_Room_West_Alcove: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_Central_First_Room_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_Big_Key_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_Central_Outdoor_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Palace_of_Twilight_Central_Tower_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Graveyard_Grave_Switch_Room_Right_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Graveyard_Grave_Switch_Room_Front_Left_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Graveyard_Grave_Switch_Room_Back_Left_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Graveyard_Owl_Statue_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_East_Wing_Boomerang_Puzzle_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_East_Wing_Balcony_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_West_Courtyard_North_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_West_Courtyard_Central_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Main_Hall_Northeast_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Lantern_Staircase_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Main_Hall_Southwest_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Main_Hall_Northwest_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Southeast_Balcony_Tower_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Big_Key_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_Eighth_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_Seventh_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_Sixth_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_Fifth_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_Fourth_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_Third_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_Second_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_First_Small_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_Fifth_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_Fourth_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_Third_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_Second_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Hyrule_Castle_Treasure_Room_First_Chest: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Kakariko_Village_Bomb_Rock_Spire_Heart_Piece: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Faron_Field_Tree_Heart_Piece: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Kakariko_Gorge_Spire_Heart_Piece: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Zant_Heart_Container: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Fishing_Hole_Heart_Piece: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         case Requirement.Cats_Hide_and_Seek_Minigame: 
-            return checkIfItemIsInList();
-            break
+            return checkIfItemIsInList( ,PlacedImportantItems);
+            break;
         
 
         /* Enemy Logic */

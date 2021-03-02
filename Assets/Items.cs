@@ -1,6 +1,8 @@
-namespace items
+using System;
+
+namespace Items
 {
-	enum Item : uint8_t
+	public enum Item
 	{
 		Recovery_Heart	=	0x00,
 		Green_Rupee	=	0x01,

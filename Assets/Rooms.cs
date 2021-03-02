@@ -1961,7 +1961,7 @@ Room[] rooms
         {
             new list<Requirement> {},
             new list<Requirement> {Requirement.Ball_and_Chain, Requirement.snowpeak_ruins_4_small_keys},
-            new list<Requirement> {}
+            new list<Requirement> {Requirement.Ball_and_Chain}
         },
     	false,
     	new list<Check> 

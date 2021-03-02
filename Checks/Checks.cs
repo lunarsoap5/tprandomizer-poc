@@ -806,7 +806,7 @@ Check[] checks
         0x06
     },
     {
-        "Lake_Lantern_Cave_End_Lantern_Chest"
+        "Lake_Lantern_Cave_End_Lantern_Chest",
         true,
         new list<Requirement> {Requirement.can_smash, Requirement.Lantern},
         34C1,
@@ -815,7 +815,7 @@ Check[] checks
         0x21
     },
     {
-        "Lake_Hylia_Water_Toadpoli_Grotto_Chest"
+        "Lake_Hylia_Water_Toadpoli_Grotto_Chest",
         true,
         new list<Requirement> {Requirement.can_defeat_water_toadpoli},
         4F3E,
@@ -824,7 +824,7 @@ Check[] checks
         0x06
     },
     {
-        "Outside_Lanayru_Spring_Left_Statue_Chest"
+        "Outside_Lanayru_Spring_Left_Statue_Chest",
         true,
         new list<Requirement> {Requirement.Lanayru_Vessel_of_Light},
         326F,
@@ -833,7 +833,7 @@ Check[] checks
         0x05
     },
     {
-        "Outside_Lanayru_Spring_Right_Statue_Chest"
+        "Outside_Lanayru_Spring_Right_Statue_Chest",
         true,
         new list<Requirement> {Requirement.Lanayru_Vessel_of_Light},
         6662,
@@ -2159,7 +2159,7 @@ Check[] checks
     {
         "City_in_The_Sky_Big_Key_Chest"
         true,
-        new list<Requirement> {Requirement.Double_Clawshot, Requirement.can_defeat_dinalfos, Requirement.can_defeat_kargorok, Requirement.can_defeat_walltula, Requirement.Shadow Crystal, Requirement.Iron_Boots},
+        new list<Requirement> {Requirement.Double_Clawshot, Requirement.can_defeat_dinalfos, Requirement.can_defeat_kargorok, Requirement.can_defeat_walltula, Requirement.Shadow_Crystal, Requirement.Iron_Boots},
         AAD2,
         false,
         new list<String> {"Chest", "City in The Sky"},

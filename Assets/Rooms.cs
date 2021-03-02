@@ -1868,7 +1868,7 @@ Room[] rooms
     	new list<*Room> {}, //(snowpeak_ruins_00_01_02_03, snowpeak_ruins_04_W, snowpeak_ruins_13)
         new list<list<Requirement>> 
         {
-            new list<Requirement> {},
+            new list<Requirement> {crystal_or_ball_and_chain},
             new list<Requirement> {Requirement.Ball_and_Chain},
             new list<Requirement> {Requirement.snowpeak_ruins_4_small_keys},
         },
@@ -1940,7 +1940,7 @@ Room[] rooms
     },
     { //113
     	"snowpeak_ruins_06",
-    	new list<*Room> {}, //(snowpeak_ruins_00_01_02_03, snowpeak_ruins_04_E,
+    	new list<*Room> {}, //(snowpeak_ruins_00_01_02_03, snowpeak_ruins_04_E, snowpeak_ruins_05_upper, snowpeak_ruins_07
         new list<list<Requirement>> 
         {
             new list<Requirement> {},

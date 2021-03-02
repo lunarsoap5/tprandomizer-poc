@@ -1,5 +1,5 @@
 using System;
-using Items;
+using Assets.Items;
 
 int forestTempleSmallKeyCount;
 int goronMinesSmallKeyCount;
@@ -23,6 +23,8 @@ bool armogohmaDefeated;
 bool argorokDefeated;
 bool zantDefeated;
 bool ganondorfDefeated;
+
+
 /*Check requirement identification */
 enum Requirement
 {
@@ -2055,379 +2057,381 @@ bool isRequirementMet(Requirement requirment)
             return (checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && (lakebedTempleSmallKeyCount >= 3) && canLaunchBombs());
             break;
         case Requirement.Sacred_Grove_Deku_Baba_Grotto_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatBabaSerpent() && canKnockDownHangingBaba());
             break;
         case Requirement.West_Hyrule_Field_Helmasaur_Grotto_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatHelmasaur();
             break;
         case Requirement.Lake_Lantern_Cave_First_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Second_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Third_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Fourth_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Fifth_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Sixth_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Seventh_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Eighth_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Ninth_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Tenth_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Eleventh_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Twelfth_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Thirtennth_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_Fourteenth_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Lantern_Cave_End_Lantern_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lake_Hylia_Water_Toadpoli_Grotto_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatWaterToadpoli();
             break;
         case Requirement.Outside_Lanayru_Spring_Left_Statue_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Outside_Lanayru_Spring_Right_Statue_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Lanayru_Spring_Underwater_Left_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
             break;
         case Requirement.Lanayru_Spring_Underwater_Right_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
             break;
         case Requirement.Lanayru_Spring_Back_Room_Left_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.Lanayru_Spring_Back_Room_Right_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.Lanayru_Spring_Back_Room_Lantern_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Flight_By_Fowl_Top_Platform_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Flight_By_Fowl_Second_Platform_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Flight_By_Fowl_Third_Platform_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Flight_By_Fowl_Fourth_Platform_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Flight_By_Fowl_Fifth_Platform_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Lake_Hylia_Shell_Blade_Grotto_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatShellBlade();
             break;
         case Requirement.Zoras_Domain_Light_All_Torches_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
             break;
         case Requirement.Zoras_Domain_Extinguish_All_Torches_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Boomerang,PlacedImportantItems);
             break;
         case Requirement.Lanayru_Field_Skulltula_Grotto_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatSkulltula() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Lanayru_Field_Behind_Gate_Underwater_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
             break;
         case Requirement.Lake_Hylia_Bridge_Vines_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.Lake_Hylia_Bridge_Bubble_Grotto_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatBubble() && canDefeatFireBubble() && canDefeatIceBubble());
             break;
         case Requirement.Lake_Hylia_Bridge_Cliff_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canLaunchBombs() && checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
             break;
         case Requirement.Faron_Field_Bridge_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.Faron_Field_Corner_Grotto_Right_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Faron_Field_Corner_Grotto_Rear_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Faron_Field_Corner_Grotto_Left_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Death_Mountain_Alcove_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return ((fyrusDefeated == true) || (checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems)));
             break;
         case Requirement.Goron_Mines_Outside_Clawshot_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.Eldin_Lantern_Cave_First_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canBurnWebs();
             break;
         case Requirement.Eldin_Lantern_Cave_Lantern_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canBurnWebs();
             break;
         case Requirement.Eldin_Lantern_Cave_Second_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
             break;
         case Requirement.Outside_South_Castle_Town_Field_Tightrope_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems));
             break;
         case Requirement.Outside_South_Castle_Town_Tetike_Grotto_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatTetike();
             break;
         case Requirement.Eldin_Field_Bomskit_Grotto_Left_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatBomskit();
             break;
         case Requirement.Eldin_Field_Bomskit_Grotto_Lantern_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatBomskit() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Eldin_Field_Water_Bomb_Fish_Grotto_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Gerudo_Desert_Skulltula_Grotto_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatSkulltula();
             break;
         case Requirement.Gerudo_Desert_Peahat_Ledge_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.Gerudo_Desert_East_Canyon_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Gerudo_Desert_Lone_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Eldin_Stockcave_Upper_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
             break;
         case Requirement.Eldin_Stockcave_Lantern_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Lantern,PlacedImportantItems) && checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems));
             break;
         case Requirement.Eldin_Stockcave_Lowest_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
             break;
         case Requirement.Gerudo_Desert_West_Canyon_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.Gerudo_Desert_Poe_Grotto_Lantern_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems));
             break;
         case Requirement.Gerudo_Desert_Northeast_Chest_Behind_Gates: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatBublin();
             break;
         case Requirement.Gerudo_Desert_South_Chest_Behind_Wooden_Gates: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatBublin();
             break;
         case Requirement.Gerudo_Desert_Campfire_North_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Gerudo_Desert_Campfire_East_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatBublin();
             break;
         case Requirement.Gerudo_Desert_Campfire_West_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatBublin();
             break;
         case Requirement.Gerudo_Desert_Northwest_Chest_Behind_Gates: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatBublin();
             break;
         case Requirement.North_Small_Chest_Before_Bublin_Camp: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatBublin();
             break;
         case Requirement.Bublin_Camp_First_Chest_Under_Tower_at_Entrance: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Bublin_Camp_Small_Chest_in_Back_of_Camp: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Outside_Arbiters_Grounds_Lantern_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
             break;
         case Requirement.Arbiters_Grounds_Lobby_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canBreakWoodenDoor();
             break;
         case Requirement.Arbiters_Grounds_East_Lower_Turnable_Redead_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Poe_Scent,PlacedImportantItems) && checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems) && canDefeatRedeadKnight());
             break;
         case Requirement.Arbiters_Grounds_Torch_Room_East_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Arbiters_Grounds_Torch_Room_West_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Arbiters_Grounds_East_Upper_Turnable_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Arbiters_Grounds_East_Upper_Turnable_Redead_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatRedeadKnight();
             break;
         case Requirement.Arbiters_Grounds_Ghoul_Rat_Room_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Arbiters_Grounds_West_Small_Chest_Behind_Block: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Arbiters_Grounds_West_Chandelier_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return ((arbitersGroundsSmallKeyCount >= 4) && canDefeatRedeadKnight() && canDefeatStalchild() && canDefeatGhoulRat());
             break;
         case Requirement.Arbiters_Grounds_West_Stalfos_North_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canBreakWoodenDoor();
             break;
         case Requirement.Arbiters_Grounds_West_Stalfos_Southeast_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canBreakWoodenDoor();
             break;
         case Requirement.Arbiters_Grounds_North_Turning_Room_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Arbiters_Grounds_Death_Sword_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatDeathSword();
             break;
         case Requirement.Arbiters_Grounds_Spinner_Room_First_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Arbiters_Grounds_Spinner_Room_Second_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Arbiters_Grounds_Spinner_Room_Lower_Central_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Spinner,PlacedImportantItems);
             break;
         case Requirement.Arbiters_Grounds_Spinner_Room_Stalfos_Alcove_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Spinner,PlacedImportantItems);
             break;
         case Requirement.Arbiters_Grounds_Spinner_Room_Lower_North_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Spinner,PlacedImportantItems);
             break;
         case Requirement.Arbiters_Grounds_Big_Key_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return ((arbitersGroundsSmallKeyCount >= 5) && checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && checkIfItemIsInList(items::Spinner,PlacedImportantItems) && canDefeatStalfos());
             break;
         case Requirement.Lanayru_Field_Spinner_Track_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Spinner,PlacedImportantItems));
             break;
         case Requirement.Lanayru_Field_Stalfos_Grotto_Right_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Lanayru_Field_Stalfos_Grotto_Left_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Lanayru_Field_Stalfos_Grotto_Stalfos_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatStalfos();
             break;
         case Requirement.Outside_South_Castle_Town_Fountain_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Spinner,PlacedImportantItems) && checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
             break;
         case Requirement.Ordon_Ranch_Grotto_Lantern_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
             break;
         case Requirement.Faron_Mist_Stump_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
             break;
         case Requirement.Faron_Mist_North_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
             break;
         case Requirement.Faron_Mist_South_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
             break;
         case Requirement.Snowpeak_Ruins_West_Courtyard_Buried_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems);
             break;
         case Requirement.Snowpeak_Ruins_East_Courtyard_Buried_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems);
             break;
         case Requirement.Snowpeak_Ruins_Ordon_Pumpkin_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatChilfos();
             break;
         case Requirement.Snowpeak_Ruins_East_Courtyard_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Snowpeak_Ruins_Wooden_Beam_Central_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatIceKeese();
             break;
         case Requirement.Snowpeak_Ruins_Wooden_Beam_Northwest_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatIceKeese();
             break;
         case Requirement.Snowpeak_Ruins_Courtyard_Central_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) ||
+            (checkIfItemIsInList(items::Goron_Bomb_Bag,PlacedImportantItems) &&
+            (snowpeakRuinsSmallKeyCount >=4)));
             break;
         case Requirement.Snowpeak_Ruins_Chest_After_Darkhammer: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatDarkhammer() && checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems));
             break;
         case Requirement.Snowpeak_Ruins_Broken_Floor_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canSmash();
             break;
         case Requirement.Snowpeak_Ruins_Wooden_Beam_Chandelier_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatChilfos() && checkIfItemIsInList(items::Ordon_Goat_Cheese,PlacedImportantItems) && checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems));
             break;
         case Requirement.Snowpeak_Ruins_Lobby_Chandelier_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return ((snowpeakRuinsSmallKeyCount >=3) && checkIfItemIsInList(items::Ordon_Goat_Cheese,PlacedImportantItems) && checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems));
             break;
         case Requirement.Snowpeak_Ruins_Lobby_West_Armor_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems);
             break;
         case Requirement.Snowpeak_Ruins_Lobby_East_Armor_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems);
             break;
         case Requirement.Snowpeak_Ruins_Northeast_Chandelier_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatChilfos() && checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems));
             break;
         case Requirement.Snowpeak_Ruins_West_Cannon_Room_Central_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems);
             break;
         case Requirement.Snowpeak_Ruins_West_Cannon_Room_Corner_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canSmash();
             break;
         case Requirement.Snowpeak_Ruins_Chapel_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatChilfos();
             break;
         case Requirement.Snowpeak_Cave_Ice_Lantern_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Lantern,PlacedImportantItems) && checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems));
             break;
         case Requirement.Snowpeak_Freezard_Grotto_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatIceKeese() && canDefeatFreezard() && checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems));
             break;
         case Requirement.Lanayru_Ice_Block_Puzzle_Cave_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems);
             break;
         case Requirement.Lost_Woods_Lantern_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
             break;
         case Requirement.Sacred_Grove_Spinner_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Spinner,PlacedImportantItems);
             break;
         case Requirement.Temple_of_Time_Lobby_Lantern_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Lantern,PlacedImportantItems);
             break;
         case Requirement.Temple_of_Time_First_Staircase_Gohma_Gate_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatYoungGohma();
             break;
         case Requirement.Temple_of_Time_First_Staircase_Window_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return hasRangedItem();
             break;
         case Requirement.Temple_of_Time_First_Staircase_Armos_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatArmos();
             break;
         case Requirement.Temple_of_Time_Statue_Throws_Room_East_Chest: 
             return checkIfItemIsInList( ,PlacedImportantItems);

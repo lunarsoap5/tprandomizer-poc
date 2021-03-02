@@ -1,8 +1,6 @@
-using System;
-
-namespace Items
+namespace Assets.Items
 {
-	public enum Item
+	enum Item
 	{
 		Recovery_Heart	=	0x00,
 		Green_Rupee	=	0x01,
@@ -262,3 +260,4 @@ namespace Items
 		/*Gives_Vanilla*/NullItem	=	0xFF
 	};
 }
+

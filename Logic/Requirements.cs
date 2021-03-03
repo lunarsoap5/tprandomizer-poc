@@ -2434,298 +2434,298 @@ bool isRequirementMet(Requirement requirment)
             return canDefeatArmos();
             break;
         case Requirement.Temple_of_Time_Statue_Throws_Room_East_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatArmos();
             break;
         case Requirement.Temple_of_Time_Moving_Wall_Beamos_Room_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Heros_Bow,PlacedImportantItems);
             break;
         case Requirement.Temple_of_Time_Scales_Gohma_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatYoungGohma() && canDefeatBabyGohma());
             break;
         case Requirement.Temple_of_Time_Gilloutine_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Temple_of_Time_Chest_Before_Midboss: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatArmos() && canDefeatBabyGohma() && canDefeatYoungGohma());
             break;
         case Requirement.Temple_of_Time_Darknut_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatDarknut();
             break;
         case Requirement.Temple_of_Time_Scales_Upper_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && checkIfItemIsInList(items::Spinner,PlacedImportantItems));
             break;
         case Requirement.Temple_of_Time_Big_Key_Chest_Room_Upper_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.Temple_of_Time_Big_Key_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatHelmasaur() && checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
             break;
         case Requirement.Temple_of_Time_Moving_Wall_Dinalfos_Room_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatDinalfos() && checkIfItemIsInList(items::Dominion_Rod,PlacedImportantItems));
             break;
         case Requirement.Temple_of_Time_Statue_Throws_Room_North_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Temple_of_Time_Statue_Throws_Room_Statue_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Dominion_Rod,PlacedImportantItems);
             break;
         case Requirement.Sacred_Grove_Past_Owl_Statue_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Dominion_Rod,PlacedImportantItems);
             break;
         case Requirement.Doctors_Office_Balcony_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Invoice,PlacedImportantItems);
             break;
         case Requirement.Bridge_of_Eldin_Owl_Statue_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Powered_Dominion_Rod,PlacedImportantItems);
             break;
         case Requirement.Kakariko_Gorge_Owl_Statue_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Powered_Dominion_Rod,PlacedImportantItems);
             break;
         case Requirement.Hyrule_Field_Ampitheater_Owl_Statue_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Powered_Dominion_Rod,PlacedImportantItems);
             break;
         case Requirement.Lake_Hylia_Bridge_Owl_Statue_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Powered_Dominion_Rod,PlacedImportantItems) && checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
             break;
         case Requirement.Faron_Woods_Owl_Statue_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Powered_Dominion_Rod,PlacedImportantItems) && checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems));
             break;
         case Requirement.Gerudo_Desert_Owl_Statue_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Powered_Dominion_Rod,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_Underwater_West_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_Underwater_East_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_West_Wing_First_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.City_in_The_Sky_East_First_Wing_Chest_After_Fans: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_East_Tile_Worm_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.City_in_The_Sky_East_Wing_After_Dinalfos_Alcove_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_East_Wing_After_Dinalfos_Ledge_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_Aeralfos_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatAeralfos() && checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems));
             break;
         case Requirement.City_in_The_Sky_East_Wing_Lower_Level_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_West_Wing_Baba_Balcony_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_West_Wing_Narrow_Ledge_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_West_Wing_Tile_Worm_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_Baba_Tower_Top_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatBabaSerpent() && canDefeatBigBaba() && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems));
             break;
         case Requirement.City_in_The_Sky_Baba_Tower_Narrow_Ledge_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatBabaSerpent() && canDefeatBigBaba() && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems));
             break;
         case Requirement.City_in_The_Sky_Baba_Tower_Alcove_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatBabaSerpent() && canDefeatBigBaba() && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems));
             break;
         case Requirement.City_in_The_Sky_West_Garden_Corner_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_West_Garden_Lone_Island_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_West_Garden_Lower_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_West_Garden_Ledge_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.City_in_The_Sky_Central_Outside_Ledge_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatDinalfos() && canDefeatWalltula() && canDefeatKargarok() && checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems));
             break;
         case Requirement.City_in_The_Sky_Central_Outside_Poe_Island_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatDinalfos() && canDefeatWalltula() && canDefeatKargarok() && checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems));
             break;
         case Requirement.City_in_The_Sky_Big_Key_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatDinalfos() && canDefeatWalltula() && canDefeatKargarok() && checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems) && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems) && checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems));
             break;
         case Requirement.City_in_The_Sky_Chest_Below_Big_Key_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatHelmasaur() && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems));
             break;
         case Requirement.City_in_The_Sky_Chest_Behind_North_Fan: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatHelmasaurus() && canDefeatDinalfos() && canDefeatWalltula() && canDefeatKargarok() && checkIfItemIsInList(items::Shadow_Crystal,PlacedImportantItems) && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems) && checkIfItemIsInList(items::Iron_Boots,PlacedImportantItems));
             break;
         case Requirement.Kakariko_Gorge_Double_Clawshot_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.Lanayru_Spring_East_Double_Clawshot_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.Lanayru_Spring_West_Double_Clawshot_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.South_of_Castle_Town_Double_Clawshot_Chasm_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.Palace_of_Twilight_West_Wing_First_Room_Central_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatZantHead();
             break;
         case Requirement.Palace_of_Twilight_West_Wing_Second_Room_Central_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatZantHead();
             break;
         case Requirement.Palace_of_Twilight_West_Wing_Second_Room_Lower_South_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatZantHead();
             break;
         case Requirement.Palace_of_Twilight_West_Wing_Second_Room_Southeast_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems);
             break;
         case Requirement.Palace_of_Twilight_West_Wing_Chest_Behind_Wall_of_Darkness: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Master_Sword_Light,PlacedImportantItems) && checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
             break;
         case Requirement.Palace_of_Twilight_East_Wing_First_Room_North_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.Palace_of_Twilight_East_Wing_First_Room_Zant_Head_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatZantHead() && checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
             break;
         case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Northeast_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatZantHead() && canDefeatShadowBeast() && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems));
             break;
         case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Northwest_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatZantHead() && canDefeatShadowBeast() && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems));
             break;
         case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Southwest_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatZantHead() && canDefeatShadowBeast() && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems));
             break;
         case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Southeast_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatZantHead() && canDefeatShadowBeast() && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems));
             break;
         case Requirement.Palace_of_Twilight_East_Wing_First_Room_East_Alcove: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return ((palaceofTwilightSmallKeyCount >= 4) && canDefeatZantHead() && canDefeatShadowBeast() && checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && canDefeatPhantomZant());
             break;
         case Requirement.Palace_of_Twilight_East_Wing_First_Room_West_Alcove: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return ((palaceofTwilightSmallKeyCount >= 4) && canDefeatZantHead() && canDefeatShadowBeast() && checkIfItemIsInList(items::Clawshot,PlacedImportantItems) && canDefeatPhantomZant());
             break;
         case Requirement.Palace_of_Twilight_Central_First_Room_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatZantHead() && checkIfItemIsInList(items::Master_Sword_Light,PlacedImportantItems));
             break;
         case Requirement.Palace_of_Twilight_Big_Key_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Master_Sword_Light,PlacedImportantItems) && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems));
             break;
         case Requirement.Palace_of_Twilight_Central_Outdoor_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatZantHead();
             break;
         case Requirement.Palace_of_Twilight_Central_Tower_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatZantHead() && checkIfItemIsInList(items::Master_Sword_Light,PlacedImportantItems) && checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
             break;
         case Requirement.Hyrule_Castle_Graveyard_Grave_Switch_Room_Right_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canSmash();
             break;
         case Requirement.Hyrule_Castle_Graveyard_Grave_Switch_Room_Front_Left_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canSmash();
             break;
         case Requirement.Hyrule_Castle_Graveyard_Grave_Switch_Room_Back_Left_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canSmash();
             break;
         case Requirement.Hyrule_Castle_Graveyard_Owl_Statue_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canSmash() && checkIfItemIsInList(items::Lantern,PlacedImportantItems) && checkIfItemIsInList(items::Powered_Dominion_Rod,PlacedImportantItems));
             break;
         case Requirement.Hyrule_Castle_East_Wing_Boomerang_Puzzle_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Boomerang,PlacedImportantItems);
             break;
         case Requirement.Hyrule_Castle_East_Wing_Balcony_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Boomerang,PlacedImportantItems);
             break;
         case Requirement.Hyrule_Castle_West_Courtyard_North_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatBokoblin();
             break;
         case Requirement.Hyrule_Castle_West_Courtyard_Central_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatBokoblin();
             break;
         case Requirement.Hyrule_Castle_Main_Hall_Northeast_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatBokoblin() && canDefeatLizalfos() && checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
             break;
         case Requirement.Hyrule_Castle_Lantern_Staircase_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canDefeatDarknut() && checkIfItemIsInList(items::Lantern,PlacedImportantItems) && checkIfItemIsInList(items::Boomerang,PlacedImportantItems));
             break;
         case Requirement.Hyrule_Castle_Main_Hall_Southwest_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canKnockDownHCPainting() && canDefeatLizalfos() && canDefeatDarknut() && checkIfItemIsInList(items::Boomerang,PlacedImportantItems) && checkIfItemIsInList(items::Lantern,PlacedImportantItems) && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems));
             break;
         case Requirement.Hyrule_Castle_Main_Hall_Northwest_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canKnockDownHCPainting() && canDefeatLizalfos() && canDefeatDarknut() && checkIfItemIsInList(items::Boomerang,PlacedImportantItems) && checkIfItemIsInList(items::Lantern,PlacedImportantItems) && checkIfItemIsInList(items::Double_Clawshot,PlacedImportantItems));
             break;
         case Requirement.Hyrule_Castle_Southeast_Balcony_Tower_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatAeralfos();
             break;
         case Requirement.Hyrule_Castle_Big_Key_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_Eighth_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_Seventh_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_Sixth_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_Fifth_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_Fourth_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_Third_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_Second_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_First_Small_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_Fifth_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_Fourth_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_Third_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_Second_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Hyrule_Castle_Treasure_Room_First_Chest: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return true;
             break;
         case Requirement.Kakariko_Village_Bomb_Rock_Spire_Heart_Piece: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (canLaunchBombs() && checkIfItemIsInList(items::Boomerang,PlacedImportantItems));
             break;
         case Requirement.Faron_Field_Tree_Heart_Piece: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Ball_and_Chain,PlacedImportantItems) || checkIfItemIsInList(items::Boomerang,PlacedImportantItems) || checkIfItemIsInList(items::Clawshot,PlacedImportantItems));
             break;
         case Requirement.Kakariko_Gorge_Spire_Heart_Piece: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return (checkIfItemIsInList(items::Clawshot,PlacedImportantItems) || checkIfItemIsInList(items::Boomerang,PlacedImportantItems));
             break;
         case Requirement.Zant_Heart_Container: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return canDefeatZant();
             break;
         case Requirement.Fishing_Hole_Heart_Piece: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Clawshot,PlacedImportantItems);
             break;
         case Requirement.Cats_Hide_and_Seek_Minigame: 
-            return checkIfItemIsInList( ,PlacedImportantItems);
+            return checkIfItemIsInList(items::Ilias_Charm,PlacedImportantItems);
             break;
         
 

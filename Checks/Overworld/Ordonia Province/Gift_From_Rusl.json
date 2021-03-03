@@ -1,0 +1,6 @@
+{
+    "requirements": ["canUse(items.Fishing_Rod"],
+    "hash": "8BA3",
+    "category": ["Chest"],
+    "item_id": "0x3F"
+}

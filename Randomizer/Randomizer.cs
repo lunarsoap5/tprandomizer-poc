@@ -596,7 +596,7 @@ Room* setupGraph()
 
 bool checkIfItemIsInList(uint8_t item, list<uint8_t> itemList)
 {
-    bool isItemPresent = true;
+    bool isItemPresent = false;
     for (int j = 0; j < itemList.count(); j++)
     {
         if (item == itemList[j])
@@ -607,6 +607,20 @@ bool checkIfItemIsInList(uint8_t item, list<uint8_t> itemList)
     }
     
     return isItemPresent;
+}
+
+/*pseudocode. will need to be edited */
+bool canUse(uint8_t item)
+{
+	bool canUseItem = false;
+	foreach (var heldItem in heldItemList)
+	{
+		if (item == heldItem)
+		{
+			canUseItem = true;
+		}
+	}
+	return canUseItem;
 }
 
 bool areItemRequirementsMet(list<Requirement> requirments)

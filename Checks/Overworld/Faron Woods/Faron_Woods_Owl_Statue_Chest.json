@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_smash, Requirement.Powered_Dominion_Rod, Requirement.Shadow_Crystal",
+    "hash": "558A",
+    "category": ["Chest", "Faron Woods"],
+    "item_id": "0x21"
+}

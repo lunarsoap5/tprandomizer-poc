@@ -1836,7 +1836,7 @@ list<uint8_t> getRequirementItems(Requirement requirment)
 }
 
 //Check if held items match the given requirement
-bool isRequirementMet(Requirement requirment)
+bool isRequirementMet(Requirement requirments)
 {
     switch (requirments)
     {

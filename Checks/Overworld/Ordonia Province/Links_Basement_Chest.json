@@ -1,0 +1,6 @@
+{
+    "requirements": "canUse(Lantern)",
+    "hash": "E723",
+    "category": ["Chest"],
+    "item_id": "0xED"
+}

@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_freezard, Requirement.can_defeat_ice_keese, Requirement.Ball_And_Chain",
+    "hash": "4584",
+    "category": ["Chest", "Snowpeak Province"],
+    "item_id": "0x06"
+}

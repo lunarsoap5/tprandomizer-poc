@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.Spinner, Requirement.can_smash",
+    "hash": "2385",
+    "category": ["Chest", "Hyrule Field"],
+    "item_id": "0x21"
+}

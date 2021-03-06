@@ -1199,51 +1199,6 @@ Check[] checks
         "item_id": "0x94
     }
     {
-        "Lanayru_Field_Spinner_Track_Chest",
-        
-        "requirements": "Requirement.Spinner, Requirement.can_smash",
-        2385,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x21
-    }
-    {
-        "Lanayru_Field_Stalfos_Grotto_Right_Small_Chest",
-        
-        "requirements": "],
-        D6A8,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x0A
-    }
-    {
-        "Lanayru_Field_Stalfos_Grotto_Left_Small_Chest",
-        
-        "requirements": "],
-        E854,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x0A
-    }
-    {
-        "Lanayru_Field_Stalfos_Grotto_Stalfos_Chest",
-        
-        "requirements": "Requirement.can_defeat_stalfos",
-        6D8E,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x21
-    }
-    {
-        "Outside_South_Castle_Town_Fountain_Chest",
-        
-        "requirements": "Requirement.Clawshot, Requirement.Spinner",
-        25C6,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x06
-    }
-    {
         "Snowpeak_Ruins_West_Courtyard_Buried_Chest",
         
         "requirements": "Requirement.Shadow_Crystal",
@@ -1397,51 +1352,6 @@ Check[] checks
         "item_id": "0xF6
     }
     {
-        "Snowpeak_Cave_Ice_Lantern_Chest",
-        
-        "requirements": "Requirement.Ball_And_Chain, Requirement.Lantern",
-        7A70,
-        
-        "category": ["Chest", "Snowpeak Province"],
-        "item_id": "0x06
-    }
-    {
-        "Snowpeak_Freezard_Grotto_Chest",
-        
-        "requirements": "Requirement.can_defeat_freezard, Requirement.can_defeat_ice_keese, Requirement.Ball_And_Chain",
-        4584,
-        
-        "category": ["Chest", "Snowpeak Province"],
-        "item_id": "0x06
-    }
-    {
-        "Lanayru_Ice_Block_Puzzle_Cave_Chest",
-        
-        "requirements": "Requirement.Ball_And_Chain",
-        3100,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x21
-    }
-    {
-        "Lost_Woods_Lantern_Chest",
-        
-        "requirements": "Requirement.Lantern",
-        A7D3,
-        
-        "category": ["Chest", "Sacred Grove"],
-        "item_id": "0x0D
-    }
-    {
-        "Sacred_Grove_Spinner_Chest",
-        
-        "requirements": "Requirement.Spinner",
-        4A9B,
-        
-        "category": ["Chest", "Sacred grove"],
-        "item_id": "0x06
-    }
-    {
         "Temple_of_Time_Lobby_Lantern_Chest"
         
         "requirements": "Requirement.Lantern",
@@ -1584,60 +1494,6 @@ Check[] checks
         
         "category": ["Chest", "Temple of Time"],
         "item_id": "0x21
-    }
-    {
-        "Sacred_Grove_Past_Owl_Statue_Chest"
-        
-        "requirements": "Requirement.Dominion_Rod",
-        7968,
-        
-        "category": ["Chest", "Sacred Grove"],
-        "item_id": "0x21
-    }
-    {
-        "Doctors_Office_Balcony_Chest"
-        
-        "requirements": "Requirement.Invoice, Requirement.Shadow_Crystal",
-        0E38,
-        
-        "category": ["Chest", "Castle Town"],
-        "item_id": "0x04
-    }
-    {
-        "Bridge_of_Eldin_Owl_Statue_Chest"
-        
-        "requirements": "Requirement.Powered_Dominion_Rod",
-        04B8,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x21
-    }
-    {
-        "Kakariko_Gorge_Owl_Statue_Chest"
-        
-        "requirements": "Requirement.Powered_Dominion_Rod",
-        773C,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x06
-    }
-    {
-        "Hyrule_Field_Ampitheater_Owl_Statue_Chest"
-        
-        "requirements": "Requirement.Powered_Dominion_Rod",
-        DE51,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x06
-    }
-    {
-        "Lake_Hylia_Bridge_Owl_Statue_Chest"
-        
-        "requirements": "Requirement.Powered_Dominion_Rod, Requirement.Clawshot",
-        0ADD,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x06
     }
     {
         "City_in_The_Sky_Underwater_West_Chest"
@@ -1855,42 +1711,6 @@ Check[] checks
         
         "category": ["Chest", "City in The Sky"],
         "item_id": "0x05
-    }
-    {
-        "Kakariko_Gorge_Double_Clawshot_Chest"
-        
-        "requirements": "Requirement.Double_Clawshot",
-        BF8B,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x21
-    }
-    {
-        "Lanayru_Spring_East_Double_Clawshot_Chest"
-        
-        "requirements": "Requirement.Double_Clawshot",
-        A2E9,
-        
-        "category": ["Chest", "Lanayru Province"],
-        "item_id": "0x06
-    }
-    {
-        "Lanayru_Spring_West_Double_Clawshot_Chest"
-        
-        "requirements": "Requirement.Double_Clawshot",
-        04BF,
-        
-        "category": ["Chest", "Lanayru Province"],
-        "item_id": "0x06
-    }
-    {
-        "South_of_Castle_Town_Double_Clawshot_Chasm_Chest"
-        
-        "requirements": "Requirement.Double_Clawshot",
-        293A,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x06
     }
     {
         "Palace_of_Twilight_West_Wing_First_Room_Central_Chest",
@@ -2289,24 +2109,6 @@ Check[] checks
         "item_id": "0x06
     }
     {
-        "Faron_Field_Tree_Heart_Piece",
-        
-        "requirements": "CRequirement.clawshot_or_boomerang",
-        7E86,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x21
-    }
-    {
-        "Kakariko_Gorge_Spire_Heart_Piece",
-        
-        "requirements": "Requirement.clawshot_or_boomerang",
-        B035,
-        
-        "category": ["Chest", "Hyrule Field"],
-        "item_id": "0x21
-    }
-    {
         "Zant_Heart_Container",
         
         "requirements": "Requirement.can_defeat_zant",
@@ -2314,15 +2116,6 @@ Check[] checks
         
         "category": ["Chest", "Palace of Twilight"],
         "item_id": "0x22
-    }
-    {
-        "Fishing_Hole_Heart_Piece",
-        
-        "requirements": "Requirement.Clawshot, Requirement.Lanayru_Vessel_of_Light",
-        0FAA,
-        
-        "category": ["Chest", "Lanayru Province"],
-        "item_id": "0x21
     }
     {
         "Cats_Hide_and_Seek_Minigame",

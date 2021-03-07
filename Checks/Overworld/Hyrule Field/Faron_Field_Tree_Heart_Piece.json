@@ -1,5 +1,5 @@
 {
-    "requirements": "CRequirement.clawshot_or_boomerang",
+    "requirements": "Requirement.clawshot_or_boomerang",
     "hash": "7E86",
     "category": ["Chest", "Hyrule Field"],
     "item_id": "0x21"

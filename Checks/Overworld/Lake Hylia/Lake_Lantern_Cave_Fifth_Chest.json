@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_smash, Requirement.Lantern",
+    "hash": "BA10",
+    "category": ["Chest", "Lanayru Province"],
+    "item_id": "0x04"
+}

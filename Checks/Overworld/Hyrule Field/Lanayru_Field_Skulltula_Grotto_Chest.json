@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_skulltula, Requirement.Lantern",
+    "hash": "A444",
+    "category": ["Chest", "Hyrule Field"],
+    "item_id": "0x05"
+}

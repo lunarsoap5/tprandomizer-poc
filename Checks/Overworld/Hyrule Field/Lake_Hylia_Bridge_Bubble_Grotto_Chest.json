@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_bubble, Requirement.can_defeat_fire_bubble, Requirement.can_defeat_ice_bubble",
+    "hash": "6D05",
+    "category": ["Chest", "Hyrule Field"],
+    "item_id": "0x06"
+}

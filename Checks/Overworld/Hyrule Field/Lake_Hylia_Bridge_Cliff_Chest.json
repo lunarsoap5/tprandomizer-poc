@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_launch_bombs, Requirement.Clawshot",
+    "hash": "7216",
+    "category": ["Chest", "Hyrule Field"],
+    "item_id": "0x05"
+}

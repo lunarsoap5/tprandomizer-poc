@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_bombling, Requirement.Boomerang",
+    "hash": "E30F",
+    "category": ["Chest", "Forest Temple"],
+    "item_id": "0x04"
+}

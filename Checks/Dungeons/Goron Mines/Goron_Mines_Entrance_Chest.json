@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_press_mines_switch",
+    "hash": "5FE5",
+    "category": ["Chest", "Goron Mines"],
+    "item_id": "0x04"
+}

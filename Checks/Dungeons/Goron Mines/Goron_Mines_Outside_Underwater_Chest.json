@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.has_sword, Requirement.Iron_Boots",
+    "hash": "05BF",
+    "category": ["Chest", "Goron Mines"],
+    "item_id": "0x05"
+}

@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_tile_worm, Requirement.can_defeat_skulltula, Requirement.can_defeat_walltula",
+    "hash": "0CF3",
+    "category": ["Chest", "Forest Temple"],
+    "item_id": "0x04"
+}

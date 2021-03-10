@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_aeralfos, Requirement.Clawshot, Requirement.Iron_Boots",
+    "hash": "26B5",
+    "category": ["Chest", "City in The Sky"],
+    "item_id": "0x47"
+}

@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_darkhammer, Requirement.Ball_And_Chain",
+    "hash": "5786",
+    "category": ["Chest", "Snowpeak Ruins"],
+    "item_id": "0xF5"
+}

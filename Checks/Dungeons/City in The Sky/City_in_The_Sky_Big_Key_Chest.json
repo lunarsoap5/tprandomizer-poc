@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.Double_Clawshot, Requirement.can_defeat_dinalfos, Requirement.can_defeat_kargorok, Requirement.can_defeat_walltula, Requirement.Shadow_Crystal, Requirement.Iron_Boots",
+    "hash": "AAD2",
+    "category": ["Chest", "City in The Sky"],
+    "item_id": "0x96"
+}

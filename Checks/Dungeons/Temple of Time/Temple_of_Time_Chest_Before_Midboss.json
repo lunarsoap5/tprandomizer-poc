@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_armos, Requirement.can_defeat_baby_gohma, Requirement.can_defeat_young_gohma",
+    "hash": "1A52",
+    "category": ["Chest", "Temple of Time"],
+    "item_id": "0x05"
+}

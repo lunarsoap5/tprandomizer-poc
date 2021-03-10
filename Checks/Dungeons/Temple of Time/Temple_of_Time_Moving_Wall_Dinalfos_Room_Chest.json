@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_dinalfos, Requirement.Dominion_Rod",
+    "hash": "D3B5",
+    "category": ["Chest", "Temple of Time"],
+    "item_id": "0x21"
+}

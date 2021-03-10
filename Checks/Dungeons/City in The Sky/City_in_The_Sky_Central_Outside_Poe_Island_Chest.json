@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_dinalfos, Requirement.can_defeat_kargorok, Requirement.can_defeat_walltula, Requirement.Shadow_Crystal",
+    "hash": "5722",
+    "category": ["Chest", "City in The Sky"],
+    "item_id": "0x05"
+}

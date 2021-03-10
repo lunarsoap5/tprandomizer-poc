@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.Ordon_Goat_Cheese, Requirement.can_defeat_chilfos, Requirement.Ball_And_Chain",
+    "hash": "F06A",
+    "category": ["Chest", "Snowpeak Ruins", "Small Key"],
+    "item_id": "0x89"
+}

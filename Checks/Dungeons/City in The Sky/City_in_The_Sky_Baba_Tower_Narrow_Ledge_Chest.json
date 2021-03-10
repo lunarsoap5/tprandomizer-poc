@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_big_baba, Requirement.can_defeat_baba_serpent, Requirement.Double_Clawshot",
+    "hash": "781F",
+    "category": ["Chest", "City in The Sky"],
+    "item_id": "0x04"
+}

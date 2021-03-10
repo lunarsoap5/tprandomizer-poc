@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_bokoblin, Requirement.can_defeat_lizalfos, Requirement.Clawshot",
+    "hash": "3107",
+    "category": ["Chest", "Hyrule Castle", "Dungeon Items", "Compass"],
+    "item_id": "0x24"
+}

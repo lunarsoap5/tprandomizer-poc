@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_zant_head, Requirement.can_defeat_shadow_beast, Requirement.Double_Clawshot",
+    "hash": "B204",
+    "category": ["Chest", "Palace of Twilight"],
+    "item_id": "0x05"
+}

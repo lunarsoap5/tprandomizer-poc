@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.Light_Sword, Requirement.Clawshot, Requirement.can_defeat_zant_head",
+    "hash": "3506",
+    "category": ["Chest", "Palace of Twilight", "Small Key"],
+    "item_id": "0x8C"
+}

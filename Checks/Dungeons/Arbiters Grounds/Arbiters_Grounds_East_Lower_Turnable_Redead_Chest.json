@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.Shadow_Crystal, Requirement.Poe_Scent, Requirement.can_defeat_redead_knight",
+    "hash": "BF75",
+    "category": ["Chest", "Arbiter's Grounds", "Small Key"],
+    "item_id": "0x88"
+}

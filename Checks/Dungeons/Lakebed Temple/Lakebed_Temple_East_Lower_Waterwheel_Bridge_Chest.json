@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_launch_bombs. Requirement.Clawshot, Requirement.lakebed_temple_3_small_keys",
+    "hash": "CF36",
+    "category": ["Chest", "Lakebed Temple"],
+    "item_id": "0x21"
+}

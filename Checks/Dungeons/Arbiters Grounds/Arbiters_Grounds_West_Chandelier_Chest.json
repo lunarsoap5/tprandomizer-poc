@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_defeat_redead_knight, Requirement.can_defeat_stalchild, Requirement.can_defeat_ghoul_rat, Requirement.arbiters_grounds_4_small_keys",
+    "hash": "B288",
+    "category": ["Chest", "Arbiter's Grounds"],
+    "item_id": "0x04"
+}

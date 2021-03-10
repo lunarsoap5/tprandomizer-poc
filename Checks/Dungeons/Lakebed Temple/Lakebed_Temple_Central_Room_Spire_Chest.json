@@ -1,0 +1,6 @@
+{
+    "requirements": "Requirement.can_launch_bombs, Requirement.lakebed_temple_3_small_keys, Requirement.Iron_Boots",
+    "hash": "7F1C",
+    "category": ["Chest", "Lakebed Temple"],
+    "item_id": "0x04"
+}

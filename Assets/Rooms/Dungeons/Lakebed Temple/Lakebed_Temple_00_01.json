@@ -1,0 +1,8 @@
+{
+    "neighbours": ["Lake_Hylia", "Lakebed_Temple_02_03"],
+    "neighbourRequirements": ["true", "Requirement.can_launch_bombs" ],
+    "isStartingRoom": "false",
+    "checks": ["Lakebed_Temple_Lobby_Left_Chest", "Lakebed_Temple_Lobby_Rear_Chest", "Lakebed_Temple_Stalactite_Room_Chest"],
+    "visited": "false",
+    "region": "Lakebed Temple"
+    }

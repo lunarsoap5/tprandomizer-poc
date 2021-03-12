@@ -20,193 +20,6 @@ struct Room
 
 Room[] rooms
 {
-    { //13
-        "goron_mines_01",
-        "neighbours": ["death_mountain_interiors, goron_mines_03"],
-        
-            "neighbourRequirements": ["true",
-            "Requirement.Iron_Boots}
-        }
-        "isStartingRoom": "false",
-        "checks": ["Goron_Mines_Entrance_Chest
-        } 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //14
-        "goron_mines_03",
-        "neighbours": ["goron_mines_01, goron_mines_04_05, goron_mines_06"],
-        
-            "neighbourRequirements": ["true",
-            "Requirement.goron_mines_1_small_key}
-            "Requirement.goron_mines_1_small_key, Requirement.Iron_Boots}
-        }
-        "isStartingRoom": "false",
-        "checks": ["Goron_Mines_Main_Magnet_Room_Bottom_Chest,
-            "Goron_Mines_Main_Magnet_Room_Top_Chest
-        } 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //15
-        "goron_mines_04_05",
-        "neighbours": ["goron_mines_03, goron_mines_14"],
-        
-            "neighbourRequirements": ["true",
-            "Requirement.Iron_Boots}
-        }
-        "isStartingRoom": "false",
-        "checks": ["Goron_Mines_Magnet_Maze_Chest
-        } 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //16
-        "goron_mines_06",
-        "neighbours": ["goron_mines_03, goron_mines_07"],
-        
-            "neighbourRequirements": ["true",
-            "Requirement.has_sword_and_irons_or_bow, Requirement.goron_mines_2_small_keys}
-        }
-        "isStartingRoom": "false",
-        "checks": ["Goron_Mines_Crystal_Switch_Room_Underwater_Chest,
-            "Goron_Mines_Crystal_Switch_Room_Small_Chest,
-            "Goron_Mines_After_Crystal_Switch_Room_Magnet_Wall_Chest
-        } 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //17
-        "goron_mines_07",
-        "neighbours": ["goron_mines_06, goron_mines_09, goron_mines_12"],
-        
-            "neighbourRequirements": ["true",
-            "Requirement.goron_mines_3_small_keys}
-            "Requirement.Bow, Requirement.Iron_Boots}
-        }
-        "isStartingRoom": "false",
-        "checks": ["Goron_Mines_Outside_Beamos_Chest,
-            "Goron_Mines_Outside_Underwater_Chest,
-            "Goron_Mines_Outside_Clawshot_Chest
-        } 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //18
-        "goron_mines_09_17",
-        "neighbours": ["goron_mines_07, dangoro"],
-        
-            "neighbourRequirements": ["true",
-            "Requirement.Iron_Boots}
-        }
-        "isStartingRoom": "false",
-        "checks": ["Goron_Mines_Gor_Ebizo_Chest,
-            "Goron_Mines_Chest_Before_Dangoro
-        } 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //19
-        "goron_mines_11",
-        "neighbours": ["dangoro, goron_mines_13, goron_mines_16"],
-        
-            "neighbourRequirements": ["true",
-            "Requirement.Bow}
-            "Requirement.Bow}
-        }
-        "isStartingRoom": "false",
-        "checks": ["Goron_Mines_Dangoro_Chest,
-            "Goron_Mines_Beamos_Room_Chest
-        } 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //20
-        "goron_mines_12",
-        "neighbours": ["goron_mines_07, fyrus"],
-        
-            "neighbourRequirements": ["true",
-            "Requirement.Bow, Requirement.can_defeat_bublin, Requirement.Goron_Mines_Big_Key}
-        }
-        "isStartingRoom": "false",
-        "checks": "", 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //21
-        "goron_mines_13",
-        "neighbours": ["goron_mines_11, goron_mines_03"],
-        
-            "neighbourRequirements": ["true",
-            "Requirement.Iron_Boots, Requirement.Bow}
-        }
-        "isStartingRoom": "false",
-        "checks": "", 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //22
-        "goron_mines_14",
-        "neighbours": ["goron_mines_05"],
-        
-            "neighbourRequirements": ["true",
-        }
-        "isStartingRoom": "false",
-        "checks": ["Goron_Mines_Gor_Amato_Chest,
-            "Goron_Mines_Gor_Amato_Small_Chest
-        } 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //23
-        "goron_mines_16",
-        "neighbours": ["goron_mines_11"],
-        
-            "neighbourRequirements": ["true",
-        }
-        "isStartingRoom": "false",
-        "checks": ["Goron_Mines_Gor_Liggs_Chest
-        } 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //24
-        "fyrus",
-        "neighbours": ["kakariko_village"],
-        
-            "Requirement.Can_Defeat_Fyrus}
-        }
-        "isStartingRoom": "false",
-        "checks": "", 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-    { //25
-        "dangoro",
-        "neighbours": ["goron_mines_09, goron_mines_11"],
-        
-            "Requirement.Can_Defeat_Dangoro}
-            "Requirement.Can_Defeat_Dangoro}
-        }
-        "isStartingRoom": "false",
-        "checks": "", 
-        
-        "visited": "false",
-        "Goron Mines"
-    }
-
     //Forest Temple
     { //26
         "forest_temple_00_01",
@@ -217,15 +30,14 @@ Room[] rooms
             "Requirement.can_burn_webs, Requirement.can_free_second_monkey_or_clawshot}
             "Requirement.can_defeat_bombling_or_burn_webs}
             "Requirement.can_burn_webs, Requirement.can_defeat_bombling, Requirement.can_defeat_walltula, Requirement.can_defeat_big_baba, Requirement.can_defeat_bokoblin, Requirement.can_break_monkey_cage, Requirement.forest_temple_4_small_keys}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Forest_Temple_Central_Chest_Behind_Stairs,
             "Forest_Temple_Central_North_Chest,
             "Forest_Temple_Central_Chest_Hanging_From_Web,
             "Forest_Temple_Big_Key_Chest,
             "Forest_Temple_East_Water_Cave_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Forest Temple"
     }
@@ -234,11 +46,10 @@ Room[] rooms
         "neighbours": ["forest_temple_00_01"],
         
             "Requirement.can_defeat_bokoblin}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Forest_Temple_Second_Monkey_Under_Bridge_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Forest Temple"
     }
@@ -250,11 +61,10 @@ Room[] rooms
             "Requirement.can_defeat_bombling}
             "Requirement.can_defeat_bombling, Requirement.can_defeat_walltula}
             "Requirement.Boomerang}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Forest_Temple_West_Deku_Like_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Forest Temple"
     }
@@ -263,13 +73,12 @@ Room[] rooms
         "neighbours": ["forest_temple_03"],
         
             "neighbourRequirements": ["true",
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Forest_Temple_Totem_Pole_Chest,
             "Forest_Temple_West_Tile_Worm_Room_Vines_Chest,
             "Forest_Temple_West_Tile_Worm_Room_Chest_Behind_Stairs
-        } 
-        
+         ],
         "visited": "false",
         "Forest Temple"
     }
@@ -278,7 +87,7 @@ Room[] rooms
         "neighbours": ["forest_temple_03"],
         
             "neighbourRequirements": ["true",
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -293,11 +102,10 @@ Room[] rooms
             "Requirement.Boomerang, Requirement.forest_temple_4_small_keys}
             "Requirement.Boomerang}
             "Requirement.Boomerang}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Forest_Temple_Windless_Bridge_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Forest Temple"
     }
@@ -306,11 +114,10 @@ Room[] rooms
         "neighbours": ["forest_temple_09"],
         
             "neighbourRequirements": ["true",
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Forest_Temple_North_Deku_Like_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Forest Temple"
     }
@@ -319,11 +126,10 @@ Room[] rooms
         "neighbours": ["forest_temple_09"],
         
             "neighbourRequirements": ["true",
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Forest_Temple_East_Tile_Worm_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Forest Temple"
     }
@@ -334,7 +140,7 @@ Room[] rooms
             "neighbourRequirements": ["true",
             "Requirement.Boomerang, Requirement.can_defeat_bokoblin, Requirement.can_defeat_walltula}
             "Requirement.can_burn_webs, Requirement.can_defeat_bombling, Requirement.can_defeat_big_baba, Requirement.can_defeat_bokoblin, Requirement.can_break_monkey_cage, Requirement.forest_temple_4_small_keys, Requirement.Boomerang, Requirement.can_defeat_skulltula, Requirement.can_defeat_walltula}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -346,7 +152,7 @@ Room[] rooms
         "neighbours": ["forest_temple_12"],
         
             "neighbourRequirements": ["true",
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -359,11 +165,10 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.can_defeat_walltula, Requirement.can_defeat_bokoblin, Requirement.can_break_monkey_cage}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Forest_Temple_Entrance_Vines_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Forest Temple"
     }
@@ -372,7 +177,7 @@ Room[] rooms
         "neighbours": ["forest_temple_03"],
         
             "Requirement.Can_Defeat_Ook, Requirement.Boomerang}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -384,7 +189,7 @@ Room[] rooms
         "neighbours": ["south_faron_woods"],
         
             "Requirement.Can_Defeat_Diababa}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -398,11 +203,10 @@ Room[] rooms
             "neighbourRequirements": ["true",
             "Requirement.temple_of_time_1_small_key}
             "Requirement.Dominion_Rod, Requirement.Bow, Requirement.Spinner, Requirement.can_defeat_lizalfos, Requirement.can_defeat_dinalfos, Requirement.can_defeat_darknut, Requirement.temple_of_time_3_small_keys}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Temple_of_Time_Lantern_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Temple of Time"
     }
@@ -412,13 +216,12 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.has_ranged_item, Requirement.can_defeat_young_gohma, Requirement.can_defeat_lizalfos}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Temple_of_Time_First_Staircase_Gohma_Gate_Chest
             "Temple_of_Time_First_Staircase_Window_Chest,
             "Temple_of_Time_First_Staircase_Armos_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Temple of Time"
     }
@@ -429,7 +232,7 @@ Room[] rooms
             "neighbourRequirements": ["true",
             "Requirement.Spinner}
             "Requirement.Spinner, Requirement.temple_of_time_2_small_keys}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -441,13 +244,12 @@ Room[] rooms
         "neighbours": ["temple_of_time_02"],
         
             "neighbourRequirements": ["true",
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Temple_of_Time_Statue_Throws_Room_East_Chest,
             "Temple_of_Time_Statue_Throws_Room_North_Chest,
             "Temple_of_Time_Statue_Throws_Room_Statue_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Temple of Time"
     }
@@ -457,12 +259,11 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Bow, Requirement.can_defeat_lizalfos, Requirement.can_defeat_dinalfos}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Temple_of_Time_Moving_Wall_Beamos_Room_Chest,
             "Temple_of_Time_Moving_Wall_Dinalfos_Room_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Temple of Time"
     }
@@ -473,12 +274,11 @@ Room[] rooms
             "neighbourRequirements": ["true",
             "Requirement.Clawshot, Requirement.Spinner}
             "true"
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Temple_of_Time_Scales_Gohma_Chest,
             "Temple_of_Time_Scales_Upper_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Temple of Time"
     }
@@ -487,12 +287,11 @@ Room[] rooms
         "neighbours": ["temple_of_time_05"],
         
             "neighbourRequirements": ["true",
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Temple_of_Time_Big_Key_Chest,
             "Temple_of_Time_Big_Key_Chest_Room_Upper_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Temple of Time"
     }
@@ -502,12 +301,11 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.can_defeat_lizalfos, Requirement.can_defeat_baby_gohma, Requirement.can_defeat_young_gohma, Requirement.can_defeat_armos, Requirement.temple_of_time_3_small_keys}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Temple_of_Time_Gilloutine_Chest,
             "Temple_of_Time_Chest_Before_Midboss
-        } 
-        
+         ],
         "visited": "false",
         "Temple of Time"
     }
@@ -518,7 +316,7 @@ Room[] rooms
         {
             "neighbourRequirements": ["true",
             "Requirement.Dominion_rod, Requirement.Temple_of_Time_Big_Key}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -530,11 +328,10 @@ Room[] rooms
         "neighbours": ["temple_of_time_07"],
         
             "Requirement.Can_Defeat_Darknut, Requirement.Dominion_Rod}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Temple_of_Time_Darknut_Chest    
-        } 
-        
+         ],
         "visited": "false",
         "Temple of Time"
     }
@@ -543,7 +340,7 @@ Room[] rooms
         "neighbours": ["sacred_grove_temple_of_time"],
         
             "Requirement.Can_Defeat_Armogohma}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -557,12 +354,11 @@ Room[] rooms
         
             "Requirement.Clawshot}
             "Requirement.Clawshot_or_Bow}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["City_in_The_Sky_Underwater_West_Chest,
             "City_in_The_Sky_Underwater_East_Chest
-        } 
-        
+         ],
         "visited": "false",
         "City in the Sky"
     }
@@ -572,7 +368,7 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Clawshot}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -587,13 +383,12 @@ Room[] rooms
             "Requirement.Spinner, Requirement.city_in_the_sky_1_small_key}
             "Requirement.Clawshot}
             "Requirement.Double_Clawshot, Requirement.can_defeat_baba_serpent, Requirement.can_defeat_kargarok, Requirement.Shadow_Crystal, Requirement.Iron_Boots}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["City_in_The_Sky_Big_Key_Chest,
             "City_in_The_Sky_Chest_Below_Big_Key_Chest,
             "City_in_The_Sky_Chest_Behind_North_Fan
-        } 
-        
+         ],
         "visited": "false",
         "City in the Sky"
     }
@@ -603,12 +398,11 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Clawshot}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["City_in_The_Sky_East_First_Wing_Chest_After_Fans,
             "City_in_The_Sky_East_Wing_Lower_Level_Chest
-        } 
-        
+         ],
         "visited": "false",
         "City in the Sky"
     }
@@ -619,7 +413,7 @@ Room[] rooms
             "Requirement.Double_Clawshot}
             "neighbourRequirements": ["true",
             "true"
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -632,7 +426,7 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Double_Clawshot}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -645,11 +439,10 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.can_defeat_tile_worm}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["City_in_The_Sky_East_Tile_Worm_Small_Chest
-        } 
-        
+         ],
         "visited": "false",
         "City in the Sky"
     }
@@ -659,12 +452,11 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Clawshot}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["City_in_The_Sky_East_Wing_After_Dinalfos_Alcove_Chest,
             "City_in_The_Sky_East_Wing_After_Dinalfos_Ledge_Chest
-        } 
-        
+         ],
         "visited": "false",
         "City in the Sky"
     }
@@ -674,7 +466,7 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Clawshot, Requirement.can_defeat_dinalfos}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -687,14 +479,13 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Double_Clawshot}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["City_in_The_Sky_West_Wing_First_Chest,
             "City_in_The_Sky_West_Wing_Baba_Balcony_Chest,
             "City_in_The_Sky_West_Wing_Narrow_Ledge_Chest,
             "City_in_The_Sky_West_Wing_Tile_Worm_Chest
-        } 
-        
+         ],
         "visited": "false",
         "City in the Sky"
     }
@@ -704,13 +495,12 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Double_Clawshot, Requirement.can_defeat_baba_serpent}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["City_in_The_Sky_Baba_Tower_Top_Small_Chest,
             "City_in_The_Sky_Baba_Tower_Narrow_Ledge_Chest,
             "City_in_The_Sky_Baba_Tower_Alcove_Chest
-        } 
-        
+        ],
         "isStartingRoom": "false",
         "City in the Sky"
     }
@@ -720,14 +510,13 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Double_Clawshot}
-        }
+        ],
         "visited": "false",
         "checks": ["City_in_The_Sky_West_Garden_Corner_Chest,
             "City_in_The_Sky_West_Garden_Lone_Island_Chest,
             "City_in_The_Sky_West_Garden_Lower_Chest,
             "City_in_The_Sky_West_Garden_Ledge_Chest
-        } 
-        
+        ],
         "isStartingRoom": "false",
         "City in the Sky"
     }
@@ -737,12 +526,11 @@ Room[] rooms
         
             "Requirement.Double_Clawshot}
             "neighbourRequirements": ["true",
-        }
+        ],
         "visited": "false",
         "checks": ["City_in_The_Sky_Central_Outside_Chest,
             "City_in_The_Sky_Central_Outside_Poe_Island_Chest
-        } 
-        
+        ],
         "isStartingRoom": "false",
         "City in the Sky"
     }
@@ -752,7 +540,7 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Double_Clawshot, Requirement.can_defeat_aeralfos, Requirement.City_in_The_Sky_Big_Key}
-        }
+        ],
         "visited": "false",
         "checks": "", 
         
@@ -764,7 +552,7 @@ Room[] rooms
         "neighbours": ["city_in_the_sky_00_16"],
         
             "Requirement.Can_Defeat_Argorok}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -776,11 +564,10 @@ Room[] rooms
         "neighbours": ["city_in_the_sky_05"],
         
             "Requirement.Double_Clawshot, Requirement.can_defeat_aeralfos}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["City_in_The_Sky_Aeralfos_Chest
-        } 
-        
+         ],
         "visited": "false",
         "City in the Sky"
     }
@@ -792,12 +579,11 @@ Room[] rooms
             "Requirement.palace_of_twilight_1_small_key, Requirement.can_defeat_zant_head, Requirement.Clawshot}
             "Requirement.can_defeat_phantom_zant, Requirement.Clawshot, Requirement.can_defeat_zant_head, Requirement.palace_of_twilight_2_small_keys}
             "Requirement.can_defeat_phantom_zant, Requirement.Clawshot, Requirement.can_defeat_zant_head, Requirement.Shadow_Crystal, Requirement.palace_of_twilight_4_small_keys, Requirement.Light_Sword}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Palace_of_Twilight_West_Wing_First_Room_Central_Chest,
             "Palace_of_Twilight_West_Wing_Chest_Behind_Wall_of_Darkness
-        } 
-        
+         ],
         "visited": "false",
         "Palace of Twilight"
     }
@@ -807,13 +593,12 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.palace_of_twilight_2_small_keys, Requirement.can_defeat_zant_head, Requirement.Clawshot}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Palace_of_Twilight_West_Wing_Second_Room_Central_Chest,
             "Palace_of_Twilight_West_Wing_Second_Room_Lower_South_Chest,
             "Palace_of_Twilight_West_Wing_Second_Room_Southeast_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Palace of Twilight"
     }
@@ -823,14 +608,13 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.palace_of_twilight_3_small_keys, Requirement.can_defeat_zant_head, Requirement.Clawshot}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Palace_of_Twilight_East_Wing_First_Room_North_Small_Chest,
             "Palace_of_Twilight_East_Wing_First_Room_Zant_Head_Chest,
             "Palace_of_Twilight_East_Wing_First_Room_East_Alcove,
             "Palace_of_Twilight_East_Wing_First_Room_West_Alcove
-        } 
-        
+         ],
         "visited": "false",
         "Palace of Twilight"
     }
@@ -840,14 +624,13 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.palace_of_twilight_4_small_keys, Requirement.can_defeat_shadow_beast, Requirement.Clawshot}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Palace_of_Twilight_East_Wing_Second_Room_Northeast_Chest,
             "Palace_of_Twilight_East_Wing_Second_Room_Northwest_Chest,
             "Palace_of_Twilight_East_Wing_Second_Room_Southwest_Chest,
             "Palace_of_Twilight_East_Wing_Second_Room_Southeast_Chest
-        }
-        , 
+        ],
         "visited": "false",
         "Palace of Twilight"
     }
@@ -857,11 +640,10 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.palace_of_twilight_5_small_keys, Requirement.can_defeat_zant_head, Requirement.Light_Sword}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Palace_of_Twilight_Central_First_Room_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Palace of Twilight"
     }
@@ -871,11 +653,10 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.palace_of_twilight_7_small_keys, Requirement.can_defeat_zant_head, Requirement.Light_Sword}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Palace_of_Twilight_Central_Tower_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Palace of Twilight"
     }
@@ -885,7 +666,7 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Palace_of_Twilight_Big_Key, Requirement.can_defeat_shadow_beast}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -898,12 +679,11 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.palace_of_twilight_6_small_keys, Requirement.can_defeat_zant_head, Requirement.Light_Sword}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Palace_of_Twilight_Big_Key_Chest,
             "Palace_of_Twilight_Central_Outdoor_Chest
-        } 
-        
+         ],
         "visited": "false",
         "Palace of Twilight"
     }
@@ -912,7 +692,7 @@ Room[] rooms
         "neighbours": ["palace_of_twilight_02"],
         
             "Requirement.can_defeat_phantom_zant}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -924,7 +704,7 @@ Room[] rooms
         "neighbours": ["palace_of_twilight_05"],
         
             "Requirement.can_defeat_phantom_zant}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": "", 
         
@@ -936,11 +716,10 @@ Room[] rooms
         "neighbours": ["palace_of_twilight_00_01"],
         
             "Requirement.can_defeat_zant}
-        }
+        ],
         "isStartingRoom": "false",
         "checks": ["Zant_Heart_Container
-        } 
-        
+         ],
         "visited": "false",
         "Palace of Twilight"
     }
@@ -950,13 +729,12 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.can_defeat_bokoblin, Requirement.can_defeat_lizalfos, Requirement.Double_Clawshot}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Hyrule_Castle_Main_Hall_Northeast_Chest,
             "Hyrule_Castle_Main_Hall_Southwest_Chest,
             "Hyrule_Castle_Main_Hall_Northwest_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Castle"
     }
@@ -967,11 +745,10 @@ Room[] rooms
             "neighbourRequirements": ["true",
             "Requirement.can_defeat_darknut, Requirement.Lantern, Requirement.Boomerang}
             "Requirement.can_defeat_darknut, Requirement.Lantern, Requirement.Boomerang}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Hyrule_Castle_Lantern_Staircase_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Castle"
     }
@@ -981,7 +758,7 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.can_knock_down_hc_painting, Requirement.can_defeat_lizalfos}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -1008,7 +785,7 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Lantern}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -1049,8 +826,7 @@ Room[] rooms
             "Hyrule_Castle_Treasure_Room_Third_Chest,
             "Hyrule_Castle_Treasure_Room_Second_Chest,
             "Hyrule_Castle_Treasure_Room_First_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Hyrule Castle"
     }
@@ -1065,8 +841,7 @@ Room[] rooms
             "Hyrule_Castle_Graveyard_Grave_Switch_Room_Front_Left_Chest,
             "Hyrule_Castle_Graveyard_Grave_Switch_Room_Rear_Left_Chest,
             "Hyrule_Castle_Graveyard_Owl_Statue_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Hyrule Castle"
     }
@@ -1108,8 +883,7 @@ Room[] rooms
     	"isStartingRoom": "false",
     	"checks": ["Hyrule_Castle_West_Courtyard_North_Small_Chest,
             "Hyrule_Castle_West_Courtyard_Central_Small_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Hyrule Castle"
     }
@@ -1119,12 +893,11 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Shadow_Crystal}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Hyrule_Castle_East_Wing_Boomerang_Puzzle_Chest,
             "Hyrule_Castle_East_Wing_Balcony_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Castle"
     }
@@ -1139,8 +912,7 @@ Room[] rooms
     	"isStartingRoom": "false",
     	"checks": ["Hyrule_Castle_Southeast_Balcony_Tower_Chest,
             "Hyrule_Castle_Big_Key_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Hyrule Castle"
     }
@@ -1165,8 +937,7 @@ Room[] rooms
         }
     	"isStartingRoom": "false",
     	"checks": ["Arbiters_Grounds_Lobby_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Arbiter's Grounds"
     }
@@ -1199,8 +970,7 @@ Room[] rooms
             "Arbiters_Grounds_Torch_Room_West_Chest,
             "Arbiters_Grounds_West_Small_Chest_Behind_Block,
             "Arbiters_Grounds_West_Chandelier_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Arbiter's Grounds"
     }
@@ -1226,8 +996,7 @@ Room[] rooms
     	"isStartingRoom": "false",
     	"checks": ["Arbiters_Grounds_East_Upper_Turnable_Chest,
             "Arbtiers_Grounds_East_Upper_Turnable_Redead_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Arbiter's Grounds"
     }
@@ -1254,8 +1023,7 @@ Room[] rooms
     	"isStartingRoom": "false",
     	"checks": ["Arbiters_Grounds_West_Stalfos_North_Chest,
             "Arbiters_Grounds_West_Stalfos_Southeast_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Arbiter's Grounds"
     }
@@ -1282,8 +1050,7 @@ Room[] rooms
         }
     	"isStartingRoom": "false",
     	"checks": ["Arbiters_Grounds_Big_Key_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Arbiter's Grounds"
     }
@@ -1333,15 +1100,14 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Spinner}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Arbiters_Grounds_Spinner_Room_First_Small_Chest,
             "Arbiters_Grounds_Spinner_Room_Second_Small_Chest,
             "Arbiters_Grounds_Spinner_Room_Lower_Central_Small_Chest,
             "Arbiters_Grounds_Spinner_Room_Stalfos_Alcove_Chest,
             "Arbiters_Grounds_Spinner_Room_Lower North_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Arbiter's Grounds"
     }
@@ -1354,8 +1120,7 @@ Room[] rooms
         }
     	"isStartingRoom": "false",
     	"checks": ["Arbiters_Grounds_Ghoul_Rat_Room_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Arbiter's Grounds"
     }
@@ -1368,8 +1133,7 @@ Room[] rooms
         }
     	"isStartingRoom": "false",
     	"checks": ["Arbiters_Grounds_North_Turning_Room_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Arbiter's Grounds"
     }
@@ -1390,11 +1154,10 @@ Room[] rooms
 	    "neighbours": ["arbiters_grounds_11"]
         
             "Requirement.Can_Defeat_Death_Sword}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Death_Sword_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Arbiter's Grounds"
     }
@@ -1411,8 +1174,7 @@ Room[] rooms
     	"checks": ["Snowpeak_Ruins_Lobby_Chandelier_Chest,
             "Snowpeak_Ruins_Lobby_West_Armor_Chest,
             "Snowpeak_Ruins_lobby_East_Armor_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Snowpeak Ruins"
     }
@@ -1427,8 +1189,7 @@ Room[] rooms
     	"isStartingRoom": "false",
     	"checks": ["Snowpeak_Ruins_East_Courtyard_Burried_Chest,
             "Snowpeak_Ruins_East_Courtyard_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Snowpeak Ruins"
     }
@@ -1446,8 +1207,7 @@ Room[] rooms
     	"isStartingRoom": "false",
     	"checks": ["Snowpeak_Ruins_West_Courtyard_Buried_Chest,
             "Snowpeak_Ruins_Courtyard_Central_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Snowpeak Ruins"
     }
@@ -1460,8 +1220,7 @@ Room[] rooms
         }
     	"isStartingRoom": "false",
     	"checks": ["Snowpeak_Ruins_Ordon_Pumpkin_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Snowpeak Ruins"
     }
@@ -1474,8 +1233,7 @@ Room[] rooms
         }
     	"isStartingRoom": "false",
     	"checks": ["Snowpeak_Ruins_Northeast_Chandelier_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Snowpeak Ruins"
     }
@@ -1504,8 +1262,7 @@ Room[] rooms
         }
     	"isStartingRoom": "false",
     	"checks": ["Snowpeak_Ruins_Broken_Floor_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Snowpeak Ruins"
     }
@@ -1519,8 +1276,7 @@ Room[] rooms
     	"checks": ["Snowpeak_Ruins_Wooden_Beam_Central_Chest,
             "Snowpeak_Ruins_Wooden_Beam_Northwest_Chest,
             "Snowpeak_Ruins_Wooden_Beam_Chandelier_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Snowpeak Ruins"
     }
@@ -1534,8 +1290,7 @@ Room[] rooms
     	"isStartingRoom": "false",
     	"checks": ["Snowpeak_Ruins_West_Cannon_Room_Central_Chest,
             "Snowpeak_Ruins_West_Cannon_Room_Corner_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Snowpeak Ruins"
     }
@@ -1547,8 +1302,7 @@ Room[] rooms
         }
     	"isStartingRoom": "false",
     	"checks": ["Snowpeak_Ruins_Chapel_Chest
-        } 
-        
+         ],
     	"visited": "false",
     	"Snowpeak Ruins"
     }
@@ -1582,11 +1336,10 @@ Room[] rooms
 	    "neighbours": ["snowpeak_ruins_04_W"]
         
             "Requirement.Can_Defeat_Darkhammer}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Snowpeak_Ruins_Chest_After_Darkhammer
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Snowpeak Ruins"
     }
@@ -1595,11 +1348,10 @@ Room[] rooms
 	    "neighbours": ["lanayru_field"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Lanayru_Ice_Puzzle_Cave_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -1609,7 +1361,7 @@ Room[] rooms
         
             "Clawshot}
             "Requirement.can_defeat_bokoblin, Requirement.can_defeat_keese, Requirement.can_defeat_rat, Requirement.can_defeat_baba_serpent, Requirement.can_defeat_skulltula, Requirement.can_defeat_bublin, Requirement.can_defeat_torch_slug, Requirement.can_defeat_fire_keese, Requirement.can_defeat_dodongo, Requirement.can_defeat_tetike, Requirement.can_defeat_lizalfos.}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -1622,7 +1374,7 @@ Room[] rooms
         
             "Clawshot}
             "Requirement.can_defeat_helmasaur, Requirement.can_defeat_rat, Requirement.Spinner, Requirement.can_defeat_chu, Requirement.can_defeat_chu_worm, Requirement.can_defeat_bubble, Requirement.can_defeat_bublin, Requirement.can_defeat_keese, Requirement.can_defeat_rat, Requirement.can_defeat_stalhound, Requirement.can_defeat_poe, Requirement.can_defeat_leever}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -1635,7 +1387,7 @@ Room[] rooms
         
             "Clawshot}
             "Requirement.can_defeat_bokoblin, Requirement.can_defeat_ice_keese, Requirement.Ball_And_Chain, Requirement.can_defeat_keese, Requirement.can_defeat_rat, Requirement.can_defeat_ghoul_rat, Requirement.can_defeat_stalchild, Requirement.can_defeat_redead_knight, REquirement.can_defeat_bublin, Requirement.can_defeat_stalfos, Requirement.can_defeat_skulltula, Requirement.can_defeat_bubble, Requirement.can_defeat_lizalfos, Requirement.can_defeat_fire_bubble}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -1648,7 +1400,7 @@ Room[] rooms
         
             "Clawshot}
             "Requirement.can_defeat_beamos, Requirement.can_defeat_keese, Requirement.Powered_Dominion_Rod, Requirement.can_defeat_torch_slug, Requirement.can_defeat_fire_keese, Requirement.can_defeat_dodongo, Requirement.can_defeat_fire_bubble, Requirement.can_defeat_redead_knight, Requirement.can_defeat_poe, Requirement.can_defeat_ghoul_rat, Requirement.can_defeat_chu, Requirement.can_defeat_ice_keese, Requirement.can_defeat_freezard, Requirement.can_defeat_chilfos, Requirement.can_defeat_ice_bubble, Requirement.can_defeat_leever, Requirement.can_defeat_darknut}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -1660,7 +1412,7 @@ Room[] rooms
 	    "neighbours": ["lanayru spring"]
         
             "Requirement.can_defeat_armos, Requirement.Double_Clawshot, Requirement.can_defeat_bokoblin, Requirement.can_defeat_baba_serpent, Requirement.can_defeat_lizalfos, Requirement.can_defeat_bublin, Requirement.can_defeat_dinalfos, Requirement.can_defeat_poe, Requirement.can_defeat_redead_knight, Requirement.can_defeat_chu, Requirement.can_defeat_freezard, Requirement.can_defeat_chilfos, Requirement.can_defeat_ghoul_rat, Requirement.can_defeat_rat, Requirement.can_defat_stalchild, Requirement.can_defeat_aeralfos, Requirement.can_defeat_darknut}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -1672,13 +1424,12 @@ Room[] rooms
 	    "neighbours": ["kakariko_gorge"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Eldin_Lantern_Cave_First_Chest,
             "Eldin_Lantern_Cave_Lantern_Chest,
             "Eldin_Lantern_Cave_Second_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -1687,7 +1438,7 @@ Room[] rooms
 	    "neighbours": ["lake_hylia"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Lake_Lantern_Cave_First_Chest,
             "Lake_Lantern_Cave_Second_Chest,
@@ -1705,8 +1456,7 @@ Room[] rooms
             "Lake_Lantern_Cave_Fourteenth_Chest,
             "Lake_Lantern_Cave_End_Lantern_Chest
 
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Lanayru Province"
     }
@@ -1715,13 +1465,12 @@ Room[] rooms
 	    "neighbours": ["eldin_field"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Eldin_Stockcave_Upper_Chest,
             "Eldin_Stockcave_Lantern_Chest,
             "Eldin_Stockcave_Lowest_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -1730,11 +1479,10 @@ Room[] rooms
 	    "neighbours": ["outside_castle_town_west"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["West_Hyrule_Field_Helmasaur_Grotto_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -1743,12 +1491,11 @@ Room[] rooms
 	    "neighbours": ["eldin_field"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Eldin_Field_Bomskit_Grotto_Left_Chest,
             "Eldin_Field_Bomskit_Grotto_Lantern_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -1757,11 +1504,10 @@ Room[] rooms
 	    "neighbours": ["ordon_province"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Ordon_Ranch_Grotto_Lantern_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Ordonia Province"
     }
@@ -1770,7 +1516,7 @@ Room[] rooms
 	    "neighbours": ["lanayru_field"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -1782,13 +1528,12 @@ Room[] rooms
 	    "neighbours": ["lanayru_field"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Lanayru_Field_Stalfos_Grotto_Right_Small_Chest,
             "Lanayru_Field_Stalfos_Grotto_Left_Small_Chest,
             "Lanayru_Field_Stalfos_Grotto_Stalfos_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -1797,13 +1542,12 @@ Room[] rooms
 	    "neighbours": ["faron_field"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Faron_Field_Corner_Grotto_Right_Chest,
             "Faron_Field_Corner_Grotto_Left_Chest,
             "Faron_Field_Corner_Grotto_Rear_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -1812,11 +1556,10 @@ Room[] rooms
 	    "neighbours": ["sacred_grove_master_sword"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Sacred_Grove_Deku_Baba_Grotto_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Sacred Grove"
     }
@@ -1825,11 +1568,10 @@ Room[] rooms
 	    "neighbours": ["gerudo_desert"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Gerudo_Desert_Poe_Grotto_Lantern_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Gerudo Desert"
     }
@@ -1838,11 +1580,10 @@ Room[] rooms
 	    "neighbours": ["lake_hylia_bridge"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Lake_Hylia_Bridge_Bubble_Grotto_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -1851,11 +1592,10 @@ Room[] rooms
 	    "neighbours": ["gerudo_desert"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Gerudo_Desert_Skulltula_Grotto_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Gerudo Desert"
     }
@@ -1864,11 +1604,10 @@ Room[] rooms
 	    "neighbours": ["can_access_snowpeak_climb"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Snowpeak_Freezard_Grotto_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Snowpeak Province"
     }
@@ -1877,11 +1616,10 @@ Room[] rooms
 	    "neighbours": ["lanayru_field"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Lanayru_Field_Skulltula_Grotto_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -1890,11 +1628,10 @@ Room[] rooms
 	    "neighbours": ["outside_castle_town_south"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Outside_South_Castle_Town_Tetike_Grotto_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -1903,11 +1640,10 @@ Room[] rooms
 	    "neighbours": ["lake_hylia"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Lake_Hylia_Water_Toadpoli_Grotto_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Lanayru Province"
     }
@@ -1916,11 +1652,10 @@ Room[] rooms
 	    "neighbours": ["eldin_field"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Eldin_Field_Bomb_Fish_Grotto_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -1929,11 +1664,10 @@ Room[] rooms
 	    "neighbours": ["lake_hylia"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Lake_Hylia_Shell_Blade_Grotto_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Lanayru Province"
     }
@@ -1943,10 +1677,10 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Lantern}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["South_Faron_Cave_Chest
-        }
+        ],
 	    "visited": "false",
 	    "Faron Woods"
     }
@@ -1955,12 +1689,12 @@ Room[] rooms
 	    "neighbours": ["south_faron_woods"]
         
             "Requirement.Wooden_Sword}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Gift_From_Rusl,
             "Links_Basement_Chest,
             "Wrestling_With_Bo
-        }
+        ],
 	    "visited": "false",
 	    "Ordonia Province"
     }
@@ -1972,7 +1706,7 @@ Room[] rooms
             "Requirement.diababa_defeated}
             "Requirement.Coro_Key}
             "Requirement.can_smash, Requirement.Powered_Dominion_Rod, Requirement.Shadow_Crystal}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -1986,15 +1720,14 @@ Room[] rooms
             "neighbourRequirements": ["true",
             "Requirement.Lantern}
             "Requirement.Small_Key_N_Faron_Gate}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Faron_Mist_Stump_Chest,
             "Faron_Mist_North_Chest,
             "Faron_Mist_South_Chest,
             "Faron_Woods_Owl_Statue_Chest
 
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Faron Woods"
     }
@@ -2003,11 +1736,11 @@ Room[] rooms
 	    "neighbours": ["faron_mist_area"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Faron_Mist_Cave_Open_Chest,
             "Faron_Mist_Cave_Lantern_Chest
-        }
+        ],
 	    "visited": "false",
 	    "Faron Woods"
     }
@@ -2018,10 +1751,10 @@ Room[] rooms
             "neighbourRequirements": ["true",
             "Requirement.Lantern}
             "Requirement.fused_shadow_count_3, Requirement.Shadow_Crystal}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["North_Faron_Woods_Deku_Baba_Chest
-        }
+        ],
 	    "visited": "false",
 	    "Faron Woods"
     }
@@ -2033,7 +1766,7 @@ Room[] rooms
             "Requirement.Eldin_Vessel_of_Light}
             "true"
             "Requirement.Water_Bombs, Requirement.Iron_Boots}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Kakariko_Inn_Chest,
             "Eldin_Spring_Underwater_Chest,
@@ -2041,8 +1774,7 @@ Room[] rooms
             "Kakariko_Watchtower_Chest,
             "Kakariko_Watchtower_Alcove_Chest,
             "Kakariko_Bomb_Rock_Spire_Heart_Piece
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Eldin Province"
     }
@@ -2052,11 +1784,10 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Iron_Boots}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Death_Mountain_Alcove_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Eldin Province"
     }
@@ -2066,7 +1797,7 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Iron_Boots, Requirement.can_defeat_goron}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -2079,15 +1810,14 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Lanayru_Vessel_of_Light}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Zoras_Domain_Chest_By_Mother_and_Child_Isles,
             "Zoras_Domain_Chest_Behind_Waterfall,
             "Zoras_Domain_Light_All_Torches_Chest,
             "Zoras_Domain_Extinguish_All_Torches_Chest,
             "Fishing_Hole_Heart_Piece
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Lanayru Province"
     }
@@ -2098,7 +1828,7 @@ Room[] rooms
             "neighbourRequirements": ["true",
             "Requirement.Reekfish_Scent, Requirement.Shadow_Crystal}
 			"Requirement.Reekfish_Scent, Requirement.Shadow_Crystal}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -2111,11 +1841,10 @@ Room[] rooms
         
             "Requirement.Shadow_Crystal}
             "Requirement.can_defeat_shadow_beast}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Snowpeak_Cave_Ice_Lantern_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Snowpeak Province"
     }
@@ -2131,7 +1860,7 @@ Room[] rooms
             "Requirement.Lanayru_Vessel_of_Light, Requirement.Clawshot, Requirement.Ancient_Sky_Book_Completed}
             "Requirement.Lanayru_Vessel_of_Light}
             "Requirement.Lanayru_Vessel_of_Light, Requirement.Shadow_Crystal}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Lake_Hylia_Underwater_Chest,
             "Outside_Lanayru_Spring_Left_Statue_Chest,
@@ -2148,8 +1877,7 @@ Room[] rooms
             "Flight_By_Fowl_Fifth_Platform,
             "Lanayru_Spring_East_Double_Clawshot_Chest,
             "Lanayru_Spring_West_Double_Clawshot_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Lanayru Province"
     }
@@ -2161,11 +1889,10 @@ Room[] rooms
             "true"
             "true"
             "Requirement.zant_defeated, Requirement.mdh_complete}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Doctors_Office_Balcony_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Castle Town"
     }
@@ -2175,11 +1902,10 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.can_defeat_skull_kid_2}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Lost_Woods_Lantern_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Sacred Grove"
     }
@@ -2190,11 +1916,10 @@ Room[] rooms
             "neighbourRequirements": ["true",
             "Requirement.can_defeat_shadow_beast, Requirement.Master_Sword}
             "Requirement.can_smash && Requirement.Shadow_Crystal}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Sacred_Grove_Spinner_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Sacred Grove"
     }
@@ -2204,11 +1929,10 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.Master_Sword}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Sacred_Grove_Past_Owl_Statue
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Sacred Grove"
     }
@@ -2218,12 +1942,11 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.can_defeat_king_bublin_3}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Bublin_Camp_First_Chest_Under_Tower_at_Entrance,
             "Bublin_Camp_Small_Chest_in_Back_of_Camp
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Gerudo Desert"
     }
@@ -2233,11 +1956,10 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "true"
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Outside_Arbiters_Grounds_Lantern_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Gerudo Desert"
     }
@@ -2252,12 +1974,11 @@ Room[] rooms
             "Requirement.can_smash}
             "Requirement.Shadow_Crystal}
             "Requirement.Shadow_Crystal}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Eldin_Field_Bomb_Rock_Chest,
             "Bridge_of_Eldin_Owl_Statue_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -2269,13 +1990,12 @@ Room[] rooms
             "neighbourRequirements": ["true",
             "true"
             "Requirement.can_smash}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Kakariko_Gorge_Owl_Statue_Chest,
             "Kakariko_Gorge_Double_Clawshot_Chest,
             "Kakariko_Gorge_Spire_Heart_Piece
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -2288,12 +2008,11 @@ Room[] rooms
             "true"
             "Requirement.Gate_Keys}
             "Requirement.Shadow_Crystal}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Faron_Field_Bridge_Chest,
             "Faron_Field_Tree_Heart_Piece
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -2310,12 +2029,11 @@ Room[] rooms
             "Requirement.Shadow_Crystal}
             "Requirement.Shadow_Crystal}
             "Requirement.Shadow_Crystal}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Lanayru_Field_Behind_Gate_Underwater_Chest,
             "Lanayru_Field_Spinner_Track_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -2328,13 +2046,12 @@ Room[] rooms
             "Requriement.can_smash}
             "true"
             "Requirement.Shadow_Crystal, Requirement.can_launch_bombs, Requirement.Clawshot}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Lake_Hylia_Bridge_Vines_Chest,
             "Lake_Hylia_Bridge_Cliff_Chest,
             "Lake_Hylia_Bridge_Owl_Statue_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -2346,11 +2063,10 @@ Room[] rooms
             "true"
             "true"
             "Requirement.Shadow_Crystal, Requirement.Clawshot}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Hyrule_Field_Ampitheater_Owl_Statue_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -2362,13 +2078,12 @@ Room[] rooms
             "Requirement.Lanayru_Vessel_of_Light}
             "Requirement.Shadow_Crystal}
             "true"
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["South_Castle_Field_Tightrope_Chest,
             "Outside_Castle_Town_Fountain_Chest,
             "South_of_Castle_Town_Double_Clawshot_Chasm_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hyrule Field"
     }
@@ -2380,7 +2095,7 @@ Room[] rooms
             "Requirement.can_defeat_bublin}
             "Requirement.Shadow_Crystal}
             "Requirement.Shadow_Crystal}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Gerudo_Desert_Peahat_Ledge_Chest,
             "Gerudo_Desert_East_Canyon_Chest,
@@ -2394,8 +2109,7 @@ Room[] rooms
             "Gerudo_Desert_Northwest_Chest_Behind_Gates,
             "Gerudo_Desert_North_Small_Chest_Before_Bublin_Camp,
             "Gerudo_Desert_Owl_Statue_Chest
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Gerudo Desert"
     }
@@ -2405,7 +2119,7 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "Requirement.mirror_shard_count_4, Requirement.can_defeat_shadow_beast}
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         
@@ -2417,11 +2131,10 @@ Room[] rooms
 	    "neighbours": ["lanayru_field"]
         
             "neighbourRequirements": ["true",
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": ["Cats_Hide_and_Seek_Minigame
-        } 
-        
+         ],
 	    "visited": "false",
 	    "Hidden Village"
     }
@@ -2431,7 +2144,7 @@ Room[] rooms
         
             "neighbourRequirements": ["true",
             "true"
-        }
+        ],
 	    "isStartingRoom": "false",
 	    "checks": "", 
         

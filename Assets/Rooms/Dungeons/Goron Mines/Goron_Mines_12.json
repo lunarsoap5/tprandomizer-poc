@@ -1,0 +1,17 @@
+{
+    "name": "goron_mines_12",
+    "neighbours": 
+    [
+        "goron_mines_07", 
+        "fyrus"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Bow, Requirement.can_defeat_bublin, Requirement.Goron_Mines_Big_Key"
+    ],
+    "isStartingRoom": "false",
+    "checks": "",
+    "visited": "false",
+    "region": "Goron Mines"
+}

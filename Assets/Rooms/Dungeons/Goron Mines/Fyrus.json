@@ -1,0 +1,15 @@
+{ 
+    "name": "fyrus",
+    "neighbours": 
+    [
+        "kakariko_village"
+    ],
+    "neighbourRequirements": 
+    [
+        "Requirement.Can_Defeat_Fyrus"
+    ],
+    "isStartingRoom": "false",
+    "checks": "", 
+    "visited": "false",
+    "region": "Goron Mines"
+}

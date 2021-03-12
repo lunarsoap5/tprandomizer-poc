@@ -1,0 +1,24 @@
+{
+    "names": "goron_mines_07",
+    "neighbours": 
+    [
+        "goron_mines_06", 
+        "goron_mines_09", 
+        "goron_mines_12"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.goron_mines_3_small_keys",
+        "Requirement.Bow, Requirement.Iron_Boots"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Goron_Mines_Outside_Beamos_Chest",
+        "Goron_Mines_Outside_Underwater_Chest",
+        "Goron_Mines_Outside_Clawshot_Chest"
+    ],
+    "visited": "false",
+    "region": "Goron Mines"
+}

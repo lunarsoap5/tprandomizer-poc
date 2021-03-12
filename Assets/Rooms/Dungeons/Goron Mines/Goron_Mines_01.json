@@ -1,0 +1,20 @@
+{
+    "name": "goron_mines_01",
+    "neighbours": 
+    [
+        "death_mountain_interiors", 
+        "goron_mines_03"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Iron_Boots"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Goron_Mines_Entrance_Chest"
+    ],
+    "visited": "false",
+    "region": "Goron Mines"
+}

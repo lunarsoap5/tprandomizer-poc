@@ -1,0 +1,21 @@
+{ 
+    "name": "goron_mines_09_17",
+    "neighbours": 
+    [
+        "goron_mines_07", 
+        "dangoro"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Iron_Boots"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Goron_Mines_Gor_Ebizo_Chest",
+        "Goron_Mines_Chest_Before_Dangoro"
+    ],
+    "visited": "false",
+    "region": "Goron Mines"
+}

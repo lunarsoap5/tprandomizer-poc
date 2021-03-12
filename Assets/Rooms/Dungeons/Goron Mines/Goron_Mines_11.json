@@ -1,0 +1,23 @@
+{ 
+    "name": "goron_mines_11",
+    "neighbours": 
+    [
+        "dangoro", 
+        "goron_mines_13", 
+        "goron_mines_16"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Bow",
+        "Requirement.Bow"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Goron_Mines_Dangoro_Chest",
+        "Goron_Mines_Beamos_Room_Chest"
+    ], 
+    "visited": "false",
+    "region": "Goron Mines"
+}

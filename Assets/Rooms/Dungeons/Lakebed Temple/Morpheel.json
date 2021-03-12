@@ -1,0 +1,15 @@
+{ 
+    "name": "Morpheel",
+    "neighbours": 
+    [
+        "lake_hylia"
+    ],
+    "neighbourRequirments":
+    [
+        "Requirement.Can_Defeat_Morpheel"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

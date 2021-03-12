@@ -1,0 +1,22 @@
+{
+    "name": "Lakebed Temple 09",
+    "neighbours": 
+    [
+        "lakebed_temple_08", 
+        "deku_toad"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.lakebed_temple_3_small_keys, Requirement.Zora_Armor, Requirement.Water_Bombs"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lakebed_Temple_Before_Deku_Toad_Alcove_Chest",
+        "Lakebed_Temple_Before_Deku_Toad_Underwater_Left_Chest",
+        "Lakebed_Temple_Before_Deku_Toad_Underwater_Right_Chest"
+    ], 
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

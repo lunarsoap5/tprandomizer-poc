@@ -1,0 +1,19 @@
+{
+    "name": "Lakebed Temple 13",
+    "neighbours": 
+    [
+        "lakebed_temple_11"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lakebed_Temple_West_Water_Supply_Small_Chest",
+        "Lakebed_Temple_West_Water_Supply_Chest"
+    ],
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

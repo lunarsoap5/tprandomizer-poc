@@ -1,4 +1,5 @@
 {
+    "name": "Lakebed Temple 06",
     "neighbours": ["lakebed_temple_05"],
     "neighbourRequirements": "true",
     "isStartingRoom": "false",

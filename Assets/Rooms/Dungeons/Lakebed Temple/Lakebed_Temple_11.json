@@ -1,0 +1,24 @@
+{
+    "name": "Lakebed Temple 11",
+    "neighbours": 
+    [
+        "lakebed_temple_02_03", 
+        "lakebed_temple_12", 
+        "lakebed_temple_13"
+    ],
+    "neighbourRequirements": 
+    [
+        "Requirement.Clawshot, Requirement.can_lauch_bombs",
+        "true",
+        "Requirement.Clawshot, Requirement.can_lauch_bombs"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lakebed_Temple_West_Second_Floor_Southwest_Underwater_Chest",
+        "Lakebed_Temple_West_Second_Floor_Northeast_Chest",
+        "Lakebed_Temple_West_Second_Floor_Southeast_Chest"
+    ],
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

@@ -1,5 +1,13 @@
 {
-    "neighbours": ["lakebed_temple_00_01", "lakebed_temple_07", "lakebed_temple_08", "lakebed_temple_12", "morpheel"],
+    "name": "Lakebed Temple 02-03",
+    "neighbours": 
+    [
+        "lakebed_temple_00_01", 
+        "lakebed_temple_07", 
+        "lakebed_temple_08", 
+        "lakebed_temple_12", 
+        "morpheel"
+    ],
     "neighbourRequirements": [
         "true", 
         "Requirement.lakebed_temple_1_small_key", 

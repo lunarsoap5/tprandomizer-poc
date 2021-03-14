@@ -1,0 +1,18 @@
+{
+    "name": "forest_temple_10",
+    "neighbours": 
+    [
+        "forest_temple_12"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Forest_Temple_North_Deku_Like_Chest"
+    ],
+    "visited": "false",
+    "region": "Forest Temple"
+}

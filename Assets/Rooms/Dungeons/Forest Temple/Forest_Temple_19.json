@@ -1,0 +1,15 @@
+{
+    "name": "forest_temple_19",
+    "neighbours": 
+    [
+        "forest_temple_12"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Forest Temple"
+}

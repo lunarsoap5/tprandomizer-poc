@@ -1,0 +1,15 @@
+{
+    "name": "diababa",
+    "neighbours": 
+    [
+        "south_faron_woods"
+    ],
+    "neighbourRequirements":
+    [
+        "Requirement.Can_Defeat_Diababa"
+    ],
+    "isStartingRoom": "false",
+    "checks": "", 
+    "visited": "false",
+    "region": "Forest Temple"
+}

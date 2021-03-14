@@ -1,0 +1,24 @@
+{
+    "name": "forest_temple_09",
+    "neighbours": 
+    [
+        "forest_temple_00_01", 
+        "forest_temple_11", 
+        "forest_temple_12", 
+        "forest_temple_19"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Boomerang, Requirement.forest_temple_4_small_keys",
+        "Requirement.Boomerang",
+        "Requirement.Boomerang"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Forest_Temple_Windless_Bridge_Chest"
+    ],
+    "visited": "false",
+    "region": "Forest Temple"
+}

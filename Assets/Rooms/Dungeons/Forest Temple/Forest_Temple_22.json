@@ -1,0 +1,20 @@
+{
+    "name": "forest_temple_22",
+    "neighbours": 
+    [
+        "north_faron_woods", 
+        "forest_temple_00"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_walltula, Requirement.can_defeat_bokoblin, Requirement.can_break_monkey_cage"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Forest_Temple_Entrance_Vines_Chest"
+    ],
+    "visited": "false",
+    "region": "Forest Temple"
+}

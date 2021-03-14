@@ -1,0 +1,30 @@
+{ 
+    "name": "forest_temple_00_01",
+    "neighbours": 
+    [
+        "forest_temple_22", 
+        "forest_temple_02", 
+        "forest_temple_03", 
+        "forest_temple_09", 
+        "ook"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_bombling_or_burn_webs, Requirement.forest_temple_4_small_keys",
+        "Requirement.can_burn_webs, Requirement.can_free_second_monkey_or_clawshot",
+        "Requirement.can_defeat_bombling_or_burn_webs",
+        "Requirement.can_burn_webs, Requirement.can_defeat_bombling, Requirement.can_defeat_walltula, Requirement.can_defeat_big_baba, Requirement.can_defeat_bokoblin, Requirement.can_break_monkey_cage, Requirement.forest_temple_4_small_keys"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Forest_Temple_Central_Chest_Behind_Stairs",
+        "Forest_Temple_Central_North_Chest",
+        "Forest_Temple_Central_Chest_Hanging_From_Web",
+        "Forest_Temple_Big_Key_Chest",
+        "Forest_Temple_East_Water_Cave_Chest"
+    ],
+    "visited": "false",
+    "region": "Forest Temple"
+}

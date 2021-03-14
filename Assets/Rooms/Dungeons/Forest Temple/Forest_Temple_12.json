@@ -1,0 +1,19 @@
+{
+    "name": "forest_temple_12",
+    "neighbours": 
+    [
+        "forest_temple_09", 
+        "forest_temple_10", 
+        "diababa"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Boomerang, Requirement.can_defeat_bokoblin, Requirement.can_defeat_walltula",
+        "Requirement.can_burn_webs, Requirement.can_defeat_bombling, Requirement.can_defeat_big_baba, Requirement.can_defeat_bokoblin, Requirement.can_break_monkey_cage, Requirement.forest_temple_4_small_keys, Requirement.Boomerang, Requirement.can_defeat_skulltula, Requirement.can_defeat_walltula"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Forest Temple"
+}

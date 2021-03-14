@@ -1,0 +1,25 @@
+{
+    "name": "forest_temple_03",
+    "neighbours": 
+    [
+        "forest_temple_00_01", 
+        "forest_temple_05", 
+        "forest_temple_07", 
+        "ook"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_bombling",
+        "Requirement.can_defeat_bombling", 
+        "Requirement.can_defeat_walltula",
+        "Requirement.Boomerang"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Forest_Temple_West_Deku_Like_Chest"
+    ],
+    "visited": "false",
+    "region": "Forest Temple"
+}

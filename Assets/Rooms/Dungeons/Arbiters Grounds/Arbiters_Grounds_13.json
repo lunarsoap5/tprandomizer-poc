@@ -1,0 +1,24 @@
+{ 
+    "name": "arbiters_grounds_13",
+    "neighbours": 
+    [
+        "arbiters_grounds_11", 
+        "arbiters_grounds_09"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Spinner"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters_Grounds_Spinner_Room_First_Small_Chest",
+        "Arbiters_Grounds_Spinner_Room_Second_Small_Chest",
+        "Arbiters_Grounds_Spinner_Room_Lower_Central_Small_Chest",
+        "Arbiters_Grounds_Spinner_Room_Stalfos_Alcove_Chest",
+        "Arbiters_Grounds_Spinner_Room_Lower North_Chest"
+     ],
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

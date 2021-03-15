@@ -1,0 +1,21 @@
+{ 
+    "name": "arbiters_grounds_07",
+    "neighbours": 
+    [
+        "arbiters_grounds_02_06_15", 
+        "arbiters_grounds_12"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_stalfos"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters_Grounds_West_Stalfos_North_Chest",
+        "Arbiters_Grounds_West_Stalfos_Southeast_Chest"
+    ],
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

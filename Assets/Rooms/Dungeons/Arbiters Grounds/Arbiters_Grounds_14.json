@@ -1,0 +1,20 @@
+{ 
+    "name": "arbiters_grounds_14",
+    "neighbours": 
+    [
+        "arbiters_grounds_05", 
+        "arbiters_grounds_02"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_ghoul_rat, Requirement.arbiters_grounds_4_small_keys"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters_Grounds_Ghoul_Rat_Room_Chest"
+    ],
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

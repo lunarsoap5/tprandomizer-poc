@@ -1,0 +1,15 @@
+{ 
+    "name": "stallord",
+    "neighbours": 
+    [
+        "mirror_chamber"
+    ],
+    "neighbourRequirements":
+    [
+        "Requirement.Can_Defeat_Stallord"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

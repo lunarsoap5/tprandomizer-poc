@@ -1,0 +1,19 @@
+{ 
+    "name": "arbiters_grounds_11",
+    "neighbours": 
+    [
+        "arbiters_grounds_10", 
+        "death_sword", 
+        "can_access_arbiters_grounds_13"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_stalfos, Requirement.can_defeat_poison_mite",
+        "Requirement.can_defeat_stalfos, Requirement.can_defeat_poison_mite, Requirement.Spinner"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

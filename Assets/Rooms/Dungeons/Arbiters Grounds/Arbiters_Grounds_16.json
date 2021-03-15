@@ -1,0 +1,20 @@
+{ 
+    "name": "arbiters_grounds_16",
+    "neighbours": 
+    [
+        "arbiters_grounds_09", 
+        "arbiters_grounds_10"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_bubble, Requirement.arbiters_grounds_5_small_keys"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters_Grounds_North_Turning_Room_Chest"
+    ],
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

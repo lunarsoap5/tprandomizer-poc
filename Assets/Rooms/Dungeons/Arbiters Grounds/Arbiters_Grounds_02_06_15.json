@@ -1,0 +1,30 @@
+{
+    "name": "arbiters_grounds_02_06_15",
+    "neighbours": 
+    [
+        "arbiters_grounds_01", 
+        "arbiters_grounds_07", 
+        "arbiters_grounds_03", 
+        "arbiters_grounds_04", 
+        "arbiters_grounds_09"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.arbiters_grounds_4_small_keys, Requirement.can_defeat_redead_knight, Requirement.can_defeat_stalchild, Requirement.can_defeat_bubble, Requirement.can_defeat_ghoul_rat",
+        "Requirement.Poe_Scent, Requirement.Shadow_Crystal, Requirement.Clawshot, Requirement.can_defeat_redead_knight",
+        "Requirement.arbiters_grounds_2_small_keys",
+        "Requirement.can_defeat_poe, Requirement.Shadow_Crystal, Requirement.Clawshot, Requirement.Poe_Scent, Requirement.can_defeat_redead_knight, Requirement.can_defeat_stalchild, Requirement.can_defeat_bubble, Requirement.can_defeat_ghoul_rat, Requirement.can_defeat_stalfos"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters_Grounds_East_Lower_Turnable_Redead_Chest",
+        "Arbiters_Grounds_Torch_Room_East_Chest",
+        "Arbiters_Grounds_Torch_Room_West_Chest",
+        "Arbiters_Grounds_West_Small_Chest_Behind_Block",
+        "Arbiters_Grounds_West_Chandelier_Chest"
+     ],
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

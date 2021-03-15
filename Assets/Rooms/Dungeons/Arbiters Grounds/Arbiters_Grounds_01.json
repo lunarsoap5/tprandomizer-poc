@@ -1,0 +1,17 @@
+{
+    "name": "arbiters_grounds_01",
+    "neighbours": 
+    [
+        "arbiters_grounds_00", 
+        "arbiters_grounds_02_06_15"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Lantern"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

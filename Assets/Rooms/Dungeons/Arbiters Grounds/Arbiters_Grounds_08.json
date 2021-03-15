@@ -1,0 +1,17 @@
+{ 
+    "name": "arbiters_grounds_08",
+    "neighbours": 
+    [
+        "arbiters_grounds_12", 
+        "arbiters_grounds_07"
+    ],
+    "neighbourRequirements":
+    [
+        "Requirement.can_defeat_poe",
+        "Requirement.can_defeat_poe"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

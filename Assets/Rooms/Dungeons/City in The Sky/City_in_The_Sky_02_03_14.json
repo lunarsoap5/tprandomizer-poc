@@ -1,0 +1,26 @@
+{
+    "name": "city_in_the_sky_02_03_14",
+    "neighbours": 
+    [
+        "city_in_the_sky_01", 
+        "city_in_the_sky_04", 
+        "city_in_the_sky_06", 
+        "city_in_the_sky_15"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Spinner, Requirement.city_in_the_sky_1_small_key",
+        "Requirement.Clawshot",
+        "Requirement.Double_Clawshot, Requirement.can_defeat_baba_serpent, Requirement.can_defeat_kargarok, Requirement.Shadow_Crystal, Requirement.Iron_Boots"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "City_in_The_Sky_Big_Key_Chest",
+        "City_in_The_Sky_Chest_Below_Big_Key_Chest",
+        "City_in_The_Sky_Chest_Behind_North_Fan"
+     ],
+    "visited": "false",
+    "region": "City in the Sky"
+}

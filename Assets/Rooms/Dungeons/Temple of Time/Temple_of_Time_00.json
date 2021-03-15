@@ -1,0 +1,22 @@
+{ 
+    "name": "temple_of_time_00",
+    "neighbours": 
+    [
+        "sacred_grove_temple_of_time", 
+        "temple_of_time_01", 
+        "temple_of_time_08"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.temple_of_time_1_small_key",
+        "Requirement.Dominion_Rod, Requirement.Bow, Requirement.Spinner, Requirement.can_defeat_lizalfos, Requirement.can_defeat_dinalfos, Requirement.can_defeat_darknut, Requirement.temple_of_time_3_small_keys"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple_of_Time_Lantern_Chest"
+    ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

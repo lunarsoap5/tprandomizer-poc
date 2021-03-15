@@ -1,0 +1,21 @@
+{
+    "name": "temple_of_time_07",
+    "neighbours": 
+    [
+        "temple_of_time_05", 
+        "darknut"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_lizalfos, Requirement.can_defeat_baby_gohma, Requirement.can_defeat_young_gohma, Requirement.can_defeat_armos, Requirement.temple_of_time_3_small_keys"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple_of_Time_Gilloutine_Chest",
+        "Temple_of_Time_Chest_Before_Midboss"
+    ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

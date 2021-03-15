@@ -1,0 +1,17 @@
+{
+    "name": "city_in_the_sky_08",
+    "neighbours": 
+    [
+        "city_in_the_sky_07_lower", 
+        "city_in_the_sky_07_upper"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Clawshot, Requirement.can_defeat_dinalfos"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "City in the Sky"
+}

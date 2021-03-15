@@ -1,0 +1,16 @@
+{ 
+    "name": "city_in_the_sky_15",
+    "neighbours": 
+    [
+        "city_in_the_sky_01_02_03_14", 
+        "argorok"],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Double_Clawshot, Requirement.can_defeat_aeralfos, Requirement.City_in_The_Sky_Big_Key"
+    ],
+    "visited": "false",
+    "checks": [""], 
+    "isStartingRoom": "false",
+    "region": "City in the Sky"
+}

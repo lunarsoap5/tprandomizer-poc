@@ -1,0 +1,21 @@
+{
+    "name": "city_in_the_sky_00_16",
+    "neighbours": 
+    [
+        "lake_hylia", 
+        "city_in_the_sky_01"
+    ],
+    "neighbourRequirements":
+    [
+        "Requirement.Clawshot",
+        "Requirement.Clawshot_or_Bow"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "City_in_The_Sky_Underwater_West_Chest",
+        "City_in_The_Sky_Underwater_East_Chest"
+    ],
+    "visited": "false",
+    "region": "City in the Sky"
+}

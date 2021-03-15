@@ -1,0 +1,20 @@
+{
+    "name": "city_in_the_sky_07_lower",
+    "neighbours": 
+    [
+        "city_in_the_sky_04", 
+        "city_in_the_sky_08"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_tile_worm"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "City_in_The_Sky_East_Tile_Worm_Small_Chest"
+    ],
+    "visited": "false",
+    "region": "City in the Sky"
+}

@@ -1,0 +1,21 @@
+{
+    "name": "temple_of_time_04",
+    "neighbours": 
+    [
+        "temple_of_time_02", 
+        "temple_of_time_05"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Bow, Requirement.can_defeat_lizalfos, Requirement.can_defeat_dinalfos"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple_of_Time_Moving_Wall_Beamos_Room_Chest",
+        "Temple_of_Time_Moving_Wall_Dinalfos_Room_Chest"
+     ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

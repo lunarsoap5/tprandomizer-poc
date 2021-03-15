@@ -1,0 +1,17 @@
+{
+    "name": "temple_of_time_08",
+    "neighbours": 
+    [
+        "temple_of_time_00", 
+        "armogohma"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Dominion_rod, Requirement.Temple_of_Time_Big_Key"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Temple of Time"
+}

@@ -1,0 +1,21 @@
+{ 
+    "name": "city_in_the_sky_04",
+    "neighbours": 
+    [
+        "city_in_the_sky_02_03_14", 
+        "city_in_the_sky_07_lower"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Clawshot"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "City_in_The_Sky_East_First_Wing_Chest_After_Fans",
+        "City_in_The_Sky_East_Wing_Lower_Level_Chest"
+    ],
+    "visited": "false",
+    "region": "City in the Sky"
+}

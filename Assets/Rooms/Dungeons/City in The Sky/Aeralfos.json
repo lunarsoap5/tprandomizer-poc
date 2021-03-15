@@ -1,0 +1,18 @@
+{ 
+    "name": "aeralfos",
+    "neighbours": 
+    [
+        "city_in_the_sky_05"
+    ],
+    "neighbourRequirements":
+    [
+        "Requirement.Double_Clawshot, Requirement.can_defeat_aeralfos"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "City_in_The_Sky_Aeralfos_Chest"
+    ],
+    "visited": "false",
+    "region": "City in the Sky"
+}

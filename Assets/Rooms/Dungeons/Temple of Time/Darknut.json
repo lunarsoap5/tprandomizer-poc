@@ -1,0 +1,18 @@
+{
+    "name": "darknut",
+    "neighbours": 
+    [
+        "temple_of_time_07"
+    ],
+    "neighbourRequirements":
+    [
+        "Requirement.Can_Defeat_Darknut, Requirement.Dominion_Rod"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple_of_Time_Darknut_Chest"    
+    ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "armogohma",
+    "neighbours": 
+    [
+        "sacred_grove_temple_of_time"
+    ],
+    "neighbourRequirements":
+    [
+        "Requirement.Can_Defeat_Armogohma"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Temple of Time"
+}

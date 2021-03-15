@@ -1,0 +1,22 @@
+{
+    "name": "temple_of_time_01",
+    "neighbours": 
+    [
+        "temple_of_time_00", 
+        "temple_of_time_02"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.has_ranged_item, Requirement.can_defeat_young_gohma, Requirement.can_defeat_lizalfos"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple_of_Time_First_Staircase_Gohma_Gate_Chest",
+        "Temple_of_Time_First_Staircase_Window_Chest",
+        "Temple_of_Time_First_Staircase_Armos_Chest"
+     ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

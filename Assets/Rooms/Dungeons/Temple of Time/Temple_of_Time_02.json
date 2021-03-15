@@ -1,0 +1,19 @@
+{
+    "name": "temple_of_time_02",
+    "neighbours": 
+    [
+        "temple_of_time_01", 
+        "temple_of_time_03", 
+        "temple_of_time_04"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Spinner",
+        "Requirement.Spinner, Requirement.temple_of_time_2_small_keys"
+    ],
+    "isStartingRoom": "false",
+    "checks": "", 
+    "visited": "false",
+    "region": "Temple of Time"
+}

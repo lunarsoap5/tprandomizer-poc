@@ -1,0 +1,17 @@
+{ 
+    "name": "hyrule_castle_05",
+    "neighbours": 
+    [
+        "hyrule_castle_02", 
+        "hyrule_castle_06"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Lantern"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

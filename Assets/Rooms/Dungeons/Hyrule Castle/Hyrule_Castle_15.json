@@ -1,0 +1,23 @@
+{ 
+    "name": "hyrule_castle_15",
+    "neighbours": 
+    [
+        "hyrule_castle_04", 
+        "hyrule_castle_06", 
+        "hyrule_castle_12"
+    ],
+    "neighbourRequirements":
+    [
+        "Requirement.can_defeat_darknut, Requirement.can_defeat_lizalfos, Requirement.can_knock_down_hc_painting",
+        "Requirement.Lantern, Requirement.can_defeat_dinalfos",
+        "Requirement.hyrule_castle_2_small_keys"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Hyrule_Castle_Southeast_Balcony_Tower_Chest",
+        "Hyrule_Castle_Big_Key_Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

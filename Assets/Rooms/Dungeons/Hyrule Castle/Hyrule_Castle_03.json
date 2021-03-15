@@ -1,0 +1,17 @@
+{ 
+    "name": "hyrule_castle_03",
+    "neighbours": 
+    [
+        "hyrule_castle_02", 
+        "hyrule_castle_04"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_knock_down_hc_painting, Requirement.can_defeat_lizalfos"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

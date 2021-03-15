@@ -1,0 +1,19 @@
+{ 
+    "name": "hyrule_castle_04",
+    "neighbours": 
+    [
+        "hyrule_castle_03", 
+        "hyrule_castle_01", 
+        "hyrule_castle_15"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_darknut",
+        "Requirement.can_defeat_darknut"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

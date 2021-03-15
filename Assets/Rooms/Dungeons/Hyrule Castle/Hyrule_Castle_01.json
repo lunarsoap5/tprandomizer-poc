@@ -1,0 +1,22 @@
+{ 
+    "name": "hyrule_castle_01",
+    "neighbours": 
+    [
+        "hyrule_castle_11", 
+        "hyrule_castle_02"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_bokoblin, Requirement.can_defeat_lizalfos, Requirement.Double_Clawshot"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Hyrule_Castle_Main_Hall_Northeast_Chest",
+        "Hyrule_Castle_Main_Hall_Southwest_Chest",
+        "Hyrule_Castle_Main_Hall_Northwest_Chest"
+     ],
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

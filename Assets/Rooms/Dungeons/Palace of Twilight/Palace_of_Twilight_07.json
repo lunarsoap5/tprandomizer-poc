@@ -1,0 +1,20 @@
+{ 
+    "name": "palace_of_twilight_07",
+    "neighbours": 
+    [
+        "palace_of_twilight_00_01", 
+        "palace_of_twilight_11"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.palace_of_twilight_5_small_keys, Requirement.can_defeat_zant_head, Requirement.Light_Sword"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Palace_of_Twilight_Central_First_Room_Chest"
+    ],
+    "visited": "false",
+    "region": "Palace of Twilight"
+}

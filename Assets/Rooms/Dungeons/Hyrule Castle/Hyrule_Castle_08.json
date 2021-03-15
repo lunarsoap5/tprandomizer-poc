@@ -1,0 +1,30 @@
+{ 
+    "name": "hyrule_castle_08",
+    "neighbours": 
+    [
+        "hyrule_castle_12"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Hyrule_Castle_Treasure_Room_Eighth_Small_Chest",
+        "Hyrule_Castle_Treasure_Room_Seventh_Small_Chest",
+        "Hyrule_Castle_Treasure_Room_Sixth_Small_Chest",
+        "Hyrule_Castle_Treasure_Room_Fifth_Small_Chest",
+        "Hyrule_Castle_Treasure_Room_Fourth_Small_Chest",
+        "Hyrule_Castle_Treasure_Room_Third_Small_Chest",
+        "Hyrule_Castle_Treasure_Room_Second_Small_Chest",
+        "Hyrule_Castle_Treasure_Room_First_Small_Chest",
+        "Hyrule_Castle_Treasure_Room_Fifth_Chest",
+        "Hyrule_Castle_Treasure_Room_Fourth_Chest",
+        "Hyrule_Castle_Treasure_Room_Third_Chest",
+        "Hyrule_Castle_Treasure_Room_Second_Chest",
+        "Hyrule_Castle_Treasure_Room_First_Chest"
+     ],
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

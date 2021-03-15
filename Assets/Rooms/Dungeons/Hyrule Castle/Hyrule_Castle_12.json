@@ -1,0 +1,19 @@
+{
+    "name": "hyrule_castle_12",
+    "neighbours": 
+    [
+        "hyrule_castle_15", 
+        "hyrule_castle_08", 
+        "ganondorf_castle"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.hyrule_castle_3_small_keys, Requirement.Spinner, Requirement.Double_Clawshot, Requirement.can_defeat_darknut, Requirement.can_defeat_lizalfos",
+        "Requirement.Spinner, Requirement.Double_Clawshot, Requirement.can_defeat_darknut, Requirement.can_defeat_lizalfos, Requirement.Hyrule_Castle_Big_Key"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

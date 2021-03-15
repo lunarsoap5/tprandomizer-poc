@@ -1,0 +1,19 @@
+{ 
+    "name": "hyrule_castle_06",
+    "neighbours": 
+    [
+        "hyrule_castle_05", 
+        "hyrule_castle_01", 
+        "hyrule_castle_15"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_dinalfos",
+        "Requirement.can_defeat_dinalfos"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

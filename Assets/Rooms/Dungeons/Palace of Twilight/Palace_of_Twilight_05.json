@@ -1,0 +1,23 @@
+{ 
+    "name": "palace_of_twilight_05",
+    "neighbours": 
+    [
+        "palace_of_twilight_04", 
+        "phantom_zant_2"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.palace_of_twilight_4_small_keys, Requirement.can_defeat_shadow_beast, Requirement.Clawshot"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Palace_of_Twilight_East_Wing_Second_Room_Northeast_Chest",
+        "Palace_of_Twilight_East_Wing_Second_Room_Northwest_Chest",
+        "Palace_of_Twilight_East_Wing_Second_Room_Southwest_Chest",
+        "Palace_of_Twilight_East_Wing_Second_Room_Southeast_Chest"
+    ],
+    "visited": "false",
+    "region": "Palace of Twilight"
+}

@@ -1,0 +1,21 @@
+{ 
+    "name": "hyrule_castle_11",
+    "neighbours": 
+    [
+        "castle_town", 
+        "hyrule_castle_01", 
+        "hyrule_castle_13", 
+        "hyrule_castle_14"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.hyrule_castle_1_small_key",
+        "Requirement.can_defeat_bokoblin, Requirement.can_defeat_kargarok",
+        "Requirement.can_defeat_bokoblin, Requirement.can_defeat_kargarok"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

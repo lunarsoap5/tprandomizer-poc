@@ -1,0 +1,26 @@
+{
+    "name": "snowpeak_ruins_00_01_02_03",
+    "neighbours": 
+    [
+        "snowpeak_summit", 
+        "snowpeak_ruins_07", 
+        "snowpeak_ruins_04_W", 
+        "snowpeak_ruins_04_E"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Ordon_Goat_Cheese",
+        "Requirement.Ordon_Pumpkin",
+        "Requirement.crystal_or_ball_and_chain"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak_Ruins_Lobby_Chandelier_Chest",
+        "Snowpeak_Ruins_Lobby_West_Armor_Chest",
+        "Snowpeak_Ruins_lobby_East_Armor_Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

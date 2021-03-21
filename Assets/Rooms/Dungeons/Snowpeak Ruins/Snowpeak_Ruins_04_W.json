@@ -1,0 +1,29 @@
+{
+    "name": "snowpeak_ruins_04_W",
+    "neighbours": 
+    [
+        "snowpeak_ruins_00_01_02_03", 
+        "snowpeak_ruins_04_E", 
+        "snowpeak_ruins_09", 
+        "snowpeak_ruins_11", 
+        "darkhammer", 
+        "blizzeta"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Ball_and_Chain",
+        "true",
+        "Requirement.Ordon_Goat_Cheese, Requirement.Ball_and_Chain, Requirement.can_defeat_chilfos, Requirement.can_defeat_mini_freezard, Requirement.can_defeat_freezard, Requirement.snowpeak_ruins_4_small_keys, Requirement.Bombs",
+        "Requirement.can_access_darkhammer",
+        "Requirement.Ordon_Goat_Cheese, Requirement.Ball_and_Chain, Requirement.can_defeat_chilfos, Requirement.can_defeat_mini_freezard, Requirement.can_defeat_freezard, Requirement.snowpeak_ruins_4_small_keys, Requirement.Bombs, Requirement.Snowpeak_Ruins_Bedroom_Key"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak_Ruins_West_Courtyard_Buried_Chest",
+        "Snowpeak_Ruins_Courtyard_Central_Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

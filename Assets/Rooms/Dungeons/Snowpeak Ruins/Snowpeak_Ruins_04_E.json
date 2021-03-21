@@ -1,0 +1,23 @@
+{
+    "name": "snowpeak_ruins_04_E",
+    "neighbours": 
+    [
+        "snowpeak_ruins_00_01_02_03", 
+        "snowpeak_ruins_04_W", 
+        "snowpeak_ruins_13"
+    ],
+    "neighbourRequirements":
+    [
+        "crystal_or_ball_and_chain",
+        "Requirement.Ball_and_Chain",
+        "Requirement.snowpeak_ruins_4_small_keys"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak_Ruins_East_Courtyard_Burried_Chest",
+        "Snowpeak_Ruins_East_Courtyard_Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

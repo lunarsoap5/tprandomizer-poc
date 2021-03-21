@@ -1,0 +1,20 @@
+{
+    "name": "snowpeak_ruins_05_lower",
+    "neighbours": 
+    [
+        "snowpeak_ruins_13", 
+        "snowpeak_ruins_00_01_02_03"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_chilfos"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak_Ruins_Ordon_Pumpkin_Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

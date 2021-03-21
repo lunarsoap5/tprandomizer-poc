@@ -1,0 +1,22 @@
+{ 
+    "name": "snowpeak_ruins_07",
+    "neighbours": 
+    [
+        "snowpeak_ruins_00_01_02_03", 
+        "snowpeak_ruins_06", 
+        "snowpeak_ruins_08"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Ball_and_Chain, Requirement.snowpeak_ruins_4_small_keys",
+        "Requirement.Ball_and_Chain"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak_Ruins_Broken_Floor_Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

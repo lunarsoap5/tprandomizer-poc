@@ -1,0 +1,18 @@
+{ 
+    "name": "grotto_2_2",
+    "neighbours": 
+    [
+        "sacred_grove_master_sword"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Sacred_Grove_Deku_Baba_Grotto_Chest"
+    ],
+    "visited": "false",
+    "region": "Sacred Grove"
+}

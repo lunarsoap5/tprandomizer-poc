@@ -1,0 +1,17 @@
+{ 
+    "name": "cave_of_ordeals_22_31",
+    "neighbours": 
+    [
+        "faron spring", 
+        "cave_of_ordeals_32_41"
+    ],
+    "neighbourRequirements":
+    [
+        "Clawshot",
+        "Requirement.can_defeat_bokoblin, Requirement.can_defeat_ice_keese, Requirement.Ball_And_Chain, Requirement.can_defeat_keese, Requirement.can_defeat_rat, Requirement.can_defeat_ghoul_rat, Requirement.can_defeat_stalchild, Requirement.can_defeat_redead_knight, REquirement.can_defeat_bublin, Requirement.can_defeat_stalfos, Requirement.can_defeat_skulltula, Requirement.can_defeat_bubble, Requirement.can_defeat_lizalfos, Requirement.can_defeat_fire_bubble"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Cave of Ordeals"
+}

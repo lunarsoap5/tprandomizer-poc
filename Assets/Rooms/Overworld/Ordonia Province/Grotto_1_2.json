@@ -1,0 +1,18 @@
+{
+    "name": "grotto_1_2",
+    "neighbours": 
+    [
+        "ordon_province"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Ordon_Ranch_Grotto_Lantern_Chest"
+    ],
+    "visited": "false",
+    "region": "Ordonia Province"
+}

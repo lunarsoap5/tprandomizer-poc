@@ -1,0 +1,35 @@
+{ 
+    "name": "lanayru_field",
+    "neighbours": 
+    [
+        "eldin_field", 
+        "zoras_domain", 
+        "outside_castle_town_west", 
+        "lanayru_ice_puzzle_cave", 
+        "lake_hylia_bridge", 
+        "hidden_village", 
+        "grotto_2_0", 
+        "grotto_4_3", 
+        "grotto_1_3"
+    ],
+    "neighbourRequirements": 
+    [
+        "Requirement.can_smash",
+        "Requirement.can_smash",
+        "true",
+        "Requirement.can_smash",
+        "Requirement.can_smash",
+        "Requirement.Wooden_Statue",
+        "Requirement.Shadow_Crystal",
+        "Requirement.Shadow_Crystal",
+        "Requirement.Shadow_Crystal"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lanayru_Field_Behind_Gate_Underwater_Chest",
+        "Lanayru_Field_Spinner_Track_Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

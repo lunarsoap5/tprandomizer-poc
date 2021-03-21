@@ -1,0 +1,21 @@
+{ 
+    "name": "south_faron_woods",
+    "neighbours": 
+    [
+        "ordon_province", 
+        "faron_field", 
+        "south_faron_woods_cave", 
+        "faron_mist_area"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.diababa_defeated",
+        "Requirement.Coro_Key",
+        "Requirement.can_smash, Requirement.Powered_Dominion_Rod, Requirement.Shadow_Crystal"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Faron Woods"
+}

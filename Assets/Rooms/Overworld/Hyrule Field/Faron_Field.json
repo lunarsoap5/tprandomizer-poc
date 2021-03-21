@@ -1,0 +1,27 @@
+{
+    "name": "faron_field",
+    "neighbours": 
+    [
+        "south_faron_woods", 
+        "outside_castle_town_south", 
+        "kakariko_gorge", 
+        "lake_hylia_bridge", 
+        "grotto_2_1"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Lanayru_Vessel_of_Light",
+        "true",
+        "Requirement.Gate_Keys",
+        "Requirement.Shadow_Crystal"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Faron_Field_Bridge_Chest",
+        "Faron_Field_Tree_Heart_Piece"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

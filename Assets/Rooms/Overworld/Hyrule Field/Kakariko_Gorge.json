@@ -1,0 +1,26 @@
+{ 
+    "name": "kakariko_gorge",
+    "neighbours": 
+    [
+        "eldin_field", 
+        "faron_field", 
+        "kakariko_village", 
+        "eldin_long_cave"
+    ],
+    "neighbourRequirements": 
+    [
+        "Requirement.can_smash",
+        "true",
+        "true",
+        "Requirement.can_smash"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Kakariko_Gorge_Owl_Statue_Chest",
+        "Kakariko_Gorge_Double_Clawshot_Chest",
+        "Kakariko_Gorge_Spire_Heart_Piece"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

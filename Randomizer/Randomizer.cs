@@ -28,6 +28,17 @@ struct Check
     uint8_t itemId; //The original item id of the check. This allows us to make an array of all items in the item pool for randomization purposes. Also is useful for documentation purposes.
 }
 
+struct Room
+{
+    string name; //Name we give the room to identify it (it can be a series of rooms that don't have requirements between each other to make the algorithm go faster)
+    list<Room*> neighbours; //Refers to the rooms of the same stage that can be accesed from this room
+    list<list<Requirement>> neighbourRequirments; //List of list of requirements to enter each neighbouring room
+    bool isStartingRoom; //Defines if it is the stage you start the game in
+    list<Check*> checks; //Checks contained inside the room
+    bool visited;
+    string region;
+}
+
 Room* setupGraph()
 {
     resetAllRoomsVisited();

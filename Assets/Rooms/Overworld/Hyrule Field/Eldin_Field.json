@@ -1,0 +1,30 @@
+{
+    "name": "eldin_field",
+    "neighbours": 
+    [
+        "kakariko_gorge", 
+        "kakariko_village", 
+        "goron_stockcave", 
+        "castle_town", 
+        "lanayru_field", "grotto_5_3", 
+        "grotto_1_1"
+    ],
+    "neighbourRequirements": 
+    [
+        "Requirement.can_smash",
+        "true",
+        "Requirement.Clawshot",
+        "Requirement.Lanayru_Vessel_of_Light",
+        "Requirement.can_smash",
+        "Requirement.Shadow_Crystal",
+        "Requirement.Shadow_Crystal"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Eldin_Field_Bomb_Rock_Chest",
+        "Bridge_of_Eldin_Owl_Statue_Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

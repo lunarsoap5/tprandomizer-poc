@@ -1,0 +1,26 @@
+{ 
+    "name": "outside_castle_town_south",
+    "neighbours": 
+    [
+        "castle_town", 
+        "faron_field", 
+        "grotto_5_0", 
+        "lake hylia"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Lanayru_Vessel_of_Light",
+        "Requirement.Shadow_Crystal",
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "South_Castle_Field_Tightrope_Chest",
+        "Outside_Castle_Town_Fountain_Chest",
+        "South_of_Castle_Town_Double_Clawshot_Chasm_Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

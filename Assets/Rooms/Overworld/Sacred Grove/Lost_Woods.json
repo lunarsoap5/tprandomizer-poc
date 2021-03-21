@@ -1,0 +1,20 @@
+{
+    "name": "lost_woods",
+    "neighbours": 
+    [
+        "north_faron_woods", 
+        "sacred_grove_master_sword"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_skull_kid_2"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lost_Woods_Lantern_Chest"
+    ],
+    "visited": "false",
+    "region": "Sacred Grove"
+}

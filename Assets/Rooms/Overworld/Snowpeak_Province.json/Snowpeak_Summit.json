@@ -1,0 +1,20 @@
+{ 
+    "name": "snowpeak_summit",
+    "neighbours": 
+    [
+        "snowpeak_climb", 
+        "snowpeak_ruins_00"
+    ],
+    "neighbourRequirements":
+    [
+        "Requirement.Shadow_Crystal",
+        "Requirement.can_defeat_shadow_beast"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak_Cave_Ice_Lantern_Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Province"
+}

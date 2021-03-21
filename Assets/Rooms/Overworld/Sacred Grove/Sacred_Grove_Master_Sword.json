@@ -1,0 +1,22 @@
+{ 
+    "name": "sacred_grove_master_sword",
+    "neighbours": 
+    [
+        "lost_woods", 
+        "sacred_grove_temple_of_time", 
+        "grotto_2_2"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.can_defeat_shadow_beast, Requirement.Master_Sword",
+        "Requirement.can_smash && Requirement.Shadow_Crystal"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Sacred_Grove_Spinner_Chest"
+    ],
+    "visited": "false",
+    "region": "Sacred Grove"
+}

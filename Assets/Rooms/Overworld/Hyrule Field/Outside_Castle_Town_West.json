@@ -1,0 +1,24 @@
+{
+    "name": "outside_castle_town_west",
+    "neighbours": 
+    [
+        "lake_hylia_bridge", 
+        "lanayru_field", 
+        "castle_town", 
+        "grotto_1_0"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "true",
+        "true",
+        "Requirement.Shadow_Crystal, Requirement.Clawshot"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Hyrule_Field_Ampitheater_Owl_Statue_Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

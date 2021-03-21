@@ -1,0 +1,19 @@
+{ 
+    "name": "snowpeak_climb",
+    "neighbours": 
+    [
+        "zoras_domain", 
+        "snowpeak_summit", 
+        "grotto_4_2"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Reekfish_Scent, Requirement.Shadow_Crystal",
+        "Requirement.Reekfish_Scent, Requirement.Shadow_Crystal"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Snowpeak Province"
+}

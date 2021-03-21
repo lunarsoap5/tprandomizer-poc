@@ -1,0 +1,29 @@
+{ 
+    "name": "kakariko_village",
+    "neighbours": 
+    [
+        "kakariko_gorge", 
+        "eldin_field", 
+        "death_mountain_trail", 
+        "lake_hylia"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Eldin_Vessel_of_Light",
+        "true",
+        "Requirement.Water_Bombs, Requirement.Iron_Boots"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Kakariko_Inn_Chest",
+        "Eldin_Spring_Underwater_Chest",        
+        "Kakariko_Graveyard_Lantern_Chest",
+        "Kakariko_Watchtower_Chest",
+        "Kakariko_Watchtower_Alcove_Chest",
+        "Kakariko_Bomb_Rock_Spire_Heart_Piece"
+    ],
+    "visited": "false",
+    "region": "Eldin Province"
+}

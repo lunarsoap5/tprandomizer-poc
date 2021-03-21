@@ -1,0 +1,35 @@
+{
+    "name": "gerudo_desert",
+    "neighbours": 
+    [
+        "cave_of_ordeals", 
+        "bublin_camp", 
+        "grotto_3_0", 
+        "grotto_4_1"
+    ],
+    "neighbourRequirements":
+    [
+        "Requirement.can_defeat_shadow_beast, Requirement.Clawshot",
+        "Requirement.can_defeat_bublin",
+        "Requirement.Shadow_Crystal",
+        "Requirement.Shadow_Crystal"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Gerudo_Desert_Peahat_Ledge_Chest",
+        "Gerudo_Desert_East_Canyon_Chest",
+        "Gerudo_Desert_Lone_Small_Chest",
+        "Gerudo_Desert_West_Canyon_Chest",
+        "Gerudo_Desert_Northeast_Chest_Behind_Gates",
+        "Gerudo_Desert_South_Chest_Behind_Wooden_Gates",
+        "Gerudo_Desert_Campfire_North_Chest",
+        "Gerudo_Desert_Campfire_East_Chest",
+        "Gerudo_Desert_Campfire_West_Chest",
+        "Gerudo_Desert_Northwest_Chest_Behind_Gates",
+        "Gerudo_Desert_North_Small_Chest_Before_Bublin_Camp",
+        "Gerudo_Desert_Owl_Statue_Chest"
+     ],
+    "visited": "false",
+    "region": "Gerudo Desert"
+}

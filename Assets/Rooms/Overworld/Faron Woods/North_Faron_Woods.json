@@ -1,0 +1,22 @@
+{ 
+    "name": "north_faron_woods",
+    "neighbours": 
+    [
+        "faron_mist_area", 
+        "forest_temple_22", 
+        "lost_woods"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Lantern",
+        "Requirement.fused_shadow_count_3, Requirement.Shadow_Crystal"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "North_Faron_Woods_Deku_Baba_Chest"
+    ],
+    "visited": "false",
+    "region": "Faron Woods"
+}

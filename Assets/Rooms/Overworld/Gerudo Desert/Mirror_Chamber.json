@@ -1,0 +1,17 @@
+{
+    "name": "mirror_chamber",
+    "neighbours": 
+    [
+        "stallord", 
+        "palace_of_twilight_00"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.mirror_shard_count_4, Requirement.can_defeat_shadow_beast"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Gerudo Desert"
+}

@@ -1,0 +1,20 @@
+{
+    "name": "south_faron_woods_cave",
+    "neighbours": 
+    [
+        "south_faron_woods", 
+        "faron_mist_area"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Lantern"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "South_Faron_Cave_Chest"
+    ],
+    "visited": "false",
+    "region": "Faron Woods"
+}

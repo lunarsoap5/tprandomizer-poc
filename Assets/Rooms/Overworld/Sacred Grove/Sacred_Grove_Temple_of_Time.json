@@ -1,0 +1,19 @@
+{
+    "name": "sacred_grove_temple_of_time",
+    "neighbours": 
+    [
+        "sacred_grove_master_sword, temple_of_time_00"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Master_Sword"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Sacred_Grove_Past_Owl_Statue"
+    ],
+    "visited": "false",
+    "region": "Sacred Grove"
+}

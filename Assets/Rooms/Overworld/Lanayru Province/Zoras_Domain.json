@@ -1,0 +1,24 @@
+{ 
+    "name": "zoras_domain",
+    "neighbours": 
+    [
+        "lanayru_field", 
+        "snowpeak_climb"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Requirement.Lanayru_Vessel_of_Light"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Zoras_Domain_Chest_By_Mother_and_Child_Isles",
+        "Zoras_Domain_Chest_Behind_Waterfall",
+        "Zoras_Domain_Light_All_Torches_Chest",
+        "Zoras_Domain_Extinguish_All_Torches_Chest",
+        "Fishing_Hole_Heart_Piece"
+     ],
+    "visited": "false",
+    "region": "Lanayru Province"
+}

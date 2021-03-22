@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Light_Sword, Requirement.Clawshot, Requirement.can_defeat_zant_head",
+    "requirements": "Logic.canDefeatZantHead() && Logic.canUse(Item.Master_Sword_Light) && Logic.canUse(Item.Clawshot)",
     "hash": "3506",
     "category": ["Chest", "Palace of Twilight", "Small Key"],
     "item_id": "0x8C"

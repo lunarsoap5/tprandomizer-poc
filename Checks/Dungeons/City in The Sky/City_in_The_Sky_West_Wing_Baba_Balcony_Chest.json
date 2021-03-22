@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Double_Clawshot",
+    "requirements": "Logic.canUse(Item.Double_Clawshot)",
     "hash": "63B4",
     "category": ["Chest", "City in The Sky"],
     "item_id": "0x0F"

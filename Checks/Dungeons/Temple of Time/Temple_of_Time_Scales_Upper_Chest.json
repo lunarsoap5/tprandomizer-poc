@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Clawshot, Requirement.Spinner",
+    "requirements": "Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Spinner)",
     "hash": "BD60",
     "category": ["Chest", "Temple of Time"],
     "item_id": "0x04"

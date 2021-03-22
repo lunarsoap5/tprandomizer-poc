@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Iron_Boots",
+    "requirements": "Logic.canUse(Item.Iron_Boots)",
     "hash": "CF09",
     "category": ["Chest", "City in The Sky"],
     "item_id": "0x18"

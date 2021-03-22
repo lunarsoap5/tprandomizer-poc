@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_defeat_ice_keese",
+    "requirements": "Logic.canDefeatIceKeese()",
     "hash": "A3A7",
     "category": ["Chest", "Snowpeak Ruins"],
     "item_id": "0x04"

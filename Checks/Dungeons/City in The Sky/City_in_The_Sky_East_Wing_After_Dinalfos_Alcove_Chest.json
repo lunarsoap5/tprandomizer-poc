@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Clawshot, Requirement.can_defeat_dinalfos, Requirement.can_defeat_tile_worm",
+    "requirements": "Logic.canUse(Item.Clawshot)",
     "hash": "5C4D",
     "category": ["Chest", "City in The Sky"],
     "item_id": "0x04"

@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Double_Clawshot",
+    "requirements": "Logic.canUse(Item.Double_Clawshot)",
     "hash": "2E9D",
     "category": ["Chest", "Palace of Twilight"],
     "item_id": "0x06"

@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_smash",
+    "requirements": "Logic.canSmash()",
     "hash": "98E8",
     "category": ["Chest", "Snowpeak Ruins"],
     "item_id": "0x0A"

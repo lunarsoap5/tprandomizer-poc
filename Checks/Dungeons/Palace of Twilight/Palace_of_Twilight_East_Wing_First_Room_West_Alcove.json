@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.palace_of_twilight_4_small_keys, Requirement.can_defeat_shadow_beast, Requirement.Clawshot, Requirement.can_defeat_phantom_zant",
+    "requirements": "(palaceofTwilightSmallKeyCount >= 4) && Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Clawshot) && Logic.canDefeatPhantomZant()",
     "hash": "FA68",
     "category": ["Chest", "Palace of Twilight"],
     "item_id": "0x05"

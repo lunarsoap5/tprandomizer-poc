@@ -2107,59 +2107,6 @@ bool isRequirementMet(Requirement requirments)
         case Requirement.Faron_Mist_South_Chest: 
             return Logic.canUse(Item.Lantern);
             break;
-        case Requirement.Snowpeak_Ruins_West_Courtyard_Buried_Chest: 
-            return Logic.canUse(Item.Shadow_Crystal);
-            break;
-        case Requirement.Snowpeak_Ruins_East_Courtyard_Buried_Chest: 
-            return Logic.canUse(Item.Shadow_Crystal);
-            break;
-        case Requirement.Snowpeak_Ruins_Ordon_Pumpkin_Chest: 
-            return Logic.canDefeatChilfos();
-            break;
-        case Requirement.Snowpeak_Ruins_East_Courtyard_Chest: 
-            return true;
-            break;
-        case Requirement.Snowpeak_Ruins_Wooden_Beam_Central_Chest: 
-            return Logic.canDefeatIceKeese();
-            break;
-        case Requirement.Snowpeak_Ruins_Wooden_Beam_Northwest_Chest: 
-            return Logic.canDefeatIceKeese();
-            break;
-        case Requirement.Snowpeak_Ruins_Courtyard_Central_Chest: 
-            return (Logic.canUse(Item.Ball_and_Chain) ||
-            (Logic.canUse(Item.Goron_Bomb_Bag) &&
-            (snowpeakRuinsSmallKeyCount >=4)));
-            break;
-        case Requirement.Snowpeak_Ruins_Chest_After_Darkhammer: 
-            return (Logic.canDefeatDarkhammer() && Logic.canUse(Item.Ball_and_Chain));
-            break;
-        case Requirement.Snowpeak_Ruins_Broken_Floor_Chest: 
-            return Logic.canSmash();
-            break;
-        case Requirement.Snowpeak_Ruins_Wooden_Beam_Chandelier_Chest: 
-            return (Logic.canDefeatChilfos() && Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain));
-            break;
-        case Requirement.Snowpeak_Ruins_Lobby_Chandelier_Chest: 
-            return ((snowpeakRuinsSmallKeyCount >=3) && Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain));
-            break;
-        case Requirement.Snowpeak_Ruins_Lobby_West_Armor_Chest: 
-            return Logic.canUse(Item.Ball_and_Chain);
-            break;
-        case Requirement.Snowpeak_Ruins_Lobby_East_Armor_Chest: 
-            return Logic.canUse(Item.Ball_and_Chain);
-            break;
-        case Requirement.Snowpeak_Ruins_Northeast_Chandelier_Chest: 
-            return (Logic.canDefeatChilfos() && Logic.canUse(Item.Ball_and_Chain));
-            break;
-        case Requirement.Snowpeak_Ruins_West_Cannon_Room_Central_Chest: 
-            return Logic.canUse(Item.Ball_and_Chain);
-            break;
-        case Requirement.Snowpeak_Ruins_West_Cannon_Room_Corner_Chest: 
-            return Logic.canSmash();
-            break;
-        case Requirement.Snowpeak_Ruins_Chapel_Chest: 
-            return Logic.canDefeatChilfos();
-            break;
         case Requirement.Snowpeak_Cave_Ice_Lantern_Chest: 
             return (Logic.canUse(Item.Lantern) && Logic.canUse(Item.Ball_and_Chain));
             break;
@@ -2174,54 +2121,6 @@ bool isRequirementMet(Requirement requirments)
             break;
         case Requirement.Sacred_Grove_Spinner_Chest: 
             return Logic.canUse(Item.Spinner);
-            break;
-        case Requirement.Temple_of_Time_Lobby_Lantern_Chest: 
-            return Logic.canUse(Item.Lantern);
-            break;
-        case Requirement.Temple_of_Time_First_Staircase_Gohma_Gate_Chest: 
-            return Logic.canDefeatYoungGohma();
-            break;
-        case Requirement.Temple_of_Time_First_Staircase_Window_Chest: 
-            return hasRangedItem();
-            break;
-        case Requirement.Temple_of_Time_First_Staircase_Armos_Chest: 
-            return Logic.canDefeatArmos();
-            break;
-        case Requirement.Temple_of_Time_Statue_Throws_Room_East_Chest: 
-            return Logic.canDefeatArmos();
-            break;
-        case Requirement.Temple_of_Time_Moving_Wall_Beamos_Room_Chest: 
-            return Logic.canUse(Item.Heros_Bow);
-            break;
-        case Requirement.Temple_of_Time_Scales_Gohma_Chest: 
-            return (Logic.canDefeatYoungGohma() && Logic.canDefeatBabyGohma());
-            break;
-        case Requirement.Temple_of_Time_Gilloutine_Chest: 
-            return true;
-            break;
-        case Requirement.Temple_of_Time_Chest_Before_Midboss: 
-            return (Logic.canDefeatArmos() && Logic.canDefeatBabyGohma() && Logic.canDefeatYoungGohma());
-            break;
-        case Requirement.Temple_of_Time_Darknut_Chest: 
-            return Logic.canDefeatDarknut();
-            break;
-        case Requirement.Temple_of_Time_Scales_Upper_Chest: 
-            return (Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Spinner));
-            break;
-        case Requirement.Temple_of_Time_Big_Key_Chest_Room_Upper_Chest: 
-            return Logic.canUse(Item.Clawshot);
-            break;
-        case Requirement.Temple_of_Time_Big_Key_Chest: 
-            return (Logic.canDefeatHelmasaur() && Logic.canUse(Item.Clawshot));
-            break;
-        case Requirement.Temple_of_Time_Moving_Wall_Dinalfos_Room_Chest: 
-            return (Logic.canDefeatDinalfos() && Logic.canUse(Item.Dominion_Rod));
-            break;
-        case Requirement.Temple_of_Time_Statue_Throws_Room_North_Chest: 
-            return true;
-            break;
-        case Requirement.Temple_of_Time_Statue_Throws_Room_Statue_Chest: 
-            return Logic.canUse(Item.Dominion_Rod);
             break;
         case Requirement.Sacred_Grove_Past_Owl_Statue_Chest: 
             return Logic.canUse(Item.Dominion_Rod);
@@ -2247,78 +2146,6 @@ bool isRequirementMet(Requirement requirments)
         case Requirement.Gerudo_Desert_Owl_Statue_Chest: 
             return Logic.canUse(Item.Powered_Dominion_Rod);
             break;
-        case Requirement.City_in_The_Sky_Underwater_West_Chest: 
-            return Logic.canUse(Item.Iron_Boots);
-            break;
-        case Requirement.City_in_The_Sky_Underwater_East_Chest: 
-            return Logic.canUse(Item.Iron_Boots);
-            break;
-        case Requirement.City_in_The_Sky_West_Wing_First_Chest: 
-            return true;
-            break;
-        case Requirement.City_in_The_Sky_East_First_Wing_Chest_After_Fans: 
-            return Logic.canUse(Item.Clawshot);
-            break;
-        case Requirement.City_in_The_Sky_East_Tile_Worm_Small_Chest: 
-            return true;
-            break;
-        case Requirement.City_in_The_Sky_East_Wing_After_Dinalfos_Alcove_Chest: 
-            return Logic.canUse(Item.Clawshot);
-            break;
-        case Requirement.City_in_The_Sky_East_Wing_After_Dinalfos_Ledge_Chest: 
-            return Logic.canUse(Item.Clawshot);
-            break;
-        case Requirement.City_in_The_Sky_Aeralfos_Chest: 
-            return (Logic.canDefeatAeralfos() && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Iron_Boots));
-            break;
-        case Requirement.City_in_The_Sky_East_Wing_Lower_Level_Chest: 
-            return Logic.canUse(Item.Double_Clawshot);
-            break;
-        case Requirement.City_in_The_Sky_West_Wing_Baba_Balcony_Chest: 
-            return Logic.canUse(Item.Double_Clawshot);
-            break;
-        case Requirement.City_in_The_Sky_West_Wing_Narrow_Ledge_Chest: 
-            return Logic.canUse(Item.Double_Clawshot);
-            break;
-        case Requirement.City_in_The_Sky_West_Wing_Tile_Worm_Chest: 
-            return Logic.canUse(Item.Double_Clawshot);
-            break;
-        case Requirement.City_in_The_Sky_Baba_Tower_Top_Small_Chest: 
-            return (Logic.canDefeatBabaSerpent() && Logic.canDefeatBigBaba() && Logic.canUse(Item.Double_Clawshot));
-            break;
-        case Requirement.City_in_The_Sky_Baba_Tower_Narrow_Ledge_Chest: 
-            return (Logic.canDefeatBabaSerpent() && Logic.canDefeatBigBaba() && Logic.canUse(Item.Double_Clawshot));
-            break;
-        case Requirement.City_in_The_Sky_Baba_Tower_Alcove_Chest: 
-            return (Logic.canDefeatBabaSerpent() && Logic.canDefeatBigBaba() && Logic.canUse(Item.Double_Clawshot));
-            break;
-        case Requirement.City_in_The_Sky_West_Garden_Corner_Chest: 
-            return Logic.canUse(Item.Double_Clawshot);
-            break;
-        case Requirement.City_in_The_Sky_West_Garden_Lone_Island_Chest: 
-            return Logic.canUse(Item.Double_Clawshot);
-            break;
-        case Requirement.City_in_The_Sky_West_Garden_Lower_Chest: 
-            return Logic.canUse(Item.Double_Clawshot);
-            break;
-        case Requirement.City_in_The_Sky_West_Garden_Ledge_Chest: 
-            return Logic.canUse(Item.Double_Clawshot);
-            break;
-        case Requirement.City_in_The_Sky_Central_Outside_Ledge_Chest: 
-            return (Logic.canDefeatDinalfos() && Logic.canDefeatWalltula() && Logic.canDefeatKargarok() && Logic.canUse(Item.Shadow_Crystal));
-            break;
-        case Requirement.City_in_The_Sky_Central_Outside_Poe_Island_Chest: 
-            return (Logic.canDefeatDinalfos() && Logic.canDefeatWalltula() && Logic.canDefeatKargarok() && Logic.canUse(Item.Shadow_Crystal));
-            break;
-        case Requirement.City_in_The_Sky_Big_Key_Chest: 
-            return (Logic.canDefeatDinalfos() && Logic.canDefeatWalltula() && Logic.canDefeatKargarok() && Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Double_Clawshot) && Logic.canUse(Item.Iron_Boots));
-            break;
-        case Requirement.City_in_The_Sky_Chest_Below_Big_Key_Chest: 
-            return (Logic.canDefeatHelmasaur() && Logic.canUse(Item.Double_Clawshot));
-            break;
-        case Requirement.City_in_The_Sky_Chest_Behind_North_Fan: 
-            return (Logic.canDefeatHelmasaurus() && Logic.canDefeatDinalfos() && Logic.canDefeatWalltula() && Logic.canDefeatKargarok() && Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Double_Clawshot) && Logic.canUse(Item.Iron_Boots));
-            break;
         case Requirement.Kakariko_Gorge_Double_Clawshot_Chest: 
             return Logic.canUse(Item.Double_Clawshot);
             break;
@@ -2330,57 +2157,6 @@ bool isRequirementMet(Requirement requirments)
             break;
         case Requirement.South_of_Castle_Town_Double_Clawshot_Chasm_Chest: 
             return Logic.canUse(Item.Double_Clawshot);
-            break;
-        case Requirement.Palace_of_Twilight_West_Wing_First_Room_Central_Chest: 
-            return Logic.canDefeatZantHead();
-            break;
-        case Requirement.Palace_of_Twilight_West_Wing_Second_Room_Central_Chest: 
-            return Logic.canDefeatZantHead();
-            break;
-        case Requirement.Palace_of_Twilight_West_Wing_Second_Room_Lower_South_Chest: 
-            return Logic.canDefeatZantHead();
-            break;
-        case Requirement.Palace_of_Twilight_West_Wing_Second_Room_Southeast_Chest: 
-            return Logic.canUse(Item.Double_Clawshot);
-            break;
-        case Requirement.Palace_of_Twilight_West_Wing_Chest_Behind_Wall_of_Darkness: 
-            return (Logic.canUse(Item.Master_Sword_Light) && Logic.canUse(Item.Clawshot));
-            break;
-        case Requirement.Palace_of_Twilight_East_Wing_First_Room_North_Small_Chest: 
-            return Logic.canUse(Item.Clawshot);
-            break;
-        case Requirement.Palace_of_Twilight_East_Wing_First_Room_Zant_Head_Chest: 
-            return (Logic.canDefeatZantHead() && Logic.canUse(Item.Clawshot));
-            break;
-        case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Northeast_Chest: 
-            return (Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Double_Clawshot));
-            break;
-        case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Northwest_Chest: 
-            return (Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Double_Clawshot));
-            break;
-        case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Southwest_Chest: 
-            return (Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Double_Clawshot));
-            break;
-        case Requirement.Palace_of_Twilight_East_Wing_Second_Room_Southeast_Chest: 
-            return (Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Double_Clawshot));
-            break;
-        case Requirement.Palace_of_Twilight_East_Wing_First_Room_East_Alcove: 
-            return ((palaceofTwilightSmallKeyCount >= 4) && Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Clawshot) && Logic.canDefeatPhantomZant());
-            break;
-        case Requirement.Palace_of_Twilight_East_Wing_First_Room_West_Alcove: 
-            return ((palaceofTwilightSmallKeyCount >= 4) && Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Clawshot) && Logic.canDefeatPhantomZant());
-            break;
-        case Requirement.Palace_of_Twilight_Central_First_Room_Chest: 
-            return (Logic.canDefeatZantHead() && Logic.canUse(Item.Master_Sword_Light));
-            break;
-        case Requirement.Palace_of_Twilight_Big_Key_Chest: 
-            return (Logic.canUse(Item.Master_Sword_Light) && Logic.canUse(Item.Double_Clawshot));
-            break;
-        case Requirement.Palace_of_Twilight_Central_Outdoor_Chest: 
-            return Logic.canDefeatZantHead();
-            break;
-        case Requirement.Palace_of_Twilight_Central_Tower_Chest: 
-            return (Logic.canDefeatZantHead() && Logic.canUse(Item.Master_Sword_Light) && Logic.canUse(Item.Clawshot));
             break;
         case Requirement.Hyrule_Castle_Graveyard_Grave_Switch_Room_Right_Chest: 
             return Logic.canSmash();

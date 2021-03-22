@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Shadow_Crystal",
+    "requirements": "Logic.canUse(Item.Shadow_Crystal)",
     "hash": "2725",
     "category": ["Chest", "Snowpeak Ruins"],
     "item_id": "0x04"

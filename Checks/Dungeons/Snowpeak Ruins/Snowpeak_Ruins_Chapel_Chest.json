@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_defeat_chilfos",
+    "requirements": "Logic.canDefeatChilfos()",
     "hash": "9C1C",
     "category": ["Chest", "Snowpeak Ruins", "Boss Key"],
     "item_id": "0xF6"

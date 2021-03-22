@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Bow",
+    "requirements": "Logic.canUse(Item.Heros_Bow)",
     "hash": "E368",
     "category": ["Chest", "Temple of Time", "Dungeon Items", "Compass"],
     "item_id": "0x24"

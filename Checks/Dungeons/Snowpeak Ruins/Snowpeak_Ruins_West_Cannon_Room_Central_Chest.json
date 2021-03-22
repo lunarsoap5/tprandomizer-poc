@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Ball_And_Chain",
+    "requirements": "Logic.canUse(Item.Ball_and_Chain)",
     "hash": "CB52",
     "category": ["Chest", "Snowpeak Ruins"],
     "item_id": "0x04"

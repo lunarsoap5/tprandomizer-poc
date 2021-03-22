@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Iron_Boots, Requirement.Zora_Armor Requirement.lakebed_temple_3_small_keys",
+    "requirements": "Logic.canUse(Item.Zora_Armor) && Logic.canUse(Item.Iron_Boots)",
     "hash": "618E",
     "category": ["Chest", "Lakebed Temple"],
     "item_id": "0x16"

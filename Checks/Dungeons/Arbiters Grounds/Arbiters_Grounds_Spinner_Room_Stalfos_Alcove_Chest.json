@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Spinner",
+    "requirements": "Logic.canUse(Item.Spinner)",
     "hash": "0EF4",
     "category": ["Chest", "Arbiter's Grounds"],
     "item_id": "0x21"

@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Zora_Armor",
+    "requirements": "Logic.canUse(Item.Zora_Armor)",
     "hash": "92AC",
     "category": ["Chest", "Lakebed Temple"],
     "item_id": "0x17"

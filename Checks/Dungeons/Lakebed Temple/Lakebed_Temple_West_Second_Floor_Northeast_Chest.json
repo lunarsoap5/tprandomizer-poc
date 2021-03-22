@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Clawshot",
+    "requirements": "Logic.canUse(Item.Clawshot)",
     "hash": "3BC1",
     "category": ["Chest", "Lakebed Temple"],
     "item_id": "0x04"

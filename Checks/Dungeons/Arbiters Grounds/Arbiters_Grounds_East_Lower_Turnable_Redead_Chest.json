@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Shadow_Crystal, Requirement.Poe_Scent, Requirement.can_defeat_redead_knight",
+    "requirements": "Logic.canUse(Item.Poe_Scent) && Logic.canUse(Item.Shadow_Crystal) && Logic.canDefeatRedeadKnight()",
     "hash": "BF75",
     "category": ["Chest", "Arbiter's Grounds", "Small Key"],
     "item_id": "0x88"

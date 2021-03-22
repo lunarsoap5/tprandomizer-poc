@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_defeat_deku_toad",
+    "requirements": "Logic.canDefeatDekuToad()",
     "hash": "B9C7",
     "category": ["Chest", "Lakebed Temple"],
     "item_id": "0x44"

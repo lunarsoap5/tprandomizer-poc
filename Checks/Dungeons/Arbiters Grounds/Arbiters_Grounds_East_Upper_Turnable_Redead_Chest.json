@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_defeat_redead_knight",
+    "requirements": "Logic.canDefeatRedeadKnight()",
     "hash": "F20F",
     "category": ["Chest", "Arbiter's Grounds", "Small Key"],
     "item_id": "0x88"

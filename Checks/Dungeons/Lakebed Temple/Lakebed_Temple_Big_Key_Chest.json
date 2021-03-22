@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Clawshot, Requirement.Water_Bombs",
+    "requirements": "Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Water_Bombs)",
     "hash": "4429",
     "category": ["Chest", "Lakebed Temple", "Boss Key"],
     "item_id": "0x93"

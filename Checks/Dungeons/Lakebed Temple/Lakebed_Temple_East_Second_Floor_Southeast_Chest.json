@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_launch_bombs",
+    "requirements": "Logic.canLaunchBombs()",
     "hash": "E6CB",
     "category": ["Chest", "Lakebed Temple", "Small Key"],
     "item_id": "0x87"

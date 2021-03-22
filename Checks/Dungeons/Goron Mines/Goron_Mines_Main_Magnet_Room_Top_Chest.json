@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Bow, Requirement.Iron_Boots, Requirement.goron_mines_3_small_keys, Requirement.can_defeat_dangoro",
+    "requirements": "Logic.canUse(Item.Bow) && Logic.canUse(Item.Iron_Boots) && Logic.canDefeatDangoro() && (goronMinesSmallKeyCount >= 3)",
     "hash": "4262",
     "category": ["Chest", "Goron Mines"],
     "item_id": "0x05"

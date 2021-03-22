@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_cut_hanging_web",
+    "requirements": "Logic.canCutHangingWeb()",
     "hash": "6A07",
     "category": ["Chest", "Forest Temple", "Dungeon Items", "Compass"],
     "item_id": "0x24"

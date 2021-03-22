@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Boomerang",
+    "requirements": "Logic.canUse(Item.Boomerang)",
     "hash": "80A2",
     "category": ["Chest", "Forest Temple"],
     "item_id": "0x85"

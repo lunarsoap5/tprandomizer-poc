@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Iron_Boots",
+    "requirements": "Logic.canUse(Item.Iron_Boots)",
     "hash": "CD65",
     "category": ["Chest", "Goron Mines"],
     "item_id": "0x21"

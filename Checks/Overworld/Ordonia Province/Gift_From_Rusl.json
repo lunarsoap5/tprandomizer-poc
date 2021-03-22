@@ -1,5 +1,9 @@
 {
-    "requirements": ["canUse(items.Fishing_Rod"],
+    "name": "Gift_From_Rusl",
+    "requirements": 
+    [
+        "canUse(Item.Slingshot)"
+    ],
     "hash": "8BA3",
     "category": ["Chest"],
     "item_id": "0x3F"

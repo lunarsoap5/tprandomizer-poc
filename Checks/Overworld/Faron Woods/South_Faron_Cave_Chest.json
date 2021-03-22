@@ -1,6 +1,11 @@
 {
-    "requirements": "Requirement.Lantern",
+    "name": "South_Faron_Cave_Chest",
+    "requirements": "canUse(Item.Lantern)",
     "hash": "542E",
-    "category": ["Chest", "Faron Woods"],
+    "category": 
+    [
+        "Chest", 
+        "Faron Woods"
+    ],
     "item_id": "0x03"
 }

@@ -1,6 +1,6 @@
 namespace Assets.Items
 {
-	enum Item
+	enum Item : byte
 	{
 		Recovery_Heart	=	0x00,
 		Green_Rupee	=	0x01,
@@ -73,7 +73,7 @@ namespace Assets.Items
 		Clawshot	=	0x44,
 		Iron_Boots	=	0x45,
 		Dominion_Rod = 0x46,
-		Clawshots	=	0x47,
+		Double_Clawshot	=	0x47,
 		Lantern	=	0x48,
 		Master_Sword_Light	=	0x49,
 		Fishing_Rod	=	0x4A,

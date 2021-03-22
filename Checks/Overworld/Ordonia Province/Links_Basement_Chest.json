@@ -1,5 +1,5 @@
 {
-    "requirements": "canUse(Lantern)",
+    "requirements": "canUse(Item.Lantern)",
     "hash": "E723",
     "category": ["Chest"],
     "item_id": "0xED"

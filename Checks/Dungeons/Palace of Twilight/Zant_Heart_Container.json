@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_defeat_zant",
+    "requirements": "Logic.canDefeatZant()",
     "hash": "93FC",
     "category": ["Chest", "Palace of Twilight"],
     "item_id": "0x22"

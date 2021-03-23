@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_smash",
+    "requirements": "Logic.canSmash()",
     "hash": "1F6C",
     "category": ["Chest", "Hyrule Castle"],
     "item_id": "0x04"

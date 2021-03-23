@@ -1,5 +1,5 @@
 {
-    "requirements": "Lantern",
+    "requirements": "Logic.canSmash() && Logic.canUse(Item.Lantern)",
     "hash": "D3D9",
     "category": ["Chest", "Gerudo Desert"],
     "item_id": "0x06"

@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_defeat_aeralfos",
+    "requirements": "Logic.canDefeatAeralfos()",
     "hash": "8C2C",
     "category": ["Chest", "Hyrule Castle"],
     "item_id": "0x8D"

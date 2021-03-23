@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Invoice, Requirement.Shadow_Crystal",
+    "requirements": "Logic.canUse(Item.Invoice) && Logic.canUse(Item.Shadow_Crystal)",
     "hash": "0E38",
     "category": ["Chest", "Castle Town"],
     "item_id": "0x04"

@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Ilias_Charm",
+    "requirements": "Logic.canUse(Item.Ilias_Charm)",
     "hash": "9E3C",
     "category": ["Chest", "Hidden Village"],
     "item_id": "0x21"

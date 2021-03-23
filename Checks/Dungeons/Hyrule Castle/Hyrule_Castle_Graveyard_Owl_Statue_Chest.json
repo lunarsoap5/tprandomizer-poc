@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_smash, Requirement.Lantern, Requirement.Powered_Dominion_Rod",
+    "requirements": "Logic.canSmash() && Logic.canUse(Item.Lantern) && Logic.canUse(Item.Powered_Dominion_Rod)",
     "hash": "87FB",
     "category": ["Chest", "Hyrule Castle", "Small Key"],
     "item_id": "0x8D"

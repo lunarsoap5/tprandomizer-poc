@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_defeat_stalfos",
+    "requirements": "Logic.canDefeatStalfos()",
     "hash": "6D8E",
     "category": ["Chest", "Hyrule Field"],
     "item_id": "0x21"

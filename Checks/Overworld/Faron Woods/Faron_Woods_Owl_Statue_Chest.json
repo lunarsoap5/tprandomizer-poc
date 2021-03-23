@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_smash, Requirement.Powered_Dominion_Rod, Requirement.Shadow_Crystal",
+    "requirements": "Logic.canSmash() && Logic.canUse(Item.Powered_Dominion_Rod) && Logic.canUse(Item.Shadow_Crystal)",
     "hash": "558A",
     "category": ["Chest", "Faron Woods"],
     "item_id": "0x21"

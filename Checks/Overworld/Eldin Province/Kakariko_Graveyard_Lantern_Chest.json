@@ -1,0 +1,6 @@
+{
+    "requirements": "Logic.canUse(Item.Lantern)",
+    "hash": "7D3A",
+    "category": ["Chest", "Kakariko Village"],
+    "item_id": "0x05"
+}

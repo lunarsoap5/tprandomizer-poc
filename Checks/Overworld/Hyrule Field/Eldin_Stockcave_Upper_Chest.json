@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Iron_Boots",
+    "requirements": "Logic.canUse(Item.Iron_Boots)",
     "hash": "B84B",
     "category": ["Chest", "Hyrule Field"],
     "item_id": "0x04"

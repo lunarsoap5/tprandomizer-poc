@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_defeat_bublin",
+    "requirements": "Logic.canDefeatBublin()",
     "hash": "F2F6",
     "category": ["Chest", "Gerudo Desert"],
     "item_id": "0x0E"

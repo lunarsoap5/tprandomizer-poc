@@ -1,6 +1,0 @@
-{
-    "requirements": "Requirement.Bombs, Requirement.can_launch_bombs",
-    "hash": "A573",
-    "category": ["Chest", "Kakariko Village"],
-    "item_id": "0x21"
-}

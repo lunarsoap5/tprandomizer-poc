@@ -1,5 +1,5 @@
 {
-    "requirements": "RRequirement.can_knock_down_hc_painting, Requirement.can_defeat_darknut, Requirement.can_defeat_lizalfos, Requirement.Boomerang, Requirement.Lantern, Requirement.Double_Clawshot",
+    "requirements": "Logic.canKnockDownHCPainting() && Logic.canDefeatLizalfos() && Logic.canDefeatDarknut() && Logic.canUse(Item.Boomerang) && Logic.canUse(Item.Lantern) && Logic.canUse(Item.Double_Clawshot)",
     "hash": "A782",
     "category": ["Chest", "Hyrule Castle"],
     "item_id": "0x07"

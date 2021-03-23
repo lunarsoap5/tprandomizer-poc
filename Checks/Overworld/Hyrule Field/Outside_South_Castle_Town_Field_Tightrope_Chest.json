@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Clawshot, Requirement.Shadow_Crystal",
+    "requirements": "Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Shadow_Crystal)",
     "hash": "79AC",
     "category": ["Chest", "Hyrule Field"],
     "item_id": "0x06"

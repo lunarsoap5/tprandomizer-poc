@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_defeat_bomskit",
+    "requirements": "ogic.canDefeatBomskit()",
     "hash": "96E8",
     "category": ["Chest", "Hyrule Field"],
     "item_id": "0x05"

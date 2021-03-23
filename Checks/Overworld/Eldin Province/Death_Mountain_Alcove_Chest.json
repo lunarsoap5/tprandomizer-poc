@@ -1,0 +1,6 @@
+{
+    "requirements": "(fyrusDefeated == true) || (Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Iron_Boots))",
+    "hash": "6c2e",
+    "category": ["Chest", "Eldin Province"],
+    "item_id": "0x21"
+}

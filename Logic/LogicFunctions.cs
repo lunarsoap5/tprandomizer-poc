@@ -816,44 +816,13 @@ namespace Logic
             hasSword() ||
             (canUse(Item.Ball_and_Chain) ||
             canUse(Item.Goron_Bomb_Bag)));
-            }
-        public bool canBreakSnowpeakRuinsCentralIce()
-        {
-            return (canUse(Item.Ball_and_Chain) ||
-            (canUse(Item.Goron_Bomb_Bag) &&
-            (snowpeakRuinsSmallKeyCount >=4)));
-            }
+        }
 
         public bool canKnockDownHCPainting()
         {
             return (canUse(Item.Heros_Bow) ||
             canUse(Item.Goron_Bomb_Bag));
-            }
-
-        public bool clawshotOrBoomerang()
-        {
-            return (canUse(Item.Boomerang) ||
-            canUse(Item.Clawshot));
-            }
-
-        public bool hasSwordAndIronsOrBow()
-        {
-            return ((hasSword() &&
-            canUse(Item.Iron_Boots)) ||
-            canUse(Item.Heros_Bow));
-            }
-
-        public bool canFreeSecondMonkeyOrClawshot()
-        {
-            return (((hasSword() ||
-            canUse(Item.Iron_Boots) ||
-            canUse(Item.Spinner) ||
-            canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Shadow_Crystal)) &&
-            (forestTempleSmallKeyCount >= 4)) ||
-            canUse(Item.Clawshot));
-            }
-
+        }
         public bool canBreakMonkeyCage()
         {
             return (hasSword() ||
@@ -864,18 +833,6 @@ namespace Logic
             canUse(Item.Heros_Bow) ||
             canUse(Item.Clawshot));
             }
-        public bool clawshotOrBow()
-        {
-            return (canUse(Item.Heros_Bow) ||
-            canUse(Item.Clawshot));
-            }
-
-        public bool crystalOrBallAndChain()
-        {
-            return (canUse(Item.Shadow_Crystal) ||
-            canUse(Item.Ball_and_Chain));
-            }
-
         public bool canAccessDarkhammer()
         {
             return (canUse(Item.Ball_and_Chain) ||

@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.clawshot_or_boomerang",
+    "requirements": "Logic.canUse(Item.Ball_and_Chain) || Logic.canUse(Item.Boomerang) || Logic.canUse(Item.Clawshot)",
     "hash": "7E86",
     "category": ["Chest", "Hyrule Field"],
     "item_id": "0x21"

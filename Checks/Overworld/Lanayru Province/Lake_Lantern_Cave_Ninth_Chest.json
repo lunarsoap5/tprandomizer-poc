@@ -1,0 +1,6 @@
+{
+    "requirements": "Logic.canSmash() && Logic.canUse(Item.Lantern)",
+    "hash": "DBF7",
+    "category": ["Chest", "Lanayru Province"],
+    "item_id": "0x0E"
+}

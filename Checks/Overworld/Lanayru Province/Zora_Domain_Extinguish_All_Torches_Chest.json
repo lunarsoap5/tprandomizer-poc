@@ -1,0 +1,6 @@
+{
+    "requirements": "Logic.canUse(Item.Boomerang)",
+    "hash": "827F",
+    "category": ["Chest", "Lanayru Province"],
+    "item_id": "0x05"
+}

@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Clawshot",
+    "requirements": "Logic.canUse(Item.Clawshot)",
     "hash": "D552",
     "category": ["Chest", "Hyrule Field"],
     "item_id": "0x06"

@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_defeat_baba_serpent, Requirement.can_knock_down_hanging_baba",
+    "requirements": "Logic.canDefeatBabaSerpent() && Logic.canKnockDownHangingBaba()",
     "hash": "F29C",
     "category": ["Chest", "Sacred Grove"],
     "item_id": "0x21"

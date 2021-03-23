@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Powered_Dominion_Rod",
+    "requirements": "Logic.canUse(Item.Powered_Dominion_Rod)",
     "hash": "04B8",
     "category": ["Chest", "Hyrule Field"],
     "item_id": "0x21"

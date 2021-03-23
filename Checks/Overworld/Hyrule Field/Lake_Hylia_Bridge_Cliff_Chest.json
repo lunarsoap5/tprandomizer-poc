@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_launch_bombs, Requirement.Clawshot",
+    "requirements": "Logic.canLaunchBombs() && Logic.canUse(Item.Clawshot)",
     "hash": "7216",
     "category": ["Chest", "Hyrule Field"],
     "item_id": "0x05"

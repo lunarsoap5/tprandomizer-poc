@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Boomerang",
+    "requirements": "Logic.canUse(Item.Boomerang)",
     "hash": "1533",
     "category": ["Chest", "Hyrule Castle", "Dungeon Items", "Dungeon Map"],
     "item_id": "0x23"

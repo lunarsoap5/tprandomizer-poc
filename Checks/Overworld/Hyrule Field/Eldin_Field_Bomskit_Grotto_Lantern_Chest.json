@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_defeat_bomskit, Requirement.Lantern",
+    "requirements": "Logic.canDefeatBomskit() && Logic.canUse(Item.Lantern)",
     "hash": "D3C9",
     "category": ["Chest", "Hyrule Field"],
     "item_id": "0x05"

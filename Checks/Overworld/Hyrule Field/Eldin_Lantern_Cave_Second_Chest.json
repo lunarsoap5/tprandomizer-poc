@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.can_burn_webs",
+    "requirements": "Logic.canBurnWebs()",
     "hash": "BAF6",
     "category": ["Chest", "Hyrule Field"],
     "item_id": "0x05"

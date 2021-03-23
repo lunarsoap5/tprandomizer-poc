@@ -1,5 +1,5 @@
 {
-    "requirements": "Requirement.Lantern",
+    "requirements": "Logic.canUse(Item.Lantern)",
     "hash": "300D",
     "category": ["Chest", "Faron Woods"],
     "item_id": "0x05"

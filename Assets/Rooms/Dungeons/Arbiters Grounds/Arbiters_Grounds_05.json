@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.can_defeat_redead_knight, Requirement.can_defeat_stalchild"
+        "Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

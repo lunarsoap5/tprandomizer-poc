@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.arbiters_grounds_1_small_key"
+        "arbitersGroundsSmallKeyCount >= 1"
     ],
     "isStartingRoom": "false",
     "checks": 

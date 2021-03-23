@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Can_Defeat_Death_Sword"
+        "Logic.canDefeatDeathSword()"
     ],
     "isStartingRoom": "false",
     "checks": 

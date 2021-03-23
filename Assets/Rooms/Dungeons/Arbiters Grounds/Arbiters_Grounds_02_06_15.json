@@ -11,10 +11,10 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.arbiters_grounds_4_small_keys, Requirement.can_defeat_redead_knight, Requirement.can_defeat_stalchild, Requirement.can_defeat_bubble, Requirement.can_defeat_ghoul_rat",
-        "Requirement.Poe_Scent, Requirement.Shadow_Crystal, Requirement.Clawshot, Requirement.can_defeat_redead_knight",
-        "Requirement.arbiters_grounds_2_small_keys",
-        "Requirement.can_defeat_poe, Requirement.Shadow_Crystal, Requirement.Clawshot, Requirement.Poe_Scent, Requirement.can_defeat_redead_knight, Requirement.can_defeat_stalchild, Requirement.can_defeat_bubble, Requirement.can_defeat_ghoul_rat, Requirement.can_defeat_stalfos"
+        "(arbitersGroundsSmallKeyCount >=4) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatBubble() && Logic.canDefeatGhoulRat()",
+        "canUse(Item.Poe_Scent) && canUse(Item.Shadow_Crystal) && canUse(Item.Clawshot) && Logic.canDefeatRedeadKnight()",
+        "arbitersGroundsSmallKeyCount >=2",
+        "Logic.canDefeatPoe() && canUse(Item.Shadow_Crystal) && canUse(Item.Clawshot) && canUse(Item.Poe_Scent) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatBubble() && Logic.canDefeatGhoulRat() && Logic.canDefeatStalfos()"
     ],
     "isStartingRoom": "false",
     "checks": 

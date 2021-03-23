@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.can_defeat_stalfos, Requirement.can_defeat_poison_mite",
-        "Requirement.can_defeat_stalfos, Requirement.can_defeat_poison_mite, Requirement.Spinner"
+        "Logic.canDefeatStalfos() && Logic.canDefeatPoisonMite()",
+        "Logic.canDefeatStalfos() && Logic.canDefeatPoisonMite() && canUse(Item.Spinner)"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

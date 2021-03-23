@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.can_defeat_poison_mite"
+        "Logic.canDefeatPoisonMite()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

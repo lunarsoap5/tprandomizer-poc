@@ -1,6 +1,7 @@
 using System;
 using Assets.Items;
 using Logic;
+using System.Collections.Generic;
 
 namespace Randomizer
 {
@@ -8,12 +9,33 @@ namespace Randomizer
 	{
 		Random rnd = new Random();
 		LogicFunctions Logic = new LogicFunctions();
+		
 
-		bool test = true;
+		struct Check
+		{
+			string checkName { get; set;} //the common name for the check this can be used in the randomizer to identify the check."
+			bool empty { get; set;} //Identifies if we already placed an item on this check (starts at true)
+			bool logicalCondition { get; set;} //List of requirements to obtain this check while inside the room (so does not include the items needed to enter the room)
+			ushort hash { get; set;} //the fletcher hash that will be compared to on stage load
+			bool isExcluded { get; set;} //Identifies if the check is excluded or not. We can write the randomizer to not place important items in excluded checks
+			List<string> checkCategory { get; set;} //Allows grouping of checks to make it easier to randomize them based on their type, region, exclusion status, etc.
+			Item itemId { get; set;} //The original item id of the check. This allows us to make an array of all items in the item pool for randomization purposes. Also is useful for documentation purposes.
+		}
+
+		struct Room
+		{
+			string name { get; set;} //Name we give the room to identify it (it can be a series of rooms that don't have requirements between each other to make the algorithm go faster)
+			List<Room*> neighbours { get; set;} //Refers to the rooms of the same stage that can be accesed from this room
+			List<List<bool>> neighbourRequirments { get; set;} //List of list of requirements to enter each neighbouring room
+			bool isStartingRoom { get; set;} //Defines if it is the stage you start the game in
+			List<Check*> checks { get; set;} //Checks contained inside the room
+			bool visited { get; set;}
+			string region { get; set;}
+		}
+
 		
 		list<uint8_t> HeldImportantItems = {/*all important item ids*/};
-
-		void restAllRoomsVisited()
+		void resetAllRoomsVisited()
 		{
 			for (int i = 0; i < rooms.count(); i++)
 			{
@@ -25,28 +47,6 @@ namespace Randomizer
 			}
 		}
 
-		struct Check
-		{
-			string checkName; //the common name for the check this can be used in the randomizer to identify the check."
-			bool empty; //Identifies if we already placed an item on this check (starts at true)
-			list<Requirement> requirments; //List of requirements to obtain this check while inside the room (so does not include the items needed to enter the room)
-			uint16_t hash; //the fletcher hash that will be compared to on stage load
-			bool isExcluded; //Identifies if the check is excluded or not. We can write the randomizer to not place important items in excluded checks
-			list<class> checkCategory; //Allows grouping of checks to make it easier to randomize them based on their type, region, exclusion status, etc.
-			byte itemId; //The original item id of the check. This allows us to make an array of all items in the item pool for randomization purposes. Also is useful for documentation purposes.
-		}
-
-		struct Room
-		{
-			string name; //Name we give the room to identify it (it can be a series of rooms that don't have requirements between each other to make the algorithm go faster)
-			list<Room*> neighbours; //Refers to the rooms of the same stage that can be accesed from this room
-			list<list<Requirement>> neighbourRequirments; //List of list of requirements to enter each neighbouring room
-			bool isStartingRoom; //Defines if it is the stage you start the game in
-			list<Check*> checks; //Checks contained inside the room
-			bool visited;
-			string region;
-		}
-
 		Room* setupGraph()
 		{
 			resetAllRoomsVisited();
@@ -56,7 +56,7 @@ namespace Randomizer
 			return &rooms[145];
 		}
 
-		bool checkIfItemIsInList(uint8_t item, list<uint8_t> itemList)
+		bool checkIfItemIsInList(byte item, List<byte> itemList)
 		{
 			bool isItemPresent = false;
 			for (int j = 0; j < itemList.count(); j++)
@@ -71,9 +71,8 @@ namespace Randomizer
 			return isItemPresent;
 		}
 
-		/*pseudocode. will need to be edited */
 
-		bool areItemRequirementsMet(list<Requirement> requirments)
+		bool areItemRequirementsMet(List<Requirement> requirments)
 		{    
 			bool areRequirementsMet = true;
 			
@@ -97,11 +96,11 @@ namespace Randomizer
 			return areRequirementsMet;
 		}
 
-		list<*Check> listAllAvailableChecks(*Room startingRoom)
+		List<*Check> listAllAvailableChecks(*Room startingRoom)
 		{
 			restAllRoomsVisited();
-			list<*Check> checks = {};
-			list<*Room> roomsToExplore = {};
+			List<*Check> checks = {};
+			List<*Room> roomsToExplore = {};
 			startingRoom->visited = true;
 			roomsToExplore.add(startingRoom);
 			
@@ -161,237 +160,238 @@ namespace Randomizer
 			return false;
 		}
 
-		list<int> PlacedImportantItems = {};
+		List<int> PlacedImportantItems = {};
 
 		int nbSkybooksPlaced = 0;
 
-		int verifyItem (int item)
+		Item verifyItem (Item item)
 		{
 			switch (item) //Make sure you place the items in the right order (from big to small)
 			{
-				case 0xE9:
+				case Item.Ancient_Sky_Book_Empty:
 					if (nbSkybooksPlaced <= 5)
 					{
-						item = 0xEA; //Ancient_Sky_Book_partly_filled
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
 					}
 					else
 					{
-						item = 0xE9; //Ancient_Sky_Book_empty
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
 					nbSkybooksPlaced++;
 					break;
-				case 0xDB:
+				case Item.Ancient_Sky_Book_First_Character:
 					if (nbSkybooksPlaced <= 5)
 					{
-						item = 0xEA; //Ancient_Sky_Book_partly_filled
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
 					}
 					else
 					{
-						item = 0xE9; //Ancient_Sky_Book_empty
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
 					nbSkybooksPlaced++;
 					break;
-				case 0xDC:
+				case Item.Ancient_Sky_Book_Second_Character:
 					if (nbSkybooksPlaced <= 5)
 					{
-						item = 0xEA; //Ancient_Sky_Book_partly_filled
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
 					}
 					else
 					{
-						item = 0xE9; //Ancient_Sky_Book_empty
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
 					nbSkybooksPlaced++;
 					break;
-				case 0xDD:
+				case Item.Ancient_Sky_Book_Third_Character:
 					if (nbSkybooksPlaced <= 5)
 					{
-						item = 0xEA; //Ancient_Sky_Book_partly_filled
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
 					}
 					else
 					{
-						item = 0xE9; //Ancient_Sky_Book_empty
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
 					nbSkybooksPlaced++;
 					break;
-				case 0xDE:
+				case Item.Ancient_Sky_Book_Fourth_Character:
 					if (nbSkybooksPlaced <= 5)
 					{
-						item = 0xEA; //Ancient_Sky_Book_partly_filled
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
 					}
 					else
 					{
-						item = 0xE9; //Ancient_Sky_Book_empty
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
 					nbSkybooksPlaced++;
 					break;
-				case 0xDF:
+				case Item.Ancient_Sky_Book_Fifth_Character:
 					if (nbSkybooksPlaced <= 5)
 					{
-						item = 0xEA; //Ancient_Sky_Book_partly_filled
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
 					}
 					else
 					{
-						item = 0xE9; //Ancient_Sky_Book_empty
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
 					nbSkybooksPlaced++;
 					break;
-				case 0x44:
-					if (!checkIfItemIsInList(0x47, PlacedImportantItems))
+				case Item.Clawshot:
+					if (Logic.canUse(Item.Double_Clawshot))
 					{
-						item = 0x47; //Double_Clawshot
+						item = Item.Double_Clawshot; //Double_Clawshot
 					}
 					break;
-				case 0x46:
-					if (!checkIfItemIsInList(0x4C, PlacedImportantItems))
+				case Item.Dominion_Rod_Uncharged:
+					if (Logic.canUse(Item.Dominion_Rod))
 					{
-						item = 0x4C; //Charged_Dominion_Rod
+						item = Item.Dominion_Rod; //Charged_Dominion_Rod
 					}
 					break;
-				case 0x35:
-					if (!checkIfItemIsInList(0x36, PlacedImportantItems))
+				case Item.Big_Wallet:
+					if (Logic.canUse(Item.Giant_Wallet))
 					{
-						item = 0x36; //Giant_Wallet
+						item = Item.Giant_Wallet; //Giant_Wallet
 					}
 					break;
-				case 0x55:
-					if (!checkIfItemIsInList(0x56, PlacedImportantItems))
+				case Item.Big_Quiver:
+					if (Logic.canUse(Item.Giant_Quiver))
 					{
-						item = 0x56; //Giant_Quiver
-					}
-				case 0x43:
-					if (!checkIfItemIsInList(0x56, PlacedImportantItems))
-					{
-						item = 0x56; //Giant_Quiver
-					}
-					else if (!checkIfItemIsInList(0x55, PlacedImportantItems))
-					{
-						item = 0x55; //Big_Quiver
+						item = Item.Giant_Quiver; //Giant_Quiver
 					}
 					break;
-				case 0x29:
-					if (!checkIfItemIsInList(0x49, PlacedImportantItems))
+				case Item.Heros_Bow:
+					if (Logic.canUse(Item.Giant_Quiver))
 					{
-						item = 0x49; //Light_Sword
+						item = Item.Giant_Quiver; //Giant_Quiver
+					}
+					else if (Logic.canUse(Item.Big_Quiver))
+					{
+						item = Item.Big_Quiver; //Big_Quiver
 					}
 					break;
-				case 0x28:
-					if (!checkIfItemIsInList(0x49, PlacedImportantItems))
+				case Item.Master_Sword:
+					if (Logic.canUse(Item.Master_Sword_Light))
 					{
-						item = 0x49; //Light_Sword
-					}
-					else if (!checkIfItemIsInList(0x29, PlacedImportantItems))
-					{
-						item = 0x29; //Master_Sword
+						item = Item.Master_Sword_Light; //Light_Sword
 					}
 					break;
-				case 0x3F:
-					if (!checkIfItemIsInList(0x49, PlacedImportantItems))
+				case Item.Ordon_Sword:
+					if (Logic.canUse(Item.Master_Sword_Light))
 					{
-						item = 0x49; //Light_Sword
+						item = Item.Master_Sword_Light; //Light_Sword
 					}
-					else if (!checkIfItemIsInList(0x29, PlacedImportantItems))
+					else if (Logic.canUse(Item.Master_Sword))
 					{
-						item = 0x29; //Master_Sword
-					}
-					else if (!checkIfItemIsInList(0x28, PlacedImportantItems))
-					{
-						item = 0x28; //Ordon_Sword
+						item = Item.Master_Sword; //Master_Sword
 					}
 					break;
-				case 0xE6:
-					if (!checkIfItemIsInList(0xE7, PlacedImportantItems))
+				case Item.Wooden_Sword:
+					if (Logic.canUse(Item.Master_Sword_Light))
 					{
-						item = 0xE7; //Great_Spin
+						item = Item.Master_Sword_Light; //Light_Sword
+					}
+					else if (Logic.canUse(Item.Master_Sword))
+					{
+						item = Item.Master_Sword; //Master_Sword
+					}
+					else if (Logic.canUse(Item.Ordon_Sword))
+					{
+						item = Item.Ordon_Sword; //Ordon_Sword
 					}
 					break;
-				case 0xE5:
-					if (!checkIfItemIsInList(0xE7, PlacedImportantItems))
+				case Item.Jump_Strike:
+					if (Logic.canUse(Item.Great_Spin))
 					{
-						item = 0xE7; //Great_Spin
-					}
-					else if (!checkIfItemIsInList(0xE6, PlacedImportantItems))
-					{
-						item = 0xE6; //Jump_Strike
+						item = Item.Great_Spin; //Great_Spin
 					}
 					break;
-				case 0xE4:
-					if (!checkIfItemIsInList(0xE7, PlacedImportantItems))
+				case Item.Mortal_Draw:
+					if (Logic.canUse(Item.Great_Spin))
 					{
-						item = 0xE7; //Great_Spin
+						item = Item.Great_Spin; //Great_Spin
 					}
-					else if (!checkIfItemIsInList(0xE6, PlacedImportantItems))
+					else if (Logic.canUse(Item.Jump_Strike))
 					{
-						item = 0xE6; //Jump_Strike
-					}
-					else if (!checkIfItemIsInList(0xE5, PlacedImportantItems))
-					{
-						item = 0xE5; //Mortal_Draw
+						item = Item.Jump_Strike; //Jump_Strike
 					}
 					break;
-				case 0xE3:
-					if (!checkIfItemIsInList(0xE7, PlacedImportantItems))
+				case Item.Helm_Splitter:
+					if (Logic.canUse(Item.Great_Spin))
 					{
-						item = 0xE7; //Great_Spin
+						item = Item.Great_Spin; //Great_Spin
 					}
-					else if (!checkIfItemIsInList(0xE6, PlacedImportantItems))
+					else if (Logic.canUse(Item.Jump_Strike))
 					{
-						item = 0xE6; //Jump_Strike
+						item = Item.Jump_Strike; //Jump_Strike
 					}
-					else if (!checkIfItemIsInList(0xE5, PlacedImportantItems))
+					else if (Logic.canUse(Item.Mortal_Draw))
 					{
-						item = 0xE5; //Mortal_Draw
-					}
-					else if (!checkIfItemIsInList(0xE4, PlacedImportantItems))
-					{
-						item = 0xE4; //Helm_Splitter
+						item = Item.Mortal_Draw; //Mortal_Draw
 					}
 					break;
-				case 0xE2:
-					if (!checkIfItemIsInList(0xE7, PlacedImportantItems))
+				case Item.Back_Slice:
+					if (Logic.canUse(Item.Great_Spin))
 					{
-						item = 0xE7; //Great_Spin
+						item = Item.Great_Spin; //Great_Spin
 					}
-					else if (!checkIfItemIsInList(0xE6, PlacedImportantItems))
+					else if (Logic.canUse(Item.Jump_Strike))
 					{
-						item = 0xE6; //Jump_Strike
+						item = Item.Jump_Strike; //Jump_Strike
 					}
-					else if (!checkIfItemIsInList(0xE5, PlacedImportantItems))
+					else if (Logic.canUse(Item.Mortal_Draw))
 					{
-						item = 0xE5; //Mortal_Draw
+						item = Item.Mortal_Draw; //Mortal_Draw
 					}
-					else if (!checkIfItemIsInList(0xE4, PlacedImportantItems))
+					else if (Logic.canUse(Item.Helm_Splitter))
 					{
-						item = 0xE4; //Helm_Splitter
-					}
-					else if (!checkIfItemIsInList(0xE3, PlacedImportantItems))
-					{
-						item = 0xE3; //Back_Slice
+						item = Item.Helm_Splitter; //Helm_Splitter
 					}
 					break;
-				case 0xE1:
-					if (!checkIfItemIsInList(0xE7, PlacedImportantItems))
+				case Item.Shield_Attack:
+					if (Logic.canUse(Item.Great_Spin))
 					{
-						item = 0xE7; //Great_Spin
+						item = Item.Great_Spin; //Great_Spin
 					}
-					else if (!checkIfItemIsInList(0xE6, PlacedImportantItems))
+					else if (Logic.canUse(Item.Jump_Strike))
 					{
-						item = 0xE6; //Jump_Strike
+						item = Item.Jump_Strike; //Jump_Strike
 					}
-					else if (!checkIfItemIsInList(0xE5, PlacedImportantItems))
+					else if (Logic.canUse(Item.Mortal_Draw))
 					{
-						item = 0xE5; //Mortal_Draw
+						item = Item.Mortal_Draw; //Mortal_Draw
 					}
-					else if (!checkIfItemIsInList(0xE4, PlacedImportantItems))
+					else if (Logic.canUse(Item.Helm_Splitter))
 					{
-						item = 0xE4; //Helm_Splitter
+						item = Item.Helm_Splitter; //Helm_Splitter
 					}
-					else if (!checkIfItemIsInList(0xE3, PlacedImportantItems))
+					else if (Logic.canUse(Item.Back_Slice))
 					{
-						item = 0xE3; //Back_Slice
+						item = Item.Back_Slice; //Back_Slice
 					}
-					else if (!checkIfItemIsInList(0xE2, PlacedImportantItems))
+					break;
+				case Item.Ending_Blow:
+					if (Logic.canUse(Item.Great_Spin))
 					{
-						item = 0xE2; //Shield_Attack
+						item = Item.Great_Spin; //Great_Spin
+					}
+					else if (Logic.canUse(Item.Jump_Strike))
+					{
+						item = Item.Jump_Strike; //Jump_Strike
+					}
+					else if (Logic.canUse(Item.Mortal_Draw))
+					{
+						item = Item.Mortal_Draw; //Mortal_Draw
+					}
+					else if (Logic.canUse(Item.Helm_Splitter))
+					{
+						item = Item.Helm_Splitter; //Helm_Splitter
+					}
+					else if (Logic.canUse(Item.Back_Slice))
+					{
+						item = Item.Back_Slice; //Back_Slice
+					}
+					else if (Logic.canUse(Item.Shield_Attack))
+					{
+						item = Item.Shield_Attack; //Shield_Attack
 					}
 					break;
 			}

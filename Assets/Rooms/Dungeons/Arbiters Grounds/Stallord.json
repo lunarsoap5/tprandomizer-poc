@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Can_Defeat_Stallord"
+        "Logic.canDefeatStallord()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

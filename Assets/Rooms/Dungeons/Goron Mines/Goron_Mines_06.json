@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.has_sword_and_irons_or_bow, Requirement.goron_mines_2_small_keys"
+        "((Logic.canUse(Item.Iron_Boots) && Logic.hasSword()) || Logic.canUse(Item.Heros_Bow)) && (goronMinesSmallKeyCount >= 2)"
     ],
     "isStartingRoom": "false",
     "checks": 

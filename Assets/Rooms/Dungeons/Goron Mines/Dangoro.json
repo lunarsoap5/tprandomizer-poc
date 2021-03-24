@@ -7,8 +7,8 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Can_Defeat_Dangoro",
-        "Requirement.Can_Defeat_Dangoro"
+        "Logic.canDefeatDangoro()",
+        "Logic.canDefeatDangoro()"
     ],
     "isStartingRoom": "false",
     "checks": "", 

@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.can_defeat_tile_worm"
+        "Logic.canDefeatTileWorm()"
     ],
     "isStartingRoom": "false",
     "checks": 

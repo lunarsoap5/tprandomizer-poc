@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Clawshot, Requirement.can_defeat_dinalfos"
+        "Logic.canUse(Item.Clawshot) && Logic.canDefeatDinalfos()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

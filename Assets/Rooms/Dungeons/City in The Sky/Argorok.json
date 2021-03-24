@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Can_Defeat_Argorok"
+        "Logic.canDefeatArgorok()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

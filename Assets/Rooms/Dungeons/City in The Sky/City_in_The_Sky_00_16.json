@@ -7,8 +7,8 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Clawshot",
-        "Requirement.Clawshot_or_Bow"
+        "Logic.canUse(Item.Clawshot)",
+        "Logic.canUse(Item.Clawshot) || Logic.canUse(Item.Heros_Bow)"
     ],
     "isStartingRoom": "false",
     "checks": 

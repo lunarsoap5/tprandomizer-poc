@@ -10,10 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.can_defeat_bombling",
-        "Requirement.can_defeat_bombling", 
-        "Requirement.can_defeat_walltula",
-        "Requirement.Boomerang"
+        "Logic.canDefeatBombling()",
+        "Logic.canDefeatBombling()", 
+        "Logic.canUse(Item.Boomerang)"
     ],
     "isStartingRoom": "false",
     "checks": 

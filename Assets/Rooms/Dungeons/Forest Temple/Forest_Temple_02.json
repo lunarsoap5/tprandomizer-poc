@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.can_defeat_bokoblin"
+        "Logic.canDefeatBokoblin()"
     ],
     "isStartingRoom": "false",
     "checks": 

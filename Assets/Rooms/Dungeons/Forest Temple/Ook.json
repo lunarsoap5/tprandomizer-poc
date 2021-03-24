@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Can_Defeat_Ook, Requirement.Boomerang"
+        "Logic.canDefeatOok() && Logic.canUse(Item.Boomerang)"
     ],
     "isStartingRoom": "false",
     "checks": "", 

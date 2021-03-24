@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.can_defeat_darknut",
-        "Requirement.can_defeat_darknut"
+        "Logic.canDefeatDarknut()",
+        "Logic.canDefeatDarknut()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

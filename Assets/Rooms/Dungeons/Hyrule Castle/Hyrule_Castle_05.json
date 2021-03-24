@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Lantern"
+        "Logic.canUse(Item.Lantern)"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

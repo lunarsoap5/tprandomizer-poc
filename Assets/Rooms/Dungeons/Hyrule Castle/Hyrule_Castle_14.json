@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Shadow_Crystal"
+        "Logic.canUse(Item.Shadow_Crystal)"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Bow",
-        "Requirement.Bow"
+        "Logic.canUse(Item.Heros_Bow)",
+        "Logic.canUse(Item.Heros_Bow)"
     ],
     "isStartingRoom": "false",
     "checks": 

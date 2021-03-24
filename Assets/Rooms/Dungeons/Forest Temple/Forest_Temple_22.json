@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatWalltula() && Logic.canDefeatBokoblin() && Logic.canBreakMonkeyCage()"
+        "Requirement.can_defeat_walltula, Requirement.can_defeat_bokoblin, Requirement.can_break_monkey_cage"
     ],
     "isStartingRoom": "false",
     "checks": 

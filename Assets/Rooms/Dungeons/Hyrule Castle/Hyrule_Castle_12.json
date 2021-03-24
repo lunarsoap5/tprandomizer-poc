@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "(hyruleCastleSmallKeyCount >= 3) && Logic.canUse(Item.Spinner) && Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatDarknut && Logic.canDefeatLizalfos()",
-        "Logic.canUse(Item.Spinner) && Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatDarknut() && Logic.canDefeatLizalfos() && Logic.canUse(Item.Hyrule_Castle_Big_Key)"
+        "Requirement.hyrule_castle_3_small_keys, Requirement.Spinner, Requirement.Double_Clawshot, Requirement.can_defeat_darknut, Requirement.can_defeat_lizalfos",
+        "Requirement.Spinner, Requirement.Double_Clawshot, Requirement.can_defeat_darknut, Requirement.can_defeat_lizalfos, Requirement.Hyrule_Castle_Big_Key"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

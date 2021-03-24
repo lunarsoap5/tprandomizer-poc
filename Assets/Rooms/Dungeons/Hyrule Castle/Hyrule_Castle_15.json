@@ -8,9 +8,9 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canDefeatDarknut() && Logic.canDefeatLizalfos() && Logic.canKnockDownHCPainting()",
-        "Logic.canUse(Item.Lantern), Logic.canDefeatDinalfos()",
-        "hyruleCastleSmallKeyCount >= 2"
+        "Requirement.can_defeat_darknut, Requirement.can_defeat_lizalfos, Requirement.can_knock_down_hc_painting",
+        "Requirement.Lantern, Requirement.can_defeat_dinalfos",
+        "Requirement.hyrule_castle_2_small_keys"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements": 
     [
-        "Logic.canDefeatFyrus()"
+        "Requirement.Can_Defeat_Fyrus"
     ],
     "isStartingRoom": "false",
     "checks": "", 

@@ -10,9 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Boomerang) && (forestTempleSmallKeyCount >= 4)",
-        "Logic.canUse(Item.Boomerang)",
-        "Logic.canUse(Item.Boomerang)"
+        "Requirement.Boomerang, Requirement.forest_temple_4_small_keys",
+        "Requirement.Boomerang",
+        "Requirement.Boomerang"
     ],
     "isStartingRoom": "false",
     "checks": 

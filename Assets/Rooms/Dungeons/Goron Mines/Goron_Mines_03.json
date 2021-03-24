@@ -9,9 +9,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "goronMinesSmallKeyCount >= 1",
-        "goronMinesSmallKeyCount >= 1", 
-        "Logic.canUse(Item.Iron_Boots)"
+        "Requirement.goron_mines_1_small_key",
+        "Requirement.goron_mines_1_small_key", 
+        "Requirement.Iron_Boots"
     ],
     "isStartingRoom": "false",
     "checks": 

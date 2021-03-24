@@ -729,10 +729,17 @@ namespace Logic
 
         public bool canFreeAllMonkeys()
         {
-                    return (canBreakMonkeyCage() &&
+                    return ((canUse(Item.Clawshot) ||
+                    canUse(Item.Heros_Bow) ||
+                    canUse(Item.Iron_Boots) ||
+                    canUse(Item.Spinner) ||
+                    canUse(Item.Shield_Attack) ||
+                    canUse(Item.Goron_Bomb_Bag) ||
+                    canUse(Item.Ball_and_Chain) ||
+                    hasSword()) &&
                     (forestTempleSmallKeyCount >= 4) &&
-                    canBurnWebs() &&
-                    canUse(Item.Boomerang) && canDefeatBokoblin() && canDefeatBigBaba());
+                    canUse(Item.Lantern) &&
+                    canUse(Item.Boomerang));
         }
 
         public bool canSmash()
@@ -778,6 +785,11 @@ namespace Logic
             canUse(Item.Ball_and_Chain));
         }
 
+        public bool canDefeatBomblingOrBurnWebs()
+        {
+            return (canDefeatBombling() || canBurnWebs());
+            }
+
         public bool canPressMinesSwitch()
         {
             return (canUse(Item.Ball_and_Chain) ||
@@ -788,6 +800,14 @@ namespace Logic
             return (canUse(Item.Heros_Bow) ||
             canUse(Item.Clawshot) ||
             canUse(Item.Boomerang));
+            }
+
+        public bool canBeatMinesOrClawshot()
+        {
+            return (canUse(Item.Iron_Boots) &&
+            ((canUse(Item.Heros_Bow) &&
+            hasSword()) || 
+            canUse(Item.Clawshot)));
             }
 
         public bool canBreakWoodenDoor()

@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatDinalfos()",
-        "Logic.canDefeatDinalfos()"
+        "Requirement.can_defeat_dinalfos",
+        "Requirement.can_defeat_dinalfos"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

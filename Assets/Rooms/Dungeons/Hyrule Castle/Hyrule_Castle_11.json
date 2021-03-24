@@ -10,9 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "hyruleCastleSmallKeyCount >= 1",
-        "Logic.canDefeatBokoblin() && Logic.canDefeatKargarok()",
-        "Logic.canDefeatBokoblin() && Logic.canDefeatKargarok()"
+        "Requirement.hyrule_castle_1_small_key",
+        "Requirement.can_defeat_bokoblin, Requirement.can_defeat_kargarok",
+        "Requirement.can_defeat_bokoblin, Requirement.can_defeat_kargarok"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

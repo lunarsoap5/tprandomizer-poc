@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Heros_Bow) && Logic.canDefeatBublin() && Logic.canUse(Item.Goron_Mines_Big_Key)"
+        "Requirement.Bow, Requirement.can_defeat_bublin, Requirement.Goron_Mines_Big_Key"
     ],
     "isStartingRoom": "false",
     "checks": "",

@@ -4,7 +4,7 @@
     "neighbourRequirments": 
     [
         "true",
-        "Requirement.Zora_Armor", "Requirement.Water_Bombs"
+        "Logic.canUse(Item.Zora_Armor) && Logic.canUse(Item.Goron_Bomb_Bag)"
     ],
     "isStartingRoom": "false",
     "checks": ["Lakebed_Temple_Underwater_Maze_Small_Chest"],

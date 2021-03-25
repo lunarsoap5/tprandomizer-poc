@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Palace_of_Twilight_Big_Key, Requirement.can_defeat_shadow_beast"
+        "Logic.canUse(Item.Palace_of_Twilight_Big_Key) && Logic.canDefeatShadowBeast()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

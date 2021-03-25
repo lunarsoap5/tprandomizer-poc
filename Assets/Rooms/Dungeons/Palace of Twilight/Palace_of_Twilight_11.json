@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.palace_of_twilight_6_small_keys, Requirement.can_defeat_zant_head, Requirement.Light_Sword"
+        "(palaceofTwilightSmallKeyCount >=6) && Logic.canDefeatZantHead() && Logic.canUse(Item.Light_Sword)"
     ],
     "isStartingRoom": "false",
     "checks": 

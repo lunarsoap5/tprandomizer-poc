@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.palace_of_twilight_4_small_keys, Requirement.can_defeat_shadow_beast, Requirement.Clawshot"
+        "(palaceofTwilightSmallKeyCount >= 4) && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Clawshot)"
     ],
     "isStartingRoom": "false",
     "checks": 

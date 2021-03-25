@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.lakebed_temple_3_small_keys, Requirement.can_launch_bombs"
+        "(lakebedTempleSmallKeyCount >= 3) && Logic.canLaunchBombs()"
     ],
     "isStartingRoom": "false",
     "checks": 

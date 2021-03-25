@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true", 
-        "Requirement.can_launch_bombs" 
+        "Logic.canLaunchBombs()" 
     ],
     "isStartingRoom": "false",
     "checks": 

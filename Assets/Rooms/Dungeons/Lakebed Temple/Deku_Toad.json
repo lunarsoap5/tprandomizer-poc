@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements": 
     [
-        "Requirement.Can_Defeat_Deku_Toad, Requirement.Clawshot"
+        "Logic.canDefeatDekuToad() && Logic.canUse(Item.Clawshot)"
     ],
     "isStartingRoom": "false",
     "checks": 

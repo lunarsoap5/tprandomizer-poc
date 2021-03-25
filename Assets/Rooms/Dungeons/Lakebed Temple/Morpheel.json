@@ -6,7 +6,7 @@
     ],
     "neighbourRequirments":
     [
-        "Requirement.Can_Defeat_Morpheel"
+        "Logic.canDefeatMorpheel()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

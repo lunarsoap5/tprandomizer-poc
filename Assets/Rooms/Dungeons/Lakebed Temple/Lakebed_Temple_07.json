@@ -8,8 +8,8 @@
     ],
     "neighbourRequirements": 
     [   "true",
-        "Requirement.can_lauch_bombs",
-        "Requirement.can_lauch_bombs"
+        "Logic.canLaunchBombs()",
+        "Logic.canLaunchBombs()"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -8,9 +8,9 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Clawshot",
+        "Logic.canUse(Item.Clawshot)",
         "true",
-        "Requirement.Clawshot"
+        "Logic.canUse(Item.Clawshot)"
     ],
     "isStartingRoom": "false",
     "checks": 

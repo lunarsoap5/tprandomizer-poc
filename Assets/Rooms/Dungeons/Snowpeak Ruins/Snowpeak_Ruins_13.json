@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.can_defeat_mini_freezard}"
+        "Logic.canDefeatMiniFreezard()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

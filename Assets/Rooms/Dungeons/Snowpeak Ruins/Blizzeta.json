@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Can_Defeat_Blizzeta"
+        "Logic.canDefeatBlizzeta()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

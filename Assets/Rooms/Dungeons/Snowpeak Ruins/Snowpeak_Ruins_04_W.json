@@ -12,11 +12,11 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Ball_and_Chain",
+        "Logic.canUse(Item.Ball_and_Chain)",
         "true",
-        "Requirement.Ordon_Goat_Cheese, Requirement.Ball_and_Chain, Requirement.can_defeat_chilfos, Requirement.can_defeat_mini_freezard, Requirement.can_defeat_freezard, Requirement.snowpeak_ruins_4_small_keys, Requirement.Bombs",
-        "Requirement.can_access_darkhammer",
-        "Requirement.Ordon_Goat_Cheese, Requirement.Ball_and_Chain, Requirement.can_defeat_chilfos, Requirement.can_defeat_mini_freezard, Requirement.can_defeat_freezard, Requirement.snowpeak_ruins_4_small_keys, Requirement.Bombs, Requirement.Snowpeak_Ruins_Bedroom_Key"
+        "Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain) && Logic.canDefeatChilfos() && Logic.canDefeatMiniFreezard() && Logic.canDefeatFreezard() && (snowpeakRuinsSmallKeyCount >= 4) && Logic.canUse(Item.Goron_Bomb_Bag)",
+        "Logic.canUse(Item.Ball_and_Chain) || ((snowpeakRuinsSmallKeyCount >=4) && Logic.canUse(Item.Goron_Bomb_Bag))",
+        "Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain) && Logic.canDefeatChilfos() && Logic.canDefeatMiniFreezard() && Logic.canDefeatFreezard() && (snowpeakRuinsSmallKeyCount >= 4) && Logic.canUse(Item.Goron_Bomb_Bag) && Logic.canUse(Item.Snowpeak_Ruins_Bedroom_Key)"
     ],
     "isStartingRoom": "false",
     "checks": 

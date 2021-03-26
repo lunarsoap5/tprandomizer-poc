@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Can_Defeat_Armogohma"
+        "Logic.canDefeatArmogohma()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

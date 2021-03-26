@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.can_defeat_chilfos"
+        "Logic.canDefeatChilfos()"
     ],
     "isStartingRoom": "false",
     "checks": 

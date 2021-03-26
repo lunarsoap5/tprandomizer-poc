@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Bow, Requirement.can_defeat_lizalfos, Requirement.can_defeat_dinalfos"
+        "Logic.canUse(Item.Heros_Bow) && Logic.canDefeatLizalfos() && Logic.canDefeatDinalfos()"
     ],
     "isStartingRoom": "false",
     "checks": 

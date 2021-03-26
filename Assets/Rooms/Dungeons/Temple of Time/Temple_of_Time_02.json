@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Spinner",
-        "Requirement.Spinner, Requirement.temple_of_time_2_small_keys"
+        "Logic.canUse(Item.Spinner)",
+        "Logic.canUse(Item.Spinner) && (templeofTimeSmallKeyCount >= 2)"
     ],
     "isStartingRoom": "false",
     "checks": "", 

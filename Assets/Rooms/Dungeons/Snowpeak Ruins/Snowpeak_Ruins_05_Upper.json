@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Ball_and_Chain"
+        "Logic.canUse(Item.Ball_and_Chain)"
     ],
     "isStartingRoom": "false",
     "checks": 

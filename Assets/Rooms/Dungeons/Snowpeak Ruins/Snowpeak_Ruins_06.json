@@ -10,9 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.crystal_or_ball_and_chain",
-        "Requirement.Ball_and_Chain, Requirement.Clawshot, Requirement.can_defeat_chilfos",
-        "Requirement.snowpeak_ruins_4_small_keys"
+        "Logic.canUse(Item.Shadow_Crystal) || Logic.canUse(Item.Ball_and_Chain)",
+        "Logic.canUse(Item.Ball_and_Chain) && Logic.canUse(Item.Clawshot) && Logic.canDefeatChilfos()",
+        "(snowpeakRuinsSmallKeyCount >=4)"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

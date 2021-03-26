@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Wooden_Sword"
+        "Logic.canUse(Item.Wooden_Sword)"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -10,8 +10,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Lanayru_Vessel_of_Light",
-        "Requirement.Shadow_Crystal",
+        "",
+        "Logic.canUse(Item.Shadow_Crystal)",
         "true"
     ],
     "isStartingRoom": "false",

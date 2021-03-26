@@ -13,14 +13,14 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Aurus_Memo, Requirement.Lanayru_Vessel_of_Light",
-        "Requirement.Lanayru_Vessel_of_Light, Requirement.can_smash",
-        "Requirement.Lanayru_Vessel_of_Light, Requirement.Shadow_Crystal",
-        "Requirement.Lanayru_Vessel_of_Light, Requirement.Shadow_Crystal",
-        "Requirement.Iron_Boots, Requirement.Water_Bombs, Requirement.Zora_Armor",
-        "Requirement.Lanayru_Vessel_of_Light, Requirement.Clawshot, Requirement.Ancient_Sky_Book_Completed",
-        "Requirement.Lanayru_Vessel_of_Light",
-        "Requirement.Lanayru_Vessel_of_Light, Requirement.Shadow_Crystal"
+        "Logic.canUse(Item.Aurus_Memo)",
+        "Logic.canSmash()",
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Iron_Boots) && Logic.canUse(Item.Goron_Bomb_Bag) && Logic.canUse(Item.Zora_Armor)",
+        "Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Ancient_Sky_Book_Completed)",
+        "",
+        "Logic.canUse(Item.Shadow_Crystal)"
     ],
     "isStartingRoom": "false",
     "checks": 

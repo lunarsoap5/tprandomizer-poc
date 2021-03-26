@@ -11,10 +11,10 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Lanayru_Vessel_of_Light",
+        "access lake hylia",
         "true",
-        "Requirement.Gate_Keys",
-        "Requirement.Shadow_Crystal"
+        "Logic.canUse(Item.Gate_Keys)",
+        "Logic.canUse(Item.Shadow_Crystal)"
     ],
     "isStartingRoom": "false",
     "checks": 

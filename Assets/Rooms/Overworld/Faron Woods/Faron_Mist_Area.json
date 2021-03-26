@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Lantern",
-        "Requirement.Small_Key_N_Faron_Gate"
+        "Logic.canUse(Item.Lantern)",
+        "Logic.canUse(Item.Small_Key_N_Faron_Gate)"
     ],
     "isStartingRoom": "false",
     "checks": 

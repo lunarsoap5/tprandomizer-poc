@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Reekfish_Scent, Requirement.Shadow_Crystal",
-        "Requirement.Reekfish_Scent, Requirement.Shadow_Crystal"
+        "Logic.canUse(Item.Reekfish_Scent) && Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Reekfish_Scent) && Logic.canUse(Item.Shadow_Crystal)"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

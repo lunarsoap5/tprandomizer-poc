@@ -7,7 +7,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Master_Sword"
+        "Logic.canUse(Item.Master_Sword)"
     ],
     "isStartingRoom": "false",
     "checks": 

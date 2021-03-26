@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.can_defeat_shadow_beast, Requirement.Master_Sword",
-        "Requirement.can_smash && Requirement.Shadow_Crystal"
+        "Logic.canDefeatShadowBeast() && Logic.canUse(Item.Master_Sword)",
+        "Logic.canSmash() && Logic.canUse(Item.Shadow_Crystal)"
     ],
     "isStartingRoom": "false",
     "checks": 

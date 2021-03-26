@@ -7,6 +7,28 @@ namespace Randomizer
 {
 	class Randomizer
 	{
+		int forestTempleSmallKeyCount;
+		int goronMinesSmallKeyCount;
+		int lakebedTempleSmallKeyCount;
+		int arbitersGroundsSmallKeyCount;
+		int snowpeakRuinsSmallKeyCount;
+		int templeofTimeSmallKeyCount;
+		int cityinTheSkySmallKeyCount;
+		int palaceofTwilightSmallKeyCount;
+		int hyruleCastleSmallKeyCount;
+		int fusedShadowCount;
+		int mirrorShardCount;
+
+		bool mdhComplete;
+		bool diababaDefeated;
+		bool fyrusDefeated;
+		bool morpheelDefeated;
+		bool stallordDefeated;
+		bool blizzetaDefeated;
+		bool armogohmaDefeated;
+		bool argorokDefeated;
+		bool zantDefeated;
+		bool ganondorfDefeated;
 		Random rnd = new Random();
 		LogicFunctions Logic = new LogicFunctions();
 		

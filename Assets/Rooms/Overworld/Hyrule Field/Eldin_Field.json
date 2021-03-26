@@ -6,18 +6,19 @@
         "kakariko_village", 
         "goron_stockcave", 
         "castle_town", 
-        "lanayru_field", "grotto_5_3", 
+        "lanayru_field", 
+        "grotto_5_3", 
         "grotto_1_1"
     ],
     "neighbourRequirements": 
     [
-        "Requirement.can_smash",
+        "Logic.canSmash()",
         "true",
-        "Requirement.Clawshot",
-        "Requirement.Lanayru_Vessel_of_Light",
-        "Requirement.can_smash",
-        "Requirement.Shadow_Crystal",
-        "Requirement.Shadow_Crystal"
+        "Logic.canUse(Item.Clawshot)",
+        "can access castle town",
+        ":pgic.canSmash()",
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Shadow_Crystal)"
     ],
     "isStartingRoom": "false",
     "checks": 

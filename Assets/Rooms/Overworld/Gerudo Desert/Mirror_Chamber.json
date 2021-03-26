@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.mirror_shard_count_4, Requirement.can_defeat_shadow_beast"
+        "Logic.canDefeatShadowBeast()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

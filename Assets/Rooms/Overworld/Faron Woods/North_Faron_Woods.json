@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Lantern",
-        "Requirement.fused_shadow_count_3, Requirement.Shadow_Crystal"
+        "Logic.canUse(Item.Lantern)",
+        "true"
     ],
     "isStartingRoom": "false",
     "checks": 

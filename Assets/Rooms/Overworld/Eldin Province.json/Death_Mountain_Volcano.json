@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Iron_Boots, Requirement.can_defeat_goron"
+        "Logic.canUse(Item.Iron_Boots) && Logic.canDefeatGoron()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

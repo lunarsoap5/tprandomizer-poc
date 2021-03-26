@@ -9,10 +9,10 @@
     ],
     "neighbourRequirements": 
     [
-        "Requirement.can_smash",
+        "Logic.canSmash()",
         "true",
         "true",
-        "Requirement.can_smash"
+        "Logic.canSmash()"
     ],
     "isStartingRoom": "false",
     "checks": 

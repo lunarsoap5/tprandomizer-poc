@@ -11,8 +11,8 @@
     [
         "true",
         "Requirement.diababa_defeated",
-        "Requirement.Coro_Key",
-        "Requirement.can_smash, Requirement.Powered_Dominion_Rod, Requirement.Shadow_Crystal"
+        "Logic.canUse(Item.Coro_Key)",
+        "Logic.canSmash() && Logic.canUse(Item.Dominion_Rod) && Logic.canUse(Item.Shadow_Crystal)"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

@@ -14,15 +14,15 @@
     ],
     "neighbourRequirements": 
     [
-        "Requirement.can_smash",
-        "Requirement.can_smash",
+        "Logic.canSmash()",
+        "Logic.canSmash()",
         "true",
-        "Requirement.can_smash",
-        "Requirement.can_smash",
-        "Requirement.Wooden_Statue",
-        "Requirement.Shadow_Crystal",
-        "Requirement.Shadow_Crystal",
-        "Requirement.Shadow_Crystal"
+        "Logic.canSmash()",
+        "Logic.canSmash()",
+        "Logic.canUse(Item.Wooden_Statue)",
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Shadow_Crystal)"
     ],
     "isStartingRoom": "false",
     "checks": 

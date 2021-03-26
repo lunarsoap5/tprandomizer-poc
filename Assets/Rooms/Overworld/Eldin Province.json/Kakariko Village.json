@@ -10,9 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "Requirement.Eldin_Vessel_of_Light",
+        "",
         "true",
-        "Requirement.Water_Bombs, Requirement.Iron_Boots"
+        "Logic.canUse(Item.Goron_Bomb_Bag) && Logic.canUse(Item.Iron_Boots)"
     ],
     "isStartingRoom": "false",
     "checks": 

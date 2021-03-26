@@ -7,8 +7,8 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.Shadow_Crystal",
-        "Requirement.can_defeat_shadow_beast"
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canDefeatShadowBeast()"
     ],
     "isStartingRoom": "false",
     "checks": 

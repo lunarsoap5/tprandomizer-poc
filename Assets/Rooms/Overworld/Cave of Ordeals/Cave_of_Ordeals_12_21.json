@@ -8,7 +8,7 @@
     "neighbourRequirements":
     [
         "Clawshot",
-        "Requirement.can_defeat_helmasaur, Requirement.can_defeat_rat, Requirement.Spinner, Requirement.can_defeat_chu, Requirement.can_defeat_chu_worm, Requirement.can_defeat_bubble, Requirement.can_defeat_bublin, Requirement.can_defeat_keese, Requirement.can_defeat_rat, Requirement.can_defeat_stalhound, Requirement.can_defeat_poe, Requirement.can_defeat_leever"
+        "Logic.canDefeatHelmasaur() && Logic.canDefeatRat() && Logic.canUse(Item.Spinner) && Logic.canDefeatChu() && Logic.canDefeatChuWorm() && Logic.canDefeatBubble() && Logic.canDefeatBublin() && Logic.canDefeatKeese() && Logic.canDefeatRat() && Logic.canDefeatStalhound() && Logic.canDefeatPoe() && Logic.canDefeatLeever()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

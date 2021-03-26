@@ -8,7 +8,7 @@
     "neighbourRequirements":
     [
         "Clawshot",
-        "Requirement.can_defeat_beamos, Requirement.can_defeat_keese, Requirement.Powered_Dominion_Rod, Requirement.can_defeat_torch_slug, Requirement.can_defeat_fire_keese, Requirement.can_defeat_dodongo, Requirement.can_defeat_fire_bubble, Requirement.can_defeat_redead_knight, Requirement.can_defeat_poe, Requirement.can_defeat_ghoul_rat, Requirement.can_defeat_chu, Requirement.can_defeat_ice_keese, Requirement.can_defeat_freezard, Requirement.can_defeat_chilfos, Requirement.can_defeat_ice_bubble, Requirement.can_defeat_leever, Requirement.can_defeat_darknut"
+        "Logic.canDefeatBeamos() && Logic.canDefeatKeese() && Logic.canUse(Item.Dominion_Rod) && Logic.canDefeatTorchSlug() && Logic.canDefeatFireKeese() && Logic.canDefeatDodongo() && Logic.canDefeatFireBubble() && Logic.canDefeatRedeadKnight() && Logic.canDefeatPoe() && Logic.canDefeatGhoulRat() && Logic.canDefeatChu() && Logic.canDefeatIceKeese() && Logic.canDefeatFreezard() && Logic.canDefeatChilfos() && Logic.canDefeatIceBubble() && Logic.canDefeatLeever() && Logic.canDefeatDarknut()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

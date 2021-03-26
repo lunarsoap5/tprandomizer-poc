@@ -8,7 +8,7 @@
     "neighbourRequirements":
     [
         "Clawshot",
-        "Requirement.can_defeat_bokoblin, Requirement.can_defeat_ice_keese, Requirement.Ball_And_Chain, Requirement.can_defeat_keese, Requirement.can_defeat_rat, Requirement.can_defeat_ghoul_rat, Requirement.can_defeat_stalchild, Requirement.can_defeat_redead_knight, REquirement.can_defeat_bublin, Requirement.can_defeat_stalfos, Requirement.can_defeat_skulltula, Requirement.can_defeat_bubble, Requirement.can_defeat_lizalfos, Requirement.can_defeat_fire_bubble"
+        "Logic.canDefeatBokoblin() && Logic.canDefeatIceKeese() && Logic.canUse(Item.Ball_and_Chain) && Logic.canDefeatKeese() && Logic.canDefeatRat() && Logic.canDefeatGhoulRat() && Logic.canDefeatStalchild() && Logic.canDefeatRedeadKnight() && Logic.canDefeatBublin() && Logic.canDefeatStalfos() && Logic.canDefeatSkulltula() && Logic.canDefeatBubble() && Logic.canDefeatLizalfos() && Logic.canDefeatFireBubble()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

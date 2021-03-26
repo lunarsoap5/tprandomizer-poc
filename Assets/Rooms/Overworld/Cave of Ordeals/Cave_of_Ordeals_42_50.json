@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Requirement.can_defeat_armos, Requirement.Double_Clawshot, Requirement.can_defeat_bokoblin, Requirement.can_defeat_baba_serpent, Requirement.can_defeat_lizalfos, Requirement.can_defeat_bublin, Requirement.can_defeat_dinalfos, Requirement.can_defeat_poe, Requirement.can_defeat_redead_knight, Requirement.can_defeat_chu, Requirement.can_defeat_freezard, Requirement.can_defeat_chilfos, Requirement.can_defeat_ghoul_rat, Requirement.can_defeat_rat, Requirement.can_defat_stalchild, Requirement.can_defeat_aeralfos, Requirement.can_defeat_darknut"
+        "Logic.canDefeatArmos() && Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatBokoblin() && Logic.canDefeatBabaSerpent() && Logic.canDefeatLizalfos() && Logic.canDefeatBublin() && Logic.canDefeatDinalfos() && Logic.canDefeatPoe() && Logic.canDefeatRedeadKnight() && Logic.canDefeatChu() && Logic.canDefeatFreezard() && Logic.canDefeatChilfos() && Logic.canDefeatGhoulRat() && Logic.canDefeatRat() && Logic.canDefeatStalchild() && Logic.canDefeatAeralfos() && Logic.canDefeatDarknut()"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

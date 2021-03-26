@@ -5,71 +5,21 @@ using System.Collections.Generic;
 
 namespace Randomizer
 {
-	class Randomizer
+	class RandomizerFunction
 	{
-		int forestTempleSmallKeyCount;
-		int goronMinesSmallKeyCount;
-		int lakebedTempleSmallKeyCount;
-		int arbitersGroundsSmallKeyCount;
-		int snowpeakRuinsSmallKeyCount;
-		int templeofTimeSmallKeyCount;
-		int cityinTheSkySmallKeyCount;
-		int palaceofTwilightSmallKeyCount;
-		int hyruleCastleSmallKeyCount;
-		int fusedShadowCount;
-		int mirrorShardCount;
-
-		bool mdhComplete;
-		bool diababaDefeated;
-		bool fyrusDefeated;
-		bool morpheelDefeated;
-		bool stallordDefeated;
-		bool blizzetaDefeated;
-		bool armogohmaDefeated;
-		bool argorokDefeated;
-		bool zantDefeated;
-		bool ganondorfDefeated;
 		Random rnd = new Random();
 		LogicFunctions Logic = new LogicFunctions();
-		
 
-		struct Check
-		{
-			string checkName { get; set;} //the common name for the check this can be used in the randomizer to identify the check."
-			bool empty { get; set;} //Identifies if we already placed an item on this check (starts at true)
-			bool logicalCondition { get; set;} //List of requirements to obtain this check while inside the room (so does not include the items needed to enter the room)
-			ushort hash { get; set;} //the fletcher hash that will be compared to on stage load
-			bool isExcluded { get; set;} //Identifies if the check is excluded or not. We can write the randomizer to not place important items in excluded checks
-			List<string> checkCategory { get; set;} //Allows grouping of checks to make it easier to randomize them based on their type, region, exclusion status, etc.
-			Item itemId { get; set;} //The original item id of the check. This allows us to make an array of all items in the item pool for randomization purposes. Also is useful for documentation purposes.
-		}
-
-		struct Room
-		{
-			string name { get; set;} //Name we give the room to identify it (it can be a series of rooms that don't have requirements between each other to make the algorithm go faster)
-			List<Room*> neighbours { get; set;} //Refers to the rooms of the same stage that can be accesed from this room
-			List<List<bool>> neighbourRequirments { get; set;} //List of list of requirements to enter each neighbouring room
-			bool isStartingRoom { get; set;} //Defines if it is the stage you start the game in
-			List<Check*> checks { get; set;} //Checks contained inside the room
-			bool visited { get; set;}
-			string region { get; set;}
-		}
-
-		
-		list<uint8_t> HeldImportantItems = {/*all important item ids*/};
+		List<byte> HeldImportantItems = {/*all important item ids*/};
 		void resetAllRoomsVisited()
 		{
 			for (int i = 0; i < rooms.count(); i++)
 			{
 				rooms[i].visited = false;
 			}
-			if (test == Logic.canUse(Item.Master_Sword))
-			{
-				test = false;
-			}
 		}
 
-		Room* setupGraph()
+		Room setupGraph()
 		{
 			resetAllRoomsVisited();
 			
@@ -118,11 +68,11 @@ namespace Randomizer
 			return areRequirementsMet;
 		}
 
-		List<*Check> listAllAvailableChecks(*Room startingRoom)
+		List<Check> listAllAvailableChecks(Room startingRoom)
 		{
 			restAllRoomsVisited();
-			List<*Check> checks = {};
-			List<*Room> roomsToExplore = {};
+			List<Check> checks = {};
+			List<Room> roomsToExplore = {};
 			startingRoom->visited = true;
 			roomsToExplore.add(startingRoom);
 			
@@ -146,11 +96,11 @@ namespace Randomizer
 				roomsToExplore.remove(roomsToExplore[0]);
 			}
 			
-			retrun checks;
+			return checks;
 			
 		}
 
-		bool checkIfItemNotNeededToReachCheck(int item, *Check check, *Room startingRoom)
+		bool checkIfItemNotNeededToReachCheck(int item, Check check, Room startingRoom)
 		{
 			restAllRoomsVisited();
 			list<*Room> roomsToExplore = {};
@@ -421,16 +371,16 @@ namespace Randomizer
 		}
 
 
-		void placeItemInCheck(int item, *Check check)
+		void placeItemInCheck(int item, Check check)
 		{
-			check->itemWasPlaced = true;
+			check.itemWasPlaced = true;
 			int itemToPlaceInCheck = item;
 			HeldImportantItems.remove(item);
 			PlacedImportantItems.add(item);
 			... //Perform whatever is needed to insert the item in the check
 		}
 
-		void startOver(*Room startingRoom)
+		void startOver(Room startingRoom)
 		{
 			nbSkybooksPlaced = 0;
 			for (int i = 0; i< PlacedImportantItems.count(); i++)
@@ -442,11 +392,11 @@ namespace Randomizer
 			placeRequiredItems(startingRoom);
 		}
 
-		void placeRequiredItems(*Room startingRoom)
+		void placeRequiredItems(Room startingRoom)
 		{
-			list<*Check> availableChecks = listAllAvailableChecks(startingRoom);
+			List<Check> availableChecks = listAllAvailableChecks(startingRoom);
 			int itemToPlace = verifyItem(HeldImportantItems[rnd.next(HeldImportantItems.count()-1)]);
-			*Check checkToReciveItem = availableChecks[rnd.next(availableChecks.count()-1)];
+			Check checkToReciveItem = availableChecks[rnd.next(availableChecks.count()-1)];
 			
 			while (HeldImportantItems.count() > 0 && availableChecks > 0)
 			{
@@ -470,7 +420,7 @@ namespace Randomizer
 
 		void Main()
 		{
-			*Room startingRoom = setupGraph();    
+			Room startingRoom = setupGraph();    
 			placeShopItems(startingRoom);
 			placeDungeonItems(startingRoom);
 			placeProgressiveItems(startingRoom);

@@ -6,6 +6,31 @@ namespace Logic
 {
     class LogicFunctions
     {
+        RandomizerFunction Randomizer = new RandomizerFunction();
+
+        public int forestTempleSmallKeyCount = 0;
+		public int goronMinesSmallKeyCount = 0;
+		public int lakebedTempleSmallKeyCount = 0;
+		public int arbitersGroundsSmallKeyCount = 0;
+		public int snowpeakRuinsSmallKeyCount = 0;
+		public int templeofTimeSmallKeyCount = 0;
+		public int cityinTheSkySmallKeyCount = 0;
+		public int palaceofTwilightSmallKeyCount = 0;
+		public int hyruleCastleSmallKeyCount = 0;
+		public int fusedShadowCount = 0;
+		public int mirrorShardCount = 0;
+
+		bool mdhComplete;
+		bool diababaDefeated;
+		bool fyrusDefeated;
+		bool morpheelDefeated;
+		bool stallordDefeated;
+		bool blizzetaDefeated;
+		bool armogohmaDefeated;
+		bool argorokDefeated;
+		bool zantDefeated;
+		bool ganondorfDefeated;
+
         public bool canUse(Item item)
 		{
 			bool canUseItem = false;
@@ -339,7 +364,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatLizalfos()
         {
             return (hasSword() ||
@@ -348,7 +373,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatMiniFreezard()
         {
             return (hasSword() ||
@@ -357,7 +382,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatMoldorm()
         {
             return (hasSword() ||
@@ -366,7 +391,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatPoisonMite()
         {
             return (hasSword() ||
@@ -375,7 +400,7 @@ namespace Logic
             canUse(Item.Lantern) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatPuppet()
         {
             return (hasSword() ||
@@ -384,7 +409,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatRat()
         {
             return (hasSword() ||
@@ -394,7 +419,7 @@ namespace Logic
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatRedeadKnight()
         {
             return (hasSword() ||
@@ -403,12 +428,12 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatShadowBeast()
         {
             return (hasSword() ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatShadowBublin()
         {
             return (hasSword() ||
@@ -417,7 +442,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatShadowDekuBaba()
         {
             return (hasSword() ||
@@ -428,7 +453,7 @@ namespace Logic
             canUse(Item.Shield_Attack) ||
             canUse(Item.Slingshot) ||
             canUse(Item.Clawshot));
-            }
+        }
         public bool canDefeatShadowInsect()
         {
             return canUse(Item.Shadow_Crystal);
@@ -441,7 +466,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatShadowKeese()
         {
             return (hasSword() ||
@@ -451,7 +476,7 @@ namespace Logic
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatShadowVermin()
         {
             return (hasSword() ||
@@ -460,13 +485,13 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatShellBlade()
         {
             return ((hasSword() ||
             canUse(Item.Goron_Bomb_Bag)) &&
             canUse(Item.Iron_Boots));
-            }
+        }
         public bool canDefeatSkullfish()
         {
             return (hasSword() ||
@@ -475,7 +500,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatSkulltula()
         {
             return (hasSword() ||
@@ -484,12 +509,12 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatStalfos()
         {
             return (canUse(Item.Ball_and_Chain) ||
             canUse(Item.Goron_Bomb_Bag));
-            }
+        }
         public bool canDefeatStalhound()
         {
             return (hasSword() ||
@@ -498,7 +523,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatStalchild()
         {
             return (hasSword() ||
@@ -507,7 +532,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatTetike()
         {
             return (hasSword() ||
@@ -516,7 +541,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatTileWorm()
         {
             return ((hasSword() ||
@@ -524,7 +549,7 @@ namespace Logic
             canUse(Item.Heros_Bow) ||
             canUse(Item.Shadow_Crystal)) &&
             canUse(Item.Boomerang));
-            }
+        }
         public bool canDefeatToado()
         {
             return (hasSword() ||
@@ -532,21 +557,21 @@ namespace Logic
             canUse(Item.Heros_Bow) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatWaterToadpoli()
         {
             return (hasSword() || 
             canUse(Item.Ball_and_Chain) ||
             canUse(Item.Heros_Bow) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatTorchSlug()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
             canUse(Item.Heros_Bow) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatWalltula()
         {
             return (canUse(Item.Ball_and_Chain) ||
@@ -563,7 +588,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatYoungGohma()
         {
             return (hasSword() ||
@@ -572,7 +597,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatZantHead()
         {
             return (canUse(Item.Shadow_Crystal) ||
@@ -586,22 +611,22 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatDangoro()
         {
             return ((hasSword() ||
             canUse(Item.Ball_and_Chain) ||
             canUse(Item.Shadow_Crystal)) &&
             canUse(Item.Iron_Boots));
-            }
+        }
         public bool canDefeatCarrierKargarok()
         {
             return canUse(Item.Shadow_Crystal);
-            }
+        }
         public bool canDefeatTwilitBloat()
         {
             return canUse(Item.Shadow_Crystal);
-            }
+        }
         public bool canDefeatDekuToad()
         {
             return (hasSword() ||
@@ -610,19 +635,19 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatSkullKid1()
         {
             return canUse(Item.Shadow_Crystal);
-            }
+        }
         public bool canDefeatSkullKid2()
         {
             return canUse(Item.Heros_Bow);
-            }
+        }
         public bool canDefeatKingBublin2()
         {
             return canUse(Item.Heros_Bow);
-            }
+        }
         public bool canDefeatKingBublin3()
         {
             return (hasSword() ||
@@ -631,7 +656,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatKingBublin4()
         {
             return (hasSword() ||
@@ -640,7 +665,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatDeathSword()
         {
             return ((hasSword() ||
@@ -651,7 +676,7 @@ namespace Logic
             canUse(Item.Heros_Bow) ||
             canUse(Item.Clawshot)) &&
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatDarkhammer()
         {
             return (hasSword() ||
@@ -660,7 +685,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatPhantomZant()
         {
             return (canUse(Item.Shadow_Crystal) ||
@@ -676,28 +701,28 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
-            }
+        }
         public bool canDefeatFyrus()
         {
             return (canUse(Item.Heros_Bow) &&
             canUse(Item.Iron_Boots) &&
             hasSword());
-            }
+        }
         public bool canDefeatMorpheel()
         {
             return (canUse(Item.Zora_Armor) &&
             canUse(Item.Iron_Boots) &&
             hasSword());
-            }
+        }
         public bool canDefeatStallord()
         {
             return (canUse(Item.Spinner) &&
             hasSword());
-            }
+        }
         public bool canDefeatBlizzeta()
         {
             return canUse(Item.Ball_and_Chain);
-            }
+        }
         public bool canDefeatArmogohma()
         {
             return (canUse(Item.Heros_Bow) &&
@@ -709,7 +734,7 @@ namespace Logic
             canUse(Item.Iron_Boots) &&
             (canUse(Item.Master_Sword_Light) ||
             canUse(Item.Master_Sword)));
-            }
+        }
         public bool canDefeatZant()
         {
             return ((canUse(Item.Master_Sword) ||
@@ -719,20 +744,12 @@ namespace Logic
             canUse(Item.Iron_Boots) &&
             canUse(Item.Zora_Armor) &&
             canUse(Item.Ball_and_Chain)));
-            }
+        }
         public bool canDefeatGanondorf()
         {
             return (canUse(Item.Shadow_Crystal) &&
             canUse(Item.Master_Sword) &&
             canUse(Item.Ending_Blow) );
-            }
-
-        public bool canFreeAllMonkeys()
-        {
-                    return (canBreakMonkeyCage() &&
-                    (forestTempleSmallKeyCount >= 4) &&
-                    canBurnWebs() &&
-                    canUse(Item.Boomerang) && canDefeatBokoblin() && canDefeatBigBaba());
         }
 
         public bool canSmash()
@@ -746,7 +763,7 @@ namespace Logic
             return (canUse(Item.Ball_and_Chain) ||
             canUse(Item.Lantern) ||
             canUse(Item.Goron_Bomb_Bag));
-            }
+        }
 
         public bool hasRangedItem()
         {
@@ -755,20 +772,20 @@ namespace Logic
             canUse(Item.Heros_Bow) ||
             canUse(Item.Clawshot) ||
             canUse(Item.Boomerang));
-            }
+        }
 
         public bool hasSheild()
         {
             return (canUse(Item.Ordon_Shield)  ||
             canUse(Item.Wooden_Shield)  ||
             canUse(Item.Hylian_Shield) );
-            }
+        }
         public bool canLaunchBombs()
         {
             return ((canUse(Item.Boomerang) ||
             canUse(Item.Heros_Bow)) &&
             canUse(Item.Goron_Bomb_Bag));
-            }
+        }
 
         public bool canCutHangingWeb()
         {
@@ -777,32 +794,11 @@ namespace Logic
             canUse(Item.Boomerang) ||
             canUse(Item.Ball_and_Chain));
         }
-
-        public bool canPressMinesSwitch()
-        {
-            return (canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Iron_Boots));
-            }
-        public bool canKnockDownHangingBaba()
-        {
-            return (canUse(Item.Heros_Bow) ||
-            canUse(Item.Clawshot) ||
-            canUse(Item.Boomerang));
-            }
-
-        public bool canBreakWoodenDoor()
-        {
-            return (canUse(Item.Shadow_Crystal) ||
-            hasSword() ||
-            (canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Goron_Bomb_Bag)));
-        }
-
         public bool canKnockDownHCPainting()
         {
             return (canUse(Item.Heros_Bow) ||
             canUse(Item.Goron_Bomb_Bag));
-        }
+        } 
         public bool canBreakMonkeyCage()
         {
             return (hasSword() ||
@@ -812,12 +808,32 @@ namespace Logic
             canUse(Item.Shadow_Crystal) ||
             canUse(Item.Heros_Bow) ||
             canUse(Item.Clawshot));
-            }
-        public bool canAccessDarkhammer()
+        }
+        public bool canPressMinesSwitch()
         {
             return (canUse(Item.Ball_and_Chain) ||
-            (canUse(Item.Goron_Bomb_Bag) &&
-            (snowpeakRuinsSmallKeyCount >= 4)));
-            }
+            canUse(Item.Iron_Boots));
+        }
+        public bool canFreeAllMonkeys()
+        {
+                    return (canBreakMonkeyCage() &&
+                    (forestTempleSmallKeyCount >= 4) &&
+                    canBurnWebs() &&
+                    canUse(Item.Boomerang) && canDefeatBokoblin() && canDefeatBigBaba());
+        }
+        public bool canKnockDownHangingBaba()
+        {
+            return (canUse(Item.Heros_Bow) ||
+            canUse(Item.Clawshot) ||
+            canUse(Item.Boomerang));
+        }
+        
+        public bool canBreakWoodenDoor()
+        {
+            return (canUse(Item.Shadow_Crystal) ||
+            hasSword() ||
+            (canUse(Item.Ball_and_Chain) ||
+            canUse(Item.Goron_Bomb_Bag)));
+        }
     }
 }

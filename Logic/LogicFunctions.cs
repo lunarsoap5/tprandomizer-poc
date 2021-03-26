@@ -1,12 +1,10 @@
 using System;
 using Assets.Items;
-using Randomizer;
 
 namespace Logic
 {
     class LogicFunctions
     {
-        RandomizerFunction Randomizer = new RandomizerFunction();
 
         public int forestTempleSmallKeyCount = 0;
 		public int goronMinesSmallKeyCount = 0;
@@ -34,13 +32,7 @@ namespace Logic
         public bool canUse(Item item)
 		{
 			bool canUseItem = false;
-			foreach (var heldItem in heldItemList)
-			{
-				if (item == heldItem)
-				{
-					canUseItem = true;
-				}
-			}
+			
 			return canUseItem;
 		}
 

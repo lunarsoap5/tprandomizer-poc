@@ -1,10 +1,9 @@
 {
-    "name": "Gift_From_Rusl",
-    "requirements": 
-    [
-        "canUse(Item.Slingshot)"
-    ],
+    "checkName": "Gift_From_Rusl",
+    "empty": "false",
+    "requirements": "canUse(Item.Slingshot)",
     "hash": "8BA3",
+    "isExcluded": "false",
     "category": ["Chest"],
-    "item_id": "0x3F"
+    "itemId": "0x3F"
 }

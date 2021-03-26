@@ -1,6 +1,6 @@
 namespace Assets.Items
 {
-	enum Item : byte
+	public enum Item : byte
 	{
 		Recovery_Heart	=	0x00,
 		Green_Rupee	=	0x01,

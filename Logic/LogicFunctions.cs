@@ -3,7 +3,7 @@ using Assets.Items;
 
 namespace Logic
 {
-    class LogicFunctions
+    public class LogicFunctions
     {
 
         public int forestTempleSmallKeyCount = 0;
@@ -29,7 +29,14 @@ namespace Logic
 		bool zantDefeated;
 		bool ganondorfDefeated;
 
-        public bool canUse(Item item)
+        public static bool canUse(Item item)
+		{
+			bool canUseItem = false;
+			
+			return canUseItem;
+		}
+
+        public static bool hasItem(int item)
 		{
 			bool canUseItem = false;
 			
@@ -138,7 +145,7 @@ namespace Logic
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
         }
-        public bool canDefeatBombskit()
+        public bool canDefeatBomskit()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||

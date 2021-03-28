@@ -1,7 +1,7 @@
 {
     "checkName": "Gift_From_Rusl",
     "empty": "false",
-    "requirements": "canUse(Item.Slingshot)",
+    "requirements": "Logic.canUse(Item.Double_Clawshot)",
     "hash": "8BA3",
     "isExcluded": "false",
     "category": ["Chest"],

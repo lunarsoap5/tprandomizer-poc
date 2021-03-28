@@ -11,22 +11,22 @@ using System.Text.RegularExpressions;
 
 namespace tprandomizer_poc_main
 {
-    public class Room
+    public struct Room
 		{
-			string name { get; set;} //Name we give the room to identify it (it can be a series of rooms that don't have requirements between each other to make the algorithm go faster)
-			List<Room> neighbours { get; set;} //Refers to the rooms of the same stage that can be accesed from this room
-			List<List<bool>> neighbourRequirments { get; set;} //List of list of requirements to enter each neighbouring room
-			bool isStartingRoom { get; set;} //Defines if it is the stage you start the game in
-			List<Check> checks { get; set;} //Checks contained inside the room
-			bool visited { get; set;}
-			string region { get; set;}
+			public string name { get; set;} //Name we give the room to identify it (it can be a series of rooms that don't have requirements between each other to make the algorithm go faster)
+			public List<string> neighbours { get; set;} //Refers to the rooms of the same stage that can be accesed from this room
+			public List<string> neighbourRequirments { get; set;} //List of list of requirements to enter each neighbouring room
+			public bool isStartingRoom { get; set;} //Defines if it is the stage you start the game in
+			public List<string> checks { get; set;} //Checks contained inside the room
+			public bool visited { get; set;}
+			public string region { get; set;}
 		}
     
     public class RoomFunctions
     {
         public Dictionary<string, Room> RoomDict = new Dictionary<string, Room>();
         
-        public void InitalizeRooms()
+        public void InitializeRooms()
         {
             RoomDict.Add("lakebed_temple_00_01", new Room());
             RoomDict.Add("lakebed_temple_02_03", new Room());

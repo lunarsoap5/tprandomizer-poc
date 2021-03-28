@@ -19,22 +19,25 @@ namespace tprandomizer_poc_main
             RoomFunctions Rooms = new RoomFunctions();
             Type myCheckType=typeof(Check);
             Checks.InitializeChecks();
-            foreach (string file in Directory.EnumerateFiles("./Checks/", "*.json"))
+            Rooms.InitializeRooms();
+            foreach (string file in System.IO.Directory.GetFiles("./Checks/", "*",SearchOption.AllDirectories))
             {
                 string contents = File.ReadAllText(file);
                 PropertyInfo myPropInfo = myCheckType.GetProperty(file);
                 Checks.CheckDict.Add(file,JsonConvert.DeserializeObject<Check>(contents));
+                Console.WriteLine("Check File Loaded " + file);
             }
 
             Type myRoomType=typeof(Room);
-            foreach (string file in Directory.EnumerateFiles("./Assets/Rooms/", "*.json"))
+            foreach (string file in System.IO.Directory.GetFiles("./Assets/Rooms/", "*",SearchOption.AllDirectories))
             {
                 string contents = File.ReadAllText(file);
                 PropertyInfo myPropInfo = myRoomType.GetProperty(file);
                 Rooms.RoomDict.Add(file,JsonConvert.DeserializeObject<Room>(contents));
+                Console.WriteLine("Room File Loaded " + file);
             }
             // To get the values alone, use the Values property.
-            Dictionary<string, Room>.ValueCollection valueColl = Rooms.RoomDict.Values;
+         /*   Dictionary<string, Room>.ValueCollection valueColl = Rooms.RoomDict.Values;
 
             // The elements of the ValueCollection are strongly typed
             // with the type that was specified for dictionary values.
@@ -42,7 +45,7 @@ namespace tprandomizer_poc_main
             foreach( Room s in valueColl )
             {
                 Console.WriteLine("Value = {0}", s);
-            }
+            }*/
                 
                 //myJsonObject.requirements = Regex.Replace(myJsonObject.requirements, @"\bLogic\b", "Logic.LogicFunctions");
                 //var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");

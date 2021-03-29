@@ -67,36 +67,34 @@ namespace tprandomizer_poc_main
             
             
             Checks.InitializeChecks();
-            Type myCheckType=typeof(Check);
             foreach (string file in System.IO.Directory.GetFiles("./Checks/", "*",SearchOption.AllDirectories))
             {
                 string contents = File.ReadAllText(file);
-                PropertyInfo myPropInfo = myCheckType.GetProperty(file);
-                Checks.CheckDict.Add(file,JsonConvert.DeserializeObject<Check>(contents));
-                Check currentCheck = Checks.CheckDict[file];
+                string fileName = Path.GetFileNameWithoutExtension(file);
+                Checks.CheckDict[fileName] = JsonConvert.DeserializeObject<Check>(contents);
+                Check currentCheck = Checks.CheckDict[fileName];
                 currentCheck.requirements = Regex.Replace(currentCheck.requirements, @"\bLogic\b", "Logic.LogicFunctions");
-                Checks.CheckDict[file] = currentCheck;
-                Console.WriteLine("Check File Loaded " + file);
+                Checks.CheckDict[fileName] = currentCheck;
+                Console.WriteLine("Check File Loaded " + fileName);
             }
 
             Rooms.InitializeRooms();
-            Type myRoomType=typeof(Room);
             foreach (string file in System.IO.Directory.GetFiles("./Assets/Rooms/", "*",SearchOption.AllDirectories))
             {
                 string contents = File.ReadAllText(file);
-                PropertyInfo myPropInfo = myRoomType.GetProperty(file);
-                Rooms.RoomDict.Add(file,JsonConvert.DeserializeObject<Room>(contents));
-                Room currentRoom = Rooms.RoomDict[file];
+                string fileName = Path.GetFileNameWithoutExtension(file);
+                Rooms.RoomDict[fileName] = JsonConvert.DeserializeObject<Room>(contents);
+                Room currentRoom = Rooms.RoomDict[fileName];
                 var newList = currentRoom.neighbourRequirements.Select(s => s.Replace("Logic", "Logic.LogicFunctions")).ToList();
                 currentRoom.neighbourRequirements = newList;
                 Rooms.RoomDict[file] = currentRoom;
-                Console.WriteLine("Room File Loaded " + file);
+                Console.WriteLine("Room File Loaded " + fileName);
             }
 
             
 
             //Rooms.setupGraph();
-
+            Console.WriteLine("Current Item Pool:");
            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
             {
                 Check currentCheck = checkList.Value;

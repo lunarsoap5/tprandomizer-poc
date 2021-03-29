@@ -1,0 +1,9 @@
+{
+    "checkName": "City in The Sky Underwater West Chest",
+    "requirements": "Logic.canUse(Item.Iron_Boots)",
+    "hash": "CF09",
+    "isExcluded": false,
+    "category": ["Chest", "City in The Sky"],
+    "itemId": "Water_Bombs_15",
+    "itemWasPlaced": false
+}

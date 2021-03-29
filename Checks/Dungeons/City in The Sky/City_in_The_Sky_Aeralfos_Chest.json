@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatAeralfos() && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Iron_Boots)",
-    "hash": "26B5",
-    "category": ["Chest", "City in The Sky"],
-    "item_id": "0x47"
-}

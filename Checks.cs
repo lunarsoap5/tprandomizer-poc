@@ -15,7 +15,6 @@ namespace tprandomizer_poc_main
     public struct Check
     {
         public string checkName { set; get;} //the common name for the check this can be used in the randomizer to identify the check."
-        public bool empty { get; set;} //Identifies if we already placed an item on this check (starts at true)
         public string requirements { get; set;} //List of requirements to obtain this check while inside the room (so does not include the items needed to enter the room)
         public string hash { get; set;} //the fletcher hash that will be compared to on stage load
         public bool isExcluded { get; set;} //Identifies if the check is excluded or not. We can write the randomizer to not place important items in excluded checks
@@ -177,25 +176,25 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Bublin_Camp_First_Chest_Under_Tower_at_Entrance", new Check());
             CheckDict.Add("Bublin_Camp_Small_Chest_in_Back_of_Camp", new Check());
             CheckDict.Add("Outside_Arbiters_Grounds_Lantern_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_Lobby_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_East_Lower_Turnable_Redead_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_Torch_Room_East_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_Torch_Room_West_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_East_Upper_Turnable_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_East_Upper_Turnable_Redead_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_Ghoul_Rat_Room_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_West_Small_Chest_Behind_Block", new Check());
-            CheckDict.Add("Arbiters_Grounds_West_Chandelier_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_West_Stalfos_North_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_West_Stalfos_Southeast_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_North_Turning_Room_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_Death_Sword_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_Spinner_Room_First_Small_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_Spinner_Room_Second_Small_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_Spinner_Room_Lower_Central_Small_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_Spinner_Room_Stalfos_Alcove_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_Spinner_Room_Lower_North_Chest", new Check());
-            CheckDict.Add("Arbiters_Grounds_Big_Key_Chest", new Check());
+            CheckDict.Add("Arbiters Grounds Lobby Chest", new Check());
+            CheckDict.Add("Arbiters Grounds East Lower Turnable Redead Chest", new Check());
+            CheckDict.Add("Arbiters Grounds Torch Room East Chest", new Check());
+            CheckDict.Add("Arbiters Grounds Torch Room West Chest", new Check());
+            CheckDict.Add("Arbiters Grounds East Upper Turnable Chest", new Check());
+            CheckDict.Add("Arbiters Grounds East Upper Turnable Redead Chest", new Check());
+            CheckDict.Add("Arbiters Grounds Ghoul Rat Room Chest", new Check());
+            CheckDict.Add("Arbiters Grounds West Small Chest Behind Block", new Check());
+            CheckDict.Add("Arbiters Grounds West Chandelier Chest", new Check());
+            CheckDict.Add("Arbiters Grounds West Stalfos North Chest", new Check());
+            CheckDict.Add("Arbiters Grounds West Stalfos Southeast Chest", new Check());
+            CheckDict.Add("Arbiters Grounds North Turning Room Chest", new Check());
+            CheckDict.Add("Arbiters Grounds Death Sword Chest", new Check());
+            CheckDict.Add("Arbiters Grounds Spinner Room First Small Chest", new Check());
+            CheckDict.Add("Arbiters Grounds Spinner Room Second Small Chest", new Check());
+            CheckDict.Add("Arbiters Grounds Spinner Room Lower Central Small Chest", new Check());
+            CheckDict.Add("Arbiters Grounds Spinner Room Stalfos Alcove Chest", new Check());
+            CheckDict.Add("Arbiters Grounds Spinner Room Lower North Chest", new Check());
+            CheckDict.Add("Arbiters Grounds Big Key Chest", new Check());
             CheckDict.Add("Lanayru_Field_Spinner_Track_Chest", new Check());
             CheckDict.Add("Lanayru_Field_Stalfos_Grotto_Right_Small_Chest", new Check());
             CheckDict.Add("Lanayru_Field_Stalfos_Grotto_Left_Small_Chest", new Check());
@@ -251,30 +250,30 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Lake_Hylia_Bridge_Owl_Statue_Chest", new Check());
             CheckDict.Add("Faron_Woods_Owl_Statue_Chest", new Check());
             CheckDict.Add("Gerudo_Desert_Owl_Statue_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_Underwater_West_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_Underwater_East_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_West_Wing_First_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_East_First_Wing_Chest_After_Fans", new Check());
-            CheckDict.Add("City_in_The_Sky_East_Tile_Worm_Small_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_East_Wing_After_Dinalfos_Alcove_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_East_Wing_After_Dinalfos_Ledge_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_Aeralfos_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_East_Wing_Lower_Level_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_West_Wing_Baba_Balcony_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_West_Wing_Narrow_Ledge_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_West_Wing_Tile_Worm_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_Baba_Tower_Top_Small_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_Baba_Tower_Narrow_Ledge_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_Baba_Tower_Alcove_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_West_Garden_Corner_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_West_Garden_Lone_Island_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_West_Garden_Lower_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_West_Garden_Ledge_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_Central_Outside_Ledge_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_Central_Outside_Poe_Island_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_Big_Key_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_Chest_Below_Big_Key_Chest", new Check());
-            CheckDict.Add("City_in_The_Sky_Chest_Behind_North_Fan", new Check());
+            CheckDict.Add("City in The Sky Underwater West Chest", new Check());
+            CheckDict.Add("City in The Sky Underwater East Chest", new Check());
+            CheckDict.Add("City in The Sky West Wing First Chest", new Check());
+            CheckDict.Add("City in The Sky East First Wing Chest After Fans", new Check());
+            CheckDict.Add("City in The Sky East Tile Worm Small Chest", new Check());
+            CheckDict.Add("City in The Sky East Wing After Dinalfos Alcove Chest", new Check());
+            CheckDict.Add("City in The Sky East Wing After Dinalfos Ledge Chest", new Check());
+            CheckDict.Add("City in The Sky Aeralfos Chest", new Check());
+            CheckDict.Add("City in The Sky East Wing Lower Level Chest", new Check());
+            CheckDict.Add("City in The Sky West Wing Baba Balcony Chest", new Check());
+            CheckDict.Add("City in The Sky West Wing Narrow Ledge Chest", new Check());
+            CheckDict.Add("City in The Sky West Wing Tile Worm Chest", new Check());
+            CheckDict.Add("City in The Sky Baba Tower Top Small Chest", new Check());
+            CheckDict.Add("City in The Sky Baba Tower Narrow Ledge Chest", new Check());
+            CheckDict.Add("City in The Sky Baba Tower Alcove Chest", new Check());
+            CheckDict.Add("City in The Sky West Garden Corner Chest", new Check());
+            CheckDict.Add("City in The Sky West Garden Lone Island Chest", new Check());
+            CheckDict.Add("City in The Sky West Garden Lower Chest", new Check());
+            CheckDict.Add("City in The Sky West Garden Ledge Chest", new Check());
+            CheckDict.Add("City in The Sky Central Outside Ledge Chest", new Check());
+            CheckDict.Add("City in The Sky Central Outside Poe Island Chest", new Check());
+            CheckDict.Add("City in The Sky Big Key Chest", new Check());
+            CheckDict.Add("City in The Sky Chest Below Big Key Chest", new Check());
+            CheckDict.Add("City in The Sky Chest Behind North Fan", new Check());
             CheckDict.Add("Kakariko_Gorge_Double_Clawshot_Chest", new Check());
             CheckDict.Add("Lanayru_Spring_East_Double_Clawshot_Chest", new Check());
             CheckDict.Add("Lanayru_Spring_West_Double_Clawshot_Chest", new Check());

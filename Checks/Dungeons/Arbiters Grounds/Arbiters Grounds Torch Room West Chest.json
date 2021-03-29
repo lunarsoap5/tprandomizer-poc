@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiter's Grounds Torch Room West Chest",
+    "requirements": "true",
+    "hash": "FAA5",
+    "isExcluded": false,
+    "category": ["Chest", "Arbiter's Grounds", "Dungeon Items", "Dungeon Map"],
+    "itemId": "Dungeon_Map",
+    "itemWasPlaced": false
+}

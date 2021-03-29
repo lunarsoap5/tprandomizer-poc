@@ -1,0 +1,9 @@
+{
+    "checkName": "City in The Sky East Wing After Dinalfos Alcove Chest",
+    "requirements": "Logic.canUse(Item.Clawshot)",
+    "hash": "5C4D",
+    "isExcluded": false,
+    "category": ["Chest", "City in The Sky"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

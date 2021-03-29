@@ -1,9 +1,0 @@
-{
-    "checkName": "Gift_From_Rusl",
-    "empty": "false",
-    "requirements": "Logic.canUse(Item.Double_Clawshot)",
-    "hash": "8BA3",
-    "isExcluded": "false",
-    "category": ["Chest"],
-    "itemId": "Wooden_Sword"
-}

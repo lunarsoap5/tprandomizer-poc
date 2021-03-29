@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiter's Grounds Death Sword Chest",
+    "requirements": "Logic.canDefeatDeathSword()",
+    "hash": "8318",
+    "isExcluded": false,
+    "category": ["Chest", "Arbiter's Grounds"],
+    "itemId": "Spinner",
+    "itemWasPlaced": false
+}

@@ -1,6 +1,0 @@
-{
-    "requirements": "(Logic.canDefeatBombling() || Logic.canBurnWebs()) && Logic.canUse(Item.Boomerang)",
-    "hash": "2C4F",
-    "category": ["Chest", "Forest Temple", "Big Key"],
-    "item_id": "0x92"
-}

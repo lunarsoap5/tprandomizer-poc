@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiter's Grounds West Small Chest Behind Block",
+    "requirements": "true",
+    "hash": "B294",
+    "isExcluded": false,
+    "category": ["Chest", "Arbiter's Grounds"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

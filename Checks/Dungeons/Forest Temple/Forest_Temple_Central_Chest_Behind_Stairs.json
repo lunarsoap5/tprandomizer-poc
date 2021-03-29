@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Boomerang) && Logic.canDefeatBombling()",
-    "hash": "E30F",
-    "category": ["Chest", "Forest Temple"],
-    "item_id": "0x04"
-}

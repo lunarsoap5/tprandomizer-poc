@@ -1,6 +1,0 @@
-{
-    "requirements": "(arbitersGroundsSmallKeyCount >= 4) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatGhoulRat()",
-    "hash": "B288",
-    "category": ["Chest", "Arbiter's Grounds"],
-    "item_id": "0x04"
-}

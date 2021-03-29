@@ -1,0 +1,9 @@
+{
+    "checkName": "City in The Sky Baba Tower Top Small Chest",
+    "requirements": "Logic.canDefeatBabaSerpent() && Logic.canDefeatBigBaba() && Logic.canUse(Item.Double_Clawshot)",
+    "hash": "2DD1",
+    "isExcluded": false,
+    "category": ["Chest", "City in The Sky"],
+    "itemId": "Yellow_Rupee",
+    "itemWasPlaced": false
+}

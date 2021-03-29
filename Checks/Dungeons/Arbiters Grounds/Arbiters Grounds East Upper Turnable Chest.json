@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiter's Grounds East Upper Turnable Chest",
+    "requirements": "true",
+    "hash": "73DB",
+    "isExcluded": false,
+    "category": ["Chest", "Arbiter's Grounds", "Dungeon Items", "Compass"],
+    "itemId": "Compass",
+    "itemWasPlaced": false
+}

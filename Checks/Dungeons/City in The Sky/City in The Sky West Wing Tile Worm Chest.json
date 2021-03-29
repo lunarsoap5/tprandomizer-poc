@@ -1,0 +1,9 @@
+{
+    "checkName": "City in The Sky West Wing Tile Worm Chest",
+    "requirements": "Logic.canUse(Item.Double_Clawshot)",
+    "hash": "F48A",
+    "isExcluded": false,
+    "category": ["Chest", "City in The Sky"],
+    "itemId": "Bombs_10",
+    "itemWasPlaced": false
+}

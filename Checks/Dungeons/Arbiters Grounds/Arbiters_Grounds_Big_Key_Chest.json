@@ -1,6 +1,0 @@
-{
-    "requirements": "(arbitersGroundsSmallKeyCount >= 5) && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Spinner) && Logic.canDefeatStalfos()",
-    "hash": "47CF",
-    "category": ["Chest", "Arbiter's Grounds", "Boss Key"],
-    "item_id": "0x94"
-}

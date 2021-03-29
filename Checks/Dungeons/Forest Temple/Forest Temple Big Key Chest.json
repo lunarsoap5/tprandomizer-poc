@@ -1,0 +1,9 @@
+{
+    "checkName": "Forest Temple Big Key Chest",
+    "requirements": "(Logic.canDefeatBombling() || Logic.canBurnWebs()) && Logic.canUse(Item.Boomerang)",
+    "hash": "2C4F",
+    "isExcluded": false,
+    "category": ["Chest", "Forest Temple", "Big Key"],
+    "itemId": "Forest_Temple_Big_Key",
+    "itemWasPlaced": false
+}

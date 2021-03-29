@@ -1,0 +1,9 @@
+{
+    "checkName": "Forest Temple Central Chest Hanging From Web",
+    "requirements": "Logic.canCutHangingWeb()",
+    "hash": "6A07",
+    "isExcluded": false,
+    "category": ["Chest", "Forest Temple", "Dungeon Items", "Compass"],
+    "itemId": "Compass",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Forest Temple Central Chest Behind Stairs",
+    "requirements": "Logic.canUse(Item.Boomerang) && Logic.canDefeatBombling()",
+    "hash": "E30F",
+    "isExcluded": false,
+    "category": ["Chest", "Forest Temple"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

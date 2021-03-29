@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 using Assets.Items;
@@ -13,39 +14,94 @@ namespace tprandomizer_poc_main
 { 
     class Program
     {
+        ItemFunctions Items = new ItemFunctions();
+        
+        
+        void startOver(Room startingRoom)
+        {
+            
+            Items.nbSkybooksPlaced = 0;
+            for (int i = 0; i< Items.PlacedImportantItems.Count(); i++)
+            {
+                Items.heldItems.Add(Items.PlacedImportantItems[i]);
+            }
+            Items.PlacedImportantItems.Clear();
+            //empty all checks of their items  
+            placeRequiredItems(startingRoom);
+        }
+
+        void placeRequiredItems(Room startingRoom)
+        {
+            Random rnd = new Random();
+            RoomFunctions Rooms = new RoomFunctions();
+            CheckFunctions Checks = new CheckFunctions();
+            List<string> availableChecks = new List<string>();
+            availableChecks = Rooms.listAllAvailableChecks(startingRoom);
+            Item itemToPlace = Items.verifyItem(Items.heldItems[rnd.Next(Items.heldItems.Count()-1)]);
+            string checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
+            
+            while (Items.heldItems.Count() > 0 && availableChecks.Any())
+            {
+                while (!Checks.checkIfItemNotNeededToReachCheck(itemToPlace, checkToReciveItem, startingRoom))
+                {
+                    checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
+                }
+                
+                Checks.placeItemInCheck(itemToPlace,checkToReciveItem);
+                
+                availableChecks = Rooms.listAllAvailableChecks(startingRoom);
+                itemToPlace = Items.verifyItem(Items.heldItems[rnd.Next(Items.heldItems.Count()-1)]);
+                checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
+            }
+            if (Items.heldItems.Count() > 0)
+            {//no more available checks and still items to place, starting over
+                //failsafe: assumed fill can fail, but rarely, so it is best to start over if it happens
+                startOver(startingRoom);
+            }
+        }
+        
         static void Main(string[] args)
         {
             CheckFunctions Checks = new CheckFunctions();
             RoomFunctions Rooms = new RoomFunctions();
-            Type myCheckType=typeof(Check);
+            
+            
             Checks.InitializeChecks();
-            Rooms.InitializeRooms();
+            Type myCheckType=typeof(Check);
             foreach (string file in System.IO.Directory.GetFiles("./Checks/", "*",SearchOption.AllDirectories))
             {
                 string contents = File.ReadAllText(file);
                 PropertyInfo myPropInfo = myCheckType.GetProperty(file);
                 Checks.CheckDict.Add(file,JsonConvert.DeserializeObject<Check>(contents));
+                Check currentCheck = Checks.CheckDict[file];
+                currentCheck.requirements = Regex.Replace(currentCheck.requirements, @"\bLogic\b", "Logic.LogicFunctions");
+                Checks.CheckDict[file] = currentCheck;
                 Console.WriteLine("Check File Loaded " + file);
             }
 
+            Rooms.InitializeRooms();
             Type myRoomType=typeof(Room);
             foreach (string file in System.IO.Directory.GetFiles("./Assets/Rooms/", "*",SearchOption.AllDirectories))
             {
                 string contents = File.ReadAllText(file);
                 PropertyInfo myPropInfo = myRoomType.GetProperty(file);
                 Rooms.RoomDict.Add(file,JsonConvert.DeserializeObject<Room>(contents));
+                Room currentRoom = Rooms.RoomDict[file];
+                var newList = currentRoom.neighbourRequirements.Select(s => s.Replace("Logic", "Logic.LogicFunctions")).ToList();
+                currentRoom.neighbourRequirements = newList;
+                Rooms.RoomDict[file] = currentRoom;
                 Console.WriteLine("Room File Loaded " + file);
             }
-            // To get the values alone, use the Values property.
-         /*   Dictionary<string, Room>.ValueCollection valueColl = Rooms.RoomDict.Values;
 
-            // The elements of the ValueCollection are strongly typed
-            // with the type that was specified for dictionary values.
-            Console.WriteLine();
-            foreach( Room s in valueColl )
+            
+
+            //Rooms.setupGraph();
+
+           foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
             {
-                Console.WriteLine("Value = {0}", s);
-            }*/
+                Check currentCheck = checkList.Value;
+                Console.WriteLine(currentCheck.itemId);
+            }
                 
                 //myJsonObject.requirements = Regex.Replace(myJsonObject.requirements, @"\bLogic\b", "Logic.LogicFunctions");
                 //var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");

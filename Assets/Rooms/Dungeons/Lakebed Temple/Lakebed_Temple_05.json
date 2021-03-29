@@ -1,7 +1,7 @@
 { 
     "name": "Lakebed Temple 05",
     "neighbours": ["lakebed_temple_12, lakebed_temple_06"],
-    "neighbourRequirments": 
+    "neighbourRequirements": 
     [
         "true",
         "Logic.canUse(Item.Zora_Armor) && Logic.canUse(Item.Goron_Bomb_Bag)"

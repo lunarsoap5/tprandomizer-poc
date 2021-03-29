@@ -1,3 +1,15 @@
+using System.Linq;
+using System.Reflection;
+using Newtonsoft.Json;
+using Assets.Items;
+using System.IO;
+using Logic;
+using System.Collections.Generic;
+using Microsoft.CodeAnalysis.CSharp.Scripting;
+using Microsoft.CodeAnalysis.Scripting;
+using System.Text.RegularExpressions;
+using tprandomizer_poc_main;
+
 namespace Assets.Items
 {
 	public enum Item : byte
@@ -259,5 +271,258 @@ namespace Assets.Items
 		Coro_Key	=	0xFE,
 		/*Gives_Vanilla*/NullItem	=	0xFF
 	};
+
+	public class ItemFunctions
+	{
+		
+		public List<Item> heldItems = new List<Item>();
+		public List<Item> PlacedImportantItems = new List<Item>();
+
+		public int nbSkybooksPlaced = 0;
+
+		public Item verifyItem (Item item)
+		{
+			switch (item) //Make sure you place the items in the right order (from big to small)
+			{
+				case Item.Ancient_Sky_Book_Empty:
+					if (nbSkybooksPlaced <= 5)
+					{
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+					}
+					else
+					{
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
+					}
+					nbSkybooksPlaced++;
+					break;
+				case Item.Ancient_Sky_Book_First_Character:
+					if (nbSkybooksPlaced <= 5)
+					{
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+					}
+					else
+					{
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
+					}
+					nbSkybooksPlaced++;
+					break;
+				case Item.Ancient_Sky_Book_Second_Character:
+					if (nbSkybooksPlaced <= 5)
+					{
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+					}
+					else
+					{
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
+					}
+					nbSkybooksPlaced++;
+					break;
+				case Item.Ancient_Sky_Book_Third_Character:
+					if (nbSkybooksPlaced <= 5)
+					{
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+					}
+					else
+					{
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
+					}
+					nbSkybooksPlaced++;
+					break;
+				case Item.Ancient_Sky_Book_Fourth_Character:
+					if (nbSkybooksPlaced <= 5)
+					{
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+					}
+					else
+					{
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
+					}
+					nbSkybooksPlaced++;
+					break;
+				case Item.Ancient_Sky_Book_Fifth_Character:
+					if (nbSkybooksPlaced <= 5)
+					{
+						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+					}
+					else
+					{
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
+					}
+					nbSkybooksPlaced++;
+					break;
+				case Item.Clawshot:
+					if (Logic.LogicFunctions.canUse(Item.Double_Clawshot))
+					{
+						item = Item.Double_Clawshot; //Double_Clawshot
+					}
+					break;
+				case Item.Dominion_Rod_Uncharged:
+					if (Logic.LogicFunctions.canUse(Item.Dominion_Rod))
+					{
+						item = Item.Dominion_Rod; //Charged_Dominion_Rod
+					}
+					break;
+				case Item.Big_Wallet:
+					if (Logic.LogicFunctions.canUse(Item.Giant_Wallet))
+					{
+						item = Item.Giant_Wallet; //Giant_Wallet
+					}
+					break;
+				case Item.Big_Quiver:
+					if (Logic.LogicFunctions.canUse(Item.Giant_Quiver))
+					{
+						item = Item.Giant_Quiver; //Giant_Quiver
+					}
+					break;
+				case Item.Heros_Bow:
+					if (Logic.LogicFunctions.canUse(Item.Giant_Quiver))
+					{
+						item = Item.Giant_Quiver; //Giant_Quiver
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Big_Quiver))
+					{
+						item = Item.Big_Quiver; //Big_Quiver
+					}
+					break;
+				case Item.Master_Sword:
+					if (Logic.LogicFunctions.canUse(Item.Master_Sword_Light))
+					{
+						item = Item.Master_Sword_Light; //Light_Sword
+					}
+					break;
+				case Item.Ordon_Sword:
+					if (Logic.LogicFunctions.canUse(Item.Master_Sword_Light))
+					{
+						item = Item.Master_Sword_Light; //Light_Sword
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Master_Sword))
+					{
+						item = Item.Master_Sword; //Master_Sword
+					}
+					break;
+				case Item.Wooden_Sword:
+					if (Logic.LogicFunctions.canUse(Item.Master_Sword_Light))
+					{
+						item = Item.Master_Sword_Light; //Light_Sword
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Master_Sword))
+					{
+						item = Item.Master_Sword; //Master_Sword
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Ordon_Sword))
+					{
+						item = Item.Ordon_Sword; //Ordon_Sword
+					}
+					break;
+				case Item.Jump_Strike:
+					if (Logic.LogicFunctions.canUse(Item.Great_Spin))
+					{
+						item = Item.Great_Spin; //Great_Spin
+					}
+					break;
+				case Item.Mortal_Draw:
+					if (Logic.LogicFunctions.canUse(Item.Great_Spin))
+					{
+						item = Item.Great_Spin; //Great_Spin
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Jump_Strike))
+					{
+						item = Item.Jump_Strike; //Jump_Strike
+					}
+					break;
+				case Item.Helm_Splitter:
+					if (Logic.LogicFunctions.canUse(Item.Great_Spin))
+					{
+						item = Item.Great_Spin; //Great_Spin
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Jump_Strike))
+					{
+						item = Item.Jump_Strike; //Jump_Strike
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Mortal_Draw))
+					{
+						item = Item.Mortal_Draw; //Mortal_Draw
+					}
+					break;
+				case Item.Back_Slice:
+					if (Logic.LogicFunctions.canUse(Item.Great_Spin))
+					{
+						item = Item.Great_Spin; //Great_Spin
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Jump_Strike))
+					{
+						item = Item.Jump_Strike; //Jump_Strike
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Mortal_Draw))
+					{
+						item = Item.Mortal_Draw; //Mortal_Draw
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Helm_Splitter))
+					{
+						item = Item.Helm_Splitter; //Helm_Splitter
+					}
+					break;
+				case Item.Shield_Attack:
+					if (Logic.LogicFunctions.canUse(Item.Great_Spin))
+					{
+						item = Item.Great_Spin; //Great_Spin
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Jump_Strike))
+					{
+						item = Item.Jump_Strike; //Jump_Strike
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Mortal_Draw))
+					{
+						item = Item.Mortal_Draw; //Mortal_Draw
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Helm_Splitter))
+					{
+						item = Item.Helm_Splitter; //Helm_Splitter
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Back_Slice))
+					{
+						item = Item.Back_Slice; //Back_Slice
+					}
+					break;
+				case Item.Ending_Blow:
+					if (Logic.LogicFunctions.canUse(Item.Great_Spin))
+					{
+						item = Item.Great_Spin; //Great_Spin
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Jump_Strike))
+					{
+						item = Item.Jump_Strike; //Jump_Strike
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Mortal_Draw))
+					{
+						item = Item.Mortal_Draw; //Mortal_Draw
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Helm_Splitter))
+					{
+						item = Item.Helm_Splitter; //Helm_Splitter
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Back_Slice))
+					{
+						item = Item.Back_Slice; //Back_Slice
+					}
+					else if (Logic.LogicFunctions.canUse(Item.Shield_Attack))
+					{
+						item = Item.Shield_Attack; //Shield_Attack
+					}
+					break;
+			}
+			return item;
+		}
+		public void generateItemPool()
+		{
+			CheckFunctions Checks = new CheckFunctions();
+			foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
+			{
+				Check currentCheck = checkList.Value;
+				heldItems.Add(currentCheck.itemId);
+			}
+		}
+	}
+
 }
 

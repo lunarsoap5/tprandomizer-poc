@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 using Assets.Items;
@@ -19,15 +20,19 @@ namespace tprandomizer_poc_main
         public string hash { get; set;} //the fletcher hash that will be compared to on stage load
         public bool isExcluded { get; set;} //Identifies if the check is excluded or not. We can write the randomizer to not place important items in excluded checks
         public List<string> category { get; set;} //Allows grouping of checks to make it easier to randomize them based on their type, region, exclusion status, etc.
-        public string itemId { get; set;} //The original item id of the check. This allows us to make an array of all items in the item pool for randomization purposes. Also is useful for documentation purposes.
+        public Item itemId { get; set;} //The original item id of the check. This allows us to make an array of all items in the item pool for randomization purposes. Also is useful for documentation purposes.
+        public bool itemWasPlaced { get; set;} //Identifies if we already placed an item on this check.
     }
 
     public class CheckFunctions
     {
+        
+        //RoomFunctions Rooms = new RoomFunctions();
+        ItemFunctions Items = new ItemFunctions();
+        RoomFunctions Rooms = new RoomFunctions();
         public Dictionary<string, Check> CheckDict = new Dictionary<string, Check>();
         public void InitializeChecks()
         {
-            
 
             CheckDict.Add("Gift_From_Rusl", new Check());
             CheckDict.Add("South_Faron_Cave_Chest", new Check());
@@ -324,9 +329,63 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Zant_Heart_Container", new Check());
             CheckDict.Add("Fishing_Hole_Heart_Piece", new Check());
             CheckDict.Add("Cats_Hide_and_Seek_Minigame", new Check());
+
+            
         }
 
-        
+        public void placeItemInCheck(Item item, string check)
+        {
+            //Create reference to the current check, tell the program that it was placed, set the item id of the check, and then save the changes to the check.
+            Check currentCheck = CheckDict[check];
+            currentCheck.itemWasPlaced = true;
+            Items.heldItems.Remove(item);
+            currentCheck.itemId = item;
+            Items.PlacedImportantItems.Add(item);
+            CheckDict[check] = currentCheck;
+        }
+
+        public bool checkIfItemNotNeededToReachCheck(Item item, string check, Room startingRoom)
+        {
+            Rooms.resetAllRoomsVisited();
+            List<Room> roomsToExplore = new List<Room>();
+            startingRoom.visited = true;
+            roomsToExplore.Add(startingRoom);
+            var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");
+            while (roomsToExplore.Count() > 0)
+            {
+                for (int i = 0; i < roomsToExplore[0].checks.Count(); i++)
+                {
+                    Check currentCheck = CheckDict[roomsToExplore[0].checks[i]];
+                    var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    if (roomsToExplore[0].checks[i] == check)
+                    {
+                        return ((bool)areCheckRequirementsMet &&
+                            currentCheck.itemWasPlaced == false);
+                    }
+                }
+                for (int i = 0; i < roomsToExplore[0].neighbours.Count(); i++)
+                {
+                    Room currentRoom = Rooms.RoomDict[roomsToExplore[0].neighbourRequirements[i]];
+                    Room currentNeighbour = Rooms.RoomDict[roomsToExplore[0].neighbours[i]];
+                    var areNeighbourRequirementsMet = CSharpScript.EvaluateAsync(currentRoom.neighbourRequirements[i], options).Result;
+                    if ((bool)areNeighbourRequirementsMet
+                        && currentNeighbour.visited == false)
+                    {
+                        currentNeighbour.visited = true;
+                        roomsToExplore.Add(currentNeighbour);
+                    }
+                }
+                roomsToExplore.Remove(roomsToExplore[0]);
+            }
+            return false;
+        }
+
+        public bool isRequirementMet(string requirement)
+        {
+            var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");
+            var logicResult = CSharpScript.EvaluateAsync(requirement, options).Result;
+            return (bool)logicResult;
+        }
     } 
 
 }

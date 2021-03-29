@@ -31,8 +31,15 @@ namespace Logic
 
         public static bool canUse(Item item)
 		{
-			bool canUseItem = false;
-			
+            bool canUseItem = false;
+            /*ItemFunctions Items = new ItemFunctions();
+            foreach (var checkedItem in Items.heldItems)
+            {
+                if (checkedItem == item)
+                {
+                    canUseItem = true;
+                }
+            }*/
 			return canUseItem;
 		}
 

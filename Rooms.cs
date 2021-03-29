@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 using Assets.Items;
@@ -15,7 +16,7 @@ namespace tprandomizer_poc_main
 		{
 			public string name { get; set;} //Name we give the room to identify it (it can be a series of rooms that don't have requirements between each other to make the algorithm go faster)
 			public List<string> neighbours { get; set;} //Refers to the rooms of the same stage that can be accesed from this room
-			public List<string> neighbourRequirments { get; set;} //List of list of requirements to enter each neighbouring room
+			public List<string> neighbourRequirements { get; set;} //List of list of requirements to enter each neighbouring room
 			public bool isStartingRoom { get; set;} //Defines if it is the stage you start the game in
 			public List<string> checks { get; set;} //Checks contained inside the room
 			public bool visited { get; set;}
@@ -24,10 +25,11 @@ namespace tprandomizer_poc_main
     
     public class RoomFunctions
     {
-        public Dictionary<string, Room> RoomDict = new Dictionary<string, Room>();
         
+        public Dictionary<string, Room> RoomDict = new Dictionary<string, Room>();
         public void InitializeRooms()
         {
+            
             RoomDict.Add("lakebed_temple_00_01", new Room());
             RoomDict.Add("lakebed_temple_02_03", new Room());
             RoomDict.Add("lakebed_temple_05", new Room());
@@ -197,6 +199,68 @@ namespace tprandomizer_poc_main
             RoomDict.Add("mirror_chamber", new Room());
             RoomDict.Add("hidden_village", new Room());
             RoomDict.Add("death_mountain_interiors", new Room());
+
+            
+        }
+
+        public void setupGraph()
+        {
+            resetAllRoomsVisited();
+            Room startingRoom = RoomDict["ordon_province"];
+            startingRoom.isStartingRoom = true;
+            RoomDict["ordon_province"] = startingRoom;
+        }
+
+        public void resetAllRoomsVisited()
+        {
+            foreach (KeyValuePair<string, Room> roomList in RoomDict.ToList())
+            {
+                Room currentRoom = roomList.Value;
+                currentRoom.visited = false;
+                RoomDict[roomList.Key] = currentRoom;
+            }
+        }
+
+        public List<string> listAllAvailableChecks(Room startingRoom)
+        {
+            resetAllRoomsVisited();
+            CheckFunctions Checks = new CheckFunctions();
+            List<string> checks = new List<string>();
+            List<Room> roomsToExplore = new List<Room>();
+            startingRoom.visited = true;
+            roomsToExplore.Add(startingRoom);
+            var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");
+                
+            while (roomsToExplore.Count() > 0)
+            {
+                for (int i = 0; i < roomsToExplore[0].neighbours.Count(); i++)
+                {
+                    //Create reference to the dictionary entry of the room we are evaluating
+                    Room currentNeighbour = RoomDict[roomsToExplore[0].neighbours[i]];
+                    //Parse the neighbour's requirements to find out if we can access it
+                    var areNeighbourRequirementsMet = CSharpScript.EvaluateAsync(roomsToExplore[0].neighbourRequirements[i], options).Result;
+                    //If you can access the neighbour and it hasnt been visited yet.
+                    if ((((bool)areNeighbourRequirementsMet == true)) &&  (currentNeighbour.visited == false))
+                    {
+                        currentNeighbour.visited = true;
+                        roomsToExplore.Add(currentNeighbour);
+                    }
+                }
+                for (int i = 0; i < roomsToExplore[0].checks.Count(); i++)
+                {
+                    //Create reference to the dictionary entry of the check whose logic we are evaluating
+                    Check currentCheck = Checks.CheckDict[roomsToExplore[0].checks[i]];
+                    //Parse the requirements to see if we can get the check
+                    var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    //Confirms that we can get the check and checks to see if an item was placed in it.
+                    if (((bool)areCheckRequirementsMet == true) && currentCheck.itemWasPlaced == false)
+                    {
+                        checks.Add(currentCheck.ToString());
+                    }
+                }
+                roomsToExplore.Remove(roomsToExplore[0]);
+            }
+            return checks;
         }
     }
 }

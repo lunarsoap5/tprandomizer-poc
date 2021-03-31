@@ -1,0 +1,9 @@
+{
+    "checkName": "Hyrule Castle Graveyard Grave Switch Room Right Chest",
+    "requirements": "Logic.canSmash()",
+    "hash": "E956",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Castle"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

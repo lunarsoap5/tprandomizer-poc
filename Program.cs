@@ -98,7 +98,7 @@ namespace tprandomizer_poc_main
            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
             {
                 Check currentCheck = checkList.Value;
-                Console.WriteLine(currentCheck.itemId);
+                Console.WriteLine(currentCheck.checkName + ": " + currentCheck.itemId);
             }
                 
                 //myJsonObject.requirements = Regex.Replace(myJsonObject.requirements, @"\bLogic\b", "Logic.LogicFunctions");

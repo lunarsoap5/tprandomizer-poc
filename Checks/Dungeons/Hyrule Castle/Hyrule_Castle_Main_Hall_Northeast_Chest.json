@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatBokoblin() && Logic.canDefeatLizalfos() && Logic.canUse(Item.Clawshot)",
-    "hash": "3107",
-    "category": ["Chest", "Hyrule Castle", "Dungeon Items", "Compass"],
-    "item_id": "0x24"
-}

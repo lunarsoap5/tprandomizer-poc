@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatDarknut() && Logic.canUse(Item.Lantern) && Logic.canUse(Item.Boomerang)",
-    "hash": "09D2",
-    "category": ["Chest", "Hyrule Castle"],
-    "item_id": "0x05"
-}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Goron Mines Crystal Switch Room Underwater Chest",
+    "requirements": "Logic.canUse(Item.Iron_Boots)",
+    "hash": "AC33",
+    "isExcluded": false,
+    "category": ["Chest", "Goron Mines", "Small Key"],
+    "itemId": "Goron_Mines_Small_Key",
+    "itemWasPlaced": false
+}

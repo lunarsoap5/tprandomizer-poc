@@ -1,0 +1,9 @@
+{
+    "checkName": "Hyrule Castle West Courtyard North Small Chest",
+    "requirements": "Logic.canDefeatBokoblin()",
+    "hash": "5EB3",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Castle"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

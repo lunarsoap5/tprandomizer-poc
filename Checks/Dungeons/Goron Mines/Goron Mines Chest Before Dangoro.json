@@ -1,0 +1,9 @@
+{
+    "checkName": "Goron Mines Chest Before Dangoro",
+    "requirements": "Logic.canUse(Item.Iron_Boots)",
+    "hash": "8B94",
+    "isExcluded": false,
+    "category": ["Chest", "Goron Mines"],
+    "itemId": "Yellow_Rupee",
+    "itemWasPlaced": false
+}

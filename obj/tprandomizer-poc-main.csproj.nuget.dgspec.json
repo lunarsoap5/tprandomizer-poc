@@ -1,25 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JC071094\\Downloads\\tprandomizer-poc-main\\tprandomizer-poc-main.csproj": {}
+    "C:\\Users\\Justin\\Downloads\\tprandomizer-poc\\tprandomizer-poc-main.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JC071094\\Downloads\\tprandomizer-poc-main\\tprandomizer-poc-main.csproj": {
+    "C:\\Users\\Justin\\Downloads\\tprandomizer-poc\\tprandomizer-poc-main.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JC071094\\Downloads\\tprandomizer-poc-main\\tprandomizer-poc-main.csproj",
+        "projectUniqueName": "C:\\Users\\Justin\\Downloads\\tprandomizer-poc\\tprandomizer-poc-main.csproj",
         "projectName": "tprandomizer-poc-main",
-        "projectPath": "C:\\Users\\JC071094\\Downloads\\tprandomizer-poc-main\\tprandomizer-poc-main.csproj",
-        "packagesPath": "C:\\Users\\JC071094\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JC071094\\Downloads\\tprandomizer-poc-main\\obj\\",
+        "projectPath": "C:\\Users\\Justin\\Downloads\\tprandomizer-poc\\tprandomizer-poc-main.csproj",
+        "packagesPath": "C:\\Users\\Justin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Justin\\Downloads\\tprandomizer-poc\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\JC071094\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Justin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,9 @@
+{
+    "checkName": "Hyrule Castle Third Chest",
+    "requirements": "true",
+    "hash": "6508",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Castle"],
+    "itemId": "Silver_Rupee",
+    "itemWasPlaced": false
+}

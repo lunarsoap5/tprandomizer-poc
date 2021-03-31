@@ -1,0 +1,9 @@
+{
+    "checkName": "Palace of Twilight Central Tower Chest",
+    "requirements": "Logic.canDefeatZantHead() && Logic.canUse(Item.Master_Sword_Light) && Logic.canUse(Item.Clawshot)",
+    "hash": "3506",
+    "isExcluded": false,
+    "category": ["Chest", "Palace of Twilight", "Small Key"],
+    "itemId": "Palace_of_Twilight_Small_Key",
+    "itemWasPlaced": false
+}

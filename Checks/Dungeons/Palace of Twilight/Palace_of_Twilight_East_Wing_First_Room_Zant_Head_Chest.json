@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatZantHead() && Logic.canUse(Item.Clawshot)",
-    "hash": "F92E",
-    "category": ["Chest", "Palace of Twilight", "Small Key"],
-    "item_id": "0x8C"
-}

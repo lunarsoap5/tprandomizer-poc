@@ -1,0 +1,9 @@
+{
+    "checkName": "Lakebed Temple East Lower Waterwheel Bridge Chest",
+    "requirements": "Logic.canUse(Item.Clawshot) && (lakebedTempleSmallKeyCount >= 3) && Logic.canLaunchBombs()",
+    "hash": "CF36",
+    "isExcluded": false,
+    "category": ["Chest", "Lakebed Temple"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

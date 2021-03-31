@@ -1,5 +1,6 @@
 using System;
 using Assets.Items;
+using tprandomizer_poc_main;
 
 namespace Logic
 {
@@ -28,6 +29,8 @@ namespace Logic
 		bool argorokDefeated;
 		bool zantDefeated;
 		bool ganondorfDefeated;
+
+        RoomFunctions Rooms = new RoomFunctions();
 
         public static bool canUse(Item item)
 		{
@@ -64,7 +67,7 @@ namespace Logic
                     canUse(Item.Ball_and_Chain) ||
                     hasSword() ||
                     canUse(Item.Heros_Bow) ||
-                    canUse(Item.Goron_Bomb_Bag) ||
+                    hasBombs() ||
                     canUse(Item.Iron_Boots) ||
                     canUse(Item.Shadow_Crystal));
         }
@@ -98,14 +101,14 @@ namespace Logic
         }
         public bool canDefeatBari()
         {
-            return (canUse(Item.Goron_Bomb_Bag) ||
+            return (canUseWaterBombs() ||
             canUse(Item.Clawshot));
         }
         public bool canDefeatBeamos()
         {
             return (canUse(Item.Ball_and_Chain) ||
             canUse(Item.Heros_Bow) ||
-            canUse(Item.Goron_Bomb_Bag));
+            hasBombs());
         }
         public bool canDefeatBigBaba()
         {
@@ -196,7 +199,7 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal)) &&
-            (canUse(Item.Goron_Bomb_Bag) ||
+            (hasBombs() ||
             canUse(Item.Clawshot)));
             
         }
@@ -217,7 +220,7 @@ namespace Logic
         }
         public bool canDefeatDekuLike()
         {    
-            return (canUse(Item.Goron_Bomb_Bag) ||
+            return (hasBombs() ||
             hasSword() ||
             canUse(Item.Ball_and_Chain) ||
             canUse(Item.Heros_Bow) ||
@@ -495,7 +498,7 @@ namespace Logic
         public bool canDefeatShellBlade()
         {
             return ((hasSword() ||
-            canUse(Item.Goron_Bomb_Bag)) &&
+            canUseWaterBombs()) &&
             canUse(Item.Iron_Boots));
         }
         public bool canDefeatSkullfish()
@@ -518,8 +521,7 @@ namespace Logic
         }
         public bool canDefeatStalfos()
         {
-            return (canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Goron_Bomb_Bag));
+            return (canSmash());
         }
         public bool canDefeatStalhound()
         {
@@ -582,7 +584,7 @@ namespace Logic
         {
             return (canUse(Item.Ball_and_Chain) ||
             canUse(Item.Heros_Bow) ||
-            canUse(Item.Goron_Bomb_Bag) ||
+            hasBombs() ||
             canUse(Item.Boomerang) ||
             canUse(Item.Clawshot));
         }
@@ -700,7 +702,7 @@ namespace Logic
         public bool canDefeatDiababa()
         {
             return ((canUse(Item.Boomerang) ||
-            (canUse(Item.Goron_Bomb_Bag) &&
+            (hasBombs() &&
             canUse(Item.Heros_Bow))) &&
             hasSword() ||
             canUse(Item.Ball_and_Chain) ||
@@ -761,14 +763,14 @@ namespace Logic
         public bool canSmash()
         {
                 return (canUse(Item.Ball_and_Chain) ||
-                canUse(Item.Goron_Bomb_Bag));
+                hasBombs());
         }
 
         public bool canBurnWebs()
         {
             return (canUse(Item.Ball_and_Chain) ||
             canUse(Item.Lantern) ||
-            canUse(Item.Goron_Bomb_Bag));
+            hasBombs());
         }
 
         public bool hasRangedItem()
@@ -790,7 +792,7 @@ namespace Logic
         {
             return ((canUse(Item.Boomerang) ||
             canUse(Item.Heros_Bow)) &&
-            canUse(Item.Goron_Bomb_Bag));
+            hasBombs());
         }
 
         public bool canCutHangingWeb()
@@ -803,7 +805,7 @@ namespace Logic
         public bool canKnockDownHCPainting()
         {
             return (canUse(Item.Heros_Bow) ||
-            canUse(Item.Goron_Bomb_Bag));
+            hasBombs());
         } 
         public bool canBreakMonkeyCage()
         {
@@ -839,7 +841,19 @@ namespace Logic
             return (canUse(Item.Shadow_Crystal) ||
             hasSword() ||
             (canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Goron_Bomb_Bag)));
+            hasBombs()));
+        }
+
+        public bool hasBombs()
+        {
+            return (canUse(Item.Bomb_Bag_And_Bombs) ||
+            canUse(Item.Empty_Bomb_Bag));
+        }
+
+        public bool canUseWaterBombs()
+        {
+            Room logicRoom = Rooms.RoomDict["Kakariko Village"];
+            return (hasBombs() && (logicRoom.visited == true));
         }
     }
 }

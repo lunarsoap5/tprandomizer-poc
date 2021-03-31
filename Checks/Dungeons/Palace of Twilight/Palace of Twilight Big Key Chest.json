@@ -1,0 +1,9 @@
+{
+    "checkName": "Palace of Twilight Big Key Chest",
+    "requirements": "Logic.canUse(Item.Master_Sword_Light) && Logic.canUse(Item.Double_Clawshot)",
+    "hash": "1BCC",
+    "isExcluded": false,
+    "category": ["Chest", "Palace of Twilight"],
+    "itemId": "Palace_of_Twilight_Big_Key",
+    "itemWasPlaced": false
+}

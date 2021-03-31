@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Master_Sword_Light) && Logic.canUse(Item.Double_Clawshot)",
-    "hash": "1BCC",
-    "category": ["Chest", "Palace of Twilight"],
-    "item_id": "0x97"
-}

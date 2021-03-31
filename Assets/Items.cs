@@ -95,7 +95,7 @@ namespace Assets.Items
 		/*?	=	0x4E,*/
 		Giant_Bomb_Bag	=	0x4F,
 		Empty_Bomb_Bag	=	0x50,
-		Goron_Bomb_Bag	=	0x51,
+		Bomb_Bag_And_Bombs	=	0x51,
 		/*Giant_Bomb_Bag?	=	0x52,*/
 		/*?	=	0x53,*/
 		/*unused*/Small_Quiver	=	0x54,

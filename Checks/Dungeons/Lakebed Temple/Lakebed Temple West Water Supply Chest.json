@@ -1,0 +1,9 @@
+{
+    "checkName": "Lakebed Temple West Water Supply Chest",
+    "requirements": "Logic.canUse(Item.Clawshot)",
+    "hash": "EE15",
+    "isExcluded": false,
+    "category": ["Chest", "Lakebed Temple", "Dungeon Items", "Compass"],
+    "itemId": "Compass",
+    "itemWasPlaced": false
+}

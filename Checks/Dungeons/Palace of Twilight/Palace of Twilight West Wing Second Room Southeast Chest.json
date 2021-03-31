@@ -1,0 +1,9 @@
+{
+    "checkName": "Palace of Twilight West Wing Second Room Southeast Chest",
+    "requirements": "Logic.canUse(Item.Double_Clawshot)",
+    "hash": "2E9D",
+    "isExcluded": false,
+    "category": ["Chest", "Palace of Twilight"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Lakebed Temple Deku Toad Chest",
+    "requirements": "Logic.canDefeatDekuToad()",
+    "hash": "B9C7",
+    "isExcluded": false,
+    "category": ["Chest", "Lakebed Temple"],
+    "itemId": "Clawshot",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Lakebed Temple Central Room Spire Chest",
+    "requirements": "(lakebedTempleSmallKeyCount >= 3) && Logic.canUse(Item.Iron_Boots) && canLaunchBombs()",
+    "hash": "7F1C",
+    "isExcluded": false,
+    "category": ["Chest", "Lakebed Temple"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

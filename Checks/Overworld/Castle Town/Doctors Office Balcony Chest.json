@@ -1,0 +1,9 @@
+{
+    "checkName": "Doctors Office Balcony Chest",
+    "requirements": "Logic.canUse(Item.Invoice) && Logic.canUse(Item.Shadow_Crystal)",
+    "hash": "0E38",
+    "isExcluded": false,
+    "category": ["Chest", "Castle Town"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

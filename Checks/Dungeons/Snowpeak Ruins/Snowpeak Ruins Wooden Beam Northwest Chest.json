@@ -1,0 +1,9 @@
+{
+    "checkName": "Snowpeak Ruins Wooden Beam Northwest Chest",
+    "requirements": "Logic.canDefeatIceKeese()",
+    "hash": "A356",
+    "isExcluded": false,
+    "category": ["Chest", "Snowpeak Ruins", "Dungeon Items", "Compass"],
+    "itemId": "Compass",
+    "itemWasPlaced": false
+}

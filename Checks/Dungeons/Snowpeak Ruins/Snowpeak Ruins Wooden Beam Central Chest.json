@@ -1,0 +1,9 @@
+{
+    "checkName": "Snowpeak Ruins Wooden Beam Central Chest",
+    "requirements": "Logic.canDefeatIceKeese()",
+    "hash": "A3A7",
+    "isExcluded": false,
+    "category": ["Chest", "Snowpeak Ruins"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Death Mountain Alcove Chest",
+    "requirements": "(fyrusDefeated == true) || (Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Iron_Boots))",
+    "hash": "6C2E",
+    "isExcluded": false,
+    "category": ["Chest", "Eldin Province"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

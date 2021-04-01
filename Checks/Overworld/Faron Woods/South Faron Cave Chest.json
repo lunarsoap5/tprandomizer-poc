@@ -1,0 +1,9 @@
+{
+    "checkName": "South Faron Cave Chest",
+    "requirements": "canUse(Item.Lantern)",
+    "hash": "542E",
+    "isExcluded": false,
+    "category": ["Chest", "Faron Woods"],
+    "itemId": "Yellow_Rupee",
+    "itemWasPlaced": false
+}

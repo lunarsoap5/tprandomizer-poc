@@ -1,0 +1,9 @@
+{
+    "checkName": "Temple of Time Chest Before Darknut",
+    "requirements": "Logic.canDefeatArmos() && Logic.canDefeatBabyGohma() && Logic.canDefeatYoungGohma()",
+    "hash": "1A52",
+    "isExcluded": false,
+    "category": ["Chest", "Temple of Time"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

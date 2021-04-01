@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canLaunchBombs() && Logic.canUse(Item.Boomerang)",
-    "hash": "A573",
-    "category": ["Chest", "Kakariko Village"],
-    "item_id": "0x21"
-}

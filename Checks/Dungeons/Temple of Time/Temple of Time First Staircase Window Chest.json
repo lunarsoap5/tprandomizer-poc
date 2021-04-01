@@ -1,0 +1,9 @@
+{
+    "checkName": "Temple of Time First Staircase Window Chest",
+    "requirements": "Logic.hasRangedItem()",
+    "hash": "C45E",
+    "isExcluded": false,
+    "category": ["Chest", "Temple of Time"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

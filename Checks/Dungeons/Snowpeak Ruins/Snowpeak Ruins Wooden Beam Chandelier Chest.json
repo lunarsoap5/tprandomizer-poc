@@ -1,0 +1,9 @@
+{
+    "checkName": "Snowpeak Ruins Wooden Beam Chandelier Chest",
+    "requirements": "Logic.canDefeatChilfos() && Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain)",
+    "hash": "F06A",
+    "isExcluded": false,
+    "category": ["Chest", "Snowpeak Ruins", "Small Key"],
+    "itemId": "Snowpeak_Ruins_Small_Key",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Temple of Time Statue Throws Room East Chest",
+    "requirements": "Logic.canDefeatArmos()",
+    "hash": "BB75",
+    "isExcluded": false,
+    "category": ["Chest", "Temple of Time", "Small Key"],
+    "itemId": "Temple_of_Time_Small_Key",
+    "itemWasPlaced": false
+}

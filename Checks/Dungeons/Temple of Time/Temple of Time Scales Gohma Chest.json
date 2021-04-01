@@ -1,0 +1,9 @@
+{
+    "checkName": "Temple of Time Scales Gohma Chest",
+    "requirements": "Logic.canDefeatYoungGohma() && Logic.canDefeatBabyGohma()",
+    "hash": "E586",
+    "isExcluded": false,
+    "category": ["Chest", "Temple of Time"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

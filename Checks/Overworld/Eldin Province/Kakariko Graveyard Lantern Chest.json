@@ -1,0 +1,9 @@
+{
+    "checkName": "Kakariko Graveyard Lantern Chest",
+    "requirements": "Logic.canUse(Item.Lantern)",
+    "hash": "7D3A",
+    "isExcluded": false,
+    "category": ["Chest", "Kakariko Village"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

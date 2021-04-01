@@ -1,0 +1,9 @@
+{
+    "checkName": "Faron Woods Owl Statue Chest",
+    "requirements": "Logic.canSmash() && Logic.canUse(Item.Dominion_Rod) && Logic.canUse(Item.Shadow_Crystal)",
+    "hash": "558A",
+    "isExcluded": false,
+    "category": ["Chest", "Faron Woods"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

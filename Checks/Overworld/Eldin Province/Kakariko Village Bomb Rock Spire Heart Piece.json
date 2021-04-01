@@ -1,0 +1,9 @@
+{
+    "checkName": "Kakariko Village Bomb Rock Spire Heart Piece",
+    "requirements": "Logic.canLaunchBombs() && Logic.canUse(Item.Boomerang)",
+    "hash": "A573",
+    "isExcluded": false,
+    "category": ["Chest", "Kakariko Village"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

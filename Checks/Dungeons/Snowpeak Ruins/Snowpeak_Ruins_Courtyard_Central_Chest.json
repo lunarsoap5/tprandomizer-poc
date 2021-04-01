@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Ball_and_Chain) || (Logic.canUse(Item.Goron_Bomb_Bag) && (snowpeakRuinsSmallKeyCount >=4))",
-    "hash": "E51D",
-    "category": ["Chest", "Snowpeak Ruins"],
-    "item_id": "0x0A"
-}

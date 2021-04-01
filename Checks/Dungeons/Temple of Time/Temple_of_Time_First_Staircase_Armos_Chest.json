@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatArmos() && Logic.hasRangedItem()",
-    "hash": "C637",
-    "category": ["Chest", "Temple of Time", "Dungeon Items", "Dungeon Map"],
-    "item_id": "0x23"
-}

@@ -260,7 +260,7 @@ namespace Assets.Items
 		Gate_Keys	=	0xF3,
 		Ordon_Pumpkin	=	0xF4,
 		Ordon_Goat_Cheese	=	0xF5,
-		Bed_Key	=	0xF6,
+		Snowpeak_Ruins_Bedroom_Key	=	0xF6,
 		/*Shield?	=	0xF7,*/
 		Got_Lantern_Back	=	0xF8,
 		Goron_Mines_Key_Shard_1	=	0xF9,

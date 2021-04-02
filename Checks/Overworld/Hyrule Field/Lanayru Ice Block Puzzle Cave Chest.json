@@ -1,0 +1,9 @@
+{
+    "checkName": "Lanayru Ice Block Puzzle Cave Chest",
+    "requirements": "Logic.canUse(Item.Ball_and_Chain)",
+    "hash": "3100",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

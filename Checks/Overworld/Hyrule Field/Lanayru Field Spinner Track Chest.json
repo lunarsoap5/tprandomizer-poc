@@ -1,0 +1,9 @@
+{
+    "checkName": "Lanayru Field Spinner Track Chest",
+    "requirements": "Logic.canSmash() && Logic.canUse(Item.Spinner)",
+    "hash": "2385",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

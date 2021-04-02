@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Clawshot) || Logic.canUse(Item.Boomerang)",
-    "hash": "B035",
-    "category": ["Chest", "Hyrule Field"],
-    "item_id": "0x21"
-}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Zoras Domain Extinguish All Torches Chest",
+    "requirements": "Logic.canUse(Item.Boomerang)",
+    "hash": "827F",
+    "isExcluded": false,
+    "category": ["Chest", "Lanayru Province"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

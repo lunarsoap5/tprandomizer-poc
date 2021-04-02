@@ -1,0 +1,9 @@
+{
+    "checkName": "Lanayru Field Skulltula Grotto Chest",
+    "requirements": "Logic.canDefeatSkulltula() && Logic.canUse(Item.Lantern) && Logic.canBreakWoodenDoors()",
+    "hash": "A444",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

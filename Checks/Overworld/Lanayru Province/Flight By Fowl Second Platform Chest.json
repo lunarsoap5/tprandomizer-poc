@@ -1,0 +1,9 @@
+{
+    "checkName": "Flight By Fowl Second Platform Chest",
+    "requirements": "true",
+    "hash": "4003",
+    "isExcluded": false,
+    "category": ["Chest", "Lanayru Province"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Spinner) && Logic.canUse(Item.Clawshot)",
-    "hash": "25C6",
-    "category": ["Chest", "Hyrule Field"],
-    "item_id": "0x06"
-}

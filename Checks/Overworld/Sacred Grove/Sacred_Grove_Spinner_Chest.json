@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Spinner)",
-    "hash": "4A9B",
-    "category": ["Chest", "Sacred grove"],
-    "item_id": "0x06"
-}

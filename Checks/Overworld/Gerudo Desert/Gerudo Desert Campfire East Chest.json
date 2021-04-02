@@ -1,0 +1,9 @@
+{
+    "checkName": "Gerudo Desert Campfire East Chest",
+    "requirements": "Logic.canDefeatBublin()",
+    "hash": "1190",
+    "isExcluded": false,
+    "category": ["Chest", "Gerudo Desert"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

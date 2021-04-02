@@ -1,0 +1,9 @@
+{
+    "checkName": "Gerudo Desert Campfire North Chest",
+    "requirements": "true",
+    "hash": "583B",
+    "isExcluded": false,
+    "category": ["Chest", "Gerudo Desert"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

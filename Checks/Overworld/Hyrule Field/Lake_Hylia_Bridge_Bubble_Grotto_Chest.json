@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatBubble() && Logic.canDefeatFireBubble() && Logic.canDefeatIceBubble()",
-    "hash": "6D05",
-    "category": ["Chest", "Hyrule Field"],
-    "item_id": "0x06"
-}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Flight By Fowl Third Platform Chest",
+    "requirements": "true",
+    "hash": "FAEB",
+    "isExcluded": false,
+    "category": ["Chest", "Lanayru Province"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

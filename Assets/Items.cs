@@ -251,7 +251,7 @@ namespace Assets.Items
 		Ancient_Sky_Book_Partly_Filled	=	0xEA,
 		Ancient_Sky_Book_Completed	=	0xEB,
 		Ooccoo_CitS	=	0xEC,
-		Purple_Rupee_Links_house	=	0xED,
+		Purple_Rupee_Links_House	=	0xED,
 		Small_Key_N_Faron_Gate	=	0xEE,
 		/*Blue_Fire?	=	0xEF,*/
 		/*Blue_Fire?	=	0xF0,*/

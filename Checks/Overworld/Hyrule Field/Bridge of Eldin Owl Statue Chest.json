@@ -1,0 +1,9 @@
+{
+    "checkName": "Bridge of Eldin Owl Statue Chest",
+    "requirements": "Logic.canUse(Item.Dominion_Rod)",
+    "hash": "04B8",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

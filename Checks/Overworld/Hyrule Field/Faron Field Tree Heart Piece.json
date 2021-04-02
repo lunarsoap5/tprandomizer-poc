@@ -1,0 +1,9 @@
+{
+    "checkName": "Faron Field Tree Heart Piece",
+    "requirements": "Logic.canUse(Item.Ball_and_Chain) || Logic.canUse(Item.Boomerang) || Logic.canUse(Item.Clawshot)",
+    "hash": "7E86",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

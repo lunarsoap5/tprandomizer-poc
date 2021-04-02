@@ -1,0 +1,9 @@
+{
+    "checkName": "Outside Lanayru Spring Right Statue Chest",
+    "requirements": "true",
+    "hash": "6662",
+    "isExcluded": false,
+    "category": ["Chest", "Lake Hylia"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

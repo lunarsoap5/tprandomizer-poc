@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Dominion_Rod)",
-    "hash": "7968",
-    "category": ["Chest", "Sacred Grove"],
-    "item_id": "0x21"
-}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Gerudo Desert Owl Statue Chest",
+    "requirements": "Logic.canUse(Item.Powered_Dominion_Rod)",
+    "hash": "8F1F",
+    "isExcluded": false,
+    "category": ["Chest", "Gerudo Desert"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

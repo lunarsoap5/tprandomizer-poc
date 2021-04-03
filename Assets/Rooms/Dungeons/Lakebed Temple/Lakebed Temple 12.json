@@ -2,9 +2,9 @@
     "name": "Lakebed Temple 12",
     "neighbours": 
     [
-        "lakebed_temple_11", 
-        "lakebed_temple_02_03", 
-        "lakebed_temple_05"
+        "Lakebed Temple 11", 
+        "Lakebed Temple 02 03", 
+        "Lakebed Temple 05"
     ],
     "neighbourRequirements":
     [
@@ -15,8 +15,8 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Lakebed_Temple_West_Lower_Small_Chest",
-        "Lakebed_Temple_West_Second_Floor_Central_Small_Chest"
+        "Lakebed Temple West Lower Small Chest",
+        "Lakebed Temple West Second Floor Central Small Chest"
     ],
     "visited": "false",
     "region": "Lakebed Temple"

@@ -1,9 +1,9 @@
 {
-    "name": "Lakebed Temple 00-01",
+    "name": "Lakebed Temple 00 01",
     "neighbours": 
     [
-        "Lake_Hylia", 
-        "Lakebed_Temple_02_03"
+        "Lake Hylia", 
+        "Lakebed Temple 02 03"
     ],
     "neighbourRequirements": 
     [
@@ -13,9 +13,9 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Lakebed_Temple_Lobby_Left_Chest", 
-        "Lakebed_Temple_Lobby_Rear_Chest", 
-        "Lakebed_Temple_Stalactite_Room_Chest"
+        "Lakebed Temple Lobby Left Chest", 
+        "Lakebed Temple Lobby Rear Chest", 
+        "Lakebed Temple Stalactite Room Chest"
     ],
     "visited": "false",
     "region": "Lakebed Temple"

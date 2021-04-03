@@ -13,8 +13,8 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "City_in_The_Sky_East_Wing_After_Dinalfos_Alcove_Chest",
-        "City_in_The_Sky_East_Wing_After_Dinalfos_Ledge_Chest"
+        "City in The Sky East Wing After Dinalfos Alcove Chest",
+        "City in The Sky East Wing After Dinalfos Ledge Chest"
      ],
     "visited": "false",
     "region": "City in the Sky"

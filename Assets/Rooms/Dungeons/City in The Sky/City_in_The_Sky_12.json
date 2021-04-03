@@ -13,10 +13,10 @@
     "visited": "false",
     "checks": 
     [
-        "City_in_The_Sky_West_Garden_Corner_Chest",
-        "City_in_The_Sky_West_Garden_Lone_Island_Chest",
-        "City_in_The_Sky_West_Garden_Lower_Chest",
-        "City_in_The_Sky_West_Garden_Ledge_Chest"
+        "City in The Sky West Garden Corner Chest",
+        "City in The Sky West Garden Lone Island Chest",
+        "City in The Sky West Garden Lower Chest",
+        "City in The Sky West Garden Ledge Chest"
     ],
     "isStartingRoom": "false",
     "region": "City in the Sky"

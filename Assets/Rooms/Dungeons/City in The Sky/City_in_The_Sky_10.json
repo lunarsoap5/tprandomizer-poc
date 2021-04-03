@@ -13,10 +13,10 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "City_in_The_Sky_West_Wing_First_Chest",
-        "City_in_The_Sky_West_Wing_Baba_Balcony_Chest",
-        "City_in_The_Sky_West_Wing_Narrow_Ledge_Chest",
-        "City_in_The_Sky_West_Wing_Tile_Worm_Chest"
+        "City in The Sky West Wing First Chest",
+        "City in The Sky West Wing Baba Balcony Chest",
+        "City in The Sky West Wing Narrow Ledge Chest",
+        "City in The Sky West Wing Tile Worm Chest"
      ],
     "visited": "false",
     "region": "City in the Sky"

@@ -13,8 +13,8 @@
     "visited": "false",
     "checks": 
     [
-        "City_in_The_Sky_Central_Outside_Chest",
-        "City_in_The_Sky_Central_Outside_Poe_Island_Chest"
+        "City in The Sky Central Outside Chest",
+        "City in The Sky Central Outside Poe Island Chest"
     ],
     "isStartingRoom": "false",
     "region": "City in the Sky"

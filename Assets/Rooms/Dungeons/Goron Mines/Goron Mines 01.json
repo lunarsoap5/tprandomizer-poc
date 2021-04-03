@@ -1,9 +1,9 @@
-{ 
-    "name": "goron_mines_09_17",
+{
+    "name": "Goron Mines 01",
     "neighbours": 
     [
-        "goron_mines_07", 
-        "dangoro"
+        "Death Mountain Interiors", 
+        "Goron Mines 03"
     ],
     "neighbourRequirements": 
     [
@@ -13,8 +13,7 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Goron_Mines_Gor_Ebizo_Chest",
-        "Goron_Mines_Chest_Before_Dangoro"
+        "Goron Mines Entrance Chest"
     ],
     "visited": "false",
     "region": "Goron Mines"

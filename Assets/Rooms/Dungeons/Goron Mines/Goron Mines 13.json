@@ -1,9 +1,9 @@
 { 
-    "name": "goron_mines_13",
+    "name": "Goron Mines 13",
     "neighbours": 
     [
-        "goron_mines_11", 
-        "goron_mines_03"
+        "Goron Mines 11", 
+        "Goron Mines 03"
     ],
     "neighbourRequirements": 
     [
@@ -11,7 +11,7 @@
         "Logic.canUse(Item.Iron_Boots) && Logic.canUse(Item.Heros_Bow)"
     ],
     "isStartingRoom": "false",
-    "checks": "",
+    "checks": [""],
     "visited": "false",
     "region": "Goron Mines"
 }

@@ -1,15 +1,15 @@
 { 
-    "name": "fyrus",
+    "name": "Fyrus",
     "neighbours": 
     [
-        "kakariko_village"
+        "Kakariko Village"
     ],
     "neighbourRequirements": 
     [
         "Logic.canDefeatFyrus()"
     ],
     "isStartingRoom": "false",
-    "checks": "", 
+    "checks": [""], 
     "visited": "false",
     "region": "Goron Mines"
 }

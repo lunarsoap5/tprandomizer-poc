@@ -11,7 +11,7 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Death_Sword_Chest"
+        "Death Sword Chest"
     ],
     "visited": "false",
     "region": "Arbiter's Grounds"

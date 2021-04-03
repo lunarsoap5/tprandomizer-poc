@@ -1,9 +1,9 @@
 {
-    "name": "goron_mines_06",
+    "name": "Goron Mines 06",
     "neighbours": 
     [
-        "goron_mines_03", 
-        "goron_mines_07"
+        "Goron Mines 03", 
+        "Goron Mines 07"
     ],
     "neighbourRequirements": 
     [
@@ -13,9 +13,9 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Goron_Mines_Crystal_Switch_Room_Underwater_Chest",
-        "Goron_Mines_Crystal_Switch_Room_Small_Chest",
-        "Goron_Mines_After_Crystal_Switch_Room_Magnet_Wall_Chest"
+        "Goron Mines Crystal Switch Room Underwater Chest",
+        "Goron Mines Crystal Switch Room Small Chest",
+        "Goron Mines After Crystal Switch Room Magnet Wall Chest"
     ],
     "visited": "false",
     "region": "Goron Mines"

@@ -13,8 +13,8 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Arbiters_Grounds_East_Upper_Turnable_Chest",
-        "Arbtiers_Grounds_East_Upper_Turnable_Redead_Chest"
+        "Arbiters Grounds East Upper Turnable Chest",
+        "Arbtiers Grounds East Upper Turnable Redead Chest"
     ],
     "visited": "false",
     "region": "Arbiter's Grounds"

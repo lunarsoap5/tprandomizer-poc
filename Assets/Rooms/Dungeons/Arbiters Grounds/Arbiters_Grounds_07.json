@@ -13,8 +13,8 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Arbiters_Grounds_West_Stalfos_North_Chest",
-        "Arbiters_Grounds_West_Stalfos_Southeast_Chest"
+        "Arbiters Grounds West Stalfos North Chest",
+        "Arbiters Grounds West Stalfos Southeast Chest"
     ],
     "visited": "false",
     "region": "Arbiter's Grounds"

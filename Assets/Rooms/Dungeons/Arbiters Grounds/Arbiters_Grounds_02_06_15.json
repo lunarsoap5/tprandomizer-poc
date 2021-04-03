@@ -19,11 +19,11 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Arbiters_Grounds_East_Lower_Turnable_Redead_Chest",
-        "Arbiters_Grounds_Torch_Room_East_Chest",
-        "Arbiters_Grounds_Torch_Room_West_Chest",
-        "Arbiters_Grounds_West_Small_Chest_Behind_Block",
-        "Arbiters_Grounds_West_Chandelier_Chest"
+        "Arbiters Grounds East Lower Turnable Redead Chest",
+        "Arbiters Grounds Torch Room East Chest",
+        "Arbiters Grounds Torch Room West Chest",
+        "Arbiters Grounds West Small Chest Behind Block",
+        "Arbiters Grounds West Chandelier Chest"
      ],
     "visited": "false",
     "region": "Arbiter's Grounds"

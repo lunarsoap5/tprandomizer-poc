@@ -1,10 +1,10 @@
 {
-    "names": "goron_mines_07",
+    "names": "Goron Mines 07",
     "neighbours": 
     [
-        "goron_mines_06", 
-        "goron_mines_09", 
-        "goron_mines_12"
+        "Goron Mines 06", 
+        "Goron Mines 09", 
+        "Goron Mines 12"
     ],
     "neighbourRequirements": 
     [
@@ -15,9 +15,9 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Goron_Mines_Outside_Beamos_Chest",
-        "Goron_Mines_Outside_Underwater_Chest",
-        "Goron_Mines_Outside_Clawshot_Chest"
+        "Goron Mines Outside Beamos Chest",
+        "Goron Mines Outside Underwater Chest",
+        "Goron Mines Outside Clawshot Chest"
     ],
     "visited": "false",
     "region": "Goron Mines"

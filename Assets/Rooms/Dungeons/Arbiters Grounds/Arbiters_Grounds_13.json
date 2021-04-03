@@ -13,11 +13,11 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Arbiters_Grounds_Spinner_Room_First_Small_Chest",
-        "Arbiters_Grounds_Spinner_Room_Second_Small_Chest",
-        "Arbiters_Grounds_Spinner_Room_Lower_Central_Small_Chest",
-        "Arbiters_Grounds_Spinner_Room_Stalfos_Alcove_Chest",
-        "Arbiters_Grounds_Spinner_Room_Lower North_Chest"
+        "Arbiters Grounds Spinner Room First Small Chest",
+        "Arbiters Grounds Spinner Room Second Small Chest",
+        "Arbiters Grounds Spinner Room Lower Central Small Chest",
+        "Arbiters Grounds Spinner Room Stalfos Alcove Chest",
+        "Arbiters Grounds Spinner Room Lower North Chest"
      ],
     "visited": "false",
     "region": "Arbiter's Grounds"

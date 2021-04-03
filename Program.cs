@@ -100,6 +100,18 @@ namespace tprandomizer_poc_main
                 Check currentCheck = checkList.Value;
                 Console.WriteLine(currentCheck.checkName + ": " + currentCheck.itemId);
             }
+
+            foreach (KeyValuePair<string, Room> roomList in Rooms.RoomDict.ToList())
+            {
+                Room currentRoom = roomList.Value;
+                Console.WriteLine("List of checks in " + currentRoom.name + ": ");
+                foreach (var check in currentRoom.checks)
+                {
+                    Console.WriteLine("    " + check);
+                }
+                
+            }
+            
                 
                 //myJsonObject.requirements = Regex.Replace(myJsonObject.requirements, @"\bLogic\b", "Logic.LogicFunctions");
                 //var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");

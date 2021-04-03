@@ -2,8 +2,8 @@
     "name": "Lakebed Temple 08",
     "neighbours": 
     [
-        "lakebed_temple_02_03", 
-        "lakebed_temple_09"
+        "Lakebed Temple 02 03", 
+        "Lakebed Temple 09"
     ],
     "neighbourRequirements": 
     [
@@ -13,8 +13,8 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Lakebed_Temple_East_Lower_Waterwheel_Stalactite_Chest",
-        "Lakebed_Temple_East_Lower_Waterwheel_Bridge_Chest"
+        "Lakebed Temple East Lower Waterwheel Stalactite Chest",
+        "Lakebed Temple East Lower Waterwheel Bridge Chest"
     ], 
     "visited": "false",
     "region": "Lakebed Temple"

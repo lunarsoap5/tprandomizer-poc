@@ -1,12 +1,12 @@
 {
-    "name": "Lakebed Temple 02-03",
+    "name": "Lakebed Temple 02 03",
     "neighbours": 
     [
-        "lakebed_temple_00_01", 
-        "lakebed_temple_07", 
-        "lakebed_temple_08", 
-        "lakebed_temple_12", 
-        "morpheel"
+        "Lakebed Temple 00 01", 
+        "Lakebed Temple 07", 
+        "Lakebed Temple 08", 
+        "Lakebed Temple 12", 
+        "Morpheel"
     ],
     "neighbourRequirements": [
         "true", 
@@ -18,10 +18,10 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Lakebed_Temple_Central_Room_Small_Chest",
-        "Lakebed_Temple_Central_Room_Chest",
-        "Lakebed_Temple_Chandelier_Chest",
-        "Lakebed_Temple_Center_Spire_Chest"
+        "Lakebed Temple Central Room Small Chest",
+        "Lakebed Temple Central Room Chest",
+        "Lakebed Temple Chandelier Chest",
+        "Lakebed Temple Center Spire Chest"
     ],
     "visited": "false",
     "region": "Lakebed Temple"

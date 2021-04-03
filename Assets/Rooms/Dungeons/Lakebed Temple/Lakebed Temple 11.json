@@ -2,9 +2,9 @@
     "name": "Lakebed Temple 11",
     "neighbours": 
     [
-        "lakebed_temple_02_03", 
-        "lakebed_temple_12", 
-        "lakebed_temple_13"
+        "Lakebed Temple 02 03", 
+        "Lakebed Temple 12", 
+        "Lakebed Temple 13"
     ],
     "neighbourRequirements": 
     [
@@ -15,9 +15,9 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Lakebed_Temple_West_Second_Floor_Southwest_Underwater_Chest",
-        "Lakebed_Temple_West_Second_Floor_Northeast_Chest",
-        "Lakebed_Temple_West_Second_Floor_Southeast_Chest"
+        "Lakebed Temple West Second Floor Southwest Underwater Chest",
+        "Lakebed Temple West Second Floor Northeast Chest",
+        "Lakebed Temple West Second Floor Southeast Chest"
     ],
     "visited": "false",
     "region": "Lakebed Temple"

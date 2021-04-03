@@ -2,7 +2,7 @@
     "name": "Deku Toad",
     "neighbours": 
     [
-        "lakebed_temple_09"
+        "Lakebed Temple 09"
     ],
     "neighbourRequirements": 
     [
@@ -11,7 +11,7 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Lakebed_Temple_Deku_Toad_Chest"
+        "Lakebed Temple Deku Toad Chest"
     ], 
     "visited": "false",
     "region": "Lakebed Temple"

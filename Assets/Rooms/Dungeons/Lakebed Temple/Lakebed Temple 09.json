@@ -2,8 +2,8 @@
     "name": "Lakebed Temple 09",
     "neighbours": 
     [
-        "lakebed_temple_08", 
-        "deku_toad"
+        "Lakebed Temple 08", 
+        "Deku Toad"
     ],
     "neighbourRequirements": 
     [
@@ -13,9 +13,9 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Lakebed_Temple_Before_Deku_Toad_Alcove_Chest",
-        "Lakebed_Temple_Before_Deku_Toad_Underwater_Left_Chest",
-        "Lakebed_Temple_Before_Deku_Toad_Underwater_Right_Chest"
+        "Lakebed Temple Before Deku Toad Alcove Chest",
+        "Lakebed Temple Before Deku Toad Underwater Left Chest",
+        "Lakebed Temple Before Deku Toad Underwater Right Chest"
     ], 
     "visited": "false",
     "region": "Lakebed Temple"

@@ -1,9 +1,9 @@
 {
-    "name": "goron_mines_01",
+    "name": "Goron Mines 04 05",
     "neighbours": 
     [
-        "death_mountain_interiors", 
-        "goron_mines_03"
+        "Goron Mines 03", 
+        "Goron Mines 14"
     ],
     "neighbourRequirements": 
     [
@@ -13,7 +13,7 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Goron_Mines_Entrance_Chest"
+        "Goron Mines Magnet Maze Chest"
     ],
     "visited": "false",
     "region": "Goron Mines"

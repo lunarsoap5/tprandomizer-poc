@@ -1,8 +1,8 @@
-{
-    "name": "goron_mines_16",
+{ 
+    "name": "Goron Mines 14",
     "neighbours": 
     [
-        "goron_mines_11"
+        "Goron Mines 05"
     ],
     "neighbourRequirements": 
     [
@@ -11,8 +11,9 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Goron_Mines_Gor_Liggs_Chest"
-    ],
+        "Goron Mines Gor Amato Chest",
+        "Goron Mines Gor Amato Small Chest"
+     ],
     "visited": "false",
     "region": "Goron Mines"
 }

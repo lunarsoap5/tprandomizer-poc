@@ -1,9 +1,9 @@
 {
-    "name": "goron_mines_12",
+    "name": "Goron Mines 12",
     "neighbours": 
     [
-        "goron_mines_07", 
-        "fyrus"
+        "Goron Mines 07", 
+        "Fyrus"
     ],
     "neighbourRequirements": 
     [
@@ -11,7 +11,7 @@
         "Logic.canUse(Item.Heros_Bow) && Logic.canDefeatBublin() && Logic.canUse(Item.Goron_Mines_Big_Key)"
     ],
     "isStartingRoom": "false",
-    "checks": "",
+    "checks": [""],
     "visited": "false",
     "region": "Goron Mines"
 }

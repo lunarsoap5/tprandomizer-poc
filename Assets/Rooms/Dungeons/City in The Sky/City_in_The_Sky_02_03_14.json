@@ -17,9 +17,9 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "City_in_The_Sky_Big_Key_Chest",
-        "City_in_The_Sky_Chest_Below_Big_Key_Chest",
-        "City_in_The_Sky_Chest_Behind_North_Fan"
+        "City in The Sky Big Key Chest",
+        "City in The Sky Chest Below Big Key Chest",
+        "City in The Sky Chest Behind North Fan"
      ],
     "visited": "false",
     "region": "City in the Sky"

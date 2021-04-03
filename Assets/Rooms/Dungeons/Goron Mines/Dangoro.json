@@ -1,9 +1,9 @@
 {
-    "name": "dangoro",
+    "name": "Dangoro",
     "neighbours": 
     [
-        "goron_mines_09", 
-        "goron_mines_11"
+        "Goron Mines 09", 
+        "Goron Mines 11"
     ],
     "neighbourRequirements":
     [
@@ -11,7 +11,7 @@
         "Logic.canDefeatDangoro()"
     ],
     "isStartingRoom": "false",
-    "checks": "", 
+    "checks": [""], 
     "visited": "false",
     "region": "Goron Mines"
 }

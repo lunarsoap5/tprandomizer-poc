@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatBokoblin(), &&  Logic.canDefeatLizalfos() && Logic.canUse(Item.Double_Clawshot)"
+        "Logic.canDefeatBokoblin() &&  Logic.canDefeatLizalfos() && Logic.canUse(Item.Double_Clawshot)"
     ],
     "isStartingRoom": "false",
     "checks": 

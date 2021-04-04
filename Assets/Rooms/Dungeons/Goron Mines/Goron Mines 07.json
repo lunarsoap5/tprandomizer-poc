@@ -9,7 +9,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "goronMinesSmallKeyCount >= 3",
+        "Logic.goronMinesSmallKeyCount >= 3",
         "Logic.canUse(Item.Heros_Bow) && Logic.canUse(Item.Iron_Boots)"
     ],
     "isStartingRoom": "false",

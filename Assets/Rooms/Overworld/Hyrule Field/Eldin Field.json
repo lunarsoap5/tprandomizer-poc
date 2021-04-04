@@ -15,8 +15,8 @@
         "Logic.canSmash()",
         "true",
         "Logic.canUse(Item.Clawshot)",
-        "can access castle town",
-        ":pgic.canSmash()",
+        "Logic.canUse(Item.Gate_Keys) || Logic.canSmash()",
+        "Logic.canSmash()",
         "Logic.canUse(Item.Shadow_Crystal)",
         "Logic.canUse(Item.Shadow_Crystal)"
     ],

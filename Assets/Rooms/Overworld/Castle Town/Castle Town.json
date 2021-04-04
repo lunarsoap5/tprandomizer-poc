@@ -12,7 +12,7 @@
         "true",
         "true",
         "true",
-        "(zantDefeated == true) && (morpheelDefeated == true)"
+        "(Logic.zantDefeated == true) && (Logic.morpheelDefeated == true)"
     ],
     "isStartingRoom": "false",
     "checks": 

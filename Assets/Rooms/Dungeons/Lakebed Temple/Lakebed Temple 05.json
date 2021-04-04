@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Zora_Armor) && Logic.canUse(Item.Bomb_Bag_And_Bombs)"
+        "Logic.canUse(Item.Zora_Armor) && Logic.hasBombs()"
     ],
     "isStartingRoom": "false",
     "checks": ["Lakebed Temple Underwater Maze Small Chest"],

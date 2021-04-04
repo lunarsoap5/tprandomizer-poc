@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatGhoulRat() && (arbitersGroundsSmallKeyCount >= 4)"
+        "Logic.canDefeatGhoulRat() && (Logic.arbitersGroundsSmallKeyCount >= 4)"
     ],
     "isStartingRoom": "false",
     "checks": 

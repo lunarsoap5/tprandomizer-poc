@@ -10,7 +10,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "hyruleCastleSmallKeyCount >= 1",
+        "Logic.hyruleCastleSmallKeyCount >= 1",
         "Logic.canDefeatBokoblin() && Logic.canDefeatKargarok()",
         "Logic.canDefeatBokoblin() && Logic.canDefeatKargarok()"
     ],

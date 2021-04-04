@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatBubble() && (arbitersGroundsSmallKeyCount >=5)"
+        "Logic.canDefeatBubble() && (Logic.arbitersGroundsSmallKeyCount >=5)"
     ],
     "isStartingRoom": "false",
     "checks": 

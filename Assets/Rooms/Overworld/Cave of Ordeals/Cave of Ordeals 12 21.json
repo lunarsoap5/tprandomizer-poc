@@ -7,7 +7,7 @@
     ],
     "neighbourRequirements":
     [
-        "Items.Clawshot",
+        "Logic.canUse(Item.Clawshot)",
         "Logic.canDefeatHelmasaur() && Logic.canDefeatRat() && Logic.canUse(Item.Spinner) && Logic.canDefeatChu() && Logic.canDefeatChuWorm() && Logic.canDefeatBubble() && Logic.canDefeatBublin() && Logic.canDefeatKeese() && Logic.canDefeatRat() && Logic.canDefeatStalhound() && Logic.canDefeatPoe() && Logic.canDefeatLeever()"
     ],
     "isStartingRoom": "false",

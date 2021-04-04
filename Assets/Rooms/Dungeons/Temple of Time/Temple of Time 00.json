@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "templeofTimeSmallKeyCount >=1",
-        "Logic.canUse(Item.Dominion_Rod_Uncharged) && Logic.canUse(Item.Heros_Bow) Logic.canUse(Item.Spinner) && Logic.canDefeatLizalfos() && Logic.canDefeatDinalfos() && Logic.canDefeatDarknut() && (templeofTimeSmallKeyCount >= 3)"
+        "Logic.templeofTimeSmallKeyCount >=1",
+        "Logic.canUse(Item.Dominion_Rod_Uncharged) && Logic.canUse(Item.Heros_Bow) && Logic.canUse(Item.Spinner) && Logic.canDefeatLizalfos() && Logic.canDefeatDinalfos() && Logic.canDefeatDarknut() && (Logic.templeofTimeSmallKeyCount >= 3)"
     ],
     "isStartingRoom": "false",
     "checks": 

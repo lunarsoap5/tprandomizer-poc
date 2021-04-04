@@ -10,7 +10,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Boomerang) && (forestTempleSmallKeyCount >= 4)",
+        "Logic.canUse(Item.Boomerang) && (Logic.forestTempleSmallKeyCount >= 4)",
         "Logic.canUse(Item.Boomerang)",
         "Logic.canUse(Item.Boomerang)"
     ],

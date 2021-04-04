@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "canUse(Item.Spinner)"
+        "Logic.canUse(Item.Spinner)"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -12,7 +12,7 @@
         "true",
         "Logic.canUse(Item.Shadow_Crystal) || Logic.canUse(Item.Ball_and_Chain)",
         "Logic.canUse(Item.Ball_and_Chain) && Logic.canUse(Item.Clawshot) && Logic.canDefeatChilfos()",
-        "(snowpeakRuinsSmallKeyCount >=4)"
+        "(Logic.snowpeakRuinsSmallKeyCount >=4)"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

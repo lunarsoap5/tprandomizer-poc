@@ -10,7 +10,7 @@
     [
         "true",
         "Logic.canDefeatStalfos() && Logic.canDefeatPoisonMite()",
-        "Logic.canDefeatStalfos() && Logic.canDefeatPoisonMite() && canUse(Item.Spinner)"
+        "Logic.canDefeatStalfos() && Logic.canDefeatPoisonMite() && Logic.canUse(Item.Spinner)"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

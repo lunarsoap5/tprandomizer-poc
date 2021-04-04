@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatBabaSerpent"
+        "Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatBabaSerpent()"
     ],
     "isStartingRoom": "false",
     "checks": 

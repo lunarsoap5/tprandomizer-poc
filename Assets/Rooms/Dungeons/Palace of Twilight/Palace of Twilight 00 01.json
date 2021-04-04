@@ -10,9 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "(palaceofTwilightSmallKeyCount >= 1) && Logic.canDefeatZantHead() && Logic.canUse(Item.Clawshot)",
-        "Logic.canDefeatPhantomZant() && Logic.canUse(Item.Clawshot) && Logic.canDefeatZantHead() && (palaceofTwilightSmallKeyCount >= 2)",
-        "Logic.canDefeatPhantomZant() && Logic.canUse(Item.Clawshot) && Logic.canDefeatZantHead() && Logic.canUse(Item.Shadow_Crystal) && (palaceofTwilightSmallKeyCount >= 4) && Logic.canUse(Item.Light_Sword)"
+        "(Logic.palaceofTwilightSmallKeyCount >= 1) && Logic.canDefeatZantHead() && Logic.canUse(Item.Clawshot)",
+        "Logic.canDefeatPhantomZant() && Logic.canUse(Item.Clawshot) && Logic.canDefeatZantHead() && (Logic.palaceofTwilightSmallKeyCount >= 2)",
+        "Logic.canDefeatPhantomZant() && Logic.canUse(Item.Clawshot) && Logic.canDefeatZantHead() && Logic.canUse(Item.Shadow_Crystal) && (Logic.palaceofTwilightSmallKeyCount >= 4) && Logic.canUse(Item.Master_Sword_Light)"
     ],
     "isStartingRoom": "false",
     "checks": 

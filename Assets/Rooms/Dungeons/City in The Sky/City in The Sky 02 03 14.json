@@ -10,7 +10,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Spinner) && (cityinTheSkySmallKeyCount >= 1)",
+        "Logic.canUse(Item.Spinner) && (Logic.cityinTheSkySmallKeyCount >= 1)",
         "Logic.canUse(Item.Clawshot)",
         "Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatBabaSerpent() && Logic.canDefeatKargarok() && Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Iron_Boots)"
     ],

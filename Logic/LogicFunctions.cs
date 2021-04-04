@@ -15,7 +15,7 @@ namespace Logic
 		public static int templeofTimeSmallKeyCount = 0;
 		public static int cityinTheSkySmallKeyCount = 0;
 		public static int palaceofTwilightSmallKeyCount = 0;
-		public int hyruleCastleSmallKeyCount = 0;
+		public static int hyruleCastleSmallKeyCount = 0;
 		public int fusedShadowCount = 0;
 		public int mirrorShardCount = 0;
 

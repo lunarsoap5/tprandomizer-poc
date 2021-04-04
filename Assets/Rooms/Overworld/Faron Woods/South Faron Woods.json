@@ -10,7 +10,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "diababaDefeated == true",
+        "Logic.diababaDefeated == true",
         "Logic.canUse(Item.Coro_Key)",
         "Logic.canSmash() && Logic.canUse(Item.Dominion_Rod) && Logic.canUse(Item.Shadow_Crystal)"
     ],

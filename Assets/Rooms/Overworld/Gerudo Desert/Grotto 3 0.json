@@ -1,0 +1,18 @@
+{ 
+    "name": "Grotto 3 0",
+    "neighbours": 
+    [
+        "Gerudo Desert"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Gerudo Desert Poe Grotto Lantern Chest"
+    ],
+    "visited": "false",
+    "region": "Gerudo Desert"
+}

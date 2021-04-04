@@ -1,6 +1,6 @@
 {
     "checkName": "Palace of Twilight East Wing First Room West Alcove",
-    "requirements": "(palaceofTwilightSmallKeyCount >= 4) && Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Clawshot) && Logic.canDefeatPhantomZant()",
+    "requirements": "(Logic.palaceofTwilightSmallKeyCount >= 4) && Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Clawshot) && Logic.canDefeatPhantomZant()",
     "hash": "FA68",
     "isExcluded": false,
     "category": ["Chest", "Palace of Twilight"],

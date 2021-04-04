@@ -1,0 +1,19 @@
+{ 
+    "name": "Snowpeak Climb",
+    "neighbours": 
+    [
+        "Zoras Domain", 
+        "Snowpeak Summit", 
+        "Grotto 4 2"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Coral_Earring) && Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Coral_Earring) && Logic.canUse(Item.Shadow_Crystal)"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Snowpeak Province"
+}

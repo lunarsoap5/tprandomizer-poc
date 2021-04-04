@@ -1,6 +1,6 @@
 {
     "checkName": "Snowpeak Ruins Lobby Chandelier Chest",
-    "requirements": "(snowpeakRuinsSmallKeyCount >=3) && Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain)",
+    "requirements": "(Logic.snowpeakRuinsSmallKeyCount >=3) && Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain)",
     "hash": "2D6A",
     "isExcluded": false,
     "category": ["Chest", "Snowpeak Ruins"],

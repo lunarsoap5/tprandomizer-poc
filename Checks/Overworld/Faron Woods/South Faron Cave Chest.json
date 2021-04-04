@@ -1,6 +1,6 @@
 {
     "checkName": "South Faron Cave Chest",
-    "requirements": "canUse(Item.Lantern)",
+    "requirements": "Logic.canUse(Item.Lantern)",
     "hash": "542E",
     "isExcluded": false,
     "category": ["Chest", "Faron Woods"],

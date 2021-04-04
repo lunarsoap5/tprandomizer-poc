@@ -1,0 +1,19 @@
+{ 
+    "name": "Grotto 1 1",
+    "neighbours": 
+    [
+        "Eldin Field"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Eldin Field Bomskit Grotto Left Chest",
+        "Eldin Field Bomskit Grotto Lantern Chest"
+     ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

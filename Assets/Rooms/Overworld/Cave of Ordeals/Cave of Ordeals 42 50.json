@@ -1,0 +1,15 @@
+{ 
+    "name": "Cave of Ordeals 42 50",
+    "neighbours": 
+    [
+        "Lanayru Spring"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canDefeatArmos() && Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatBokoblin() && Logic.canDefeatBabaSerpent() && Logic.canDefeatLizalfos() && Logic.canDefeatBublin() && Logic.canDefeatDinalfos() && Logic.canDefeatPoe() && Logic.canDefeatRedeadKnight() && Logic.canDefeatChu() && Logic.canDefeatFreezard() && Logic.canDefeatChilfos() && Logic.canDefeatGhoulRat() && Logic.canDefeatRat() && Logic.canDefeatStalchild() && Logic.canDefeatAeralfos() && Logic.canDefeatDarknut()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Cave of Ordeals"
+}

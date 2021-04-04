@@ -1,0 +1,17 @@
+{
+    "name": "Mirror Chamber",
+    "neighbours": 
+    [
+        "Stallord", 
+        "Palace of Twilight 00"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatShadowBeast()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Gerudo Desert"
+}

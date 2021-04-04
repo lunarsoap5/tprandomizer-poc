@@ -1,0 +1,17 @@
+{ 
+    "name": "Cave of Ordeals 01 11",
+    "neighbours": 
+    [
+        "Gerudo Desert", 
+        "Cave of Ordeals 12 21"
+    ],
+    "neighbourRequirements":
+    [
+        "Items.Clawshot",
+        "Logic.canDefeatBokoblin() && Logic.canDefeatKeese() && Logic.canDefeatRat() && Logic.canDefeatBabaSerpent() && Logic.canDefeatSkulltula() && Logic.canDefeatBublin() && Logic.canDefeatTorchSlug() && Logic.canDefeatFireKeese() && Logic.canDefeatDodongo() && Logic.canDefeatTetike() && Logic.canDefeatLizalfos()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Cave of Ordeals"
+}

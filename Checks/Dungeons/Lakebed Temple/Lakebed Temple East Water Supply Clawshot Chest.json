@@ -1,6 +1,6 @@
 {
     "checkName": "Lakebed Temple East Water Supply Clawshot Chest",
-    "requirements": "(lakebedTempleSmallKeyCount >= 3) && Logic.canUse(Item.Clawshot)",
+    "requirements": "(Logic.lakebedTempleSmallKeyCount >= 3) && Logic.canUse(Item.Clawshot)",
     "hash": "3CC9",
     "isExcluded": false,
     "category": ["Chest", "Lakebed Temple"],

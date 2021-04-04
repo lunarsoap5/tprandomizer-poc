@@ -1,0 +1,20 @@
+{ 
+    "name": "Grotto 2 0",
+    "neighbours": 
+    [
+        "Lanayru Field"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lanayru Field Stalfos Grotto Right Small Chest",
+        "Lanayru Field Stalfos Grotto Left Small Chest",
+        "Lanayru Field Stalfos Grotto Stalfos Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

@@ -1,0 +1,17 @@
+{ 
+    "name": "Cave of Ordeals 22 31",
+    "neighbours": 
+    [
+        "Faron Spring", 
+        "Cave of Ordeals 32 41"
+    ],
+    "neighbourRequirements":
+    [
+        "Clawshot",
+        "Logic.canDefeatBokoblin() && Logic.canDefeatIceKeese() && Logic.canUse(Item.Ball_and_Chain) && Logic.canDefeatKeese() && Logic.canDefeatRat() && Logic.canDefeatGhoulRat() && Logic.canDefeatStalchild() && Logic.canDefeatRedeadKnight() && Logic.canDefeatBublin() && Logic.canDefeatStalfos() && Logic.canDefeatSkulltula() && Logic.canDefeatBubble() && Logic.canDefeatLizalfos() && Logic.canDefeatFireBubble()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Cave of Ordeals"
+}

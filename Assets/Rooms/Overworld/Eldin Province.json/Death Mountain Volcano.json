@@ -1,0 +1,17 @@
+{ 
+    "name": "Death Mountain Volcano",
+    "neighbours": 
+    [
+        "Death Mountain Trail", 
+        "Death Mountain Interiors"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Iron_Boots) && Logic.canDefeatGoron()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Eldin Province"
+}

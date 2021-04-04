@@ -1,0 +1,20 @@
+{ 
+    "name": "Death Mountain Trail",
+    "neighbours": 
+    [
+        "Kakariko Village", 
+        "Death Mountain Volcano"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Iron_Boots)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Death Mountain Alcove Chest"
+    ],
+    "visited": "false",
+    "region": "Eldin Province"
+}

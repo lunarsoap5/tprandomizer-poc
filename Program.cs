@@ -94,23 +94,16 @@ namespace tprandomizer_poc_main
             
 
             //Rooms.setupGraph();
-            Console.WriteLine("Current Item Pool:");
-           foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
+
+            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
             {
                 Check currentCheck = checkList.Value;
-                Console.WriteLine(currentCheck.checkName + ": " + currentCheck.itemId);
+                Console.WriteLine("Can get check :" + currentCheck.checkName);
+                var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");
+                var now = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                Console.WriteLine(now);
             }
 
-            foreach (KeyValuePair<string, Room> roomList in Rooms.RoomDict.ToList())
-            {
-                Room currentRoom = roomList.Value;
-                Console.WriteLine("List of checks in " + currentRoom.name + ": ");
-                foreach (var check in currentRoom.checks)
-                {
-                    Console.WriteLine("    " + check);
-                }
-                
-            }
             
                 
                 //myJsonObject.requirements = Regex.Replace(myJsonObject.requirements, @"\bLogic\b", "Logic.LogicFunctions");

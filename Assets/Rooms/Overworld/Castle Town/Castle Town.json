@@ -1,0 +1,24 @@
+{ 
+    "name": "Castle Town",
+    "neighbours": 
+    [
+        "Outside Castle Town West", 
+        "Eldin Field", 
+        "Outside Castle Town South", 
+        "Hyrule Castle 11"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "true",
+        "true",
+        "(zantDefeated == true) && (morpheelDefeated == true)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Doctors Office Balcony Chest"
+    ],
+    "visited": "false",
+    "region": "Castle Town"
+}

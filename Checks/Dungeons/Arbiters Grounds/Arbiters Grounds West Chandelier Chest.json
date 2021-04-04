@@ -1,6 +1,6 @@
 {
     "checkName": "Arbiters Grounds West Chandelier Chest",
-    "requirements": "(arbitersGroundsSmallKeyCount >= 4) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatGhoulRat()",
+    "requirements": "(Logic.arbitersGroundsSmallKeyCount >= 4) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatGhoulRat()",
     "hash": "B288",
     "isExcluded": false,
     "category": ["Chest", "Arbiter's Grounds"],

@@ -1,6 +1,6 @@
 {
     "checkName": "Wrestling With Bo",
-    "requirements": "diababaDefeated == true",
+    "requirements": "Logic.diababaDefeated == true",
     "hash": "CA8A",
     "isExcluded": false,
     "category": ["Chest"],

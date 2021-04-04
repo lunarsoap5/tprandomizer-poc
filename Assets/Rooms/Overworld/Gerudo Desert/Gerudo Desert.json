@@ -1,0 +1,35 @@
+{
+    "name": "Gerudo Desert",
+    "neighbours": 
+    [
+        "cave of ordeals", 
+        "bublin camp", 
+        "grotto 3 0", 
+        "grotto 4 1"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canDefeatShadowBeast() && Logic.canUse(Item.Clawshot)",
+        "Logic.canDefeatBublin()",
+        "Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Clawshot)",
+        "Logic.canUse(Item.Shadow_Crystal)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Gerudo Desert Peahat Ledge Chest",
+        "Gerudo Desert East Canyon Chest",
+        "Gerudo Desert Lone Small Chest",
+        "Gerudo Desert West Canyon Chest",
+        "Gerudo Desert Northeast Chest Behind Gates",
+        "Gerudo Desert South Chest Behind Wooden Gates",
+        "Gerudo Desert Campfire North Chest",
+        "Gerudo Desert Campfire East Chest",
+        "Gerudo Desert Campfire West Chest",
+        "Gerudo Desert Northwest Chest Behind Gates",
+        "Gerudo Desert North Small Chest Before Bublin Camp",
+        "Gerudo Desert Owl Statue Chest"
+     ],
+    "visited": "false",
+    "region": "Gerudo Desert"
+}

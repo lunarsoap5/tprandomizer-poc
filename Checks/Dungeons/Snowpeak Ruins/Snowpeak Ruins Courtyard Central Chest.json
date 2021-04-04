@@ -1,6 +1,6 @@
 {
     "checkName": "Snowpeak Ruins Courtyard Central Chest",
-    "requirements": "Logic.canUse(Item.Ball_and_Chain) || (Logic.canUse(Item.Goron_Bomb_Bag) && (snowpeakRuinsSmallKeyCount >=4))",
+    "requirements": "Logic.canUse(Item.Ball_and_Chain) || (Logic.canUse(Item.Bomb_Bag_And_Bombs) && (Logic.snowpeakRuinsSmallKeyCount >=4))",
     "hash": "E51D",
     "isExcluded": false,
     "category": ["Chest", "Snowpeak Ruins"],

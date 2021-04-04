@@ -1,0 +1,31 @@
+{
+    "name": "Eldin Field",
+    "neighbours": 
+    [
+        "Kakariko Gorge", 
+        "Kakariko Village", 
+        "Goron Stockcave", 
+        "Castle Town", 
+        "Lanayru Field", 
+        "Grotto 5 3", 
+        "Grotto 1 1"
+    ],
+    "neighbourRequirements": 
+    [
+        "Logic.canSmash()",
+        "true",
+        "Logic.canUse(Item.Clawshot)",
+        "can access castle town",
+        ":pgic.canSmash()",
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Shadow_Crystal)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Eldin Field Bomb Rock Chest",
+        "Bridge of Eldin Owl Statue Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

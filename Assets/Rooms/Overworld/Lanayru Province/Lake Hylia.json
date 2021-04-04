@@ -1,0 +1,46 @@
+{
+    "name": "Lake Hylia",
+    "neighbours": 
+    [
+        "Gerudo Desert", 
+        "Lake Hylia Long Cave", 
+        "Grotto 5 2", 
+        "Grotto 5 4", 
+        "Lakebed Temple 00", 
+        "City in The Sky 00", 
+        "Lake Hylia Bridge", 
+        "Zoras Domain"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canUse(Item.Aurus_Memo)",
+        "Logic.canSmash()",
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Iron_Boots) && Logic.canUse(Item.Goron_Bomb_Bag) && Logic.canUse(Item.Zora_Armor)",
+        "Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Ancient_Sky_Book_Completed)",
+        "",
+        "Logic.canUse(Item.Shadow_Crystal)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lake Hylia Underwater Chest",
+        "Outside Lanayru Spring Left Statue Chest",
+        "Outside Lanayru Spring Right Statue Chest",
+        "Lanayru Spring Underwater Left Chest",
+        "Lanayru Spring Underwater Right Chest",
+        "Lanayru Spring Back Room Left Chest",
+        "Lanayru Spring Back Room Right Chest",
+        "Lanayru Spring Back Room Lantern Chest",
+        "Flight By Fowl Top Platform",
+        "Flight By Fowl Second Platform",
+        "Flight By Fowl Third Platform",
+        "Flight By Fowl Fourth Platform",
+        "Flight By Fowl Fifth Platform",
+        "Lanayru Spring East Double Clawshot Chest",
+        "Lanayru Spring West Double Clawshot Chest"
+     ],
+    "visited": "false",
+    "region": "Lanayru Province"
+}

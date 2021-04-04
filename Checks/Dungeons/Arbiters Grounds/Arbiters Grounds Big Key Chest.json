@@ -1,6 +1,6 @@
 {
     "checkName": "Arbiters Grounds Big Key Chest",
-    "requirements": "(arbitersGroundsSmallKeyCount >= 5) && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Spinner) && Logic.canDefeatStalfos()",
+    "requirements": "(Logic.arbitersGroundsSmallKeyCount >= 5) && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Spinner) && Logic.canDefeatStalfos()",
     "hash": "47CF",
     "isExcluded": false,
     "category": ["Chest", "Arbiter's Grounds", "Boss Key"],

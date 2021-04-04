@@ -1,0 +1,22 @@
+{ 
+    "name": "North Faron Woods",
+    "neighbours": 
+    [
+        "Faron Mist Area", 
+        "Forest Temple 22", 
+        "Lost Woods"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Lantern)",
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "North Faron Woods Deku Baba Chest"
+    ],
+    "visited": "false",
+    "region": "Faron Woods"
+}

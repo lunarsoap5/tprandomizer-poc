@@ -1,0 +1,20 @@
+{
+    "name": "Sacred Grove Temple of Time",
+    "neighbours": 
+    [
+        "Sacred Grove Master Sword", 
+        "Temple of Time 00"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Master_Sword)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Sacred Grove Past Owl Statue"
+    ],
+    "visited": "false",
+    "region": "Sacred Grove"
+}

@@ -1,5 +1,5 @@
 {
-    "checkName": "Lake Lantern cave Fourth Chest",
+    "checkName": "Lake Lantern Cave Fourth Chest",
     "requirements": "Logic.canSmash() && Logic.canUse(Item.Lantern)",
     "hash": "6E51",
     "isExcluded": false,

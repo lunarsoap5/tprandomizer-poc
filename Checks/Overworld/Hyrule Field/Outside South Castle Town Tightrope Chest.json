@@ -1,5 +1,5 @@
 {
-    "checkName": "Outside Castle Town South Tightrope Chest",
+    "checkName": "Outside South Castle Town Tightrope Chest",
     "requirements": "Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Shadow_Crystal)",
     "hash": "79AC",
     "isExcluded": false,

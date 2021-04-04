@@ -1,28 +1,28 @@
 { 
-    "name": "kakariko_village",
+    "name": "Kakariko Village",
     "neighbours": 
     [
-        "kakariko_gorge", 
-        "eldin_field", 
-        "death_mountain_trail", 
-        "lake_hylia"
+        "Kakariko Gorge", 
+        "Eldin Field", 
+        "Death Mountain Trail", 
+        "Lake Hylia"
     ],
     "neighbourRequirements": 
     [
         "true",
-        "",
+        "true",
         "true",
         "Logic.canUse(Item.Goron_Bomb_Bag) && Logic.canUse(Item.Iron_Boots)"
     ],
     "isStartingRoom": "false",
     "checks": 
     [
-        "Kakariko_Inn_Chest",
-        "Eldin_Spring_Underwater_Chest",        
-        "Kakariko_Graveyard_Lantern_Chest",
-        "Kakariko_Watchtower_Chest",
-        "Kakariko_Watchtower_Alcove_Chest",
-        "Kakariko_Bomb_Rock_Spire_Heart_Piece"
+        "Kakariko Inn Chest",
+        "Eldin Spring Underwater Chest",        
+        "Kakariko Graveyard Lantern Chest",
+        "Kakariko Watchtower Chest",
+        "Kakariko Watchtower Alcove Chest",
+        "Kakariko Bomb Rock Spire Heart Piece"
     ],
     "visited": "false",
     "region": "Eldin Province"

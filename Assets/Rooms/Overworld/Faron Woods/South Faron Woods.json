@@ -1,0 +1,21 @@
+{ 
+    "name": "South Faron Woods",
+    "neighbours": 
+    [
+        "Ordon Province", 
+        "Faron Field", 
+        "South Faron Woods Cave", 
+        "Faron Mist Area"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "diababaDefeated == true",
+        "Logic.canUse(Item.Coro_Key)",
+        "Logic.canSmash() && Logic.canUse(Item.Dominion_Rod) && Logic.canUse(Item.Shadow_Crystal)"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Faron Woods"
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Ordon Province",
+    "neighbours": 
+    [
+        "South Faron Woods"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canUse(Item.Wooden_Sword)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Gift From Rusl",
+        "Links Basement Chest",
+        "Wrestling With Bo"
+    ],
+    "visited": "false",
+    "region": "Ordonia Province"
+}

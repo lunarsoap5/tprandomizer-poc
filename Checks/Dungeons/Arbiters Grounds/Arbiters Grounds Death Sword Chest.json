@@ -1,5 +1,5 @@
 {
-    "checkName": "Arbiter's Grounds Death Sword Chest",
+    "checkName": "Arbiters Grounds Death Sword Chest",
     "requirements": "Logic.canDefeatDeathSword()",
     "hash": "8318",
     "isExcluded": false,

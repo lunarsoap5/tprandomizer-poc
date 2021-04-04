@@ -1,0 +1,20 @@
+{
+    "name": "City in The Sky 07 Lower",
+    "neighbours": 
+    [
+        "City in The Sky 04", 
+        "City in The Sky 08"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatTileWorm()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "City in The Sky East Tile Worm Small Chest"
+    ],
+    "visited": "false",
+    "region": "City in The Sky"
+}

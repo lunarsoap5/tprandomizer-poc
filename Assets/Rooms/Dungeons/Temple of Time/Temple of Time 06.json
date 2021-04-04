@@ -1,0 +1,19 @@
+{
+    "name": "Temple of Time 06",
+    "neighbours": 
+    [
+        "Temple of Time 05"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple of Time Big Key Chest",
+        "Temple of Time Big Key Chest Room Upper Chest"
+     ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

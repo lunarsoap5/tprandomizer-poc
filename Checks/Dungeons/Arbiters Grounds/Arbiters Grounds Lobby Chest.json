@@ -1,5 +1,5 @@
 {
-    "checkName": "Arbiter's Grounds Lobby Chest",
+    "checkName": "Arbiters Grounds Lobby Chest",
     "requirements": "Logic.canBreakWoodenDoor()",
     "hash": "FC38",
     "isExcluded": false,

@@ -1,5 +1,5 @@
 {
-    "checkName": "Arbiter's Grounds Big Key Chest",
+    "checkName": "Arbiters Grounds Big Key Chest",
     "requirements": "(arbitersGroundsSmallKeyCount >= 5) && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Spinner) && Logic.canDefeatStalfos()",
     "hash": "47CF",
     "isExcluded": false,

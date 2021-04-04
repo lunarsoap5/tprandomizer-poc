@@ -1,0 +1,19 @@
+{ 
+    "name": "Arbiters Grounds 11",
+    "neighbours": 
+    [
+        "Arbiters Grounds 10", 
+        "Death Sword", 
+        "Arbiters Grounds 13"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatStalfos() && Logic.canDefeatPoisonMite()",
+        "Logic.canDefeatStalfos() && Logic.canDefeatPoisonMite() && canUse(Item.Spinner)"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

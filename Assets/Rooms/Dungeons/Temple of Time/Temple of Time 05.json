@@ -1,0 +1,23 @@
+{ 
+    "name": "Temple of Time 05",
+    "neighbours": 
+    [
+        "Temple of Time 04", 
+        "Temple of Time 06", 
+        "Temple of Time 07"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Spinner)",
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple of Time Scales Gohma Chest",
+        "Temple of Time Scales Upper Chest"
+     ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Snowpeak Ruins 13",
+    "neighbours": 
+    [
+        "Snowpeak Ruins 04 E", 
+        "Snowpeak Ruins 05 lower"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatMiniFreezard()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

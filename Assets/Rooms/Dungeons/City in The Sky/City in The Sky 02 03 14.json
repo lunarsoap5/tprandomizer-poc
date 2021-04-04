@@ -1,0 +1,26 @@
+{
+    "name": "City in The Sky 02 03 14",
+    "neighbours": 
+    [
+        "City in The Sky 01", 
+        "City in The Sky 04", 
+        "City in The Sky 06", 
+        "City in The Sky 15"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Spinner) && (cityinTheSkySmallKeyCount >= 1)",
+        "Logic.canUse(Item.Clawshot)",
+        "Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatBabaSerpent() && Logic.canDefeatKargarok() && Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Iron_Boots)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "City in The Sky Big Key Chest",
+        "City in The Sky Chest Below Big Key Chest",
+        "City in The Sky Chest Behind North Fan"
+     ],
+    "visited": "false",
+    "region": "City in The Sky"
+}

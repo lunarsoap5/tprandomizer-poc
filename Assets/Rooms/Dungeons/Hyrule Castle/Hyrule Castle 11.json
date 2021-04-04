@@ -1,0 +1,21 @@
+{ 
+    "name": "Hyrule Castle 11",
+    "neighbours": 
+    [
+        "castle town", 
+        "Hyrule Castle 01", 
+        "Hyrule Castle 13", 
+        "Hyrule Castle 14"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "hyruleCastleSmallKeyCount >= 1",
+        "Logic.canDefeatBokoblin() && Logic.canDefeatKargarok()",
+        "Logic.canDefeatBokoblin() && Logic.canDefeatKargarok()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

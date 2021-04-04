@@ -1,5 +1,5 @@
 {
-    "checkName": "Arbiter's Grounds East Lower Turnable Redead Chest",
+    "checkName": "Arbiters Grounds East Lower Turnable Redead Chest",
     "requirements": "Logic.canUse(Item.Poe_Scent) && Logic.canUse(Item.Shadow_Crystal) && Logic.canDefeatRedeadKnight()",
     "hash": "BF75",
     "isExcluded": false,

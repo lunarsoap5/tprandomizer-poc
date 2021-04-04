@@ -1,0 +1,23 @@
+{ 
+    "name": "City in The Sky 12",
+    "neighbours": 
+    [
+        "City in The Sky 11", 
+        "City in The Sky 13"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Double_Clawshot)"
+    ],
+    "visited": "false",
+    "checks": 
+    [
+        "City in The Sky West Garden Corner Chest",
+        "City in The Sky West Garden Lone Island Chest",
+        "City in The Sky West Garden Lower Chest",
+        "City in The Sky West Garden Ledge Chest"
+    ],
+    "isStartingRoom": "false",
+    "region": "City in The Sky"
+}

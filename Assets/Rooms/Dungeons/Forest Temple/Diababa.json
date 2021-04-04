@@ -1,15 +1,15 @@
 {
-    "name": "diababa",
+    "name": "Diababa",
     "neighbours": 
     [
-        "south_faron_woods"
+        "South Faron Woods"
     ],
     "neighbourRequirements":
     [
         "Logic.canDefeatDiababa()"
     ],
     "isStartingRoom": "false",
-    "checks": "", 
+    "checks": [""], 
     "visited": "false",
     "region": "Forest Temple"
 }

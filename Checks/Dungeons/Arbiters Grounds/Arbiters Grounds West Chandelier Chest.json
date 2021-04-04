@@ -1,5 +1,5 @@
 {
-    "checkName": "Arbiter's Grounds West Chandelier Chest",
+    "checkName": "Arbiters Grounds West Chandelier Chest",
     "requirements": "(arbitersGroundsSmallKeyCount >= 4) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatGhoulRat()",
     "hash": "B288",
     "isExcluded": false,

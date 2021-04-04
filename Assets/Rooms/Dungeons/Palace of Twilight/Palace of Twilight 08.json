@@ -1,0 +1,20 @@
+{ 
+    "name": "Palace of Twilight 08",
+    "neighbours": 
+    [
+        "Palace of Twilight 11", 
+        "Palace of Twilight 09"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "(palaceofTwilightSmallKeyCount >= 7) && Logic.canDefeatZantHead() && Logic.canUse(Item.Light_Sword)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Palace of Twilight Central Tower Chest"
+    ],
+    "visited": "false",
+    "region": "Palace of Twilight"
+}

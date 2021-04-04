@@ -1,0 +1,22 @@
+{ 
+    "name": "Snowpeak Ruins 07",
+    "neighbours": 
+    [
+        "Snowpeak Ruins 00 01 02 03", 
+        "Snowpeak Ruins 06", 
+        "Snowpeak Ruins 08"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Ball_and_Chain) && (snowpeakRuinsSmallKeyCount >= 4)",
+        "Logic.canUse(Item.Ball_and_Chain)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak Ruins Broken Floor Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

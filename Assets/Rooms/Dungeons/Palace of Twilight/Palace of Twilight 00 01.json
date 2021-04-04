@@ -1,0 +1,25 @@
+{
+    "name": "Palace of Twilight 00 01",
+    "neighbours": 
+    [
+        "Mirror Chamber", 
+        "Palace of Twilight 02", 
+        "Palace of Twilight 04", 
+        "Palace of Twilight 07"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "(palaceofTwilightSmallKeyCount >= 1) && Logic.canDefeatZantHead() && Logic.canUse(Item.Clawshot)",
+        "Logic.canDefeatPhantomZant() && Logic.canUse(Item.Clawshot) && Logic.canDefeatZantHead() && (palaceofTwilightSmallKeyCount >= 2)",
+        "Logic.canDefeatPhantomZant() && Logic.canUse(Item.Clawshot) && Logic.canDefeatZantHead() && Logic.canUse(Item.Shadow_Crystal) && (palaceofTwilightSmallKeyCount >= 4) && Logic.canUse(Item.Light_Sword)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Palace of Twilight West Wing First Room Central Chest",
+        "Palace of Twilight West Wing Chest Behind Wall of Darkness"
+     ],
+    "visited": "false",
+    "region": "Palace of Twilight"
+}

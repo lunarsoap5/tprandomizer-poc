@@ -1,0 +1,22 @@
+{
+    "name": "Arbiters Grounds 09",
+    "neighbours": 
+    [
+        "Arbiters Grounds 02 06 15", 
+        "Arbiters Grounds 16", 
+        "Stallord"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "canUse(Item.Clawshot)",
+        "canUse(Item.Spinner) && canUse(Item.Arbiters_Grounds_Big_Key)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters Grounds Big Key Chest"
+    ],
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

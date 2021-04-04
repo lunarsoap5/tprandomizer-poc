@@ -1,0 +1,20 @@
+{ 
+    "name": "Snowpeak Ruins 08",
+    "neighbours": 
+    [
+        "Snowpeak Ruins 09"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak Ruins Wooden Beam Central Chest",
+        "Snowpeak Ruins Wooden Beam Northwest Chest",
+        "Snowpeak Ruins Wooden Beam Chandelier Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

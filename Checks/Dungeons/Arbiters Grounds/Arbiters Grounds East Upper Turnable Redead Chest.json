@@ -1,5 +1,5 @@
 {
-    "checkName": "Arbiter's Grounds East Upper Turnable Redead Chest",
+    "checkName": "Arbiters Grounds East Upper Turnable Redead Chest",
     "requirements": "Logic.canDefeatRedeadKnight()",
     "hash": "F20F",
     "isExcluded": false,

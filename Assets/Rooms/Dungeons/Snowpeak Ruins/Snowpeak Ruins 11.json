@@ -1,0 +1,18 @@
+{
+    "name": "Snowpeak Ruins 11",
+    "neighbours": 
+    [
+        "Snowpeak Ruins 04 W"
+    ],
+    "neighbourRequirements": 
+    [
+        "Logic.canDefeatChilfos()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak Ruins Chapel Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

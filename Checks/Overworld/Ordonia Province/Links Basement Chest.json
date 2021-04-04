@@ -1,5 +1,5 @@
 {
-    "checkName": "Link's Basement Chest",
+    "checkName": "Links Basement Chest",
     "requirements": "canUse(Item.Lantern)",
     "hash": "E723",
     "isExcluded": false,

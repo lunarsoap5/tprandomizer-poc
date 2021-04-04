@@ -1,8 +1,8 @@
 {
-    "name": "zant",
+    "name": "Zant",
     "neighbours": 
     [
-        "palace_of_twilight_00_01"
+        "Palace of Twilight 00 01"
     ],
     "neighbourRequirements":
     [
@@ -11,7 +11,7 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Zant_Heart_Container"
+        "Zant Heart Container"
     ],
     "visited": "false",
     "region": "Palace of Twilight"

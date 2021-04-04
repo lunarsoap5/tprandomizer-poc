@@ -1,0 +1,23 @@
+{ 
+    "name": "Palace of Twilight 04",
+    "neighbours": 
+    [
+        "Palace of Twilight 00 01", 
+        "Palace of Twilight 05"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "(palaceofTwilightSmallKeyCount >= 3) && Logic.canDefeatZantHead() && Logic.canUse(Items.Clawshot)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Palace of Twilight East Wing First Room North Small Chest",
+        "Palace of Twilight East Wing First Room Zant Head Chest",
+        "Palace of Twilight East Wing First Room East Alcove",
+        "Palace of Twilight East Wing First Room West Alcove"
+     ],
+    "visited": "false",
+    "region": "Palace of Twilight"
+}

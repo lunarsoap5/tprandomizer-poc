@@ -1,5 +1,5 @@
 {
-    "checkName": "Arbiter's Grounds Spinner Room Stalfos Alcove Chest",
+    "checkName": "Arbiters Grounds Spinner Room Stalfos Alcove Chest",
     "requirements": "Logic.canUse(Item.Spinner)",
     "hash": "0EF4",
     "isExcluded": false,

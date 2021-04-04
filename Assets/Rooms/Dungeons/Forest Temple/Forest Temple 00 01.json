@@ -1,0 +1,30 @@
+{ 
+    "name": "Forest Temple 00 01",
+    "neighbours": 
+    [
+        "Forest Temple 22", 
+        "Forest Temple 02", 
+        "Forest Temple 03", 
+        "Forest Temple 09", 
+        "Ook"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "(Logic.canDefeatBombling() || Logic.canBurnWebs()) && (forestTempleSmallKeyCount >=4)",
+        "Logic.canBurnWebs() && ((forestTempleSmallKeyCount >=4 && Logic.canDefeatBokoblin()) || Logic.canUse(Item.Clawshot))",
+        "Logic.canDefeatBombling() || Logic.canBurnWebs()",
+        "Logic.canBurnWebs() && Logic.canDefeatBombling() && Logic.canDefeatWalltula() && Logic.canDefeatBigBaba() && Logic.canDefeatBokoblin() && Logic.canBreakMonkeyCage() && (forestTempleSmallKeyCount >=4)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Forest Temple Central Chest Behind Stairs",
+        "Forest Temple Central North Chest",
+        "Forest Temple Central Chest Hanging From Web",
+        "Forest Temple Big Key Chest",
+        "Forest Temple East Water Cave Chest"
+    ],
+    "visited": "false",
+    "region": "Forest Temple"
+}

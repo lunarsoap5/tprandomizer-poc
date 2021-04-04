@@ -1,5 +1,5 @@
 {
-    "checkName": "Arbiter's Grounds Spinner Room Lower Central Small Chest",
+    "checkName": "Arbiters Grounds Spinner Room Lower Central Small Chest",
     "requirements": "Logic.canUse(Item.Spinner)",
     "hash": "8F23",
     "isExcluded": false,

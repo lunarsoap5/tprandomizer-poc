@@ -1,0 +1,21 @@
+{ 
+    "name": "City in The Sky 04",
+    "neighbours": 
+    [
+        "City in The Sky 02 03 14", 
+        "City in The Sky 07 Lower"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Clawshot)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "City in The Sky East First Wing Chest After Fans",
+        "City in The Sky East Wing Lower Level Chest"
+    ],
+    "visited": "false",
+    "region": "City in The Sky"
+}

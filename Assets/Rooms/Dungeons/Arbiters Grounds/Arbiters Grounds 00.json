@@ -1,0 +1,20 @@
+{
+    "name": "Arbiters Grounds 00",
+    "neighbours": 
+    [
+        "outside Arbiters Grounds", 
+        "Arbiters Grounds 01"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "arbitersGroundsSmallKeyCount >= 1"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters Grounds Lobby Chest"
+    ],
+    "visited": "false",
+    "region": "Arbiter's Grounds"
+}

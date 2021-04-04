@@ -1,15 +1,15 @@
 {
-    "name": "ook",
+    "name": "Ook",
     "neighbours": 
     [
-        "forest_temple_03"
+        "Forest Temple 03"
     ],
     "neighbourRequirements":
     [
         "Logic.canDefeatOok() && Logic.canUse(Item.Boomerang)"
     ],
     "isStartingRoom": "false",
-    "checks": "", 
+    "checks": [""], 
     "visited": "false",
     "region": "Forest Temple"
 }

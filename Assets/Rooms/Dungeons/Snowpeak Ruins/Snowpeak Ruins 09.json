@@ -1,0 +1,21 @@
+{ 
+    "name": "Snowpeak Ruins 09",
+    "neighbours": 
+    [
+        "Snowpeak Ruins 04 W", 
+        "Snowpeak Ruins 08"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canSmash()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak Ruins West Cannon Room Central Chest",
+        "Snowpeak Ruins West Cannon Room Corner Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

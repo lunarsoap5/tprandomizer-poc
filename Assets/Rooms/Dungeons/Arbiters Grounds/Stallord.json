@@ -1,8 +1,8 @@
 { 
-    "name": "stallord",
+    "name": "Stallord",
     "neighbours": 
     [
-        "mirror_chamber"
+        "Mirror Chamber"
     ],
     "neighbourRequirements":
     [

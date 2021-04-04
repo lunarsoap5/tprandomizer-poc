@@ -1,0 +1,21 @@
+{
+    "name": "Snowpeak Ruins 06",
+    "neighbours": 
+    [
+        "Snowpeak Ruins 00 01 02 03", 
+        "Snowpeak Ruins 04 E", 
+        "Snowpeak Ruins 05 Upper", 
+        "Snowpeak Ruins 07"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Shadow_Crystal) || Logic.canUse(Item.Ball_and_Chain)",
+        "Logic.canUse(Item.Ball_and_Chain) && Logic.canUse(Item.Clawshot) && Logic.canDefeatChilfos()",
+        "(snowpeakRuinsSmallKeyCount >=4)"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

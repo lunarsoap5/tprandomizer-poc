@@ -1,0 +1,21 @@
+{
+    "name": "Temple of Time 07",
+    "neighbours": 
+    [
+        "Temple of Time 05", 
+        "Darknut"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatLizalfos() && Logic.canDefeatBabyGohma() && Logic.canDefeatYoungGohma() && Logic.canDefeatArmos() && (templeofTimeSmallKeyCount >= 3)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple of Time Gilloutine Chest",
+        "Temple of Time Chest Before Darknut"
+    ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

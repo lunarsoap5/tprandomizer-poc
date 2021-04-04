@@ -87,7 +87,7 @@ namespace tprandomizer_poc_main
                 Room currentRoom = Rooms.RoomDict[fileName];
                 var newList = currentRoom.neighbourRequirements.Select(s => s.Replace("Logic", "Logic.LogicFunctions")).ToList();
                 currentRoom.neighbourRequirements = newList;
-                Rooms.RoomDict[file] = currentRoom;
+                Rooms.RoomDict[fileName] = currentRoom;
                 Console.WriteLine("Room File Loaded " + fileName);
             }
 
@@ -95,13 +95,18 @@ namespace tprandomizer_poc_main
 
             //Rooms.setupGraph();
 
-            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
+            foreach (KeyValuePair<string, Room> roomList in Rooms.RoomDict.ToList())
             {
-                Check currentCheck = checkList.Value;
-                Console.WriteLine("Can get check :" + currentCheck.checkName);
                 var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");
-                var now = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
-                Console.WriteLine(now);
+                Room currentRoom = roomList.Value;
+                Console.WriteLine("Room requirements for room: " + currentRoom.name);
+                
+                foreach (var requirement in currentRoom.neighbourRequirements)
+                {
+                    var now = CSharpScript.EvaluateAsync(requirement, options).Result;
+                    Console.WriteLine("    " + now);
+                }
+                
             }
 
             

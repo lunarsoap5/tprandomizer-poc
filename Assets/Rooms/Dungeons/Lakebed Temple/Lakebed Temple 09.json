@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "(lakebedTempleSmallKeyCount >= 3) && Logic.canUse(Item.Zora_Armor) && Logic.canUse(Item.Goron_Bomb_Bag)"
+        "(Logic.lakebedTempleSmallKeyCount >= 3) && Logic.canUse(Item.Zora_Armor) && Logic.canUse(Item.Bomb_Bag_And_Bombs)"
     ],
     "isStartingRoom": "false",
     "checks": 

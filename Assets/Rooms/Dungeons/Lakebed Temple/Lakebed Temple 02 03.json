@@ -12,8 +12,8 @@
         "true", 
         "lakebedTempleSmallKeyCount >= 1", 
         "true",
-        "(lakebedTempleSmallKeyCount >= 3) && Logic.canLaunchBombs()",
-        "(lakebedTempleSmallKeyCount >= 3) && Logic.canLaunchBombs() && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Lakebed_Temple_Big_Key)"
+        "(Logic.lakebedTempleSmallKeyCount >= 3) && Logic.canLaunchBombs()",
+        "(Logic.lakebedTempleSmallKeyCount >= 3) && Logic.canLaunchBombs() && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Lakebed_Temple_Big_Key)"
     ],
     "isStartingRoom": "false",
     "checks": 

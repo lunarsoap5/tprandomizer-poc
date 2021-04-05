@@ -13,7 +13,7 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Arbiters Grounds Lobby Chest"
+        "Checks.CheckFunctions.CheckDict[\"Arbiters Grounds Lobby Chest\"]"
     ],
     "visited": "false",
     "region": "Arbiter's Grounds"

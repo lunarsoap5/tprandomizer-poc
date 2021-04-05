@@ -1,7 +1,7 @@
+using System;
 using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
-using Assets.Items;
 using System.IO;
 using Logic;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using Microsoft.CodeAnalysis.Scripting;
 using System.Text.RegularExpressions;
 using tprandomizer_poc_main;
 
-namespace Assets.Items
+namespace tprandomizer_poc_main
 {
 	public enum Item : byte
 	{
@@ -512,15 +512,6 @@ namespace Assets.Items
 					break;
 			}
 			return item;
-		}
-		public void generateItemPool()
-		{
-			CheckFunctions Checks = new CheckFunctions();
-			foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
-			{
-				Check currentCheck = checkList.Value;
-				heldItems.Add(currentCheck.itemId);
-			}
 		}
 	}
 

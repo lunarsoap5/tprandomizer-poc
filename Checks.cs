@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
-using Assets.Items;
 using System.IO;
 using Logic;
 using System.Collections.Generic;
@@ -12,7 +11,7 @@ using System.Text.RegularExpressions;
 
 namespace tprandomizer_poc_main
 {
-    public struct Check
+    public class Check
     {
         public string checkName { set; get;} //the common name for the check this can be used in the randomizer to identify the check."
         public string requirements { get; set;} //List of requirements to obtain this check while inside the room (so does not include the items needed to enter the room)
@@ -339,6 +338,7 @@ namespace tprandomizer_poc_main
             currentCheck.itemId = item;
             Items.PlacedImportantItems.Add(item);
             CheckDict[check] = currentCheck;
+            Console.WriteLine("Placed " + currentCheck.itemId + " in check " + currentCheck.checkName);
         }
 
         public bool checkIfItemNotNeededToReachCheck(Item item, string check, Room startingRoom)

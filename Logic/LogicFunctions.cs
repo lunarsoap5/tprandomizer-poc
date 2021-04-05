@@ -1,5 +1,4 @@
 using System;
-using Assets.Items;
 using tprandomizer_poc_main;
 
 namespace Logic
@@ -28,21 +27,19 @@ namespace Logic
 		public static bool armogohmaDefeated;
 		public static bool argorokDefeated;
 		public static bool zantDefeated;
-		bool ganondorfDefeated;
 
         
 
         public static bool canUse(Item item)
 		{
             bool canUseItem = false;
-            /*ItemFunctions Items = new ItemFunctions();
-            foreach (var checkedItem in Items.heldItems)
+            foreach (var checkedItem in Singleton.getInstance().Items.heldItems)
             {
                 if (checkedItem == item)
                 {
                     canUseItem = true;
                 }
-            }*/
+            }
 			return canUseItem;
 		}
 
@@ -851,8 +848,7 @@ namespace Logic
 
         public static bool canUseWaterBombs()
         {
-            RoomFunctions Rooms = new RoomFunctions();
-            return (hasBombs() && (Rooms.RoomDict["Hidden Village"].visited == true));
+            return (hasBombs() && (Singleton.getInstance().Rooms.RoomDict["Kakariko Village"].visited == true));
         }
     }
 }

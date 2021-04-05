@@ -10,16 +10,16 @@
     "neighbourRequirements": 
     [
         "true",
-        "",
+        "true",
         "Logic.canUse(Item.Shadow_Crystal)",
         "true"
     ],
     "isStartingRoom": "false",
     "checks": 
     [
-        "South Castle Field Tightrope Chest",
-        "Outside Castle Town Fountain Chest",
-        "South of Castle Town Double Clawshot Chasm Chest"
+        "Outside South Castle Town Tightrope Chest",
+        "Outside South Castle Town Fountain Chest",
+        "Outside South Castle Town Double Clawshot Chasm Chest"
     ],
     "visited": "false",
     "region": "Hyrule Field"

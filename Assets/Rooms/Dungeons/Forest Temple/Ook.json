@@ -9,7 +9,7 @@
         "Logic.canDefeatOok() && Logic.canUse(Item.Boomerang)"
     ],
     "isStartingRoom": "false",
-    "checks": [""], 
+    "checks": ["Gale Boomerang"], 
     "visited": "false",
     "region": "Forest Temple"
 }

@@ -6,27 +6,27 @@ namespace Logic
     public class LogicFunctions
     {
 
-        public static int forestTempleSmallKeyCount = 0;
-		public static int goronMinesSmallKeyCount = 0;
-		public static int lakebedTempleSmallKeyCount = 0;
-		public static int arbitersGroundsSmallKeyCount = 0;
-		public static int snowpeakRuinsSmallKeyCount = 0;
-		public static int templeofTimeSmallKeyCount = 0;
-		public static int cityinTheSkySmallKeyCount = 0;
-		public static int palaceofTwilightSmallKeyCount = 0;
-		public static int hyruleCastleSmallKeyCount = 0;
+        public static int forestTempleSmallKeyCount = 4;
+		public static int goronMinesSmallKeyCount = 3;
+		public static int lakebedTempleSmallKeyCount = 3;
+		public static int arbitersGroundsSmallKeyCount = 5;
+		public static int snowpeakRuinsSmallKeyCount = 4;
+		public static int templeofTimeSmallKeyCount = 3;
+		public static int cityinTheSkySmallKeyCount = 1;
+		public static int palaceofTwilightSmallKeyCount = 7;
+		public static int hyruleCastleSmallKeyCount = 3;
 		public int fusedShadowCount = 0;
 		public int mirrorShardCount = 0;
 
 		public bool mdhComplete;
-		public static bool diababaDefeated;
-		public static bool fyrusDefeated;
-		public static bool morpheelDefeated;
-		public static bool stallordDefeated;
-		public static bool blizzetaDefeated;
-		public static bool armogohmaDefeated;
-		public static bool argorokDefeated;
-		public static bool zantDefeated;
+		public static bool diababaDefeated = true;
+		public static bool fyrusDefeated = true;
+		public static bool morpheelDefeated = true;
+		public static bool stallordDefeated= true;
+		public static bool blizzetaDefeated =true;
+		public static bool armogohmaDefeated = true;
+		public static bool argorokDefeated = true;
+		public static bool zantDefeated = true;
 
         
 
@@ -849,6 +849,61 @@ namespace Logic
         public static bool canUseWaterBombs()
         {
             return (hasBombs() && (Singleton.getInstance().Rooms.RoomDict["Kakariko Village"].visited == true));
+        }
+
+        public void checkBossFlags(Room bossRoom)
+        {
+            switch (bossRoom.name)
+            {
+                case "Diababa":
+                    if (bossRoom.visited == true && !canDefeatDiababa())
+                    {
+                        diababaDefeated = false;
+                    }
+                    break;
+                case "Fyrus":
+                    if (bossRoom.visited == true && !canDefeatFyrus())
+                    {
+                        fyrusDefeated = false;
+                    }
+                    break;
+                case "Morpheel":
+                    if (bossRoom.visited == true && !canDefeatMorpheel())
+                    {
+                        morpheelDefeated = false;
+                    }
+                    break;
+                case "Stallord":
+                    if (bossRoom.visited == true && !canDefeatStallord())
+                    {
+                        stallordDefeated = false;
+                    }
+                    break;
+                case "Blizzeta":
+                    if (bossRoom.visited == true && !canDefeatBlizzeta())
+                    {
+                        blizzetaDefeated = false;
+                    }
+                    break;
+                case "Armogohma":
+                    if (bossRoom.visited == true && !canDefeatArmogohma())
+                    {
+                        armogohmaDefeated = false;
+                    }
+                    break;
+                case "Argorok": 
+                    if (bossRoom.visited == true && !canDefeatArgorok())
+                    {
+                        argorokDefeated = false;
+                    }
+                    break;
+                case "Zant":
+                if (bossRoom.visited == true && !canDefeatZant())
+                {
+                    zantDefeated = false;
+                }
+                break;
+            }
         }
     }
 }

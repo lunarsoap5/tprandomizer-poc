@@ -1,0 +1,9 @@
+{
+    "checkName": "Rutelas Blessing",
+    "requirements": "(Logic.canUse(Item.Gate_Keys)",
+    "hash": "null",
+    "isExcluded": false,
+    "category": ["Chest", "Eldin Province"],
+    "itemId": "Zora_Armor",
+    "itemWasPlaced": false
+}

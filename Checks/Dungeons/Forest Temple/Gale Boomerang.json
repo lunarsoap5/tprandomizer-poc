@@ -1,0 +1,9 @@
+{
+    "checkName": "Gale Boomerang",
+    "requirements": "Logic.canDefeatOok()",
+    "hash": "null",
+    "isExcluded": false,
+    "category": ["Forest Temple"],
+    "itemId": "Boomerang",
+    "itemWasPlaced": false
+}

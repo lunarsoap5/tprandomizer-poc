@@ -2,10 +2,10 @@
     "name": "Gerudo Desert",
     "neighbours": 
     [
-        "cave of ordeals", 
-        "bublin camp", 
-        "grotto 3 0", 
-        "grotto 4 1"
+        "Cave of Ordeals 01 11", 
+        "Bublin Camp", 
+        "Grotto 3 0", 
+        "Grotto 4 1"
     ],
     "neighbourRequirements":
     [

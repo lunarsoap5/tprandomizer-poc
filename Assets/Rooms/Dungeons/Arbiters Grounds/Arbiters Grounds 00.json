@@ -2,7 +2,7 @@
     "name": "Arbiters Grounds 00",
     "neighbours": 
     [
-        "outside Arbiters Grounds", 
+        "Outside Arbiters Grounds", 
         "Arbiters Grounds 01"
     ],
     "neighbourRequirements": 
@@ -13,7 +13,7 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Checks.CheckFunctions.CheckDict[\"Arbiters Grounds Lobby Chest\"]"
+        "Arbiters Grounds Lobby Chest"
     ],
     "visited": "false",
     "region": "Arbiter's Grounds"

@@ -1,0 +1,9 @@
+{
+    "checkName": "Coro Lantern",
+    "requirements": "true",
+    "hash": "null",
+    "isExcluded": false,
+    "category": ["Chest"],
+    "itemId": "Lantern",
+    "itemWasPlaced": false
+}

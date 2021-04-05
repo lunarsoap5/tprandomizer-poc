@@ -11,11 +11,11 @@
     [
         "true",
         "Logic.diababaDefeated == true",
-        "Logic.canUse(Item.Coro_Key)",
+        "true",
         "Logic.canSmash() && Logic.canUse(Item.Dominion_Rod) && Logic.canUse(Item.Shadow_Crystal)"
     ],
     "isStartingRoom": "false",
-    "checks": [""], 
+    "checks": ["Coro Lantern"], 
     "visited": "false",
     "region": "Faron Woods"
 }

@@ -13,7 +13,7 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Bublin Camp First Chest Under Tower at Entrance",
+        "Bublin Camp First Chest Under Tower At Entrance",
         "Bublin Camp Small Chest in Back of Camp"
     ],
     "visited": "false",

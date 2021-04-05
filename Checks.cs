@@ -24,15 +24,15 @@ namespace tprandomizer_poc_main
 
     public class CheckFunctions
     {
-        
-        //RoomFunctions Rooms = new RoomFunctions();
-        ItemFunctions Items = new ItemFunctions();
-        RoomFunctions Rooms = new RoomFunctions();
         public Dictionary<string, Check> CheckDict = new Dictionary<string, Check>();
         public void InitializeChecks()
         {
 
+            CheckDict.Add("Uli Cradle Delivery", new Check());
+            CheckDict.Add("Sera Cat Fishing Reward", new Check());
+            CheckDict.Add("Sera Shop Slingshot", new Check());
             CheckDict.Add("Gift From Rusl", new Check());
+            CheckDict.Add("Coro Lantern", new Check());
             CheckDict.Add("South Faron Cave Chest", new Check());
             CheckDict.Add("Faron Mist Cave Open Chest", new Check());
             CheckDict.Add("Faron Mist Cave Lantern Chest", new Check());
@@ -70,6 +70,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Goron Mines Gor Liggs Chest", new Check());
             CheckDict.Add("Goron Mines Main Magnet Room Top Chest", new Check());
             CheckDict.Add("Goron Mines Outside Underwater Chest", new Check());
+            CheckDict.Add("Barnes Bomb Bag", new Check());
             CheckDict.Add("Eldin Spring Underwater Chest", new Check());
             CheckDict.Add("Kakariko Graveyard Lantern Chest", new Check());
             CheckDict.Add("Kakariko Watchtower Chest", new Check());
@@ -327,32 +328,53 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Zant Heart Container", new Check());
             CheckDict.Add("Fishing Hole Heart Piece", new Check());
             CheckDict.Add("Cats Hide and Seek Minigame", new Check());
+
+            foreach (string file in System.IO.Directory.GetFiles("./Checks/", "*",SearchOption.AllDirectories))
+            {
+                string contents = File.ReadAllText(file);
+                string fileName = Path.GetFileNameWithoutExtension(file);
+                Singleton.getInstance().Checks.CheckDict[fileName] = JsonConvert.DeserializeObject<Check>(contents);
+                Check currentCheck = Singleton.getInstance().Checks.CheckDict[fileName];
+                currentCheck.requirements = Regex.Replace(currentCheck.requirements, @"\bLogic\b", "Logic.LogicFunctions");
+                Singleton.getInstance().Checks.CheckDict[fileName] = currentCheck;
+                Console.WriteLine("Check File Loaded " + fileName);
+            }
         }
 
         public void placeItemInCheck(Item item, string check)
         {
             //Create reference to the current check, tell the program that it was placed, set the item id of the check, and then save the changes to the check.
-            Check currentCheck = CheckDict[check];
+            Check currentCheck = Singleton.getInstance().Checks.CheckDict[check];
             currentCheck.itemWasPlaced = true;
-            Items.heldItems.Remove(item);
+            Singleton.getInstance().Items.heldItems.Remove(item);
             currentCheck.itemId = item;
-            Items.PlacedImportantItems.Add(item);
-            CheckDict[check] = currentCheck;
+            Singleton.getInstance().Items.PlacedImportantItems.Add(item);
+            Singleton.getInstance().Checks.CheckDict[check] = currentCheck;
             Console.WriteLine("Placed " + currentCheck.itemId + " in check " + currentCheck.checkName);
         }
 
         public bool checkIfItemNotNeededToReachCheck(Item item, string check, Room startingRoom)
         {
-            Rooms.resetAllRoomsVisited();
+            Singleton.getInstance().Rooms.resetAllRoomsVisited();
             List<Room> roomsToExplore = new List<Room>();
             startingRoom.visited = true;
             roomsToExplore.Add(startingRoom);
-            var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");
+            var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("tprandomizer_poc_main");
             while (roomsToExplore.Count() > 0)
             {
+                Console.WriteLine("Currently exploring: " + roomsToExplore[0].name);
                 for (int i = 0; i < roomsToExplore[0].checks.Count(); i++)
                 {
-                    Check currentCheck = CheckDict[roomsToExplore[0].checks[i]];
+                    Check currentCheck;
+                    if (!Singleton.getInstance().Checks.CheckDict.TryGetValue(roomsToExplore[0].checks[i], out currentCheck)) 
+                    {
+                        if (roomsToExplore[0].checks[i].ToString() == "")
+                        {
+                            Console.WriteLine("Room has no checks, continuing on....");
+                            break;
+                        }
+                        Console.WriteLine("Check: " + roomsToExplore[0].checks[i] + " does not exist.");
+                    }
                     var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
                     if (roomsToExplore[0].checks[i] == check)
                     {
@@ -362,9 +384,8 @@ namespace tprandomizer_poc_main
                 }
                 for (int i = 0; i < roomsToExplore[0].neighbours.Count(); i++)
                 {
-                    Room currentRoom = Rooms.RoomDict[roomsToExplore[0].neighbourRequirements[i]];
-                    Room currentNeighbour = Rooms.RoomDict[roomsToExplore[0].neighbours[i]];
-                    var areNeighbourRequirementsMet = CSharpScript.EvaluateAsync(currentRoom.neighbourRequirements[i], options).Result;
+                    Room currentNeighbour = Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]];
+                    var areNeighbourRequirementsMet = CSharpScript.EvaluateAsync(roomsToExplore[0].neighbourRequirements[i], options).Result;
                     if ((bool)areNeighbourRequirementsMet
                         && currentNeighbour.visited == false)
                     {
@@ -375,13 +396,6 @@ namespace tprandomizer_poc_main
                 roomsToExplore.Remove(roomsToExplore[0]);
             }
             return false;
-        }
-
-        public bool isRequirementMet(string requirement)
-        {
-            var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");
-            var logicResult = CSharpScript.EvaluateAsync(requirement, options).Result;
-            return (bool)logicResult;
         }
     } 
 

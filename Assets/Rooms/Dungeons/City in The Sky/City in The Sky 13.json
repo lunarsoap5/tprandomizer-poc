@@ -3,7 +3,7 @@
     "neighbours": 
     [
         "City in The Sky 12", 
-        "City in The Sky 02"
+        "City in The Sky 02 03 14"
     ],
     "neighbourRequirements":
     [
@@ -13,7 +13,7 @@
     "visited": "false",
     "checks": 
     [
-        "City in The Sky Central Outside Chest",
+        "City in The Sky Central Outside Ledge Chest",
         "City in The Sky Central Outside Poe Island Chest"
     ],
     "isStartingRoom": "false",

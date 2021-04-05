@@ -280,6 +280,38 @@ namespace tprandomizer_poc_main
 
 		public int nbSkybooksPlaced = 0;
 
+		List<Item> ImportantItems = new List<Item>()
+        {
+            Item.Wooden_Sword,
+            Item.Fishing_Rod,
+            Item.Slingshot,
+            Item.Lantern,
+            Item.Ordon_Sword,
+            Item.Boomerang,
+            Item.Iron_Boots,
+            Item.Heros_Bow,
+            Item.Empty_Bomb_Bag,
+            Item.Zora_Armor,
+            Item.Clawshot,
+            Item.Master_Sword,
+            Item.Shadow_Crystal,
+            Item.Aurus_Memo,
+            Item.Spinner,
+            Item.Coral_Earring,
+            Item.Ball_and_Chain,
+            Item.Dominion_Rod_Uncharged,
+            Item.Dominion_Rod,
+            Item.Ancient_Sky_Book_Empty,
+            Item.Ancient_Sky_Book_First_Character,
+            Item.Ancient_Sky_Book_Second_Character,
+            Item.Ancient_Sky_Book_Third_Character,
+            Item.Ancient_Sky_Book_Fourth_Character,
+            Item.Ancient_Sky_Book_Fifth_Character,
+            Item.Ancient_Sky_Book_Completed,
+            Item.Double_Clawshot,
+            Item.Master_Sword_Light
+        };
+
 		public Item verifyItem (Item item)
 		{
 			switch (item) //Make sure you place the items in the right order (from big to small)
@@ -512,6 +544,28 @@ namespace tprandomizer_poc_main
 					break;
 			}
 			return item;
+		}
+		bool checkIfItemIsInList(Item item, List<Item> itemList)
+		{
+			bool isItemPresent = true;
+			for (int j = 0; j < itemList.Count(); j++)
+			{
+				if (item == itemList[j])
+				{
+					isItemPresent = true;
+					break;
+				}
+			}
+			return isItemPresent;
+		}
+
+		public void generateItemPool()
+		{
+			foreach (var importantItem in ImportantItems)
+			{
+				Console.WriteLine(importantItem);
+				Singleton.getInstance().Items.heldItems.Add(importantItem);
+			}
 		}
 	}
 

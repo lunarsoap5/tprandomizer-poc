@@ -13,33 +13,14 @@ namespace tprandomizer_poc_main
 { 
     public class Randomizer
     {
+        LogicFunctions Logic = new LogicFunctions();
         public void start()
         {
             Singleton.getInstance().Checks.InitializeChecks();
-            foreach (string file in System.IO.Directory.GetFiles("./Checks/", "*",SearchOption.AllDirectories))
-            {
-                string contents = File.ReadAllText(file);
-                string fileName = Path.GetFileNameWithoutExtension(file);
-                Singleton.getInstance().Checks.CheckDict[fileName] = JsonConvert.DeserializeObject<Check>(contents);
-                Check currentCheck = Singleton.getInstance().Checks.CheckDict[fileName];
-                currentCheck.requirements = Regex.Replace(currentCheck.requirements, @"\bLogic\b", "Logic.LogicFunctions");
-                Singleton.getInstance().Checks.CheckDict[fileName] = currentCheck;
-                Console.WriteLine("Check File Loaded " + fileName);
-            }
 
             Singleton.getInstance().Rooms.InitializeRooms();
-            foreach (string file in System.IO.Directory.GetFiles("./Assets/Rooms/", "*",SearchOption.AllDirectories))
-            {
-                string contents = File.ReadAllText(file);
-                string fileName = Path.GetFileNameWithoutExtension(file);
-                Singleton.getInstance().Rooms.RoomDict[fileName] = JsonConvert.DeserializeObject<Room>(contents);
-                Room currentRoom = Singleton.getInstance().Rooms.RoomDict[fileName];
-                var newList = currentRoom.neighbourRequirements.Select(s => s.Replace("Logic", "Logic.LogicFunctions")).ToList();
-                currentRoom.neighbourRequirements = newList;
-                Singleton.getInstance().Rooms.RoomDict[fileName] = currentRoom;
-                Console.WriteLine("Room File Loaded " + fileName);
-            }
-            generateItemPool();
+            
+            Singleton.getInstance().Items.generateItemPool();
             /*foreach (KeyValuePair<string, Room> roomList in Singleton.getInstance().Rooms.RoomDict.ToList())
             {
                 var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("tprandomizer_poc_main");
@@ -63,16 +44,6 @@ namespace tprandomizer_poc_main
                 //var now = CSharpScript.EvaluateAsync(myJsonObject.requirements, options).Result;
         }
 
-        public void generateItemPool()
-		{
-			foreach (KeyValuePair<string, Check> checkList in Singleton.getInstance().Checks.CheckDict)
-			{
-				Check currentCheck = checkList.Value;
-				Console.WriteLine(currentCheck.itemId);
-				Singleton.getInstance().Items.heldItems.Add(currentCheck.itemId);
-			}
-		}
-
         void startOver(Room startingRoom)
         {
             
@@ -83,6 +54,7 @@ namespace tprandomizer_poc_main
             }
             Singleton.getInstance().Items.PlacedImportantItems.Clear();
             //empty all checks of their items  
+
             placeRequiredItems(startingRoom);
         }
 
@@ -166,6 +138,7 @@ namespace tprandomizer_poc_main
                         roomChecks.Add(currentCheck.ToString());
                     }
                 }
+                Logic.checkBossFlags(roomsToExplore[0]);
                 roomsToExplore.Remove(roomsToExplore[0]);
             }
             return roomChecks;

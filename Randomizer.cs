@@ -46,7 +46,7 @@ namespace tprandomizer_poc_main
 
         void startOver(Room startingRoom)
         {
-            
+            Console.WriteLine("Starting Over.");
             Singleton.getInstance().Items.nbSkybooksPlaced = 0;
             for (int i = 0; i< Singleton.getInstance().Items.PlacedImportantItems.Count(); i++)
             {

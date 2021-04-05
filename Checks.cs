@@ -343,6 +343,7 @@ namespace tprandomizer_poc_main
 
         public void placeItemInCheck(Item item, string check)
         {
+            Console.WriteLine("Placing item in check.");
             //Create reference to the current check, tell the program that it was placed, set the item id of the check, and then save the changes to the check.
             Check currentCheck = Singleton.getInstance().Checks.CheckDict[check];
             currentCheck.itemWasPlaced = true;
@@ -355,6 +356,7 @@ namespace tprandomizer_poc_main
 
         public bool checkIfItemNotNeededToReachCheck(Item item, string check, Room startingRoom)
         {
+            Console.WriteLine("Checking if item not needed to reach check. Item: " + item + " Check: " + Singleton.getInstance().Checks.CheckDict[check].checkName + " Room: " + startingRoom.name);
             Singleton.getInstance().Rooms.resetAllRoomsVisited();
             List<Room> roomsToExplore = new List<Room>();
             startingRoom.visited = true;

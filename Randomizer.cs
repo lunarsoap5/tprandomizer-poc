@@ -55,30 +55,36 @@ namespace tprandomizer_poc_main
             List<string> availableChecks = new List<string>();
             Item itemToPlace;
             string checkToReciveItem;
-            
-            while (Singleton.getInstance().Items.heldItems.Count() > 0)
-            {
-                itemToPlace = Singleton.getInstance().Items.verifyItem(Singleton.getInstance().Items.ImportantItems[rnd.Next(Singleton.getInstance().Items.ImportantItems.Count()-1)]);
-                Singleton.getInstance().Items.heldItems.Remove(itemToPlace);
-                Singleton.getInstance().Items.ImportantItems.Remove(itemToPlace);
-                availableChecks = listAllAvailableChecks(startingRoom);
-                checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count())];
-
-                Console.WriteLine("Item to place: " + itemToPlace);
-                
-                if (Singleton.getInstance().Items.heldItems.Count() > availableChecks.Count())
+            Singleton.getInstance().Items.ItemsToBeRandomized = Singleton.getInstance().Items.ImportantItems;
+            foreach(KeyValuePair<string, Check> kvp in Singleton.getInstance().Checks.CheckDict)
                 {
-                    Singleton.getInstance().Items.ImportantItems.Add(itemToPlace);
-                    startOver(startingRoom);
+                    Check currentCheck = kvp.Value;
+                    if (currentCheck.itemWasPlaced == false)
+                    {
+                        availableChecks.Add(currentCheck.checkName);
+                    }
                 }
+            while (Singleton.getInstance().Items.ItemsToBeRandomized.Count() > 0)
+            {
+                itemToPlace = Singleton.getInstance().Items.verifyItem(Singleton.getInstance().Items.ItemsToBeRandomized[rnd.Next(Singleton.getInstance().Items.ItemsToBeRandomized.Count()-1)]);
+                Console.WriteLine("Item to place: " + itemToPlace);
+                Singleton.getInstance().Items.heldItems.Remove(itemToPlace);
+                Singleton.getInstance().Items.ItemsToBeRandomized.Remove(itemToPlace);
+                
+                checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
+
+                
                 while (!Singleton.getInstance().Checks.checkIfItemNotNeededToReachCheck(itemToPlace, checkToReciveItem, startingRoom))
                 {
                     checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
                 }
-                
+                Singleton.getInstance().Items.heldItems.Add(itemToPlace);
                 Singleton.getInstance().Checks.placeItemInCheck(itemToPlace,checkToReciveItem);
+
+                availableChecks.Remove(checkToReciveItem);
+                Singleton.getInstance().Items.heldItems.Add(itemToPlace);
             }
-            if (Singleton.getInstance().Items.heldItems.Count() > 0)
+            if (Singleton.getInstance().Items.ItemsToBeRandomized.Count() > 0)
             {//no more available checks and still items to place, starting over
                 //failsafe: assumed fill can fail, but rarely, so it is best to start over if it happens
                 startOver(startingRoom);

@@ -359,7 +359,7 @@ namespace tprandomizer_poc_main
 
         public bool checkIfItemNotNeededToReachCheck(Item item, string check, Room startingRoom)
         {
-            Console.WriteLine("Checking if item not needed to reach check. Item: " + item + " Check: " + Singleton.getInstance().Checks.CheckDict[check].checkName + " Room: " + startingRoom.name);
+            Console.WriteLine("Trying to place item: " + item + " in check: " + Singleton.getInstance().Checks.CheckDict[check].checkName);
             Singleton.getInstance().Rooms.resetAllRoomsVisited();
             List<Room> roomsToExplore = new List<Room>();
             startingRoom.visited = true;
@@ -368,26 +368,18 @@ namespace tprandomizer_poc_main
             while (roomsToExplore.Count() > 0)
             {
                 Console.WriteLine("Currently exploring: " + roomsToExplore[0].name);
-                for (int i = 0; i < roomsToExplore[0].checks.Count(); i++)
+                foreach (var currentCheck in roomsToExplore[0].checks)
                 {
-                    Check currentCheck;
-                    if (!Singleton.getInstance().Checks.CheckDict.TryGetValue(roomsToExplore[0].checks[i], out currentCheck)) 
+                    if (currentCheck == check)
                     {
-                        if (roomsToExplore[0].checks[i].ToString() == "")
-                        {
-                            Console.WriteLine("Room has no checks, continuing on....");
-                            break;
-                        }
-                        Console.WriteLine("Check: " + roomsToExplore[0].checks[i] + " does not exist.");
-                    }
-                    var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
-                    if (roomsToExplore[0].checks[i] == check)
-                    {
+                        Check evaluatedCheck = Singleton.getInstance().Checks.CheckDict[currentCheck];
+                        var areCheckRequirementsMet = CSharpScript.EvaluateAsync(evaluatedCheck.requirements, options).Result;
                         return ((bool)areCheckRequirementsMet &&
-                            currentCheck.itemWasPlaced == false);
+                            evaluatedCheck.itemWasPlaced == false);
                     }
                 }
-                for (int i = 0; i < roomsToExplore[0].neighbours.Count(); i++)
+                
+                 for (int i = 0; i < roomsToExplore[0].neighbours.Count(); i++)
                 {
                     Room currentNeighbour = Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]];
                     var areNeighbourRequirementsMet = CSharpScript.EvaluateAsync(roomsToExplore[0].neighbourRequirements[i], options).Result;

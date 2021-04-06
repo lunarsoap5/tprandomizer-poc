@@ -2,11 +2,13 @@
     "name": "Ordon Province",
     "neighbours": 
     [
-        "South Faron Woods"
+        "South Faron Woods",
+        "Grotto 1 2"
     ],
     "neighbourRequirements":
     [
-        "Logic.canUse(Item.Wooden_Sword)"
+        "Logic.canUse(Item.Wooden_Sword)",
+        "Logic.canUse(Item.Shadow_Crystal)"
     ],
     "isStartingRoom": "false",
     "checks": 

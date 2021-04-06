@@ -204,7 +204,10 @@ namespace tprandomizer_poc_main
             RoomDict.Add("Mirror Chamber", new Room());
             RoomDict.Add("Hidden Village", new Room());
             RoomDict.Add("Death Mountain Interiors", new Room());
+        }
 
+        public void deserializeRooms()
+        {
             foreach (string file in System.IO.Directory.GetFiles("./Assets/Rooms/", "*",SearchOption.AllDirectories))
             {
                 string contents = File.ReadAllText(file);

@@ -848,7 +848,31 @@ namespace Logic
 
         public static bool canUseWaterBombs()
         {
-            return (hasBombs() && (Singleton.getInstance().Rooms.RoomDict["Kakariko Village"].visited == true));
+            return (hasBombs() && canLeaveForest());
+        }
+
+        public static bool canLeaveForest()
+        {
+            return (canCompleteForestTemple());
+        }
+
+        public static bool canCompleteForestTemple()
+        {
+            return ((forestTempleSmallKeyCount >= 4) && canUse(Item.Boomerang) && canBreakMonkeyCage() && canDefeatWalltula() && canDefeatBigBaba() && canBurnWebs() && canDefeatOok() && canDefeatDiababa());
+        }
+
+        public static bool canCompleteGoronMines()
+        {
+            return ((goronMinesSmallKeyCount >=3) && canDefeatDangoro() && canDefeatFyrus() && canUse(Item.Heros_Bow) && canUse(Item.Iron_Boots) && hasSword());
+        }
+
+        public static bool canCompleteLakebedTemple()
+        {
+            return ((lakebedTempleSmallKeyCount >=3) && canDefeatDekuToad() && canDefeatMorpheel() && canUse(Item.Clawshot) && canLaunchBombs() && canUseWaterBombs());
+        }
+        public static bool canCompletePalaceofTwilight()
+        {
+            return ((palaceofTwilightSmallKeyCount >= 7) && canUse(Item.Master_Sword_Light) && canDefeatZantHead() && canDefeatShadowBeast() && canUse(Item.Double_Clawshot) && canDefeatPhantomZant() && canDefeatZant() && canUse(Item.Shadow_Crystal));
         }
 
         public void checkBossFlags(Room bossRoom)

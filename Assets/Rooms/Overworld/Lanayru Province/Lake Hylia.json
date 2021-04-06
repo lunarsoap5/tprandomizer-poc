@@ -13,7 +13,7 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canUse(Item.Aurus_Memo)",
+        "Logic.canUse(Item.Aurus_Memo) && Logic.canUse(Item.Shadow_Crystal)",
         "Logic.canSmash()",
         "Logic.canUse(Item.Shadow_Crystal)",
         "Logic.canUse(Item.Shadow_Crystal)",

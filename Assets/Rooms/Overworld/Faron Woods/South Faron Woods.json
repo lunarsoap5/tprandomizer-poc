@@ -10,7 +10,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.diababaDefeated == true",
+        "Logic.canLeaveForest()",
         "true",
         "Logic.canSmash() && Logic.canUse(Item.Dominion_Rod) && Logic.canUse(Item.Shadow_Crystal)"
     ],

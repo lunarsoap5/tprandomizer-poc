@@ -17,23 +17,13 @@ namespace tprandomizer_poc_main
         public void start()
         {
             Singleton.getInstance().Checks.InitializeChecks();
+            Singleton.getInstance().Checks.deserializeChecks();
 
             Singleton.getInstance().Rooms.InitializeRooms();
+            Singleton.getInstance().Rooms.deserializeRooms();
             
             Singleton.getInstance().Items.generateItemPool();
-            /*foreach (KeyValuePair<string, Room> roomList in Singleton.getInstance().Rooms.RoomDict.ToList())
-            {
-                var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("tprandomizer_poc_main");
-                Room currentRoom = roomList.Value;
-                Console.WriteLine("Room requirements for room: " + currentRoom.name);
-                
-                foreach (var requirement in currentRoom.neighbourRequirements)
-                {
-                    var now = CSharpScript.EvaluateAsync(requirement, options).Result;
-                    Console.WriteLine("    " + now);
-                }
-                
-            }*/
+
             Room startingRoom = Singleton.getInstance().Rooms.setupGraph();
             placeRequiredItems(startingRoom);
 
@@ -48,12 +38,13 @@ namespace tprandomizer_poc_main
         {
             Console.WriteLine("Starting Over.");
             Singleton.getInstance().Items.nbSkybooksPlaced = 0;
-            for (int i = 0; i< Singleton.getInstance().Items.PlacedImportantItems.Count(); i++)
+            Singleton.getInstance().Items.generateItemPool();
+            foreach (var item in Singleton.getInstance().Items.PlacedImportantItems)
             {
-                Singleton.getInstance().Items.heldItems.Add(Singleton.getInstance().Items.PlacedImportantItems[i]);
+                Singleton.getInstance().Items.ImportantItems.Add(item);
             }
             Singleton.getInstance().Items.PlacedImportantItems.Clear();
-            //empty all checks of their items  
+            Singleton.getInstance().Checks.deserializeChecks();
 
             placeRequiredItems(startingRoom);
         }
@@ -62,26 +53,30 @@ namespace tprandomizer_poc_main
         {
             Random rnd = new Random();
             List<string> availableChecks = new List<string>();
-            availableChecks = listAllAvailableChecks(startingRoom);
-            Item itemToPlace = Singleton.getInstance().Items.verifyItem(Singleton.getInstance().Items.heldItems[rnd.Next(Singleton.getInstance().Items.heldItems.Count()-1)]);
-            if (availableChecks.Count <= 0)
-            {
-                Console.WriteLine("No checks available for randomization....");
-            }
-            string checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
+            Item itemToPlace;
+            string checkToReciveItem;
             
-            while (Singleton.getInstance().Items.heldItems.Count() > 0 && availableChecks.Any())
+            while (Singleton.getInstance().Items.heldItems.Count() > 0)
             {
+                itemToPlace = Singleton.getInstance().Items.verifyItem(Singleton.getInstance().Items.ImportantItems[rnd.Next(Singleton.getInstance().Items.ImportantItems.Count()-1)]);
+                Singleton.getInstance().Items.heldItems.Remove(itemToPlace);
+                Singleton.getInstance().Items.ImportantItems.Remove(itemToPlace);
+                availableChecks = listAllAvailableChecks(startingRoom);
+                checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count())];
+
+                Console.WriteLine("Item to place: " + itemToPlace);
+                
+                if (Singleton.getInstance().Items.heldItems.Count() > availableChecks.Count())
+                {
+                    Singleton.getInstance().Items.ImportantItems.Add(itemToPlace);
+                    startOver(startingRoom);
+                }
                 while (!Singleton.getInstance().Checks.checkIfItemNotNeededToReachCheck(itemToPlace, checkToReciveItem, startingRoom))
                 {
                     checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
                 }
                 
                 Singleton.getInstance().Checks.placeItemInCheck(itemToPlace,checkToReciveItem);
-                
-                availableChecks = listAllAvailableChecks(startingRoom);
-                itemToPlace = Singleton.getInstance().Items.verifyItem(Singleton.getInstance().Items.heldItems[rnd.Next(Singleton.getInstance().Items.heldItems.Count()-1)]);
-                checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
             }
             if (Singleton.getInstance().Items.heldItems.Count() > 0)
             {//no more available checks and still items to place, starting over
@@ -135,7 +130,7 @@ namespace tprandomizer_poc_main
                     //Confirms that we can get the check and checks to see if an item was placed in it.
                     if (((bool)areCheckRequirementsMet == true) && currentCheck.itemWasPlaced == false)
                     {
-                        roomChecks.Add(currentCheck.ToString());
+                        roomChecks.Add(currentCheck.checkName);
                     }
                 }
                 Logic.checkBossFlags(roomsToExplore[0]);

@@ -280,7 +280,7 @@ namespace tprandomizer_poc_main
 
 		public int nbSkybooksPlaced = 0;
 
-		List<Item> ImportantItems = new List<Item>()
+		public List<Item> ImportantItems = new List<Item>()
         {
             Item.Wooden_Sword,
             Item.Fishing_Rod,
@@ -312,10 +312,61 @@ namespace tprandomizer_poc_main
             Item.Master_Sword_Light
         };
 
+		public List<Item> DungeonKeys = new List<Item>()
+        {
+            Item.Forest_Temple_Small_Key,
+			Item.Forest_Temple_Big_Key,
+			Item.Goron_Mines_Small_Key,
+			Item.Goron_Mines_Key_Shard_1,
+			Item.Goron_Mines_Key_Shard_2,
+			Item.Goron_Mines_Big_Key,
+			Item.Lakebed_Temple_Small_Key,
+			Item.Lakebed_Temple_Big_Key,
+			Item.Arbiters_Grounds_Small_Key,
+			Item.Arbiters_Grounds_Big_Key,
+			Item.Snowpeak_Ruins_Small_Key,
+			Item.Snowpeak_Ruins_Bedroom_Key,
+			Item.Temple_of_Time_Small_Key,
+			Item.Temple_of_Time_Big_Key,
+			Item.City_in_The_Sky_Small_Key,
+			Item.City_in_The_Sky_Big_Key,
+			Item.Palace_of_Twilight_Small_Key,
+			Item.Palace_of_Twilight_Big_Key,
+			Item.Hyrule_Castle_Small_Key,
+			Item.Hyrule_Castle_Big_Key
+        };
+
 		public Item verifyItem (Item item)
 		{
 			switch (item) //Make sure you place the items in the right order (from big to small)
 			{
+				case Item.Forest_Temple_Small_Key:
+					Logic.LogicFunctions.forestTempleSmallKeyCount--;
+					break;
+				case Item.Goron_Mines_Small_Key:
+					Logic.LogicFunctions.goronMinesSmallKeyCount--;
+					break;
+				case Item.Lakebed_Temple_Small_Key:
+					Logic.LogicFunctions.lakebedTempleSmallKeyCount--;
+					break;
+				case Item.Arbiters_Grounds_Small_Key:
+					Logic.LogicFunctions.arbitersGroundsSmallKeyCount--;
+					break;
+				case Item.Snowpeak_Ruins_Small_Key:
+					Logic.LogicFunctions.snowpeakRuinsSmallKeyCount--;
+					break;
+				case Item.Temple_of_Time_Small_Key:
+					Logic.LogicFunctions.templeofTimeSmallKeyCount--;
+					break;
+				case Item.City_in_The_Sky_Small_Key:
+					Logic.LogicFunctions.cityinTheSkySmallKeyCount--;
+					break;
+				case Item.Palace_of_Twilight_Small_Key:
+					Logic.LogicFunctions.palaceofTwilightSmallKeyCount--;
+					break;
+				case Item.Hyrule_Castle_Small_Key:
+					Logic.LogicFunctions.hyruleCastleSmallKeyCount--;
+					break;
 				case Item.Ancient_Sky_Book_Empty:
 					if (nbSkybooksPlaced <= 5)
 					{
@@ -565,6 +616,10 @@ namespace tprandomizer_poc_main
 			{
 				Console.WriteLine(importantItem);
 				Singleton.getInstance().Items.heldItems.Add(importantItem);
+			}
+			foreach (var dungeonKey in DungeonKeys)
+			{
+				Singleton.getInstance().Items.heldItems.Add(dungeonKey);
 			}
 		}
 	}

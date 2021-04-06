@@ -328,7 +328,10 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Zant Heart Container", new Check());
             CheckDict.Add("Fishing Hole Heart Piece", new Check());
             CheckDict.Add("Cats Hide and Seek Minigame", new Check());
+        }
 
+        public void deserializeChecks()
+        {
             foreach (string file in System.IO.Directory.GetFiles("./Checks/", "*",SearchOption.AllDirectories))
             {
                 string contents = File.ReadAllText(file);

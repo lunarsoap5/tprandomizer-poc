@@ -10,7 +10,7 @@
     [
         "true",
         "Logic.canUse(Item.Lantern)",
-        "Logic.canUse(Item.Small_Key_N_Faron_Gate)"
+        "Logic.canUse(Item.Small_Key_N_Faron_Gate) && (Logic.canUse(Item.Lantern) || Logic.canUse(Item.Shadow_Crystal))"
     ],
     "isStartingRoom": "false",
     "checks": 

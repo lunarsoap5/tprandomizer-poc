@@ -383,7 +383,7 @@ namespace tprandomizer_poc_main
 					}
 					else if (nbSkybooksPlaced <= 5)
 					{
-						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+						break;
 					}
 					else
 					{
@@ -398,7 +398,7 @@ namespace tprandomizer_poc_main
 					}
 					else if (nbSkybooksPlaced <= 5)
 					{
-						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+						break;
 					}
 					else
 					{
@@ -413,7 +413,7 @@ namespace tprandomizer_poc_main
 					}
 					else if (nbSkybooksPlaced <= 5)
 					{
-						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+						break;
 					}
 					else
 					{
@@ -428,7 +428,7 @@ namespace tprandomizer_poc_main
 					}
 					else if (nbSkybooksPlaced <= 5)
 					{
-						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+						break;
 					}
 					else
 					{
@@ -443,7 +443,7 @@ namespace tprandomizer_poc_main
 					}
 					else if (nbSkybooksPlaced <= 5)
 					{
-						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+						break;
 					}
 					else
 					{
@@ -458,7 +458,7 @@ namespace tprandomizer_poc_main
 					}
 					else if (nbSkybooksPlaced <= 5)
 					{
-						item = Item.Ancient_Sky_Book_Partly_Filled; //Ancient_Sky_Book_partly_filled
+						break;
 					}
 					else
 					{

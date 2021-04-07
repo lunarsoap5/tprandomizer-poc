@@ -59,10 +59,6 @@ namespace tprandomizer_poc_main
             string checkToReciveItem;
             Singleton.getInstance().Items.ItemsToBeRandomized = Singleton.getInstance().Items.ImportantItems;
 
-            foreach(var item in Singleton.getInstance().Items.ImportantItems)
-            {
-                Console.WriteLine(item);
-            }
             while (Singleton.getInstance().Items.ItemsToBeRandomized.Count() > 0)
             {
                 itemToPlace = Singleton.getInstance().Items.verifyItem(Singleton.getInstance().Items.ItemsToBeRandomized[rnd.Next(Singleton.getInstance().Items.ItemsToBeRandomized.Count()-1)]);
@@ -73,12 +69,12 @@ namespace tprandomizer_poc_main
                 
                 checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
 
-                
-                while (!Singleton.getInstance().Checks.checkIfItemNotNeededToReachCheck(itemToPlace, checkToReciveItem, startingRoom))
+                //Commented out because it is obsolete
+               /* while (!Singleton.getInstance().Checks.checkIfItemNotNeededToReachCheck(itemToPlace, checkToReciveItem, startingRoom))
                 {
                     checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
-                }
-                Singleton.getInstance().Items.heldItems.Add(itemToPlace);
+                }*/
+                //Singleton.getInstance().Items.heldItems.Add(itemToPlace);
                 Singleton.getInstance().Checks.placeItemInCheck(itemToPlace,checkToReciveItem);
 
                 availableChecks.Remove(checkToReciveItem);

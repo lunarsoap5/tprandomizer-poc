@@ -858,7 +858,7 @@ namespace Logic
 
         public static bool canCompleteForestTemple()
         {
-            return ((forestTempleSmallKeyCount >= 4) && canUse(Item.Boomerang) && canBreakMonkeyCage() && canDefeatWalltula() && canDefeatBigBaba() && canBurnWebs() && canDefeatOok() && canDefeatDiababa());
+            return ((forestTempleSmallKeyCount >= 4) && canUse(Item.Boomerang) && canBreakMonkeyCage() && canDefeatWalltula() && canDefeatBigBaba() && canUse(Item.Lantern) && canDefeatOok() && canDefeatDiababa());
         }
 
         public static bool canCompleteGoronMines()

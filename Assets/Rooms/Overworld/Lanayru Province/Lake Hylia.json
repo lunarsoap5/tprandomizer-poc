@@ -18,7 +18,7 @@
         "Logic.canUse(Item.Shadow_Crystal)",
         "Logic.canUse(Item.Shadow_Crystal)",
         "Logic.canUse(Item.Iron_Boots) && Logic.hasBombs() && Logic.canUse(Item.Zora_Armor)",
-        "Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Ancient_Sky_Book_Completed)",
+        "Logic.canUse(Item.Clawshot) && (ItemFunctions.nbSkybooksPlaced == 0)",
         "true",
         "Logic.canUse(Item.Shadow_Crystal)"
     ],

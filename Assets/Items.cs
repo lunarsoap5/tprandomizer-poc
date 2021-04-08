@@ -378,11 +378,7 @@ namespace tprandomizer_poc_main
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
-					else if (nbSkybooksPlaced <= 5)
-					{
-						break;
-					}
-					else
+					else if (nbSkybooksPlaced > 5)
 					{
 						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
@@ -393,11 +389,7 @@ namespace tprandomizer_poc_main
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
-					else if (nbSkybooksPlaced <= 5)
-					{
-						break;
-					}
-					else
+					else if (nbSkybooksPlaced > 5)
 					{
 						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
@@ -408,11 +400,7 @@ namespace tprandomizer_poc_main
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
-					else if (nbSkybooksPlaced <= 5)
-					{
-						break;
-					}
-					else
+					else if (nbSkybooksPlaced > 5)
 					{
 						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
@@ -423,11 +411,7 @@ namespace tprandomizer_poc_main
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
-					else if (nbSkybooksPlaced <= 5)
-					{
-						break;
-					}
-					else
+					else if (nbSkybooksPlaced > 5)
 					{
 						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
@@ -438,11 +422,7 @@ namespace tprandomizer_poc_main
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
-					else if (nbSkybooksPlaced <= 5)
-					{
-						break;
-					}
-					else
+					else if (nbSkybooksPlaced > 5)
 					{
 						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
@@ -453,11 +433,7 @@ namespace tprandomizer_poc_main
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
-					else if (nbSkybooksPlaced <= 5)
-					{
-						break;
-					}
-					else
+					else if (nbSkybooksPlaced > 5)
 					{
 						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}

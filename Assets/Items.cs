@@ -276,9 +276,6 @@ namespace tprandomizer_poc_main
 	{
 		
 		public List<Item> heldItems = new List<Item>();
-		public List<Item> PlacedImportantItems = new List<Item>();
-
-		public List<Item> ItemsToBeRandomized = new List<Item>();
 
 		public static int nbSkybooksPlaced = 0;
 
@@ -345,7 +342,7 @@ namespace tprandomizer_poc_main
 			Item.Gate_Keys
         };
 
-		public Item verifyItem (Item item)
+		public Item verifyItem (Item item, List<Item> itemList)
 		{
 			switch (item) //Make sure you place the items in the right order (from big to small)
 			{
@@ -377,7 +374,7 @@ namespace tprandomizer_poc_main
 					Logic.LogicFunctions.hyruleCastleSmallKeyCount--;
 					break;
 				case Item.Ancient_Sky_Book_Empty:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Ancient_Sky_Book_Completed))
+					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
@@ -392,7 +389,7 @@ namespace tprandomizer_poc_main
 					nbSkybooksPlaced++;
 					break;
 				case Item.Ancient_Sky_Book_First_Character:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Ancient_Sky_Book_Completed))
+					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
@@ -407,7 +404,7 @@ namespace tprandomizer_poc_main
 					nbSkybooksPlaced++;
 					break;
 				case Item.Ancient_Sky_Book_Second_Character:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Ancient_Sky_Book_Completed))
+					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
@@ -422,7 +419,7 @@ namespace tprandomizer_poc_main
 					nbSkybooksPlaced++;
 					break;
 				case Item.Ancient_Sky_Book_Third_Character:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Ancient_Sky_Book_Completed))
+					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
@@ -437,7 +434,7 @@ namespace tprandomizer_poc_main
 					nbSkybooksPlaced++;
 					break;
 				case Item.Ancient_Sky_Book_Fourth_Character:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Ancient_Sky_Book_Completed))
+					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
@@ -452,7 +449,7 @@ namespace tprandomizer_poc_main
 					nbSkybooksPlaced++;
 					break;
 				case Item.Ancient_Sky_Book_Fifth_Character:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Ancient_Sky_Book_Completed))
+					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
 					{
 						item = Item.Ancient_Sky_Book_Completed;
 					}
@@ -467,161 +464,161 @@ namespace tprandomizer_poc_main
 					nbSkybooksPlaced++;
 					break;
 				case Item.Clawshot:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Double_Clawshot))
+					if (itemList.Contains(Item.Double_Clawshot))
 					{
 						item = Item.Double_Clawshot; //Double_Clawshot
 					}
 					break;
 				case Item.Dominion_Rod_Uncharged:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Dominion_Rod))
+					if (itemList.Contains(Item.Dominion_Rod))
 					{
 						item = Item.Dominion_Rod; //Charged_Dominion_Rod
 					}
 					break;
 				case Item.Big_Wallet:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Giant_Wallet))
+					if (itemList.Contains(Item.Giant_Wallet))
 					{
 						item = Item.Giant_Wallet; //Giant_Wallet
 					}
 					break;
 				case Item.Big_Quiver:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Giant_Quiver))
+					if (itemList.Contains(Item.Giant_Quiver))
 					{
 						item = Item.Giant_Quiver; //Giant_Quiver
 					}
 					break;
 				case Item.Heros_Bow:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Giant_Quiver))
+					if (itemList.Contains(Item.Giant_Quiver))
 					{
 						item = Item.Giant_Quiver; //Giant_Quiver
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Big_Quiver))
+					else if (itemList.Contains(Item.Big_Quiver))
 					{
 						item = Item.Big_Quiver; //Big_Quiver
 					}
 					break;
 				case Item.Master_Sword:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Master_Sword_Light))
+					if (itemList.Contains(Item.Master_Sword_Light))
 					{
 						item = Item.Master_Sword_Light; //Light_Sword
 					}
 					break;
 				case Item.Ordon_Sword:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Master_Sword_Light))
+					if (itemList.Contains(Item.Master_Sword_Light))
 					{
 						item = Item.Master_Sword_Light; //Light_Sword
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Master_Sword))
+					else if (itemList.Contains(Item.Master_Sword))
 					{
 						item = Item.Master_Sword; //Master_Sword
 					}
 					break;
 				case Item.Wooden_Sword:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Master_Sword_Light))
+					if (itemList.Contains(Item.Master_Sword_Light))
 					{
 						item = Item.Master_Sword_Light; //Light_Sword
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Master_Sword))
+					else if (itemList.Contains(Item.Master_Sword))
 					{
 						item = Item.Master_Sword; //Master_Sword
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Ordon_Sword))
+					else if (itemList.Contains(Item.Ordon_Sword))
 					{
 						item = Item.Ordon_Sword; //Ordon_Sword
 					}
 					break;
 				case Item.Jump_Strike:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Great_Spin))
+					if (itemList.Contains(Item.Great_Spin))
 					{
 						item = Item.Great_Spin; //Great_Spin
 					}
 					break;
 				case Item.Mortal_Draw:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Great_Spin))
+					if (itemList.Contains(Item.Great_Spin))
 					{
 						item = Item.Great_Spin; //Great_Spin
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Jump_Strike))
+					else if (itemList.Contains(Item.Jump_Strike))
 					{
 						item = Item.Jump_Strike; //Jump_Strike
 					}
 					break;
 				case Item.Helm_Splitter:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Great_Spin))
+					if (itemList.Contains(Item.Great_Spin))
 					{
 						item = Item.Great_Spin; //Great_Spin
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Jump_Strike))
+					else if (itemList.Contains(Item.Jump_Strike))
 					{
 						item = Item.Jump_Strike; //Jump_Strike
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Mortal_Draw))
+					else if (itemList.Contains(Item.Mortal_Draw))
 					{
 						item = Item.Mortal_Draw; //Mortal_Draw
 					}
 					break;
 				case Item.Back_Slice:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Great_Spin))
+					if (itemList.Contains(Item.Great_Spin))
 					{
 						item = Item.Great_Spin; //Great_Spin
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Jump_Strike))
+					else if (itemList.Contains(Item.Jump_Strike))
 					{
 						item = Item.Jump_Strike; //Jump_Strike
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Mortal_Draw))
+					else if (itemList.Contains(Item.Mortal_Draw))
 					{
 						item = Item.Mortal_Draw; //Mortal_Draw
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Helm_Splitter))
+					else if (itemList.Contains(Item.Helm_Splitter))
 					{
 						item = Item.Helm_Splitter; //Helm_Splitter
 					}
 					break;
 				case Item.Shield_Attack:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Great_Spin))
+					if (itemList.Contains(Item.Great_Spin))
 					{
 						item = Item.Great_Spin; //Great_Spin
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Jump_Strike))
+					else if (itemList.Contains(Item.Jump_Strike))
 					{
 						item = Item.Jump_Strike; //Jump_Strike
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Mortal_Draw))
+					else if (itemList.Contains(Item.Mortal_Draw))
 					{
 						item = Item.Mortal_Draw; //Mortal_Draw
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Helm_Splitter))
+					else if (itemList.Contains(Item.Helm_Splitter))
 					{
 						item = Item.Helm_Splitter; //Helm_Splitter
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Back_Slice))
+					else if (itemList.Contains(Item.Back_Slice))
 					{
 						item = Item.Back_Slice; //Back_Slice
 					}
 					break;
 				case Item.Ending_Blow:
-					if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Great_Spin))
+					if (itemList.Contains(Item.Great_Spin))
 					{
 						item = Item.Great_Spin; //Great_Spin
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Jump_Strike))
+					else if (itemList.Contains(Item.Jump_Strike))
 					{
 						item = Item.Jump_Strike; //Jump_Strike
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Mortal_Draw))
+					else if (itemList.Contains(Item.Mortal_Draw))
 					{
 						item = Item.Mortal_Draw; //Mortal_Draw
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Helm_Splitter))
+					else if (itemList.Contains(Item.Helm_Splitter))
 					{
 						item = Item.Helm_Splitter; //Helm_Splitter
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Back_Slice))
+					else if (itemList.Contains(Item.Back_Slice))
 					{
 						item = Item.Back_Slice; //Back_Slice
 					}
-					else if (Singleton.getInstance().Items.ItemsToBeRandomized.Contains(Item.Shield_Attack))
+					else if (itemList.Contains(Item.Shield_Attack))
 					{
 						item = Item.Shield_Attack; //Shield_Attack
 					}
@@ -646,19 +643,17 @@ namespace tprandomizer_poc_main
 		public void generateItemPool()
 		{
 			nbSkybooksPlaced = 0;
-			foreach (var importantItem in ImportantItems)
-			{
-				Console.WriteLine(importantItem);
-				Singleton.getInstance().Items.heldItems.Add(importantItem);
-			}
-			foreach (var regionKey in RegionKeys)
-			{
-				Singleton.getInstance().Items.heldItems.Add(regionKey);
-			}
-			foreach (var forestItem in forestItems)
-			{
-				Singleton.getInstance().Items.heldItems.Add(forestItem);
-			}
+			Singleton.getInstance().Items.heldItems.AddRange(ImportantItems);
+			Singleton.getInstance().Items.heldItems.AddRange(RegionKeys);
+			Singleton.getInstance().Items.heldItems.AddRange(forestItems);
+			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Piece_of_Heart, 45));
+			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Heart_Container, 8));
+			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Green_Rupee, 2));
+			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Blue_Rupee, 20));
+			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Red_Rupee, 49));
+			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Purple_Rupee, 49));
+			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Orange_Rupee, 44));
+			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Silver_Rupee, 3));
 		}
 	}
 

@@ -352,7 +352,6 @@ namespace tprandomizer_poc_main
             currentCheck.itemWasPlaced = true;
             Singleton.getInstance().Items.heldItems.Remove(item);
             currentCheck.itemId = item;
-            Singleton.getInstance().Items.PlacedImportantItems.Add(item);
             Singleton.getInstance().Checks.CheckDict[check] = currentCheck;
             Console.WriteLine("Placed " + currentCheck.itemId + " in check " + currentCheck.checkName);
         }

@@ -27,7 +27,7 @@ namespace tprandomizer_poc_main
             Singleton.getInstance().Items.generateItemPool();
 
             Room startingRoom = Singleton.getInstance().Rooms.setupGraph();
-            placeRequiredItems(startingRoom);
+            placeRequiredItems(startingRoom, Singleton.getInstance().Items.heldItems);
 
             
                 
@@ -41,30 +41,29 @@ namespace tprandomizer_poc_main
             Console.WriteLine("Starting Over.");
             ItemFunctions.nbSkybooksPlaced = 0;
             Singleton.getInstance().Items.generateItemPool();
-            foreach (var item in Singleton.getInstance().Items.PlacedImportantItems)
-            {
-                Singleton.getInstance().Items.ImportantItems.Add(item);
-            }
-            Singleton.getInstance().Items.PlacedImportantItems.Clear();
             Singleton.getInstance().Checks.deserializeChecks();
 
-            placeRequiredItems(startingRoom);
+            placeRequiredItems(startingRoom, Singleton.getInstance().Items.heldItems);
         }
 
-        void placeRequiredItems(Room startingRoom)
+        void placeRequiredItems(Room startingRoom, List<Item> heldItems)
         {
             Random rnd = new Random();
             List<string> availableChecks = new List<string>();
             Item itemToPlace;
             string checkToReciveItem;
-            Singleton.getInstance().Items.ItemsToBeRandomized = Singleton.getInstance().Items.ImportantItems;
-
-            while (Singleton.getInstance().Items.ItemsToBeRandomized.Count() > 0)
+            foreach (var item in heldItems)
             {
-                itemToPlace = Singleton.getInstance().Items.verifyItem(Singleton.getInstance().Items.ItemsToBeRandomized[rnd.Next(Singleton.getInstance().Items.ItemsToBeRandomized.Count()-1)]);
+                Console.WriteLine(item);
+            }
+            List<Item> ItemsToBeRandomized = Singleton.getInstance().Items.ImportantItems;
+
+            while (ItemsToBeRandomized.Count() > 0)
+            {
+                itemToPlace = Singleton.getInstance().Items.verifyItem(ItemsToBeRandomized[rnd.Next(ItemsToBeRandomized.Count()-1)], ItemsToBeRandomized);
                 Console.WriteLine("Item to place: " + itemToPlace);
-                Singleton.getInstance().Items.heldItems.Remove(itemToPlace);
-                Singleton.getInstance().Items.ItemsToBeRandomized.Remove(itemToPlace);
+                heldItems.Remove(itemToPlace);
+                ItemsToBeRandomized.Remove(itemToPlace);
                 availableChecks = listAllAvailableChecks(startingRoom);
                 
                 checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
@@ -79,7 +78,7 @@ namespace tprandomizer_poc_main
 
                 availableChecks.Remove(checkToReciveItem);
             }
-            if (Singleton.getInstance().Items.ItemsToBeRandomized.Count() > 0)
+            if (ItemsToBeRandomized.Count() > 0)
             {//no more available checks and still items to place, starting over
                 //failsafe: assumed fill can fail, but rarely, so it is best to start over if it happens
                 startOver(startingRoom);

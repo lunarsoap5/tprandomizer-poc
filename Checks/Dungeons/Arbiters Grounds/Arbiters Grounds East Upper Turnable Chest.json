@@ -3,7 +3,7 @@
     "requirements": "true",
     "hash": "73DB",
     "isExcluded": false,
-    "category": ["Chest", "Arbiter's Grounds", "Dungeon Items", "Compass"],
+    "category": ["Chest", "Dungeon", "Arbiters Grounds", "Dungeon Items", "Compass"],
     "itemId": "Compass",
     "itemWasPlaced": false
 }

@@ -3,7 +3,7 @@
     "requirements": "true",
     "hash": "477D",
     "isExcluded": false,
-    "category": ["Chest", "Arbiter's Grounds"],
+    "category": ["Chest", "Dungeon", "Arbiters Grounds"],
     "itemId": "Bombs_10",
     "itemWasPlaced": false
 }

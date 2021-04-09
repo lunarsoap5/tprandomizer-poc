@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Ball_and_Chain)",
     "hash": "E95B",
     "isExcluded": false,
-    "category": ["Chest", "Snowpeak Ruins"],
+    "category": ["Chest", "Dungeon", "Snowpeak Ruins"],
     "itemId": "Red_Rupee",
     "itemWasPlaced": false
 }

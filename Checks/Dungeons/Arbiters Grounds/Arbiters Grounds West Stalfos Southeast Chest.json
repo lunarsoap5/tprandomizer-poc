@@ -3,7 +3,7 @@
     "requirements": "Logic.canBreakWoodenDoor()",
     "hash": "36DB",
     "isExcluded": false,
-    "category": ["Chest", "Arbiter's Grounds"],
+    "category": ["Chest", "Dungeon", "Arbiters Grounds"],
     "itemId": "Bombs_5",
     "itemWasPlaced": false
 }

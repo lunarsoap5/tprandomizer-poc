@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatChilfos()",
     "hash": "9C1C",
     "isExcluded": false,
-    "category": ["Chest", "Snowpeak Ruins", "Boss Key"],
+    "category": ["Chest", "Dungeon", "Snowpeak Ruins", "Boss Key"],
     "itemId": "Snowpeak_Ruins_Bedroom_Key",
     "itemWasPlaced": false
 }

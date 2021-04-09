@@ -3,7 +3,7 @@
     "requirements": "true",
     "hash": "D762",
     "isExcluded": false,
-    "category": ["Chest", "Hyrule Castle"],
+    "category": ["Chest", "Dungeon", "Hyrule Castle"],
     "itemId": "Blue_Rupee",
     "itemWasPlaced": false
 }

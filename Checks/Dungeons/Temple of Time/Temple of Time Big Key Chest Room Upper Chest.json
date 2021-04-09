@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Clawshot)",
     "hash": "BCFE",
     "isExcluded": false,
-    "category": ["Chest", "Temple of Time"],
+    "category": ["Chest", "Dungeon", "Temple of Time"],
     "itemId": "Red_Rupee",
     "itemWasPlaced": false
 }

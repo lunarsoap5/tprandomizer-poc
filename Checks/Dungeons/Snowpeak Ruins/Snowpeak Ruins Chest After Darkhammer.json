@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatDarkhammer() && Logic.canUse(Item.Ball_and_Chain)",
     "hash": "5786",
     "isExcluded": false,
-    "category": ["Chest", "Snowpeak Ruins"],
+    "category": ["Chest", "Dungeon", "Snowpeak Ruins"],
     "itemId": "Ordon_Goat_Cheese",
     "itemWasPlaced": false
 }

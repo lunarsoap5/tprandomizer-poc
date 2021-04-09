@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Zora_Armor)",
     "hash": "F526",
     "isExcluded": false,
-    "category": ["Chest", "Lakebed Temple"],
+    "category": ["Chest", "Dungeon", "Lakebed Temple"],
     "itemId": "Arrows_20",
     "itemWasPlaced": false
 }

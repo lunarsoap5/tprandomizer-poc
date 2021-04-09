@@ -11,7 +11,7 @@
     [
         "true",
         "Logic.canLeaveForest()",
-        "Logic.canUse(Item.Lantern) || Logic.canUse(Item.Shadow_Crystal)",
+        "true",
         "Logic.canSmash() && Logic.canUse(Item.Dominion_Rod) && Logic.canUse(Item.Shadow_Crystal)"
     ],
     "isStartingRoom": "false",

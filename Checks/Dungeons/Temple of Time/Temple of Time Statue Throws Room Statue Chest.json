@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Dominion_Rod_Uncharged)",
     "hash": "1F68",
     "isExcluded": false,
-    "category": ["Chest", "Temple of Time"],
+    "category": ["Chest", "Dungeon", "Temple of Time"],
     "itemId": "Piece_of_Heart",
     "itemWasPlaced": false
 }

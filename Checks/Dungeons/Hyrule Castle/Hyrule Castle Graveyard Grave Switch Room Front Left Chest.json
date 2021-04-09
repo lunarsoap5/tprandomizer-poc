@@ -3,7 +3,7 @@
     "requirements": "Logic.canSmash()",
     "hash": "BF0D",
     "isExcluded": false,
-    "category": ["Chest", "Hyrule Castle"],
+    "category": ["Chest", "Dungeon", "Hyrule Castle"],
     "itemId": "Green_Rupee",
     "itemWasPlaced": false
 }

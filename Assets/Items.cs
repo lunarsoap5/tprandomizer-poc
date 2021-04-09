@@ -277,6 +277,8 @@ namespace tprandomizer_poc_main
 		
 		public List<Item> heldItems = new List<Item>();
 
+		public List<Item> regionItems = new List<Item>();
+
 		public static int nbSkybooksPlaced = 0;
 
 		public List<Item> ImportantItems = new List<Item>()
@@ -316,31 +318,7 @@ namespace tprandomizer_poc_main
 		};
 
 
-		public List<Item> RegionKeys = new List<Item>()
-        {
-            Item.Forest_Temple_Small_Key,
-			Item.Forest_Temple_Big_Key,
-			Item.Goron_Mines_Small_Key,
-			Item.Goron_Mines_Key_Shard_1,
-			Item.Goron_Mines_Key_Shard_2,
-			Item.Goron_Mines_Big_Key,
-			Item.Lakebed_Temple_Small_Key,
-			Item.Lakebed_Temple_Big_Key,
-			Item.Arbiters_Grounds_Small_Key,
-			Item.Arbiters_Grounds_Big_Key,
-			Item.Snowpeak_Ruins_Small_Key,
-			Item.Snowpeak_Ruins_Bedroom_Key,
-			Item.Temple_of_Time_Small_Key,
-			Item.Temple_of_Time_Big_Key,
-			Item.City_in_The_Sky_Small_Key,
-			Item.City_in_The_Sky_Big_Key,
-			Item.Palace_of_Twilight_Small_Key,
-			Item.Palace_of_Twilight_Big_Key,
-			Item.Hyrule_Castle_Small_Key,
-			Item.Hyrule_Castle_Big_Key,
-			Item.Small_Key_N_Faron_Gate,
-			Item.Gate_Keys
-        };
+		public List<Item> RegionKeys = new List<Item>();
 
 		public Item verifyItem (Item item, List<Item> itemList)
 		{
@@ -619,17 +597,44 @@ namespace tprandomizer_poc_main
 		public void generateItemPool()
 		{
 			nbSkybooksPlaced = 0;
-			Singleton.getInstance().Items.heldItems.AddRange(ImportantItems);
-			Singleton.getInstance().Items.heldItems.AddRange(RegionKeys);
-			Singleton.getInstance().Items.heldItems.AddRange(forestItems);
-			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Piece_of_Heart, 45));
-			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Heart_Container, 8));
-			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Green_Rupee, 2));
-			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Blue_Rupee, 20));
-			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Red_Rupee, 49));
-			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Purple_Rupee, 49));
-			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Orange_Rupee, 44));
-			Singleton.getInstance().Items.heldItems.AddRange(Enumerable.Repeat(Item.Silver_Rupee, 3));
+			heldItems.AddRange(Enumerable.Repeat(Item.Piece_of_Heart, 45));
+			heldItems.AddRange(Enumerable.Repeat(Item.Heart_Container, 8));
+			heldItems.AddRange(Enumerable.Repeat(Item.Green_Rupee, 2));
+			heldItems.AddRange(Enumerable.Repeat(Item.Blue_Rupee, 20));
+			heldItems.AddRange(Enumerable.Repeat(Item.Red_Rupee, 49));
+			heldItems.AddRange(Enumerable.Repeat(Item.Purple_Rupee, 49));
+			heldItems.AddRange(Enumerable.Repeat(Item.Orange_Rupee, 44));
+			heldItems.AddRange(Enumerable.Repeat(Item.Silver_Rupee, 3));
+
+			RegionKeys.AddRange(Enumerable.Repeat(Item.Forest_Temple_Small_Key, 4));
+			RegionKeys.AddRange(Enumerable.Repeat(Item.Goron_Mines_Small_Key, 3));
+			RegionKeys.AddRange(Enumerable.Repeat(Item.Lakebed_Temple_Small_Key, 3));
+			RegionKeys.AddRange(Enumerable.Repeat(Item.Arbiters_Grounds_Small_Key, 5));
+			RegionKeys.AddRange(Enumerable.Repeat(Item.Snowpeak_Ruins_Small_Key, 4));
+			RegionKeys.AddRange(Enumerable.Repeat(Item.Temple_of_Time_Small_Key, 3));
+			RegionKeys.AddRange(Enumerable.Repeat(Item.City_in_The_Sky_Small_Key, 1));
+			RegionKeys.AddRange(Enumerable.Repeat(Item.Palace_of_Twilight_Small_Key, 7));
+			RegionKeys.AddRange(Enumerable.Repeat(Item.Hyrule_Castle_Small_Key, 3));
+			RegionKeys.Add(Item.Forest_Temple_Big_Key);
+			RegionKeys.Add(Item.Goron_Mines_Key_Shard_1);
+			RegionKeys.Add(Item.Goron_Mines_Key_Shard_2);
+			RegionKeys.Add(Item.Goron_Mines_Big_Key);
+			RegionKeys.Add(Item.Lakebed_Temple_Big_Key);
+			RegionKeys.Add(Item.Arbiters_Grounds_Big_Key);
+			RegionKeys.Add(Item.Temple_of_Time_Big_Key);
+			RegionKeys.Add(Item.Snowpeak_Ruins_Bedroom_Key);
+			RegionKeys.Add(Item.City_in_The_Sky_Big_Key);
+			RegionKeys.Add(Item.Palace_of_Twilight_Big_Key);
+			RegionKeys.Add(Item.Hyrule_Castle_Big_Key);
+			regionItems.AddRange(RegionKeys);
+			heldItems.Add(Item.Gate_Keys);
+			heldItems.Add(Item.Small_Key_N_Faron_Gate);
+			heldItems.AddRange(ImportantItems);
+			heldItems.AddRange(RegionKeys);
+			heldItems.AddRange(forestItems);
+
+			Singleton.getInstance().Items.heldItems = heldItems;
+			Singleton.getInstance().Items.regionItems = regionItems;
 		}
 	}
 

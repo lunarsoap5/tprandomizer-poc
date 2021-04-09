@@ -3,7 +3,7 @@
     "requirements": "true",
     "hash": "4BCE",
     "isExcluded": false,
-    "category": ["Chest", "Lakebed Temple"],
+    "category": ["Chest", "Dungeon", "Lakebed Temple"],
     "itemId": "Arrows_20",
     "itemWasPlaced": false
 }

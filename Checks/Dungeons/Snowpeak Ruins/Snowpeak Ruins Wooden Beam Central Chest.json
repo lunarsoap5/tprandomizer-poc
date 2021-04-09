@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatIceKeese()",
     "hash": "A3A7",
     "isExcluded": false,
-    "category": ["Chest", "Snowpeak Ruins"],
+    "category": ["Chest", "Dungeon", "Snowpeak Ruins"],
     "itemId": "Red_Rupee",
     "itemWasPlaced": false
 }

@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Boomerang)",
     "hash": "80A2",
     "isExcluded": false,
-    "category": ["Chest", "Forest Temple"],
+    "category": ["Chest", "Dungeon", "Forest Temple"],
     "itemId": "Forest_Temple_Small_Key",
     "itemWasPlaced": false
 }

@@ -3,7 +3,7 @@
     "requirements": "true",
     "hash": "F218",
     "isExcluded": false,
-    "category": ["Chest", "Forest Temple"],
+    "category": ["Chest", "Dungeon", "Forest Temple"],
     "itemId": "Yellow_Rupee",
     "itemWasPlaced": false
 }

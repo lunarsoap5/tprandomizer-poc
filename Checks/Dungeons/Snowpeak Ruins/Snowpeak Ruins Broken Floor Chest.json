@@ -3,7 +3,7 @@
     "requirements": "Logic.canSmash()",
     "hash": "569D",
     "isExcluded": false,
-    "category": ["Chest", "Snowpeak Ruins"],
+    "category": ["Chest", "Dungeon", "Snowpeak Ruins"],
     "itemId": "Piece_of_Heart",
     "itemWasPlaced": false
 }

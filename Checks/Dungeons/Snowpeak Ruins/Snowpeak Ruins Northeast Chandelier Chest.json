@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatChilfos() && Logic.canUse(Item.Ball_and_Chain)",
     "hash": "A485",
     "isExcluded": false,
-    "category": ["Chest", "Snowpeak Ruins", "Small Key"],
+    "category": ["Chest", "Dungeon", "Snowpeak Ruins", "Small Key"],
     "itemId": "Snowpeak_Ruins_Small_Key",
     "itemWasPlaced": false
 }

@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Clawshot)",
     "hash": "BAF9",
     "isExcluded": false,
-    "category": ["Chest", "Lakebed Temple"],
+    "category": ["Chest", "Dungeon", "Lakebed Temple"],
     "itemId": "Water_Bombs_10",
     "itemWasPlaced": false
 }

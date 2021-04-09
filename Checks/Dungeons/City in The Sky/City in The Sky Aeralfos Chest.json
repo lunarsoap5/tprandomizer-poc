@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatAeralfos() && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Iron_Boots)",
     "hash": "26B5",
     "isExcluded": false,
-    "category": ["Chest", "City in The Sky"],
+    "category": ["Chest", "Dungeon", "City in The Sky"],
     "itemId": "Double_Clawshot",
     "itemWasPlaced": false
 }

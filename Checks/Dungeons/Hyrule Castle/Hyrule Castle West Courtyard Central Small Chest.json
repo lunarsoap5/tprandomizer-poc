@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatBokoblin()",
     "hash": "22F4",
     "isExcluded": false,
-    "category": ["Chest", "Hyrule Castle"],
+    "category": ["Chest", "Dungeon", "Hyrule Castle"],
     "itemId": "Red_Rupee",
     "itemWasPlaced": false
 }

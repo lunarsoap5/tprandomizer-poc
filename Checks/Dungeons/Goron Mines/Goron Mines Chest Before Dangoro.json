@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Iron_Boots)",
     "hash": "8B94",
     "isExcluded": false,
-    "category": ["Chest", "Goron Mines"],
+    "category": ["Chest", "Dungeon", "Goron Mines"],
     "itemId": "Yellow_Rupee",
     "itemWasPlaced": false
 }

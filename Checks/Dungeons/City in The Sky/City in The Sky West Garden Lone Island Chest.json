@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Double_Clawshot)",
     "hash": "C036",
     "isExcluded": false,
-    "category": ["Chest", "City in The Sky"],
+    "category": ["Chest", "Dungeon", "City in The Sky"],
     "itemId": "Purple_Rupee",
     "itemWasPlaced": false
 }

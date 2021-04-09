@@ -3,7 +3,7 @@
     "requirements": "true",
     "hash": "B294",
     "isExcluded": false,
-    "category": ["Chest", "Arbiter's Grounds"],
+    "category": ["Chest", "Dungeon", "Arbiters Grounds"],
     "itemId": "Red_Rupee",
     "itemWasPlaced": false
 }

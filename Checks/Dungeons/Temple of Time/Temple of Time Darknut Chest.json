@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatDarknut()",
     "hash": "DAD6",
     "isExcluded": false,
-    "category": ["Chest", "Temple of Time"],
+    "category": ["Chest", "Dungeon", "Temple of Time"],
     "itemId": "Dominion_Rod_Uncharged",
     "itemWasPlaced": false
 }

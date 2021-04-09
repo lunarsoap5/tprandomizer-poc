@@ -3,7 +3,7 @@
     "requirements": "true",
     "hash": "2D5C",
     "isExcluded": false,
-    "category": ["Chest", "Hyrule Castle"],
+    "category": ["Chest", "Dungeon", "Hyrule Castle"],
     "itemId": "Bomblings_10",
     "itemWasPlaced": false
 }

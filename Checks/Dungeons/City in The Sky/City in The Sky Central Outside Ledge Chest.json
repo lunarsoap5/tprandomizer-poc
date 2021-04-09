@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatDinalfos() && Logic.canDefeatWalltula() && Logic.canDefeatKargarok() && Logic.canUse(Item.Shadow_Crystal)",
     "hash": "6441",
     "isExcluded": false,
-    "category": ["Chest", "City in The Sky"],
+    "category": ["Chest", "Dungeon", "City in The Sky"],
     "itemId": "Red_Rupee",
     "itemWasPlaced": false
 }

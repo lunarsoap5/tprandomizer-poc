@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Heros_Bow)",
     "hash": "49BD",
     "isExcluded": false,
-    "category": ["Chest", "Goron Mines", "Dungeon Items", "Compass"],
+    "category": ["Chest", "Dungeon", "Goron Mines", "Dungeon Items", "Compass"],
     "itemId": "Compass",
     "itemWasPlaced": false
 }

@@ -3,7 +3,7 @@
     "requirements": "true",
     "hash": "F35C",
     "isExcluded": false,
-    "category": ["Chest", "Snowpeak Ruins", "Small Key"],
+    "category": ["Chest", "Dungeon", "Snowpeak Ruins", "Small Key"],
     "itemId": "Snowpeak_Ruins_Small_Key",
     "itemWasPlaced": false
 }

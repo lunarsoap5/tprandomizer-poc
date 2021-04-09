@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Zora_Armor)",
     "hash": "92AC",
     "isExcluded": false,
-    "category": ["Chest", "Lakebed Temple"],
+    "category": ["Chest", "Dungeon", "Lakebed Temple"],
     "itemId": "Water_Bombs_10",
     "itemWasPlaced": false
 }

@@ -3,7 +3,7 @@
     "requirements": "true",
     "hash": "78DC",
     "isExcluded": false,
-    "category": ["Chest", "Goron Mines", "Small Key"],
+    "category": ["Chest", "Dungeon", "Goron Mines", "Small Key"],
     "itemId": "Goron_Mines_Small_Key",
     "itemWasPlaced": false
 }

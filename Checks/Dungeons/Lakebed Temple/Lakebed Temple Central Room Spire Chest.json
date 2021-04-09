@@ -3,7 +3,7 @@
     "requirements": "(Logic.lakebedTempleSmallKeyCount >= 3) && Logic.canUse(Item.Iron_Boots) && Logic.canLaunchBombs()",
     "hash": "7F1C",
     "isExcluded": false,
-    "category": ["Chest", "Lakebed Temple"],
+    "category": ["Chest", "Dungeon", "Lakebed Temple"],
     "itemId": "Red_Rupee",
     "itemWasPlaced": false
 }

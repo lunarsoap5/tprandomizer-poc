@@ -3,7 +3,7 @@
     "requirements": "Logic.canLaunchBombs()",
     "hash": "2AF4",
     "isExcluded": false,
-    "category": ["Chest", "Lakebed Temple", "Small Key"],
+    "category": ["Chest", "Dungeon", "Lakebed Temple", "Small Key"],
     "itemId": "Lakebed_Temple_Small_Key",
     "itemWasPlaced": false
 }

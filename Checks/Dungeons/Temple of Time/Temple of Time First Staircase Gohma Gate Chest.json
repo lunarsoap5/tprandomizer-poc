@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatYoungGohma()",
     "hash": "298C",
     "isExcluded": false,
-    "category": ["Chest", "Temple of Time"],
+    "category": ["Chest", "Dungeon", "Temple of Time"],
     "itemId": "Arrows_30",
     "itemWasPlaced": false
 }

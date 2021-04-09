@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Boomerang)",
     "hash": "592C",
     "isExcluded": false,
-    "category": ["Chest", "Hyrule Castle"],
+    "category": ["Chest", "Dungeon", "Hyrule Castle"],
     "itemId": "Yellow_Rupee",
     "itemWasPlaced": false
 }

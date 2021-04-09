@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Double_Clawshot)",
     "hash": "E301",
     "isExcluded": false,
-    "category": ["Chest", "Palace of Twilight", "Dungeon Items", "Dungeon Map"],
+    "category": ["Chest", "Dungeon", "Palace of Twilight", "Dungeon Items", "Dungeon Map"],
     "itemId": "Dungeon_Map",
     "itemWasPlaced": false
 }

@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Double_Clawshot)",
     "hash": "2E9D",
     "isExcluded": false,
-    "category": ["Chest", "Palace of Twilight"],
+    "category": ["Chest", "Dungeon", "Palace of Twilight"],
     "itemId": "Orange_Rupee",
     "itemWasPlaced": false
 }

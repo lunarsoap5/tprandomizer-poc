@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatTileWorm() && Logic.canDefeatSkulltula() && Logic.canDefeatWalltula()",
     "hash": "0CF3",
     "isExcluded": false,
-    "category": ["Chest", "Forest Temple"],
+    "category": ["Chest", "Dungeon", "Forest Temple"],
     "itemId": "Red_Rupee",
     "itemWasPlaced": false
 }

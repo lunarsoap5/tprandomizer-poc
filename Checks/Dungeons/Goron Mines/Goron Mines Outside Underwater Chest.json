@@ -3,7 +3,7 @@
     "requirements": "Logic.hasSword() && Logic.canUse(Item.Iron_Boots)",
     "hash": "05BF",
     "isExcluded": false,
-    "category": ["Chest", "Goron Mines"],
+    "category": ["Chest", "Dungeon", "Goron Mines"],
     "itemId": "Purple_Rupee",
     "itemWasPlaced": false
 }

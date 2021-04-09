@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Heros_Bow) && Logic.canUse(Item.Iron_Boots) && Logic.canDefeatDangoro() && (Logic.goronMinesSmallKeyCount >= 3)",
     "hash": "4262",
     "isExcluded": false,
-    "category": ["Chest", "Goron Mines"],
+    "category": ["Chest", "Dungeon", "Goron Mines"],
     "itemId": "Purple_Rupee",
     "itemWasPlaced": false
 }

@@ -3,7 +3,7 @@
     "requirements": "true",
     "hash": "1F95",
     "isExcluded": false,
-    "category": ["Chest", "Arbiter's Grounds"],
+    "category": ["Chest", "Dungeon", "Arbiters Grounds"],
     "itemId": "Piece_of_Heart",
     "itemWasPlaced": false
 }

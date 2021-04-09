@@ -3,7 +3,7 @@
     "requirements": "Logic.canSmash()",
     "hash": "E956",
     "isExcluded": false,
-    "category": ["Chest", "Hyrule Castle"],
+    "category": ["Chest", "Dungeon", "Hyrule Castle"],
     "itemId": "Orange_Rupee",
     "itemWasPlaced": false
 }

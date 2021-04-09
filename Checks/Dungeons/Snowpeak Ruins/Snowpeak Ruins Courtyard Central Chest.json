@@ -3,7 +3,7 @@
     "requirements": "Logic.canUse(Item.Ball_and_Chain) || (Logic.hasBombs() && (Logic.snowpeakRuinsSmallKeyCount >=4))",
     "hash": "E51D",
     "isExcluded": false,
-    "category": ["Chest", "Snowpeak Ruins"],
+    "category": ["Chest", "Dungeon", "Snowpeak Ruins"],
     "itemId": "Bombs_5",
     "itemWasPlaced": false
 }

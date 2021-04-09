@@ -3,7 +3,7 @@
     "requirements": "Logic.canDefeatHelmasaur() && Logic.canUse(Item.Clawshot)",
     "hash": "B704",
     "isExcluded": false,
-    "category": ["Chest", "Temple of Time", "Boss Key"],
+    "category": ["Chest", "Dungeon", "Temple of Time", "Boss Key"],
     "itemId": "Temple_of_Time_Big_Key",
     "itemWasPlaced": false
 }

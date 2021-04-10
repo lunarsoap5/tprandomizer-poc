@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatLizalfos() && Logic.canDefeatBabyGohma() && Logic.canDefeatYoungGohma() && Logic.canDefeatArmos() && (Logic.templeofTimeSmallKeyCount >= 3)"
+        "Logic.canDefeatLizalfos() && Logic.canDefeatBabyGohma() && Logic.canDefeatYoungGohma() && Logic.canDefeatArmos() && (Logic.getItemCount(Item.Temple_of_Time_Small_Key) >= 3)"
     ],
     "isStartingRoom": "false",
     "checks": 

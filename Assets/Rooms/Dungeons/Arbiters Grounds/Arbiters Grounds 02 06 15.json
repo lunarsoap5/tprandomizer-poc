@@ -11,10 +11,10 @@
     "neighbourRequirements": 
     [
         "true",
-        "(Logic.arbitersGroundsSmallKeyCount >=4) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatBubble() && Logic.canDefeatGhoulRat()",
+        "(Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 4) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatBubble() && Logic.canDefeatGhoulRat()",
         "Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Clawshot) && Logic.canDefeatRedeadKnight()",
-        "Logic.arbitersGroundsSmallKeyCount >=2",
-        "Logic.canDefeatPoe() && Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Clawshot) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatBubble() && Logic.canDefeatGhoulRat() && Logic.canDefeatStalfos()"
+        "Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 2",
+        "Logic.canDefeatPoe() && Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Clawshot) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatBubble() && Logic.canDefeatGhoulRat() && Logic.canDefeatStalfos() && (Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 4)"
     ],
     "isStartingRoom": "false",
     "checks": 

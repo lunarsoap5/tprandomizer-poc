@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.arbitersGroundsSmallKeyCount >= 1"
+        "Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 1"
     ],
     "isStartingRoom": "false",
     "checks": 

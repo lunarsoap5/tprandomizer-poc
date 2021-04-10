@@ -10,10 +10,10 @@
     ],
     "neighbourRequirements": [
         "true", 
-        "Logic.lakebedTempleSmallKeyCount >= 1", 
+        "Logic.getItemCount(Item.Lakebed_Temple_Small_Key) >= 1", 
         "true",
-        "(Logic.lakebedTempleSmallKeyCount >= 3) && Logic.canLaunchBombs()",
-        "(Logic.lakebedTempleSmallKeyCount >= 3) && Logic.canLaunchBombs() && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Lakebed_Temple_Big_Key)"
+        "(Logic.getItemCount(Item.Lakebed_Temple_Small_Key) >= 3) && Logic.canLaunchBombs()",
+        "(Logic.getItemCount(Item.Lakebed_Temple_Small_Key) >= 3) && Logic.canLaunchBombs() && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Lakebed_Temple_Big_Key)"
     ],
     "isStartingRoom": "false",
     "checks": 

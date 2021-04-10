@@ -10,7 +10,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.hyruleCastleSmallKeyCount >= 1",
+        "Logic.getItemCount(Item.Hyrule_Castle_Small_Key) >= 1",
         "Logic.canDefeatBokoblin() && Logic.canDefeatKargarok()",
         "Logic.canDefeatBokoblin() && Logic.canDefeatKargarok()"
     ],

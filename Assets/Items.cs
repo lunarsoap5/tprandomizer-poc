@@ -324,33 +324,6 @@ namespace tprandomizer_poc_main
 		{
 			switch (item) //Make sure you place the items in the right order (from big to small)
 			{
-				case Item.Forest_Temple_Small_Key:
-					Logic.LogicFunctions.forestTempleSmallKeyCount--;
-					break;
-				case Item.Goron_Mines_Small_Key:
-					Logic.LogicFunctions.goronMinesSmallKeyCount--;
-					break;
-				case Item.Lakebed_Temple_Small_Key:
-					Logic.LogicFunctions.lakebedTempleSmallKeyCount--;
-					break;
-				case Item.Arbiters_Grounds_Small_Key:
-					Logic.LogicFunctions.arbitersGroundsSmallKeyCount--;
-					break;
-				case Item.Snowpeak_Ruins_Small_Key:
-					Logic.LogicFunctions.snowpeakRuinsSmallKeyCount--;
-					break;
-				case Item.Temple_of_Time_Small_Key:
-					Logic.LogicFunctions.templeofTimeSmallKeyCount--;
-					break;
-				case Item.City_in_The_Sky_Small_Key:
-					Logic.LogicFunctions.cityinTheSkySmallKeyCount--;
-					break;
-				case Item.Palace_of_Twilight_Small_Key:
-					Logic.LogicFunctions.palaceofTwilightSmallKeyCount--;
-					break;
-				case Item.Hyrule_Castle_Small_Key:
-					Logic.LogicFunctions.hyruleCastleSmallKeyCount--;
-					break;
 				case Item.Ancient_Sky_Book_Empty:
 					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
 					{

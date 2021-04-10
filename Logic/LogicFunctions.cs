@@ -1,20 +1,11 @@
 using System;
 using tprandomizer_poc_main;
+using System.Collections.Generic;
 
 namespace Logic
 {
     public class LogicFunctions
     {
-
-        public static int forestTempleSmallKeyCount = 4;
-		public static int goronMinesSmallKeyCount = 3;
-		public static int lakebedTempleSmallKeyCount = 3;
-		public static int arbitersGroundsSmallKeyCount = 5;
-		public static int snowpeakRuinsSmallKeyCount = 4;
-		public static int templeofTimeSmallKeyCount = 3;
-		public static int cityinTheSkySmallKeyCount = 1;
-		public static int palaceofTwilightSmallKeyCount = 7;
-		public static int hyruleCastleSmallKeyCount = 3;
 		public int fusedShadowCount = 0;
 		public int mirrorShardCount = 0;
 
@@ -858,22 +849,37 @@ namespace Logic
 
         public static bool canCompleteForestTemple()
         {
-            return ((forestTempleSmallKeyCount >= 4) && canUse(Item.Boomerang) && canBreakMonkeyCage() && canDefeatWalltula() && canDefeatBigBaba() && canBurnWebs() && canDefeatOok() && canDefeatDiababa());
+            return ((getItemCount(Item.Forest_Temple_Small_Key) >=4) && canUse(Item.Boomerang) && canBreakMonkeyCage() && canDefeatWalltula() && canDefeatBigBaba() && canBurnWebs() && canDefeatOok() && canDefeatDiababa() && canUse(Item.Forest_Temple_Big_Key));
         }
 
         public static bool canCompleteGoronMines()
         {
-            return ((goronMinesSmallKeyCount >=3) && canDefeatDangoro() && canDefeatFyrus() && canUse(Item.Heros_Bow) && canUse(Item.Iron_Boots) && hasSword());
+            return ((getItemCount(Item.Goron_Mines_Small_Key) >=3) && canDefeatDangoro() && canDefeatFyrus() && canUse(Item.Heros_Bow) && canUse(Item.Iron_Boots) && hasSword() && canUse(Item.Goron_Mines_Big_Key));
         }
 
         public static bool canCompleteLakebedTemple()
         {
-            return ((lakebedTempleSmallKeyCount >=3) && canDefeatDekuToad() && canDefeatMorpheel() && canUse(Item.Clawshot) && canLaunchBombs() && canUseWaterBombs());
+            return ((getItemCount(Item.Lakebed_Temple_Small_Key) >=3) && canDefeatDekuToad() && canDefeatMorpheel() && canUse(Item.Clawshot) && canLaunchBombs() && canUseWaterBombs() && canUse(Item.Lakebed_Temple_Big_Key));
         }
         public static bool canCompletePalaceofTwilight()
         {
-            return ((palaceofTwilightSmallKeyCount >= 7) && canUse(Item.Master_Sword_Light) && canDefeatZantHead() && canDefeatShadowBeast() && canUse(Item.Double_Clawshot) && canDefeatPhantomZant() && canDefeatZant() && canUse(Item.Shadow_Crystal));
+            return ((getItemCount(Item.Palace_of_Twilight_Small_Key) >=7) && canUse(Item.Master_Sword_Light) && canDefeatZantHead() && canDefeatShadowBeast() && canUse(Item.Double_Clawshot) && canDefeatPhantomZant() && canDefeatZant() && canUse(Item.Shadow_Crystal) && canUse(Item.Palace_of_Twilight_Big_Key));
         }
+
+        public static int getItemCount(Item itemToBeCounted)
+		{
+            List<Item> itemList = Singleton.getInstance().Items.heldItems;
+			int itemQuantity = 0;
+			foreach (var item in itemList)
+			{
+				if (item == itemToBeCounted)
+				{
+					itemQuantity++;
+				}
+			}
+            Console.WriteLine("Item: " + itemToBeCounted.ToString() + "Quantity: " + itemQuantity);
+			return itemQuantity;
+		}
 
         public void checkBossFlags(Room bossRoom)
         {

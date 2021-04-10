@@ -10,7 +10,7 @@
     [
         "Logic.canUse(Item.Shadow_Crystal) || Logic.canUse(Item.Ball_and_Chain)",
         "Logic.canUse(Item.Ball_and_Chain)",
-        "(Logic.snowpeakRuinsSmallKeyCount >= 4)"
+        "(Logic.getItemCount(Item.Snowpeak_Ruins_Small_Key) >= 4)"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "((Logic.canUse(Item.Iron_Boots) && Logic.hasSword()) || Logic.canUse(Item.Heros_Bow)) && (Logic.goronMinesSmallKeyCount >= 2)"
+        "((Logic.canUse(Item.Iron_Boots) && Logic.hasSword()) || Logic.canUse(Item.Heros_Bow)) && (Logic.getItemCount(Item.Goron_Mines_Small_Key) >= 2)"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -10,7 +10,7 @@
     [
         "true",
         "Logic.canUse(Item.Spinner)",
-        "Logic.canUse(Item.Spinner) && (Logic.templeofTimeSmallKeyCount >= 2)"
+        "Logic.canUse(Item.Spinner) && (Logic.getItemCount(Item.Temple_of_Time_Small_Key) >= 2)"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

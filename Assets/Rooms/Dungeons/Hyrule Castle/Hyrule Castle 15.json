@@ -10,7 +10,7 @@
     [
         "Logic.canDefeatDarknut() && Logic.canDefeatLizalfos() && Logic.canKnockDownHCPainting()",
         "Logic.canUse(Item.Lantern) && Logic.canDefeatDinalfos()",
-        "Logic.hyruleCastleSmallKeyCount >= 2"
+        "Logic.getItemCount(Item.Hyrule_Castle_Small_Key) >= 2"
     ],
     "isStartingRoom": "false",
     "checks": 

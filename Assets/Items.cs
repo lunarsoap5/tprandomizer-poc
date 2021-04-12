@@ -573,7 +573,8 @@ namespace tprandomizer_poc_main
 			heldItems.AddRange(Enumerable.Repeat(Item.Piece_of_Heart, 45));
 			heldItems.AddRange(Enumerable.Repeat(Item.Heart_Container, 8));
 			heldItems.AddRange(Enumerable.Repeat(Item.Green_Rupee, 2));
-			heldItems.AddRange(Enumerable.Repeat(Item.Blue_Rupee, 20));
+			heldItems.AddRange(Enumerable.Repeat(Item.Blue_Rupee, 3));
+			heldItems.AddRange(Enumerable.Repeat(Item.Yellow_Rupee, 20));
 			heldItems.AddRange(Enumerable.Repeat(Item.Red_Rupee, 49));
 			heldItems.AddRange(Enumerable.Repeat(Item.Purple_Rupee, 49));
 			heldItems.AddRange(Enumerable.Repeat(Item.Orange_Rupee, 44));

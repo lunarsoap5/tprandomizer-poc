@@ -204,6 +204,7 @@ namespace tprandomizer_poc_main
             RoomDict.Add("Mirror Chamber", new Room());
             RoomDict.Add("Hidden Village", new Room());
             RoomDict.Add("Death Mountain Interiors", new Room());
+            return;
         }
 
         public void deserializeRooms()
@@ -219,6 +220,7 @@ namespace tprandomizer_poc_main
                 Singleton.getInstance().Rooms.RoomDict[fileName] = currentRoom;
                 Console.WriteLine("Room File Loaded " + fileName);
             }
+            return;
         }
 
         public Room setupGraph()
@@ -238,6 +240,7 @@ namespace tprandomizer_poc_main
                 currentRoom.visited = false;
                 RoomDict[roomList.Key] = currentRoom;
             }
+            return;
         }
     }
 }

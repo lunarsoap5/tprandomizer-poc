@@ -10,27 +10,16 @@ namespace Logic
 		public int mirrorShardCount = 0;
 
 		public bool mdhComplete;
-		public static bool diababaDefeated = true;
-		public static bool fyrusDefeated = true;
-		public static bool morpheelDefeated = true;
-		public static bool stallordDefeated= true;
-		public static bool blizzetaDefeated =true;
-		public static bool armogohmaDefeated = true;
-		public static bool argorokDefeated = true;
-		public static bool zantDefeated = true;
 
         
 
         public static bool canUse(Item item)
 		{
             bool canUseItem = false;
-            foreach (var checkedItem in Singleton.getInstance().Items.heldItems)
-            {
-                if (checkedItem == item)
+            if (Singleton.getInstance().Items.heldItems.Contains(item))
                 {
                     canUseItem = true;
                 }
-            }
 			return canUseItem;
 		}
 
@@ -877,63 +866,8 @@ namespace Logic
 					itemQuantity++;
 				}
 			}
-            Console.WriteLine("Item: " + itemToBeCounted.ToString() + "Quantity: " + itemQuantity);
+            Console.WriteLine("Item: " + itemToBeCounted.ToString() + " Quantity: " + itemQuantity);
 			return itemQuantity;
 		}
-
-        public void checkBossFlags(Room bossRoom)
-        {
-            switch (bossRoom.name)
-            {
-                case "Diababa":
-                    if (bossRoom.visited == true && !canDefeatDiababa())
-                    {
-                        diababaDefeated = false;
-                    }
-                    break;
-                case "Fyrus":
-                    if (bossRoom.visited == true && !canDefeatFyrus())
-                    {
-                        fyrusDefeated = false;
-                    }
-                    break;
-                case "Morpheel":
-                    if (bossRoom.visited == true && !canDefeatMorpheel())
-                    {
-                        morpheelDefeated = false;
-                    }
-                    break;
-                case "Stallord":
-                    if (bossRoom.visited == true && !canDefeatStallord())
-                    {
-                        stallordDefeated = false;
-                    }
-                    break;
-                case "Blizzeta":
-                    if (bossRoom.visited == true && !canDefeatBlizzeta())
-                    {
-                        blizzetaDefeated = false;
-                    }
-                    break;
-                case "Armogohma":
-                    if (bossRoom.visited == true && !canDefeatArmogohma())
-                    {
-                        armogohmaDefeated = false;
-                    }
-                    break;
-                case "Argorok": 
-                    if (bossRoom.visited == true && !canDefeatArgorok())
-                    {
-                        argorokDefeated = false;
-                    }
-                    break;
-                case "Zant":
-                if (bossRoom.visited == true && !canDefeatZant())
-                {
-                    zantDefeated = false;
-                }
-                break;
-            }
-        }
     }
 }

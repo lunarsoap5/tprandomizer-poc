@@ -27,7 +27,6 @@ namespace tprandomizer_poc_main
         public Dictionary<string, Check> CheckDict = new Dictionary<string, Check>();
         public void InitializeChecks()
         {
-
             CheckDict.Add("Uli Cradle Delivery", new Check());
             CheckDict.Add("Sera Cat Fishing Reward", new Check());
             CheckDict.Add("Sera Shop Slingshot", new Check());
@@ -342,6 +341,7 @@ namespace tprandomizer_poc_main
                 Singleton.getInstance().Checks.CheckDict[fileName] = currentCheck;
                 Console.WriteLine("Check File Loaded " + fileName);
             }
+            return;
         }
 
         public void placeItemInCheck(Item item, string check)
@@ -350,48 +350,10 @@ namespace tprandomizer_poc_main
             //Create reference to the current check, tell the program that it was placed, set the item id of the check, and then save the changes to the check.
             Check currentCheck = Singleton.getInstance().Checks.CheckDict[check];
             currentCheck.itemWasPlaced = true;
-            Singleton.getInstance().Items.heldItems.Remove(item);
             currentCheck.itemId = item;
             Singleton.getInstance().Checks.CheckDict[check] = currentCheck;
             Console.WriteLine("Placed " + currentCheck.itemId + " in check " + currentCheck.checkName);
-        }
-
-        public bool checkIfItemNotNeededToReachCheck(Item item, string check, Room startingRoom)
-        {
-            Console.WriteLine("Trying to place item: " + item + " in check: " + Singleton.getInstance().Checks.CheckDict[check].checkName);
-            Singleton.getInstance().Rooms.resetAllRoomsVisited();
-            List<Room> roomsToExplore = new List<Room>();
-            startingRoom.visited = true;
-            roomsToExplore.Add(startingRoom);
-            var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("tprandomizer_poc_main");
-            while (roomsToExplore.Count() > 0)
-            {
-                Console.WriteLine("Currently exploring: " + roomsToExplore[0].name);
-                foreach (var currentCheck in roomsToExplore[0].checks)
-                {
-                    if (currentCheck == check)
-                    {
-                        Check evaluatedCheck = Singleton.getInstance().Checks.CheckDict[currentCheck];
-                        var areCheckRequirementsMet = CSharpScript.EvaluateAsync(evaluatedCheck.requirements, options).Result;
-                        return ((bool)areCheckRequirementsMet &&
-                            evaluatedCheck.itemWasPlaced == false);
-                    }
-                }
-                
-                 for (int i = 0; i < roomsToExplore[0].neighbours.Count(); i++)
-                {
-                    Room currentNeighbour = Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]];
-                    var areNeighbourRequirementsMet = CSharpScript.EvaluateAsync(roomsToExplore[0].neighbourRequirements[i], options).Result;
-                    if ((bool)areNeighbourRequirementsMet
-                        && currentNeighbour.visited == false)
-                    {
-                        currentNeighbour.visited = true;
-                        roomsToExplore.Add(currentNeighbour);
-                    }
-                }
-                roomsToExplore.Remove(roomsToExplore[0]);
-            }
-            return false;
+            return;
         }
     } 
 

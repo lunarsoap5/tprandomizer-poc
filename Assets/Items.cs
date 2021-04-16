@@ -283,6 +283,10 @@ namespace tprandomizer_poc_main
 
 		public List<Item> ImportantItems = new List<Item>()
         {
+			Item.Wooden_Sword,
+			Item.Boomerang,
+			Item.Lantern,
+			Item.Slingshot,
             Item.Fishing_Rod,
             Item.Ordon_Sword,
             Item.Iron_Boots,
@@ -308,14 +312,6 @@ namespace tprandomizer_poc_main
             Item.Double_Clawshot,
             Item.Master_Sword_Light
         };
-
-		public List<Item> forestItems = new List<Item>()
-        {
-			Item.Wooden_Sword,
-			Item.Boomerang,
-			Item.Lantern,
-			Item.Slingshot,
-		};
 
 
 		public List<Item> RegionKeys = new List<Item>();
@@ -605,10 +601,10 @@ namespace tprandomizer_poc_main
 			heldItems.Add(Item.Small_Key_N_Faron_Gate);
 			heldItems.AddRange(ImportantItems);
 			heldItems.AddRange(RegionKeys);
-			heldItems.AddRange(forestItems);
 
 			Singleton.getInstance().Items.heldItems = heldItems;
 			Singleton.getInstance().Items.regionItems = regionItems;
+			return;
 		}
 	}
 

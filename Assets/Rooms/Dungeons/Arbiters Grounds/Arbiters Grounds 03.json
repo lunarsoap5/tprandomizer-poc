@@ -1,0 +1,15 @@
+{ 
+    "name": "Arbiters Grounds 03",
+    "neighbours": 
+    [
+        "Arbiters Grounds 02 06 15"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Arbiters Grounds"
+}

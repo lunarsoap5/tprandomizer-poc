@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Lantern) && Logic.canUse(Item.Ball_and_Chain)",
-    "hash": "7A70",
-    "category": ["Chest", "Snowpeak Province"],
-    "item_id": "0x06"
-}

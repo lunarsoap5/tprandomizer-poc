@@ -1,0 +1,20 @@
+{
+    "name": "Forest Temple 05",
+    "neighbours": 
+    [
+        "Forest Temple 03"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Forest Temple Totem Pole Chest",
+        "Forest Temple West Tile Worm Room Vines Chest",
+        "Forest Temple West Tile Worm Chest Behind Stairs"
+     ],
+    "visited": "false",
+    "region": "Forest Temple"
+}

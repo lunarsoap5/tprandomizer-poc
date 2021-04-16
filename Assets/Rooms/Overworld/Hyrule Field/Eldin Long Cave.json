@@ -1,0 +1,20 @@
+{
+    "name":"Eldin Long Cave",
+    "neighbours": 
+    [
+        "Kakariko Gorge"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Eldin Lantern Cave First Chest",
+        "Eldin Lantern Cave Lantern Chest",
+        "Eldin Lantern Cave Second Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

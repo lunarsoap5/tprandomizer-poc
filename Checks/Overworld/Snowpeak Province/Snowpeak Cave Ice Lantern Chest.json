@@ -1,0 +1,9 @@
+{
+    "checkName": "Snowpeak Cave Ice Lantern Chest",
+    "requirements": "Logic.canUse(Item.Lantern) && Logic.canUse(Item.Ball_and_Chain)",
+    "hash": "7A70",
+    "isExcluded": false,
+    "category": ["Chest", "Snowpeak Province"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

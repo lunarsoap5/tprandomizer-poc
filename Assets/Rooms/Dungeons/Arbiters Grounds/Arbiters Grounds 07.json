@@ -1,0 +1,21 @@
+{ 
+    "name": "Arbiters Grounds 07",
+    "neighbours": 
+    [
+        "Arbiters Grounds 02 06 15", 
+        "Arbiters Grounds 12"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatStalfos()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters Grounds West Stalfos North Chest",
+        "Arbiters Grounds West Stalfos Southeast Chest"
+    ],
+    "visited": "false",
+    "region": "Arbiters Grounds"
+}

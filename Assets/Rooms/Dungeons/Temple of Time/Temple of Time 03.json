@@ -1,0 +1,20 @@
+{
+    "name": "Temple of Time 03",
+    "neighbours": 
+    [
+        "Temple of Time 02"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple of Time Statue Throws Room East Chest",
+        "Temple of Time Statue Throws Room North Chest",
+        "Temple of Time Statue Throws Room Statue Chest"
+     ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

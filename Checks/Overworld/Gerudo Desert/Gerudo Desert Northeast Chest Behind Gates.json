@@ -1,0 +1,9 @@
+{
+    "checkName": "Gerudo Desert Northeast Chest Behind Gates",
+    "requirements": "Logic.canDefeatBublin()",
+    "hash": "9753",
+    "isExcluded": false,
+    "category": ["Chest", "Gerudo Desert"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

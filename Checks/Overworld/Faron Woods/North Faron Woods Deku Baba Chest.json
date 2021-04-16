@@ -1,0 +1,9 @@
+{
+    "checkName": "North Faron Woods Deku Baba Chest",
+    "requirements": "true",
+    "hash": "1862",
+    "isExcluded": false,
+    "category": ["Chest", "Faron Woods"],
+    "itemId": "Yellow_Rupee",
+    "itemWasPlaced": false
+}

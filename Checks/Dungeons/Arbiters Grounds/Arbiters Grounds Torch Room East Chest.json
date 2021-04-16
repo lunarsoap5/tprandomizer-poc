@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiters Grounds Torch Room East Chest",
+    "requirements": "true",
+    "hash": "1F95",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Arbiters Grounds"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

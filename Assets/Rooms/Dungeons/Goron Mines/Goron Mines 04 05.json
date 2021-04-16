@@ -1,0 +1,20 @@
+{
+    "name": "Goron Mines 04 05",
+    "neighbours": 
+    [
+        "Goron Mines 03", 
+        "Goron Mines 14"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Iron_Boots)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Goron Mines Magnet Maze Chest"
+    ],
+    "visited": "false",
+    "region": "Goron Mines"
+}

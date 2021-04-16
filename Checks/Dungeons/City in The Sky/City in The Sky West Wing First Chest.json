@@ -1,0 +1,9 @@
+{
+    "checkName": "City in The Sky West Wing First Chest",
+    "requirements": "true",
+    "hash": "18B6",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "City in The Sky", "Small Key"],
+    "itemId": "City_in_The_Sky_Small_Key",
+    "itemWasPlaced": false
+}

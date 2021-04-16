@@ -1,0 +1,23 @@
+{ 
+    "name": "Palace of Twilight 05",
+    "neighbours": 
+    [
+        "Palace of Twilight 04", 
+        "Phantom Zant 2"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "(Logic.getItemCount(Item.Palace_of_Twilight_Small_Key) >= 4) && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Clawshot)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Palace of Twilight East Wing Second Room Northeast Chest",
+        "Palace of Twilight East Wing Second Room Northwest Chest",
+        "Palace of Twilight East Wing Second Room Southwest Chest",
+        "Palace of Twilight East Wing Second Room Southeast Chest"
+    ],
+    "visited": "false",
+    "region": "Palace of Twilight"
+}

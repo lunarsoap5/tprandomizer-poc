@@ -1,0 +1,9 @@
+{
+    "checkName": "Forest Temple Second Monkey Under Bridge Chest",
+    "requirements": "true",
+    "hash": "F218",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Forest Temple"],
+    "itemId": "Yellow_Rupee",
+    "itemWasPlaced": false
+}

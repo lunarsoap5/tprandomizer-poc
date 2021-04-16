@@ -1,0 +1,21 @@
+{
+    "name": "Lakebed Temple 08",
+    "neighbours": 
+    [
+        "Lakebed Temple 02 03", 
+        "Lakebed Temple 09"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "(Logic.getItemCount(Item.Lakebed_Temple_Small_Key) >= 3) && Logic.canLaunchBombs()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lakebed Temple East Lower Waterwheel Stalactite Chest",
+        "Lakebed Temple East Lower Waterwheel Bridge Chest"
+    ], 
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

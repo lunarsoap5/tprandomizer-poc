@@ -1,0 +1,9 @@
+{
+    "checkName": "Forest Temple Windless Bridge Chest",
+    "requirements": "true",
+    "hash": "E409",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Forest Temple", "Small Key"],
+    "itemId": "Forest_Temple_Small_Key",
+    "itemWasPlaced": false
+}

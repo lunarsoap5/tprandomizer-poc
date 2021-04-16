@@ -1,0 +1,22 @@
+{ 
+    "name": "Temple of Time 00",
+    "neighbours": 
+    [
+        "Sacred Grove Temple of Time", 
+        "Temple of Time 01", 
+        "Temple of Time 08"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.getItemCount(Item.Temple_of_Time_Small_Key) >= 1",
+        "Logic.canUse(Item.Dominion_Rod_Uncharged) && Logic.canUse(Item.Heros_Bow) && Logic.canUse(Item.Spinner) && Logic.canDefeatLizalfos() && Logic.canDefeatDinalfos() && Logic.canDefeatDarknut() && (Logic.getItemCount(Item.Temple_of_Time_Small_Key) >= 3)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple of Time Lobby Lantern Chest"
+    ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

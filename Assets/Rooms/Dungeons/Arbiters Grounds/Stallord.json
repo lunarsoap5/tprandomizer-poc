@@ -1,8 +1,8 @@
 { 
-    "name": "stallord",
+    "name": "Stallord",
     "neighbours": 
     [
-        "mirror_chamber"
+        "Mirror Chamber"
     ],
     "neighbourRequirements":
     [
@@ -11,5 +11,5 @@
     "isStartingRoom": "false",
     "checks": [""], 
     "visited": "false",
-    "region": "Arbiter's Grounds"
+    "region": "Arbiters Grounds"
 }

@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiters Grounds West Stalfos North Chest",
+    "requirements": "Logic.canBreakWoodenDoor()",
+    "hash": "E296",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Arbiters Grounds"],
+    "itemId": "Bombs_5",
+    "itemWasPlaced": false
+}

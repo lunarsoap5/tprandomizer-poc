@@ -1,0 +1,9 @@
+{
+    "checkName": "Temple of Time Lobby Lantern Chest",
+    "requirements": "Logic.canUse(Item.Lantern)",
+    "hash": "BC22",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Temple of Time", "Small Key"],
+    "itemId": "Temple_of_Time_Small_Key",
+    "itemWasPlaced": false
+}

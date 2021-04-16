@@ -1,0 +1,24 @@
+{ 
+    "name": "Zoras Domain",
+    "neighbours": 
+    [
+        "Lanayru Field", 
+        "Snowpeak Climb"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Zoras Domain Chest By Mother and Child Isles",
+        "Zoras Domain Chest Behind Waterfall",
+        "Zoras Domain Light All Torches Chest",
+        "Zoras Domain Extinguish All Torches Chest",
+        "Fishing Hole Heart Piece"
+     ],
+    "visited": "false",
+    "region": "Lanayru Province"
+}

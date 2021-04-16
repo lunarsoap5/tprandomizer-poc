@@ -1,0 +1,26 @@
+{ 
+    "name": "Kakariko Gorge",
+    "neighbours": 
+    [
+        "Eldin Field", 
+        "Faron Field", 
+        "Kakariko Village", 
+        "Eldin Long Cave"
+    ],
+    "neighbourRequirements": 
+    [
+        "Logic.canSmash()",
+        "true",
+        "true",
+        "Logic.canSmash()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Kakariko Gorge Owl Statue Chest",
+        "Kakariko Gorge Double Clawshot Chest",
+        "Kakariko Gorge Spire Heart Piece"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

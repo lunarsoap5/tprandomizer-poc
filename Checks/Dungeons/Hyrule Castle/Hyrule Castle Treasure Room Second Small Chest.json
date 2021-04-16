@@ -1,0 +1,9 @@
+{
+    "checkName": "Hyrule Castle Treasure Room Second Small Chest",
+    "requirements": "true",
+    "hash": "618F",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Hyrule Castle"],
+    "itemId": "Green_Rupee",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Goron Mines Gor Liggs Chest",
+    "requirements": "true",
+    "hash": "1A80",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Goron Mines"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

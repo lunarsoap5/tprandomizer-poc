@@ -1,0 +1,15 @@
+{ 
+    "name": "Grotto 1 3",
+    "neighbours": 
+    [
+        "Lanayru Field"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Field"
+}

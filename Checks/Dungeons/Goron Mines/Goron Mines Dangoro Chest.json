@@ -1,0 +1,9 @@
+{
+    "checkName": "Goron Mines Dangoro Chest",
+    "requirements": "true",
+    "hash": "F6E5",
+    "isExcluded": false, 
+    "category": ["Chest", "Dungeon", "Goron Mines"],
+    "itemId": "Heros_Bow",
+    "itemWasPlaced": false
+}

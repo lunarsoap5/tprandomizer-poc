@@ -1,0 +1,9 @@
+{
+    "checkName": "Eldin Lantern Cave Lantern Chest",
+    "requirements": "Logic.canUse(Item.Lantern)",
+    "hash": "C037",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

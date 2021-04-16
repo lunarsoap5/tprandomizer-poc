@@ -1,0 +1,24 @@
+{
+    "name": "Outside Castle Town West",
+    "neighbours": 
+    [
+        "Lake Hylia Bridge", 
+        "Lanayru Field", 
+        "Castle Town", 
+        "Grotto 1 0"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "true",
+        "true",
+        "Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Clawshot)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Hyrule Field Ampitheater Owl Statue Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

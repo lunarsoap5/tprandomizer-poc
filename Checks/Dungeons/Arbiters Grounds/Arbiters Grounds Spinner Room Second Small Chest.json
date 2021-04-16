@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiters Grounds Spinner Room Second Small Chest",
+    "requirements": "true",
+    "hash": "BB1E",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Arbiters Grounds"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

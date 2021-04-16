@@ -1,0 +1,25 @@
+{
+    "name": "Ordon Province",
+    "neighbours": 
+    [
+        "South Faron Woods",
+        "Grotto 1 2"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canUse(Item.Wooden_Sword)",
+        "Logic.canUse(Item.Shadow_Crystal)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Uli Cradle Delivery",
+        "Sera Cat Fishing Reward",
+        "Sera Shop Slingshot",
+        "Gift From Rusl",
+        "Links Basement Chest",
+        "Wrestling With Bo"
+    ],
+    "visited": "false",
+    "region": "Ordonia Province"
+}

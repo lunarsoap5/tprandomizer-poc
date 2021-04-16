@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Double_Clawshot)",
-    "hash": "B204",
-    "category": ["Chest", "Palace of Twilight"],
-    "item_id": "0x05"
-}

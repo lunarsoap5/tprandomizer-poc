@@ -1,0 +1,9 @@
+{
+    "checkName": "Kakariko Watchtower Chest",
+    "requirements": "true",
+    "hash": "64BD",
+    "isExcluded": false,
+    "category": ["Chest", "Kakariko Village"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

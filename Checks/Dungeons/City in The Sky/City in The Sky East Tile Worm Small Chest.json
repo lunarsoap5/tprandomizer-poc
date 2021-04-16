@@ -1,0 +1,9 @@
+{
+    "checkName": "City in The Sky East Tile Worm Small Chest",
+    "requirements": "true",
+    "hash": "5940",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "City in The Sky"],
+    "itemId": "Yellow_Rupee",
+    "itemWasPlaced": false
+}

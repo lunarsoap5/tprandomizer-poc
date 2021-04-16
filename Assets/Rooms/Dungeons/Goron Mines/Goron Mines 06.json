@@ -1,0 +1,22 @@
+{
+    "name": "Goron Mines 06",
+    "neighbours": 
+    [
+        "Goron Mines 03", 
+        "Goron Mines 07"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "((Logic.canUse(Item.Iron_Boots) && Logic.hasSword()) || Logic.canUse(Item.Heros_Bow)) && (Logic.getItemCount(Item.Goron_Mines_Small_Key) >= 2)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Goron Mines Crystal Switch Room Underwater Chest",
+        "Goron Mines Crystal Switch Room Small Chest",
+        "Goron Mines After Crystal Switch Room Magnet Wall Chest"
+    ],
+    "visited": "false",
+    "region": "Goron Mines"
+}

@@ -1,0 +1,21 @@
+{ 
+    "name": "Goron Mines 09 17",
+    "neighbours": 
+    [
+        "Goron Mines 07", 
+        "Dangoro"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Iron_Boots)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Goron Mines Gor Ebizo Chest",
+        "Goron Mines Chest Before Dangoro"
+    ],
+    "visited": "false",
+    "region": "Goron Mines"
+}

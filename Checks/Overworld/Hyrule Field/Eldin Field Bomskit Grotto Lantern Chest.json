@@ -1,0 +1,9 @@
+{
+    "checkName": "Eldin Field Bomskit Grotto Lantern Chest",
+    "requirements": "Logic.canDefeatBomskit() && Logic.canUse(Item.Lantern)",
+    "hash": "D3C9",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

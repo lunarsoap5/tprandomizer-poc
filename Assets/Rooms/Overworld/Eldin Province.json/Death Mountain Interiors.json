@@ -1,0 +1,17 @@
+{
+    "name": "Death Mountain Interiors",
+    "neighbours": 
+    [
+        "Death Mountain Volcano", 
+        "Goron Mines 01"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Eldin Province"
+}

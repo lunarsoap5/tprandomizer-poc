@@ -1,0 +1,18 @@
+{
+    "name": "Deku Toad",
+    "neighbours": 
+    [
+        "Lakebed Temple 09"
+    ],
+    "neighbourRequirements": 
+    [
+        "Logic.canDefeatDekuToad() && Logic.canUse(Item.Clawshot)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lakebed Temple Deku Toad Chest"
+    ], 
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

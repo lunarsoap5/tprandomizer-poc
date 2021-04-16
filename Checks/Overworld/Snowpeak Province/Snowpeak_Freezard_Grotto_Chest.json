@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatIceKeese() && Logic.canDefeatFreezard() && Logic.canUse(Item.Ball_and_Chain)",
-    "hash": "4584",
-    "category": ["Chest", "Snowpeak Province"],
-    "item_id": "0x06"
-}

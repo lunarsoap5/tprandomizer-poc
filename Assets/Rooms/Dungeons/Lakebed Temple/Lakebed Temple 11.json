@@ -1,0 +1,24 @@
+{
+    "name": "Lakebed Temple 11",
+    "neighbours": 
+    [
+        "Lakebed Temple 02 03", 
+        "Lakebed Temple 12", 
+        "Lakebed Temple 13"
+    ],
+    "neighbourRequirements": 
+    [
+        "Logic.canUse(Item.Clawshot) && Logic.canLaunchBombs()",
+        "true",
+        "Logic.canUse(Item.Clawshot) && Logic.canLaunchBombs()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lakebed Temple West Second Floor Southwest Underwater Chest",
+        "Lakebed Temple West Second Floor Northeast Chest",
+        "Lakebed Temple West Second Floor Southeast Chest"
+    ],
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

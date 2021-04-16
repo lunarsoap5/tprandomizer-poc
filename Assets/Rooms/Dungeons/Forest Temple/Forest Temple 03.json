@@ -1,0 +1,24 @@
+{
+    "name": "Forest Temple 03",
+    "neighbours": 
+    [
+        "Forest Temple 00 01", 
+        "Forest Temple 05", 
+        "Forest Temple 07", 
+        "Ook"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatBombling()",
+        "Logic.canDefeatBombling()", 
+        "Logic.canUse(Item.Boomerang)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Forest Temple West Deku Like Chest"
+    ],
+    "visited": "false",
+    "region": "Forest Temple"
+}

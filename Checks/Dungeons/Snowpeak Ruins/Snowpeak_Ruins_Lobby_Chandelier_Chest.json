@@ -1,6 +1,0 @@
-{
-    "requirements": "(snowpeakRuinsSmallKeyCount >=3) && Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain)",
-    "hash": "2D6A",
-    "category": ["Chest", "Snowpeak Ruins"],
-    "item_id": "0x21"
-}

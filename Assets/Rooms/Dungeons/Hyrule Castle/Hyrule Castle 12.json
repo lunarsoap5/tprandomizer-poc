@@ -1,0 +1,19 @@
+{
+    "name": "Hyrule Castle 12",
+    "neighbours": 
+    [
+        "Hyrule Castle 15", 
+        "Hyrule Castle 08", 
+        "Ganondorf Castle"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "(Logic.getItemCount(Item.Hyrule_Castle_Small_Key) >= 3) && Logic.canUse(Item.Spinner) && Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatDarknut() && Logic.canDefeatLizalfos()",
+        "Logic.canUse(Item.Spinner) && Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatDarknut() && Logic.canDefeatLizalfos() && Logic.canUse(Item.Hyrule_Castle_Big_Key)"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

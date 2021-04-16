@@ -1,0 +1,9 @@
+{
+    "checkName": "Palace of Twilight West Wing First Room Central Chest",
+    "requirements": "Logic.canDefeatZantHead()",
+    "hash": "283D",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Palace of Twilight", "Small Key"],
+    "itemId": "Palace_of_Twilight_Small_Key",
+    "itemWasPlaced": false
+}

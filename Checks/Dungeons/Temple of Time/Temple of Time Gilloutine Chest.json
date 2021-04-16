@@ -1,0 +1,9 @@
+{
+    "checkName": "Temple of Time Gilloutine Chest",
+    "requirements": "true",
+    "hash": "35F9",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Temple of Time", "Small Key"],
+    "itemId": "Temple_of_Time_Small_Key",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,17 @@
+{ 
+    "name": "Hyrule Castle 03",
+    "neighbours": 
+    [
+        "Hyrule Castle 02", 
+        "Hyrule Castle 04"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canKnockDownHCPainting() && Logic.canDefeatLizalfos()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

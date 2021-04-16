@@ -1,0 +1,9 @@
+{
+    "name": "Lakebed Temple 06",
+    "neighbours": ["Lakebed Temple 05"],
+    "neighbourRequirements": ["true"],
+    "isStartingRoom": "false",
+    "checks": ["Lakebed Temple Big Key Chest"],
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

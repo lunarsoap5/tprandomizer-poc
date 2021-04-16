@@ -1,0 +1,17 @@
+{ 
+    "name": "City in The Sky 06",
+    "neighbours": 
+    [
+        "City in The Sky 02 03 14", 
+        "City in The Sky 10"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Double_Clawshot)"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "City in The Sky"
+}

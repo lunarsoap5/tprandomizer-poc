@@ -1,17 +1,17 @@
 {
-    "name": "darknut",
+    "name": "Darknut",
     "neighbours": 
     [
-        "temple_of_time_07"
+        "Temple of Time 07"
     ],
     "neighbourRequirements":
     [
-        "Logic.canDefeatDarknut() && Logic.canUse(Item.Dominion_Rod)"
+        "Logic.canDefeatDarknut() && Logic.canUse(Item.Dominion_Rod_Uncharged)"
     ],
     "isStartingRoom": "false",
     "checks": 
     [
-        "Temple_of_Time_Darknut_Chest"    
+        "Temple of Time Darknut Chest"    
     ],
     "visited": "false",
     "region": "Temple of Time"

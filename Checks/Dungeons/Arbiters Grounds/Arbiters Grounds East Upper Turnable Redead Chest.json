@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiters Grounds East Upper Turnable Redead Chest",
+    "requirements": "Logic.canDefeatRedeadKnight()",
+    "hash": "F20F",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Arbiters Grounds", "Small Key"],
+    "itemId": "Arbiters_Grounds_Small_Key",
+    "itemWasPlaced": false
+}

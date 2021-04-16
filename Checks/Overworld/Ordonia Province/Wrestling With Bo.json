@@ -1,0 +1,9 @@
+{
+    "checkName": "Wrestling With Bo",
+    "requirements": "Logic.canLeaveForest()",
+    "hash": "CA8A",
+    "isExcluded": false,
+    "category": ["Chest"],
+    "itemId": "Iron_Boots",
+    "itemWasPlaced": false
+}

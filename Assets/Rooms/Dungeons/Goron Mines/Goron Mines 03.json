@@ -1,0 +1,24 @@
+{ 
+    "name": "Goron Mines 03",
+    "neighbours": 
+    [
+        "Goron Mines 01", 
+        "Goron Mines 04 05", 
+        "Goron Mines 06"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.getItemCount(Item.Goron_Mines_Small_Key) >= 1",
+        "Logic.getItemCount(Item.Goron_Mines_Small_Key) >= 1", 
+        "Logic.canUse(Item.Iron_Boots)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Goron Mines Main Magnet Room Bottom Chest",
+        "Goron Mines Main Magnet Room Top Chest"
+    ],
+    "visited": "false",
+    "region": "Goron Mines"
+}

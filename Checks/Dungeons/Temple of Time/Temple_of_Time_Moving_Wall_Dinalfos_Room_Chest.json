@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatDinalfos() && Logic.canUse(Item.Dominion_Rod)",
-    "hash": "D3B5",
-    "category": ["Chest", "Temple of Time"],
-    "item_id": "0x21"
-}

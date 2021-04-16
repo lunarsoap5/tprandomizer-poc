@@ -1,0 +1,9 @@
+{
+    "checkName": "Forest Temple West Tile Worm Room Vines Chest",
+    "requirements": "true",
+    "hash": "4CBC",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Forest Temple"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

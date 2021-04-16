@@ -1,0 +1,18 @@
+{
+    "name": "Grotto 4 3",
+    "neighbours": 
+    [
+        "Lanayru Field"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lanayru Field Skulltula Grotto Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Snowpeak Ruins West Cannon Room Central Chest",
+    "requirements": "Logic.canUse(Item.Ball_and_Chain)",
+    "hash": "CB52",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Snowpeak Ruins"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

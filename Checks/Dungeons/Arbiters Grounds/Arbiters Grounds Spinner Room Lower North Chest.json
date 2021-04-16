@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiters Grounds Spinner Room Lower North Chest",
+    "requirements": "Logic.canUse(Item.Spinner)",
+    "hash": "8080",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Arbiters Grounds"],
+    "itemId": "Yellow_Rupee",
+    "itemWasPlaced": false
+}

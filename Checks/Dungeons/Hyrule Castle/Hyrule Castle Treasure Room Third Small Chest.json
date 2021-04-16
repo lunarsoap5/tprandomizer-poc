@@ -1,0 +1,9 @@
+{
+    "checkName": "Hyrule Castle Treasure Room Third Small Chest",
+    "requirements": "true",
+    "hash": "9CB6",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Hyrule Castle"],
+    "itemId": "Bombs_20",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Hyrule Castle Treasure Room Fourth Small Chest",
+    "requirements": "true",
+    "hash": "349E",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Hyrule Castle"],
+    "itemId": "Arrows_20",
+    "itemWasPlaced": false
+}

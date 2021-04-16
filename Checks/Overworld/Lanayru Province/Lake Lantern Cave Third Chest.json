@@ -1,0 +1,9 @@
+{
+    "checkName": "Lake Lantern Cave Third Chest",
+    "requirements": "Logic.canSmash() && Logic.canUse(Item.Lantern)",
+    "hash": "F9D2",
+    "isExcluded": false,
+    "category": ["Chest", "Lanayru Province"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatBabaSerpent() && Logic.canKnockDownHangingBaba()",
-    "hash": "F29C",
-    "category": ["Chest", "Sacred Grove"],
-    "item_id": "0x21"
-}

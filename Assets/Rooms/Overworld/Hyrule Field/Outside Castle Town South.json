@@ -1,0 +1,26 @@
+{ 
+    "name": "Outside Castle Town South",
+    "neighbours": 
+    [
+        "Castle Town", 
+        "Faron Field", 
+        "Grotto 5 0", 
+        "Lake Hylia"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "true",
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Outside South Castle Town Tightrope Chest",
+        "Outside South Castle Town Fountain Chest",
+        "Outside South Castle Town Double Clawshot Chasm Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

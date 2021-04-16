@@ -1,0 +1,9 @@
+{
+    "checkName": "Hyrule Castle Treasure Room Fifth Chest",
+    "requirements": "true",
+    "hash": "4B86",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Hyrule Castle"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Sacred Grove Past Owl Statue Chest",
+    "requirements": "Logic.canUse(Item.Dominion_Rod)",
+    "hash": "7968",
+    "isExcluded": false,
+    "category": ["Chest", "Sacred Grove"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

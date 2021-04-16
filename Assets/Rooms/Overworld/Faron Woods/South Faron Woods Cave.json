@@ -1,0 +1,20 @@
+{
+    "name": "South Faron Woods Cave",
+    "neighbours": 
+    [
+        "South Faron Woods", 
+        "Faron Mist Area"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "South Faron Cave Chest"
+    ],
+    "visited": "false",
+    "region": "Faron Woods"
+}

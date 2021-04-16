@@ -1,0 +1,17 @@
+{ 
+    "name": "Hyrule Castle 05",
+    "neighbours": 
+    [
+        "Hyrule Castle 02", 
+        "Hyrule Castle 06"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Lantern)"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Lakebed Temple West Lower Small Chest",
+    "requirements": "Logic.canUse(Item.Clawshot)",
+    "hash": "B93A",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Lakebed Temple"],
+    "itemId": "Water_Bombs_10",
+    "itemWasPlaced": false
+}

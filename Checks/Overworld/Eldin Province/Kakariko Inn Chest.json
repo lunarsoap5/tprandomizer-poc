@@ -1,0 +1,9 @@
+{
+    "checkName": "Kakariko Inn Chest",
+    "requirements": "true",
+    "hash": "12B4",
+    "isExcluded": false,
+    "category": ["Chest", "Kakariko Village"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

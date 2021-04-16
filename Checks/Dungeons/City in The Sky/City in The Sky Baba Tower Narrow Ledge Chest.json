@@ -1,0 +1,9 @@
+{
+    "checkName": "City in The Sky Baba Tower Narrow Ledge Chest",
+    "requirements": "Logic.canDefeatBabaSerpent() && Logic.canDefeatBigBaba() && Logic.canUse(Item.Double_Clawshot)",
+    "hash": "781F",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "City in The Sky"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

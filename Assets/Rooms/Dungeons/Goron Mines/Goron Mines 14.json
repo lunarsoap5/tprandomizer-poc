@@ -1,0 +1,19 @@
+{ 
+    "name": "Goron Mines 14",
+    "neighbours": 
+    [
+        "Goron Mines 04 05"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Goron Mines Gor Amato Chest",
+        "Goron Mines Gor Amato Small Chest"
+     ],
+    "visited": "false",
+    "region": "Goron Mines"
+}

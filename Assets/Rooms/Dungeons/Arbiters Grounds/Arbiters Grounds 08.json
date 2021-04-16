@@ -1,0 +1,17 @@
+{ 
+    "name": "Arbiters Grounds 08",
+    "neighbours": 
+    [
+        "Arbiters Grounds 12", 
+        "Arbiters Grounds 07"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canDefeatPoe()",
+        "Logic.canDefeatPoe()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Arbiters Grounds"
+}

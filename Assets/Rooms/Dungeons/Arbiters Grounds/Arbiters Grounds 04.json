@@ -1,0 +1,21 @@
+{
+    "name": "Arbiters Grounds 04",
+    "neighbours": 
+    [
+        "Arbiters Grounds 02 06 15", 
+        "Arbiters Grounds 05"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatBubble() && (Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 3)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters Grounds East Upper Turnable Chest",
+        "Arbiters Grounds East Upper Turnable Redead Chest"
+    ],
+    "visited": "false",
+    "region": "Arbiters Grounds"
+}

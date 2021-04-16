@@ -1,0 +1,17 @@
+{
+    "name": "Arbiters Grounds 05",
+    "neighbours": 
+    [
+        "Arbiters Grounds 04", 
+        "Arbiters Grounds 14"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Arbiters Grounds"
+}

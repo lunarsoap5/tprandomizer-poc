@@ -1,0 +1,17 @@
+{ 
+    "name": "Lakebed Temple 05",
+    "neighbours": 
+    [
+        "Lakebed Temple 12", 
+        "Lakebed Temple 06"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Zora_Armor) && Logic.hasBombs()"
+    ],
+    "isStartingRoom": "false",
+    "checks": ["Lakebed Temple Underwater Maze Small Chest"],
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

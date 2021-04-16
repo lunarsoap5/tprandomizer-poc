@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatChilfos() && Logic.canUse(Item.Ball_and_Chain)",
-    "hash": "A485",
-    "category": ["Chest", "Snowpeak Ruins", "Small Key"],
-    "item_id": "0x89"
-}

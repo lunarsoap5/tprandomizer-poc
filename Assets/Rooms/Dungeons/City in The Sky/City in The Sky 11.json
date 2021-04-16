@@ -1,0 +1,22 @@
+{ 
+    "name": "City in The Sky 11",
+    "neighbours": 
+    [
+        "City in The Sky 10", 
+        "City in The Sky 12"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatBabaSerpent()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "City in The Sky Baba Tower Top Small Chest",
+        "City in The Sky Baba Tower Narrow Ledge Chest",
+        "City in The Sky Baba Tower Alcove Chest"
+    ],
+    "visited": "false",
+    "region": "City in The Sky"
+}

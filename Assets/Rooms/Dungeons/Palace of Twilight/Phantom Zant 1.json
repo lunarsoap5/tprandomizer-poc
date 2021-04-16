@@ -1,0 +1,15 @@
+{ 
+    "name": "Phantom Zant 1",
+    "neighbours": 
+    [
+        "Palace of Twilight 02"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canDefeatPhantomZant()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Palace of Twilight"
+}

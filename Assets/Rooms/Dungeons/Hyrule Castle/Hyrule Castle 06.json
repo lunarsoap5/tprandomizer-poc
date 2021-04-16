@@ -1,0 +1,19 @@
+{ 
+    "name": "Hyrule Castle 06",
+    "neighbours": 
+    [
+        "Hyrule Castle 05", 
+        "Hyrule Castle 01", 
+        "Hyrule Castle 15"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatDinalfos()",
+        "Logic.canDefeatDinalfos()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

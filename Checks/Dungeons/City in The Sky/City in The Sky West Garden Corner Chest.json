@@ -1,0 +1,9 @@
+{
+    "checkName": "City in The Sky West Garden Corner Chest",
+    "requirements": "Logic.canUse(Item.Double_Clawshot)",
+    "hash": "13EF",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "City in The Sky"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

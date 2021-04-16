@@ -1,0 +1,9 @@
+{
+    "checkName": "Goron Mines Magnet Maze Chest",
+    "requirements": "Logic.canUse(Item.Iron_Boots)",
+    "hash": "CD65",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Goron Mines"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

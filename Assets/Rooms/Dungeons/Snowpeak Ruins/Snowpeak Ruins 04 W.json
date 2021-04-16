@@ -1,0 +1,29 @@
+{
+    "name": "Snowpeak Ruins 04 W",
+    "neighbours": 
+    [
+        "Snowpeak Ruins 00 01 02 03", 
+        "Snowpeak Ruins 04 E", 
+        "Snowpeak Ruins 09", 
+        "Snowpeak Ruins 11", 
+        "Darkhammer", 
+        "Blizzeta"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Ball_and_Chain)",
+        "true",
+        "Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain) && Logic.canDefeatChilfos() && Logic.canDefeatMiniFreezard() && Logic.canDefeatFreezard() && (Logic.getItemCount(Item.Snowpeak_Ruins_Small_Key) >= 4) && Logic.hasBombs()",
+        "Logic.canUse(Item.Ball_and_Chain) || ((Logic.getItemCount(Item.Snowpeak_Ruins_Small_Key) >= 4) && Logic.hasBombs())",
+        "Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain) && Logic.canDefeatChilfos() && Logic.canDefeatMiniFreezard() && Logic.canDefeatFreezard() && (Logic.getItemCount(Item.Snowpeak_Ruins_Small_Key) >= 4) && Logic.hasBombs() && Logic.canUse(Item.Snowpeak_Ruins_Bedroom_Key)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak Ruins West Courtyard Buried Chest",
+        "Snowpeak Ruins Courtyard Central Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

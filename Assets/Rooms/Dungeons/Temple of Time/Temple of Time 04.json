@@ -1,0 +1,21 @@
+{
+    "name": "Temple of Time 04",
+    "neighbours": 
+    [
+        "Temple of Time 02", 
+        "Temple of Time 05"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Heros_Bow) && Logic.canDefeatLizalfos() && Logic.canDefeatDinalfos()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple of Time Moving Wall Beamos Room Chest",
+        "Temple of Time Moving Wall Dinalfos Room Chest"
+     ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

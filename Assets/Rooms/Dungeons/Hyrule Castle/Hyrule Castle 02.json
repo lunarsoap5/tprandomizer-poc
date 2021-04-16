@@ -1,0 +1,22 @@
+{ 
+    "name": "Hyrule Castle 02",
+    "neighbours": 
+    [
+        "Hyrule Castle 01", 
+        "Hyrule Castle 03", 
+        "Hyrule Castle 05"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatDarknut() && Logic.canUse(Item.Lantern) && Logic.canUse(Item.Boomerang)",
+        "Logic.canDefeatDarknut() && Logic.canUse(Item.Lantern) && Logic.canUse(Item.Boomerang)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Hyrule Castle Lantern Staircase Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

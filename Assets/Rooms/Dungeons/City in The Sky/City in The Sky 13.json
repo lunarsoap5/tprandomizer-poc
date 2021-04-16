@@ -1,0 +1,21 @@
+{ 
+    "name": "City in The Sky 13",
+    "neighbours": 
+    [
+        "City in The Sky 12", 
+        "City in The Sky 02 03 14"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canUse(Item.Double_Clawshot)",
+        "true"
+    ],
+    "visited": "false",
+    "checks": 
+    [
+        "City in The Sky Central Outside Ledge Chest",
+        "City in The Sky Central Outside Poe Island Chest"
+    ],
+    "isStartingRoom": "false",
+    "region": "City in The Sky"
+}

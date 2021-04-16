@@ -1,0 +1,28 @@
+{
+    "name": "Lakebed Temple 02 03",
+    "neighbours": 
+    [
+        "Lakebed Temple 00 01", 
+        "Lakebed Temple 07", 
+        "Lakebed Temple 08", 
+        "Lakebed Temple 12", 
+        "Morpheel"
+    ],
+    "neighbourRequirements": [
+        "true", 
+        "Logic.getItemCount(Item.Lakebed_Temple_Small_Key) >= 1", 
+        "true",
+        "(Logic.getItemCount(Item.Lakebed_Temple_Small_Key) >= 3) && Logic.canLaunchBombs()",
+        "(Logic.getItemCount(Item.Lakebed_Temple_Small_Key) >= 3) && Logic.canLaunchBombs() && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Lakebed_Temple_Big_Key)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lakebed Temple Central Room Small Chest",
+        "Lakebed Temple Central Room Chest",
+        "Lakebed Temple Chandelier Chest",
+        "Lakebed Temple Central Room Spire Chest"
+    ],
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

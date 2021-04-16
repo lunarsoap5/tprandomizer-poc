@@ -1,0 +1,22 @@
+{
+    "name": "Temple of Time 01",
+    "neighbours": 
+    [
+        "Temple of Time 00", 
+        "Temple of Time 02"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.hasRangedItem() && Logic.canDefeatYoungGohma() && Logic.canDefeatLizalfos()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Temple of Time First Staircase Gohma Gate Chest",
+        "Temple of Time First Staircase Window Chest",
+        "Temple of Time First Staircase Armos Chest"
+     ],
+    "visited": "false",
+    "region": "Temple of Time"
+}

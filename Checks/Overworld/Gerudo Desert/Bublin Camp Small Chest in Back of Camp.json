@@ -1,0 +1,9 @@
+{
+    "checkName": "Bublin Camp Small Chest in Back of Camp",
+    "requirements": "true",
+    "hash": "309E",
+    "isExcluded": false,
+    "category": ["Chest", "Bublin Camp"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

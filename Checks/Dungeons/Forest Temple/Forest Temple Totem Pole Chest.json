@@ -1,0 +1,9 @@
+{
+    "checkName": "Forest Temple Totem Pole Chest",
+    "requirements": "true",
+    "hash": "F837",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Forest Temple", "Small Key"],
+    "itemId": "Forest_Temple_Small_Key",
+    "itemWasPlaced": false
+}

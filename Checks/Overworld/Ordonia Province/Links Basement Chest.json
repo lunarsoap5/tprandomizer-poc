@@ -1,0 +1,9 @@
+{
+    "checkName": "Links Basement Chest",
+    "requirements": "Logic.canUse(Item.Lantern)",
+    "hash": "E723",
+    "isExcluded": false,
+    "category": ["Chest"],
+    "itemId": "Purple_Rupee_Links_House",
+    "itemWasPlaced": false
+}

@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatTileWorm() && Logic.canDefeatSkulltula() && Logic.canDefeatWalltula()",
-    "hash": "0CF3",
-    "category": ["Chest", "Forest Temple"],
-    "item_id": "0x04"
-}

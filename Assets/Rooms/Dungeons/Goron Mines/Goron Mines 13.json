@@ -1,0 +1,17 @@
+{ 
+    "name": "Goron Mines 13",
+    "neighbours": 
+    [
+        "Goron Mines 11", 
+        "Goron Mines 03"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Iron_Boots) && Logic.canUse(Item.Heros_Bow)"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""],
+    "visited": "false",
+    "region": "Goron Mines"
+}

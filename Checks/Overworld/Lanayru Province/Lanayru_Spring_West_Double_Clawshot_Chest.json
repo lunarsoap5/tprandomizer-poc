@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Double_Clawshot)",
-    "hash": "04BF",
-    "category": ["Chest", "Lanayru Province"],
-    "item_id": "0x06"
-}

@@ -1,0 +1,20 @@
+{ 
+    "name": "Arbiters Grounds 14",
+    "neighbours": 
+    [
+        "Arbiters Grounds 05", 
+        "Arbiters Grounds 02 06 15"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatGhoulRat() && (Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 4)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters Grounds Ghoul Rat Room Chest"
+    ],
+    "visited": "false",
+    "region": "Arbiters Grounds"
+}

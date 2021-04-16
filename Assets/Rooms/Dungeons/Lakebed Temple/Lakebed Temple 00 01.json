@@ -1,0 +1,22 @@
+{
+    "name": "Lakebed Temple 00 01",
+    "neighbours": 
+    [
+        "Lake Hylia", 
+        "Lakebed Temple 02 03"
+    ],
+    "neighbourRequirements": 
+    [
+        "true", 
+        "Logic.canLaunchBombs()" 
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lakebed Temple Lobby Left Chest", 
+        "Lakebed Temple Lobby Rear Chest", 
+        "Lakebed Temple Stalactite Room Chest"
+    ],
+    "visited": "false",
+    "region": "Lakebed Temple"
+    }

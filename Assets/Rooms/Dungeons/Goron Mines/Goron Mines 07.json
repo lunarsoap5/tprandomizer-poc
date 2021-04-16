@@ -1,0 +1,24 @@
+{
+    "name": "Goron Mines 07",
+    "neighbours": 
+    [
+        "Goron Mines 06", 
+        "Goron Mines 09 17", 
+        "Goron Mines 12"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.getItemCount(Item.Goron_Mines_Small_Key) >= 3",
+        "Logic.canUse(Item.Heros_Bow) && Logic.canUse(Item.Iron_Boots)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Goron Mines Outside Beamos Chest",
+        "Goron Mines Outside Underwater Chest",
+        "Goron Mines Outside Clawshot Chest"
+    ],
+    "visited": "false",
+    "region": "Goron Mines"
+}

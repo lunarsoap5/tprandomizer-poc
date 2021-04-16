@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Lantern)",
-    "hash": "7C1C",
-    "category": ["Chest", "Forest Temple", "Dungeon Items", "Dungeon Map"],
-    "item_id": "0x23"
-}

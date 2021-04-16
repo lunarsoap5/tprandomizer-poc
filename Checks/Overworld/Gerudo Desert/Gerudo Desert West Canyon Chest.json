@@ -1,0 +1,9 @@
+{
+    "checkName": "Gerudo Desert West Canyon Chest",
+    "requirements": "Logic.canUse(Item.Clawshot)",
+    "hash": "0177",
+    "isExcluded": false,
+    "category": ["Chest", "Gerudo Desert"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

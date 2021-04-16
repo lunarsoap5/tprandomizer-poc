@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatDarkhammer() && Logic.canUse(Item.Ball_and_Chain)",
-    "hash": "5786",
-    "category": ["Chest", "Snowpeak Ruins"],
-    "item_id": "0xF5"
-}

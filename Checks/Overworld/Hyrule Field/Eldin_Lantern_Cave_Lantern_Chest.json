@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Lantern)",
-    "hash": "C037",
-    "category": ["Chest", "Hyrule Field"],
-    "item_id": "0x21"
-}

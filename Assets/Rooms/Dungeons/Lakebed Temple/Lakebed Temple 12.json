@@ -1,0 +1,23 @@
+{
+    "name": "Lakebed Temple 12",
+    "neighbours": 
+    [
+        "Lakebed Temple 11", 
+        "Lakebed Temple 02 03", 
+        "Lakebed Temple 05"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canUse(Item.Clawshot)",
+        "true",
+        "Logic.canUse(Item.Clawshot)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lakebed Temple West Lower Small Chest",
+        "Lakebed Temple West Second Floor Central Small Chest"
+    ],
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

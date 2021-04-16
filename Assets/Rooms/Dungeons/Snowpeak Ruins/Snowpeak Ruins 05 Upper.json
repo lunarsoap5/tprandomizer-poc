@@ -1,0 +1,20 @@
+{
+    "name": "Snowpeak Ruins 05 Upper",
+    "neighbours": 
+    [
+        "Snowpeak Ruins 05 Lower", 
+        "Snowpeak Ruins 00 01 02 03"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Ball_and_Chain)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak Ruins Northeast Chandelier Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

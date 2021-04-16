@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiters Grounds Spinner Room First Small Chest",
+    "requirements": "true",
+    "hash": "477D",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Arbiters Grounds"],
+    "itemId": "Bombs_10",
+    "itemWasPlaced": false
+}

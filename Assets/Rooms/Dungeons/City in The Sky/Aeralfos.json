@@ -1,8 +1,8 @@
 { 
-    "name": "aeralfos",
+    "name": "Aeralfos",
     "neighbours": 
     [
-        "city_in_the_sky_05"
+        "City in The Sky 05"
     ],
     "neighbourRequirements":
     [
@@ -11,8 +11,8 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "City_in_The_Sky_Aeralfos_Chest"
+        "City in The Sky Aeralfos Chest"
     ],
     "visited": "false",
-    "region": "City in the Sky"
+    "region": "City in The Sky"
 }

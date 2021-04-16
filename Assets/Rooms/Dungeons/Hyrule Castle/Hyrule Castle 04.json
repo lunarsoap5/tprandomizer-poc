@@ -1,0 +1,19 @@
+{ 
+    "name": "Hyrule Castle 04",
+    "neighbours": 
+    [
+        "Hyrule Castle 03", 
+        "Hyrule Castle 01", 
+        "Hyrule Castle 15"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatDarknut()",
+        "Logic.canDefeatDarknut()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

@@ -2,9 +2,9 @@
     "name": "Morpheel",
     "neighbours": 
     [
-        "lake_hylia"
+        "Lake Hylia"
     ],
-    "neighbourRequirments":
+    "neighbourRequirements":
     [
         "Logic.canDefeatMorpheel()"
     ],

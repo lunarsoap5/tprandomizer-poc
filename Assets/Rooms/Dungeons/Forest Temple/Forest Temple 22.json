@@ -1,0 +1,20 @@
+{
+    "name": "Forest Temple 22",
+    "neighbours": 
+    [
+        "North Faron Woods", 
+        "Forest Temple 00 01"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatWalltula() && Logic.canDefeatBokoblin() && Logic.canBreakMonkeyCage()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Forest Temple Entrance Vines Chest"
+    ],
+    "visited": "false",
+    "region": "Forest Temple"
+}

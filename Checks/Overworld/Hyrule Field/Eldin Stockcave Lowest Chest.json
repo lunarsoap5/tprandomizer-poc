@@ -1,0 +1,9 @@
+{
+    "checkName": "Eldin Stockcave Lowest Chest",
+    "requirements": "Logic.canUse(Item.Iron_Boots)",
+    "hash": "9C80",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

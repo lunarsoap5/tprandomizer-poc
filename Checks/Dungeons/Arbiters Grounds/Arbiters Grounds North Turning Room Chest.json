@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiters Grounds North Turning Room Chest",
+    "requirements": "true",
+    "hash": "4B87",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Arbiters Grounds", "Small Key"],
+    "itemId": "Arbiters_Grounds_Small_Key",
+    "itemWasPlaced": false
+}

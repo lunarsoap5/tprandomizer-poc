@@ -1,0 +1,23 @@
+{ 
+    "name": "Goron Mines 11",
+    "neighbours": 
+    [
+        "Dangoro", 
+        "Goron Mines 13", 
+        "Goron Mines 16"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Heros_Bow)",
+        "Logic.canUse(Item.Heros_Bow)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Goron Mines Dangoro Chest",
+        "Goron Mines Beamos Room Chest"
+    ], 
+    "visited": "false",
+    "region": "Goron Mines"
+}

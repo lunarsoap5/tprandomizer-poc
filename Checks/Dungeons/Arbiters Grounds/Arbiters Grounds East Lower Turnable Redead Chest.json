@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiters Grounds East Lower Turnable Redead Chest",
+    "requirements": "Logic.canUse(Item.Shadow_Crystal) && Logic.canDefeatRedeadKnight()",
+    "hash": "BF75",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Arbiters Grounds", "Small Key"],
+    "itemId": "Arbiters_Grounds_Small_Key",
+    "itemWasPlaced": false
+}

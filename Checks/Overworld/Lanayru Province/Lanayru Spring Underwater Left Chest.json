@@ -1,0 +1,9 @@
+{
+    "checkName": "Lanayru Spring Underwater Left Chest",
+    "requirements": "Logic.canUse(Item.Iron_Boots)",
+    "hash": "008C",
+    "isExcluded": false,
+    "category": ["Chest", "Lanayru Province"],
+    "itemId": "Blue_Rupee",
+    "itemWasPlaced": false
+}

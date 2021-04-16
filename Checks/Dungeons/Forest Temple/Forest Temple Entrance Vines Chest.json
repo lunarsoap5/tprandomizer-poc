@@ -1,0 +1,9 @@
+{
+    "checkName": "Forest Temple Entrance Vines Chest",
+    "requirements": "Logic.canDefeatWalltula()",
+    "hash": "0E45",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Forest Temple"],
+    "itemId": "Yellow_Rupee",
+    "itemWasPlaced": false
+}

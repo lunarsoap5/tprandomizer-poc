@@ -1,0 +1,16 @@
+{ 
+    "name": "City in The Sky 15",
+    "neighbours": 
+    [
+        "City in The Sky 02 03 14", 
+        "Argorok"],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatAeralfos() && Logic.canUse(Item.City_in_The_Sky_Big_Key)"
+    ],
+    "visited": "false",
+    "checks": [""], 
+    "isStartingRoom": "false",
+    "region": "City in The Sky"
+}

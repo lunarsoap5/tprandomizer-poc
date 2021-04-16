@@ -1,0 +1,19 @@
+{
+    "name": "Forest Temple 12",
+    "neighbours": 
+    [
+        "Forest Temple 09", 
+        "Forest Temple 10", 
+        "Diababa"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Boomerang) && Logic.canDefeatBokoblin() && Logic.canDefeatWalltula()",
+        "Logic.canUse(Item.Forest_Temple_Big_Key) && (Logic.canFreeAllMonkeys() || Logic.canUse(Item.Clawshot))"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Forest Temple"
+}

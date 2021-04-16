@@ -1,0 +1,35 @@
+{ 
+    "name": "Lanayru Field",
+    "neighbours": 
+    [
+        "Eldin Field", 
+        "Zoras Domain", 
+        "Outside Castle Town West", 
+        "Lanayru Ice Puzzle Cave", 
+        "Lake Hylia Bridge", 
+        "Hidden Village", 
+        "Grotto 2 0", 
+        "Grotto 4 3", 
+        "Grotto 1 3"
+    ],
+    "neighbourRequirements": 
+    [
+        "Logic.canSmash()",
+        "Logic.canSmash()",
+        "true",
+        "Logic.canSmash()",
+        "Logic.canSmash()",
+        "Logic.canUse(Item.Wooden_Statue)",
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Shadow_Crystal)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lanayru Field Behind Gate Underwater Chest",
+        "Lanayru Field Spinner Track Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

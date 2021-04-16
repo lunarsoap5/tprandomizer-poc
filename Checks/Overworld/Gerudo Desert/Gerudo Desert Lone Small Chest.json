@@ -1,0 +1,9 @@
+{
+    "checkName": "Gerudo Desert Lone Small Chest",
+    "requirements": "true",
+    "hash": "5605",
+    "isExcluded": false,
+    "category": ["Chest", "Gerudo Desert"],
+    "itemId": "Arrows_10",
+    "itemWasPlaced": false
+}

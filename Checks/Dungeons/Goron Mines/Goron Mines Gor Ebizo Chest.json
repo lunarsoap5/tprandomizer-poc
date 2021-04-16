@@ -1,0 +1,9 @@
+{
+    "checkName": "Goron Mines Gor Ebizo Chest",
+    "requirements": "true",
+    "hash": "2954",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Goron Mines"],
+    "itemId": "Yellow_Rupee",
+    "itemWasPlaced": false
+}

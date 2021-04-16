@@ -1,0 +1,9 @@
+{
+    "checkName": "Goron Mines Main Magnet Room Bottom Chest",
+    "requirements": "true",
+    "hash": "A994",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Goron Mines", "Small Key"],
+    "itemId": "Goron_Mines_Small_Key",
+    "itemWasPlaced": false
+}

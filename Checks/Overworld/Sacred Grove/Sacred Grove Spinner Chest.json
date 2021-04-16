@@ -1,0 +1,9 @@
+{
+    "checkName": "Sacred Grove Spinner Chest",
+    "requirements": "Logic.canUse(Item.Spinner)",
+    "hash": "4A9B",
+    "isExcluded": false,
+    "category": ["Chest", "Sacred Grove"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Hyrule Castle East Wing Boomerang Puzzle Chest",
+    "requirements": "Logic.canUse(Item.Boomerang)",
+    "hash": "1533",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Hyrule Castle", "Dungeon Items", "Dungeon Map"],
+    "itemId": "Dungeon_Map",
+    "itemWasPlaced": false
+}

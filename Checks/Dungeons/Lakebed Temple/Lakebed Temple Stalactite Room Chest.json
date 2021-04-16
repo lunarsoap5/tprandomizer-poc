@@ -1,0 +1,9 @@
+{
+    "checkName": "Lakebed Temple Stalactite Room Chest",
+    "requirements": "Logic.canLaunchBombs()",
+    "hash": "FC76",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Lakebed Temple"],
+    "itemId": "Water_Bombs_10",
+    "itemWasPlaced": false
+}

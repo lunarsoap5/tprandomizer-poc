@@ -1,0 +1,9 @@
+{
+    "checkName": "Hyrule Castle Graveyard Owl Statue Chest",
+    "requirements": "Logic.canSmash() && Logic.canUse(Item.Lantern) && Logic.canUse(Item.Dominion_Rod)",
+    "hash": "87FB",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Hyrule Castle", "Small Key"],
+    "itemId": "Hyrule_Castle_Small_Key",
+    "itemWasPlaced": false
+}

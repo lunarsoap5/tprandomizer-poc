@@ -1,0 +1,9 @@
+{
+    "checkName": "Eldin Field Bomskit Grotto Left Chest",
+    "requirements": "Logic.canDefeatBomskit()",
+    "hash": "96E8",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

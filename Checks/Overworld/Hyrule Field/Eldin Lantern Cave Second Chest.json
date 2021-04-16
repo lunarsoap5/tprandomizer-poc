@@ -1,0 +1,9 @@
+{
+    "checkName": "Eldin Lantern Cave Second Chest",
+    "requirements": "Logic.canBurnWebs()",
+    "hash": "BAF6",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,9 @@
+{
+    "checkName": "Lakebed Temple Central Room Chest",
+    "requirements": "true",
+    "hash": "D363",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Lakebed Temple", "Dungeon Items", "Dungeon Map"],
+    "itemId": "Dungeon_Map",
+    "itemWasPlaced": false
+}

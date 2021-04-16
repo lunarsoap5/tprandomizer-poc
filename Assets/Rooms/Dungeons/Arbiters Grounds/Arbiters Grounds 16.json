@@ -1,0 +1,20 @@
+{ 
+    "name": "Arbiters Grounds 16",
+    "neighbours": 
+    [
+        "Arbiters Grounds 09", 
+        "Arbiters Grounds 10"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatBubble() && (Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 5)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters Grounds North Turning Room Chest"
+    ],
+    "visited": "false",
+    "region": "Arbiters Grounds"
+}

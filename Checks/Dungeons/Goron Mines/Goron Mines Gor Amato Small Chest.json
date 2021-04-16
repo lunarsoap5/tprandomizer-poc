@@ -1,0 +1,9 @@
+{
+    "checkName": "Goron Mines Gor Amato Small Chest",
+    "requirements": "true",
+    "hash": "0942",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Goron Mines"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

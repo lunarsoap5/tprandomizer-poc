@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canUse(Item.Ball_and_Chain)",
-    "hash": "3100",
-    "category": ["Chest", "Hyrule Field"],
-    "item_id": "0x21"
-}

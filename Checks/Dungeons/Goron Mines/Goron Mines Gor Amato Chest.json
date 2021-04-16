@@ -1,0 +1,9 @@
+{
+    "checkName": "Goron Mines Gor Amato Chest",
+    "requirements": "true",
+    "hash": "A0D4",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Goron Mines", "Dungeon Items", "Dungeon Map"],
+    "itemId": "Dungeon_Map",
+    "itemWasPlaced": false
+}

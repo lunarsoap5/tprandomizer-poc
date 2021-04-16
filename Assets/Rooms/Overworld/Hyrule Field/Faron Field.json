@@ -1,0 +1,27 @@
+{
+    "name": "Faron Field",
+    "neighbours": 
+    [
+        "South Faron Woods", 
+        "Outside Castle Town South", 
+        "Kakariko Gorge", 
+        "Lake Hylia Bridge", 
+        "Grotto 2 1"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Gate_Keys)",
+        "true",
+        "Logic.canUse(Item.Gate_Keys)",
+        "Logic.canUse(Item.Shadow_Crystal)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Faron Field Bridge Chest",
+        "Faron Field Tree Heart Piece"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

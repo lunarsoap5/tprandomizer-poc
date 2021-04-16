@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatZantHead() && Logic.canUse(Item.Master_Sword_Light)",
-    "hash": "8F8C",
-    "category": ["Chest", "Palace of Twilight", "Small Key"],
-    "item_id": "0x8C"
-}

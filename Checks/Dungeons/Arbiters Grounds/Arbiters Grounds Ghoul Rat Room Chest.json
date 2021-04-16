@@ -1,0 +1,9 @@
+{
+    "checkName": "Arbiters Grounds Ghoul Rat Room Chest",
+    "requirements": "true",
+    "hash": "05A6",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Arbiters Grounds", "Small Key"],
+    "itemId": "Arbiters_Grounds_Small_Key",
+    "itemWasPlaced": false
+}

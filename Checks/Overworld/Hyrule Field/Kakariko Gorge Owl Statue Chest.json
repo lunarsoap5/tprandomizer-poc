@@ -1,0 +1,9 @@
+{
+    "checkName": "Kakariko Gorge Owl Statue Chest",
+    "requirements": "Logic.canUse(Item.Dominion_Rod)",
+    "hash": "773C",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

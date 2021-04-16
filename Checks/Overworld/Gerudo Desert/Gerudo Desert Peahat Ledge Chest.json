@@ -1,0 +1,9 @@
+{
+    "checkName": "Gerudo Desert Peahat Ledge Chest",
+    "requirements": "Logic.canUse(Item.Clawshot)",
+    "hash": "CA80",
+    "isExcluded": false,
+    "category": ["Chest", "Gerudo Desert"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

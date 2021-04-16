@@ -1,0 +1,19 @@
+{ 
+    "name": "Faron Mist Cave",
+    "neighbours": 
+    [
+        "Faron Mist Area"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Faron Mist Cave Open Chest",
+        "Faron Mist Cave Lantern Chest"
+    ],
+    "visited": "false",
+    "region": "Faron Woods"
+}

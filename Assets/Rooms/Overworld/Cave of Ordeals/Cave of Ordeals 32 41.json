@@ -1,0 +1,17 @@
+{ 
+    "name": "Cave of Ordeals 32 41",
+    "neighbours": 
+    [
+        "Kakariko Village", 
+        "Cave of Ordeals 42 50"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canUse(Item.Clawshot)",
+        "Logic.canDefeatBeamos() && Logic.canDefeatKeese() && Logic.canUse(Item.Dominion_Rod) && Logic.canDefeatTorchSlug() && Logic.canDefeatFireKeese() && Logic.canDefeatDodongo() && Logic.canDefeatFireBubble() && Logic.canDefeatRedeadKnight() && Logic.canDefeatPoe() && Logic.canDefeatGhoulRat() && Logic.canDefeatChu() && Logic.canDefeatIceKeese() && Logic.canDefeatFreezard() && Logic.canDefeatChilfos() && Logic.canDefeatIceBubble() && Logic.canDefeatLeever() && Logic.canDefeatDarknut()"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Cave of Ordeals"
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Snowpeak Ruins 04 E",
+    "neighbours": 
+    [
+        "Snowpeak Ruins 00 01 02 03", 
+        "Snowpeak Ruins 04 W", 
+        "Snowpeak Ruins 13"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canUse(Item.Shadow_Crystal) || Logic.canUse(Item.Ball_and_Chain)",
+        "Logic.canUse(Item.Ball_and_Chain)",
+        "(Logic.getItemCount(Item.Snowpeak_Ruins_Small_Key) >= 4)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak Ruins East Courtyard Buried Chest",
+        "Snowpeak Ruins East Courtyard Chest"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Ruins"
+}

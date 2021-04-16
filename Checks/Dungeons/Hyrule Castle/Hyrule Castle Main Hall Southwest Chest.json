@@ -1,0 +1,9 @@
+{
+    "checkName": "Hyrule Castle Main Hall Southwest Chest",
+    "requirements": "Logic.canKnockDownHCPainting() && Logic.canDefeatLizalfos() && Logic.canDefeatDarknut() && Logic.canUse(Item.Boomerang) && Logic.canUse(Item.Lantern) && Logic.canUse(Item.Double_Clawshot)",
+    "hash": "F83F",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Hyrule Castle"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

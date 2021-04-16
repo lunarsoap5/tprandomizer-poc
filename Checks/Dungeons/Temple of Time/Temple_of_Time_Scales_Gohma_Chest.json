@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatYoungGohma() && Logic.canDefeatBabyGohma()",
-    "hash": "E586",
-    "category": ["Chest", "Temple of Time"],
-    "item_id": "0x05"
-}

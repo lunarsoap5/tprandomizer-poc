@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canKnockDownHCPainting() && Logic.canDefeatLizalfos() && Logic.canDefeatDarknut() && Logic.canUse(Item.Boomerang) && Logic.canUse(Item.Lantern) && Logic.canUse(Item.Double_Clawshot)",
-    "hash": "F83F",
-    "category": ["Chest", "Hyrule Castle"],
-    "item_id": "0x05"
-}

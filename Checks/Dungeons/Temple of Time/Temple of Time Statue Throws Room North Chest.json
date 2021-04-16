@@ -1,0 +1,9 @@
+{
+    "checkName": "Temple of Time Statue Throws Room North Chest",
+    "requirements": "true",
+    "hash": "9BC3",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Temple of Time"],
+    "itemId": "Red_Rupee",
+    "itemWasPlaced": false
+}

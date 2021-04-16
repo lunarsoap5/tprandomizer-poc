@@ -1,0 +1,21 @@
+{ 
+    "name": "Hyrule Castle 14",
+    "neighbours": 
+    [
+        "Hyrule Castle 11", 
+        "Hyrule Castle 09"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Shadow_Crystal)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Hyrule Castle East Wing Boomerang Puzzle Chest",
+        "Hyrule Castle East Wing Balcony Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

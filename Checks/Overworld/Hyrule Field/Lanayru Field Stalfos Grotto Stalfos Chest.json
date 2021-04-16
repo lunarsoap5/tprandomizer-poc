@@ -1,0 +1,9 @@
+{
+    "checkName": "Lanayru Field Stalfos Grotto Stalfos Chest",
+    "requirements": "Logic.canDefeatStalfos()",
+    "hash": "6D8E",
+    "isExcluded": false,
+    "category": ["Chest", "Hyrule Field"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canSmash() && Logic.canUse(Item.Iron_Boots)",
-    "hash": "6C58",
-    "category": ["Chest", "Eldin Province"],
-    "item_id": "0x21"
-}

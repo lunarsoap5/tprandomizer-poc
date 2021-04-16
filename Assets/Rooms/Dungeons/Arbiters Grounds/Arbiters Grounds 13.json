@@ -1,0 +1,24 @@
+{ 
+    "name": "Arbiters Grounds 13",
+    "neighbours": 
+    [
+        "Arbiters Grounds 11", 
+        "Arbiters Grounds 09"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Spinner)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters Grounds Spinner Room First Small Chest",
+        "Arbiters Grounds Spinner Room Second Small Chest",
+        "Arbiters Grounds Spinner Room Lower Central Small Chest",
+        "Arbiters Grounds Spinner Room Stalfos Alcove Chest",
+        "Arbiters Grounds Spinner Room Lower North Chest"
+     ],
+    "visited": "false",
+    "region": "Arbiters Grounds"
+}

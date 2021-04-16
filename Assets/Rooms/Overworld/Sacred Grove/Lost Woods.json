@@ -1,0 +1,20 @@
+{
+    "name": "Lost Woods",
+    "neighbours": 
+    [
+        "North Faron Woods", 
+        "Sacred Grove Master Sword"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatSkullKid2() && Logic.canUse(Item.Shadow_Crystal) "
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lost Woods Lantern Chest"
+    ],
+    "visited": "false",
+    "region": "Sacred Grove"
+}

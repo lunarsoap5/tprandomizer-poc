@@ -1,0 +1,9 @@
+{
+    "checkName": "Gerudo Desert Poe Grotto Lantern Chest",
+    "requirements": "Logic.canSmash() && Logic.canUse(Item.Lantern)",
+    "hash": "D3D9",
+    "isExcluded": false,
+    "category": ["Chest", "Gerudo Desert"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

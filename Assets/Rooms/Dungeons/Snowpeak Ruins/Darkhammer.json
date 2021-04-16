@@ -1,8 +1,8 @@
 {
-    "name": "darkhammer",
+    "name": "Darkhammer",
     "neighbours": 
     [
-        "snowpeak_ruins_04_W"
+        "Snowpeak Ruins 04 W"
     ],
     "neighbourRequirements":
     [
@@ -11,7 +11,7 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Snowpeak_Ruins_Chest_After_Darkhammer"
+        "Snowpeak Ruins Chest After Darkhammer"
     ],
     "visited": "false",
     "region": "Snowpeak Ruins"

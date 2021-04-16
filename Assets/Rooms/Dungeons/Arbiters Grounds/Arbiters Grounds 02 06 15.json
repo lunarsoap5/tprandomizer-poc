@@ -1,0 +1,30 @@
+{
+    "name": "Arbiters Grounds 02 06 15",
+    "neighbours": 
+    [
+        "Arbiters Grounds 01", 
+        "Arbiters Grounds 07", 
+        "Arbiters Grounds 03", 
+        "Arbiters Grounds 04", 
+        "Arbiters Grounds 09"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "(Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 4) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatBubble() && Logic.canDefeatGhoulRat()",
+        "Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Clawshot) && Logic.canDefeatRedeadKnight()",
+        "Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 2",
+        "Logic.canDefeatPoe() && Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Clawshot) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatBubble() && Logic.canDefeatGhoulRat() && Logic.canDefeatStalfos() && (Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 4)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters Grounds East Lower Turnable Redead Chest",
+        "Arbiters Grounds Torch Room East Chest",
+        "Arbiters Grounds Torch Room West Chest",
+        "Arbiters Grounds West Small Chest Behind Block",
+        "Arbiters Grounds West Chandelier Chest"
+     ],
+    "visited": "false",
+    "region": "Arbiters Grounds"
+}

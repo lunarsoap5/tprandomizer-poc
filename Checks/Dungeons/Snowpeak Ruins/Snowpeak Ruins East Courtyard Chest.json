@@ -1,0 +1,9 @@
+{
+    "checkName": "Snowpeak Ruins East Courtyard Chest",
+    "requirements": "true",
+    "hash": "F35C",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Snowpeak Ruins", "Small Key"],
+    "itemId": "Snowpeak_Ruins_Small_Key",
+    "itemWasPlaced": false
+}

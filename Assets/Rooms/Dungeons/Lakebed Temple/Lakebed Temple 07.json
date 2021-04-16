@@ -1,0 +1,22 @@
+{ 
+    "name": "Lakebed Temple 07",
+    "neighbours": 
+    [
+        "Lakebed Temple 02 03", 
+        "Lakebed Temple 10", 
+        "Lakebed Temple 08"
+    ],
+    "neighbourRequirements": 
+    [   "true",
+        "Logic.canLaunchBombs()",
+        "Logic.canLaunchBombs()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Lakebed Temple East Second Floor Southwest Chest",
+        "Lakebed Temple East Second Floor Southeast Chest"
+    ],
+    "visited": "false",
+    "region": "Lakebed Temple"
+}

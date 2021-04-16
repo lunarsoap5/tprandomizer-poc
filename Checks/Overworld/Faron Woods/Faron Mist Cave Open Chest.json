@@ -1,0 +1,9 @@
+{
+    "checkName": "Faron Mist Cave Open Chest",
+    "requirements": "true",
+    "hash": "23EB",
+    "isExcluded": false,
+    "category": ["Chest", "Faron Woods"],
+    "itemId": "Small_Key_N_Faron_Gate",
+    "itemWasPlaced": false
+}

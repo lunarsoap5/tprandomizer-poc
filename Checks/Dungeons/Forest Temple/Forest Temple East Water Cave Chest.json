@@ -1,0 +1,9 @@
+{
+    "checkName": "Forest Temple East Water Cave Chest",
+    "requirements": "Logic.canDefeatBombling() || Logic.canBurnWebs()",
+    "hash": "FAE5",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Forest Temple"],
+    "itemId": "Yellow_Rupee",
+    "itemWasPlaced": false
+}

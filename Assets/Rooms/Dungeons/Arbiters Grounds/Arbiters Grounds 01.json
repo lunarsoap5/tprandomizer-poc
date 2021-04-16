@@ -1,0 +1,17 @@
+{
+    "name": "Arbiters Grounds 01",
+    "neighbours": 
+    [
+        "Arbiters Grounds 00", 
+        "Arbiters Grounds 02 06 15"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Lantern)"
+    ],
+    "isStartingRoom": "false",
+    "checks": [""], 
+    "visited": "false",
+    "region": "Arbiters Grounds"
+}

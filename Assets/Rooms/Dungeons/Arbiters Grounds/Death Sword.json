@@ -1,0 +1,18 @@
+{ 
+    "name": "Death Sword",
+    "neighbours": 
+    [
+        "Arbiters Grounds 11"
+    ],
+    "neighbourRequirements":
+    [
+        "Logic.canDefeatDeathSword()"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Arbiters Grounds Death Sword Chest"
+    ],
+    "visited": "false",
+    "region": "Arbiters Grounds"
+}

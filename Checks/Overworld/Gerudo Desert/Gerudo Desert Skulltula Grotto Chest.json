@@ -1,0 +1,9 @@
+{
+    "checkName": "Gerudo Desert Skulltula Grotto Chest",
+    "requirements": "Logic.canDefeatSkulltula()",
+    "hash": "421A",
+    "isExcluded": false,
+    "category": ["Chest", "Gerudo Desert"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

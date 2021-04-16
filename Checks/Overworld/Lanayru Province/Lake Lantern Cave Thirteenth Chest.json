@@ -1,0 +1,9 @@
+{
+    "checkName": "Lake Lantern Cave Thirteenth Chest",
+    "requirements": "Logic.canSmash() && Logic.canUse(Item.Lantern)",
+    "hash": "D490",
+    "isExcluded": false,
+    "category": ["Chest", "Lanayru Province"],
+    "itemId": "Seeds_50",
+    "itemWasPlaced": false
+}

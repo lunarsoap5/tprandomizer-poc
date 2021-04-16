@@ -1,0 +1,23 @@
+{
+    "name": "City in The Sky 10",
+    "neighbours": 
+    [
+        "City in The Sky 06", 
+        "City in The Sky 11"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canUse(Item.Double_Clawshot)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "City in The Sky West Wing First Chest",
+        "City in The Sky West Wing Baba Balcony Chest",
+        "City in The Sky West Wing Narrow Ledge Chest",
+        "City in The Sky West Wing Tile Worm Chest"
+     ],
+    "visited": "false",
+    "region": "City in The Sky"
+}

@@ -1,0 +1,22 @@
+{ 
+    "name": "Hyrule Castle 01",
+    "neighbours": 
+    [
+        "Hyrule Castle 11", 
+        "Hyrule Castle 02"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatBokoblin() &&  Logic.canDefeatLizalfos() && Logic.canUse(Item.Double_Clawshot)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Hyrule Castle Main Hall Northeast Chest",
+        "Hyrule Castle Main Hall Southwest Chest",
+        "Hyrule Castle Main Hall Northwest Chest"
+     ],
+    "visited": "false",
+    "region": "Hyrule Castle"
+}

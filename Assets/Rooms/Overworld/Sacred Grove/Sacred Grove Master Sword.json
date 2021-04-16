@@ -1,0 +1,22 @@
+{ 
+    "name": "Sacred Grove Master Sword",
+    "neighbours": 
+    [
+        "Lost Woods", 
+        "Sacred Grove Temple of Time", 
+        "Grotto 2 2"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "Logic.canDefeatShadowBeast() && Logic.canUse(Item.Master_Sword)",
+        "Logic.canSmash() && Logic.canUse(Item.Shadow_Crystal)"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Sacred Grove Spinner Chest"
+    ],
+    "visited": "false",
+    "region": "Sacred Grove"
+}

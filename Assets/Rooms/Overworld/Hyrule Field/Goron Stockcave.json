@@ -1,0 +1,20 @@
+{ 
+    "name": "Goron Stockcave",
+    "neighbours": 
+    [
+        "Eldin Field"
+    ],
+    "neighbourRequirements": 
+    [
+        "true"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Eldin Stockcave Upper Chest",
+        "Eldin Stockcave Lantern Chest",
+        "Eldin Stockcave Lowest Chest"
+    ],
+    "visited": "false",
+    "region": "Hyrule Field"
+}

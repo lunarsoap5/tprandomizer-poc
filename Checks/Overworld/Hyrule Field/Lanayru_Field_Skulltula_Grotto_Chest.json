@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatSkulltula() && Logic.canUse(Item.Lantern) && Logic.canBreakWoodenDoors()",
-    "hash": "A444",
-    "category": ["Chest", "Hyrule Field"],
-    "item_id": "0x05"
-}

@@ -1,6 +1,0 @@
-{
-    "requirements": "Logic.canDefeatChilfos() && Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain)",
-    "hash": "F06A",
-    "category": ["Chest", "Snowpeak Ruins", "Small Key"],
-    "item_id": "0x89"
-}

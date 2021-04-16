@@ -26,7 +26,7 @@ namespace tprandomizer_poc_main
             
             Singleton.getInstance().Items.generateItemPool();
 
-            Room startingRoom = Singleton.getInstance().Rooms.setupGraph();
+            Room startingRoom = setupGraph();
             placeItemsInWorld(startingRoom);
 
             
@@ -34,6 +34,72 @@ namespace tprandomizer_poc_main
                 //myJsonObject.requirements = Regex.Replace(myJsonObject.requirements, @"\bLogic\b", "Logic.LogicFunctions");
                 //var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");
                 //var now = CSharpScript.EvaluateAsync(myJsonObject.requirements, options).Result;
+        }
+
+        public Room setupGraph()
+        {
+            resetAllRoomsVisited();
+            Room startingRoom = Singleton.getInstance().Rooms.RoomDict["Ordon Province"];
+            startingRoom.isStartingRoom = true;
+            Singleton.getInstance().Rooms.RoomDict["Ordon Province"] = startingRoom;
+
+            List<string> roomChecks = new List<string>();
+            List<Item> playthroughItems = new List<Item>();
+            List<Room> roomsToExplore = new List<Room>();
+            startingRoom.visited = true;
+            roomsToExplore.Add(startingRoom);
+                
+            while (roomsToExplore.Count() > 0)
+            {
+                if (roomsToExplore[0].visited)
+                {
+                    Console.WriteLine("Currently exploring: " + roomsToExplore[0].name);
+                    
+                    for (int i = 0; i < roomsToExplore[0].neighbours.Count(); i++)
+                    {
+                    //Parse the neighbour's requirements to find out if we can access it
+                        if ((Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]].visited == false))
+                        {
+                            Room currentNeighbour = Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]];
+                            currentNeighbour.visited = true;
+                            Console.WriteLine("Neighbour: " + currentNeighbour.name + " added to room list.");
+                            currentNeighbour.accessRequirements = "(" + roomsToExplore[0].accessRequirements + ")" +  " && " +  "(" + roomsToExplore[0].neighbourRequirements[i] + ")";
+                            for (int j = 0; j < currentNeighbour.checks.Count(); j++)
+                            {
+                                Check currentCheck;
+                                if (!Singleton.getInstance().Checks.CheckDict.TryGetValue(currentNeighbour.checks[j], out currentCheck)) 
+                                {
+                                    if (!(currentNeighbour.checks[j].ToString() == ""))
+                                    {
+                                        currentCheck.requirements = "(" + currentCheck.requirements + ")" +  " && " +  "(" + roomsToExplore[0].accessRequirements + ")";
+                                        Console.WriteLine("Check: " + currentCheck.checkName + " Requiremnts: " + currentCheck.requirements);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Room has no checks, continuing on....");
+                                        break;
+                                    }
+                                }
+                                
+                            }
+                            roomsToExplore.Add(currentNeighbour);
+                        }
+                    }
+                    roomsToExplore.Remove(roomsToExplore[0]);
+                }
+            }
+            return startingRoom;
+        }
+
+        public void resetAllRoomsVisited()
+        {
+            foreach (KeyValuePair<string, Room> roomList in Singleton.getInstance().Rooms.RoomDict.ToList())
+            {
+                Room currentRoom = roomList.Value;
+                currentRoom.visited = false;
+                Singleton.getInstance().Rooms.RoomDict[roomList.Key] = currentRoom;
+            }
+            return;
         }
 
         void startOver(Room startingRoom)
@@ -83,64 +149,39 @@ namespace tprandomizer_poc_main
 
         public List<string> listAllAvailableDungeonChecks(Room startingRoom, Item itemToPlace)
         {
-            Singleton.getInstance().Rooms.resetAllRoomsVisited();
+            resetAllRoomsVisited();
             List<string> roomChecks = new List<string>();
             List<Item> playthroughItems = new List<Item>();
-            List<Room> roomsToExplore = new List<Room>(); 
-            roomsToExplore.Add(getDungeonEntrance(itemToPlace.ToString()));
-            roomsToExplore[0].visited = true;
-            Console.WriteLine(roomsToExplore[0].name);
             var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("tprandomizer_poc_main");
-                
-            while (roomsToExplore.Count() > 0)
+
+            foreach (KeyValuePair<string, Check> checkList in Singleton.getInstance().Checks.CheckDict.ToList())
             {
-                if (roomsToExplore[0].visited)
+                Check currentCheck = checkList.Value;
+                if (isDungeonCheck(itemToPlace.ToString(), currentCheck))
                 {
-                    Console.WriteLine("Currently exploring: " + roomsToExplore[0].name);
-                    for (int i = 0; i < roomsToExplore[0].checks.Count(); i++)
+                    Console.WriteLine("Checking for item randomized: " + currentCheck.checkName);
+                    var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    //Confirms that we can get the check and checks to see if an item was placed in it.
+                    if (((bool)areCheckRequirementsMet == true) && currentCheck.itemWasPlaced)
                     {
-                        //Create reference to the dictionary entry of the check whose logic we are evaluating
-                        Check currentCheck;
-                        if (!Singleton.getInstance().Checks.CheckDict.TryGetValue(roomsToExplore[0].checks[i], out currentCheck)) 
-                        {
-                            if (roomsToExplore[0].checks[i].ToString() == "")
-                            {
-                                Console.WriteLine("Room has no checks, continuing on....");
-                                break;
-                            }
-                            Console.WriteLine("Check: " + roomsToExplore[0].checks[i] + " does not exist.");
-                        }
-                        //Parse the requirements to see if we can get the check
-                        var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
-                        //Confirms that we can get the check and checks to see if an item was placed in it.
-                        if (((bool)areCheckRequirementsMet == true))
-                        {
-                            if (!currentCheck.itemWasPlaced)
-                            {
-                                roomChecks.Add(currentCheck.checkName);
-                            }
-                            else
-                            {
-                                Singleton.getInstance().Items.heldItems.Add(currentCheck.itemId);
-                                playthroughItems.Add(currentCheck.itemId);
-                            }
-                        }
+                        Singleton.getInstance().Items.heldItems.Add(currentCheck.itemId);
+                        playthroughItems.Add(currentCheck.itemId);
                     }
-                    for (int i = 0; i < roomsToExplore[0].neighbours.Count(); i++)
+                } 
+            }
+            foreach (KeyValuePair<string, Check> checkList in Singleton.getInstance().Checks.CheckDict.ToList())
+            {
+                Check currentCheck = checkList.Value;
+                //Confirms that we can get the check and checks to see if an item was placed in it.
+                if (isDungeonCheck(itemToPlace.ToString(), currentCheck))
+                {
+                    var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    Console.WriteLine("Checking for available item check: " + currentCheck.checkName);    
+                    if (((bool)areCheckRequirementsMet == true) && (!currentCheck.itemWasPlaced))
                     {
-                    //Parse the neighbour's requirements to find out if we can access it
-                        var areNeighbourRequirementsMet = CSharpScript.EvaluateAsync(roomsToExplore[0].neighbourRequirements[i], options).Result;
-                        //If you can access the neighbour and it hasnt been visited yet.
-                        if ((((bool)areNeighbourRequirementsMet == true)) &&  (Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]].visited == false) && isInDungeonRegion(itemToPlace.ToString(), Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]]))
-                        {
-                            Room currentNeighbour = Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]];
-                            currentNeighbour.visited = true;
-                            Console.WriteLine("Neighbour: " + currentNeighbour.name + " added to room list.");
-                            roomsToExplore.Add(currentNeighbour);
-                        }
+                        roomChecks.Add(currentCheck.checkName);
                     }
                 }
-                roomsToExplore.Remove(roomsToExplore[0]);
             }
             foreach (var newItem in playthroughItems)
             {
@@ -183,7 +224,7 @@ namespace tprandomizer_poc_main
         
         public List<string> listAllAvailableChecks(Room startingRoom)
         {
-            Singleton.getInstance().Rooms.resetAllRoomsVisited();
+            resetAllRoomsVisited();
             List<string> roomChecks = new List<string>();
             List<Item> playthroughItems = new List<Item>();
             List<Room> roomsToExplore = new List<Room>();
@@ -292,41 +333,41 @@ namespace tprandomizer_poc_main
             return regionRoom;
         }
 
-        bool isInDungeonRegion( string itemToPlace, Room currentNeighbour)
+        bool isDungeonCheck( string itemToPlace, Check currentCheck)
         {
-            if (itemToPlace.Contains("Forest_Temple") && (currentNeighbour.region == "Forest Temple"))
+            if (itemToPlace.Contains("Forest_Temple") && (currentCheck.category.Contains("Forest Temple")))
             {
                 return true;
             }
-            else if (itemToPlace.Contains("Goron_Mines") && (currentNeighbour.region == "Goron Mines"))
+            else if (itemToPlace.Contains("Goron_Mines") && (currentCheck.category.Contains("Goron Mines")))
             {
               return true;
             }
-            else if (itemToPlace.Contains("Lakebed_Temple") && (currentNeighbour.region == "Lakebed Temple"))
+            else if (itemToPlace.Contains("Lakebed_Temple") && (currentCheck.category.Contains("Lakebed Temple")))
             {
                 return true;
             }
-            else if (itemToPlace.Contains("Arbiters_Grounds") && (currentNeighbour.region == "Arbiters Grounds"))
+            else if (itemToPlace.Contains("Arbiters_Grounds") && (currentCheck.category.Contains("Arbiters Grounds")))
             {
                 return true;
             }
-            else if (itemToPlace.Contains("Snowpeak_Ruins") && (currentNeighbour.region == "Snowpeak Ruins"))
+            else if (itemToPlace.Contains("Snowpeak_Ruins") && (currentCheck.category.Contains("Snowpeak Ruins")))
             {
                 return true;
             }
-            else if (itemToPlace.Contains("Temple_of_Time") && (currentNeighbour.region == "Temple of Time"))
+            else if (itemToPlace.Contains("Temple_of_Time") && (currentCheck.category.Contains("Temple of Time")))
             {
                return true;
             }
-            else if (itemToPlace.Contains("City_in_The_Sky") && (currentNeighbour.region == "City in The Sky"))
+            else if (itemToPlace.Contains("City_in_The_Sky") && (currentCheck.category.Contains("City in The Sky")))
             {
                 return true;
             }
-            else if (itemToPlace.Contains("Palace_of_Twilight") && (currentNeighbour.region == "Palace of Twilight"))
+            else if (itemToPlace.Contains("Palace_of_Twilight") && (currentCheck.category.Contains("Palace of Twilight")))
             {
                 return true;
             }
-            else if (itemToPlace.Contains("Hyrule_Castle") && (currentNeighbour.region == "Hyrule Castle"))
+            else if (itemToPlace.Contains("Hyrule_Castle") && (currentCheck.category.Contains("Hyrule Castle")))
             {
                 return true;
             }

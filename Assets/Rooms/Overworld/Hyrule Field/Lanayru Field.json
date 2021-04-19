@@ -20,7 +20,7 @@
         "Logic.canSmash()",
         "Logic.canSmash()",
         "Logic.canUse(Item.Wooden_Statue)",
-        "Logic.canUse(Item.Shadow_Crystal)",
+        "Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Spinner)",
         "Logic.canUse(Item.Shadow_Crystal)",
         "Logic.canUse(Item.Shadow_Crystal)"
     ],

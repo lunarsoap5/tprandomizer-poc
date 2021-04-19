@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Justin\\Downloads\\tprandomizer-poc\\tprandomizer-poc-main.csproj": {}
+    "C:\\Users\\Justin\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Justin\\Downloads\\tprandomizer-poc\\tprandomizer-poc-main.csproj": {
+    "C:\\Users\\Justin\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Justin\\Downloads\\tprandomizer-poc\\tprandomizer-poc-main.csproj",
-        "projectName": "tprandomizer-poc-main",
-        "projectPath": "C:\\Users\\Justin\\Downloads\\tprandomizer-poc\\tprandomizer-poc-main.csproj",
+        "projectUniqueName": "C:\\Users\\Justin\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectName": "ConsoleApp1",
+        "projectPath": "C:\\Users\\Justin\\source\\repos\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\Justin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Justin\\Downloads\\tprandomizer-poc\\obj\\",
+        "outputPath": "C:\\Users\\Justin\\source\\repos\\ConsoleApp1\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

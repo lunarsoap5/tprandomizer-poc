@@ -2,7 +2,7 @@ using System;
 using tprandomizer_poc_main;
 using System.Collections.Generic;
 
-namespace Logic
+namespace tprandomizer_poc_main
 {
     public class LogicFunctions
     {

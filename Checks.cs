@@ -3,7 +3,6 @@ using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 using System.IO;
-using Logic;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
@@ -20,6 +19,7 @@ namespace tprandomizer_poc_main
         public List<string> category { get; set;} //Allows grouping of checks to make it easier to randomize them based on their type, region, exclusion status, etc.
         public Item itemId { get; set;} //The original item id of the check. This allows us to make an array of all items in the item pool for randomization purposes. Also is useful for documentation purposes.
         public bool itemWasPlaced { get; set;} //Identifies if we already placed an item on this check.
+        public bool hasBeenReached {get; set;} //indicates that we can get the current check. Prevents unneccesary repetitive parsing.
     }
 
     public class CheckFunctions
@@ -329,32 +329,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Cats Hide and Seek Minigame", new Check());
         }
 
-        public void deserializeChecks()
-        {
-            foreach (string file in System.IO.Directory.GetFiles("./Checks/", "*",SearchOption.AllDirectories))
-            {
-                string contents = File.ReadAllText(file);
-                string fileName = Path.GetFileNameWithoutExtension(file);
-                Singleton.getInstance().Checks.CheckDict[fileName] = JsonConvert.DeserializeObject<Check>(contents);
-                Check currentCheck = Singleton.getInstance().Checks.CheckDict[fileName];
-                currentCheck.requirements = Regex.Replace(currentCheck.requirements, @"\bLogic\b", "Logic.LogicFunctions");
-                Singleton.getInstance().Checks.CheckDict[fileName] = currentCheck;
-                Console.WriteLine("Check File Loaded " + fileName);
-            }
-            return;
-        }
-
-        public void placeItemInCheck(Item item, string check)
-        {
-            Console.WriteLine("Placing item in check.");
-            //Create reference to the current check, tell the program that it was placed, set the item id of the check, and then save the changes to the check.
-            Check currentCheck = Singleton.getInstance().Checks.CheckDict[check];
-            currentCheck.itemWasPlaced = true;
-            currentCheck.itemId = item;
-            Singleton.getInstance().Checks.CheckDict[check] = currentCheck;
-            Console.WriteLine("Placed " + currentCheck.itemId + " in check " + currentCheck.checkName);
-            return;
-        }
+        
     } 
 
 }

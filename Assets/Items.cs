@@ -3,7 +3,6 @@ using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 using System.IO;
-using Logic;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
@@ -323,64 +322,67 @@ namespace tprandomizer_poc_main
 				case Item.Ancient_Sky_Book_Empty:
 					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
 					{
-						item = Item.Ancient_Sky_Book_Completed;
+						item = Item.Ancient_Sky_Book_Completed; //Ancient_Sky_Book_empty
 					}
-					else if (nbSkybooksPlaced > 5)
+					else if (itemList.Contains(Item.Ancient_Sky_Book_Fifth_Character))
 					{
-						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
+						item = Item.Ancient_Sky_Book_Fifth_Character; //Ancient_Sky_Book_empty
+					}
+					else if (itemList.Contains(Item.Ancient_Sky_Book_Fourth_Character))
+					{
+						item = Item.Ancient_Sky_Book_Fourth_Character; //Ancient_Sky_Book_empty
+					}
+					else if (itemList.Contains(Item.Ancient_Sky_Book_Third_Character))
+					{
+						item = Item.Ancient_Sky_Book_Third_Character; //Ancient_Sky_Book_empty
+					}
+					else if (itemList.Contains(Item.Ancient_Sky_Book_Second_Character))
+					{
+						item = Item.Ancient_Sky_Book_Second_Character; //Ancient_Sky_Book_empty
+					}
+					else if (itemList.Contains(Item.Ancient_Sky_Book_First_Character))
+					{
+						item = Item.Ancient_Sky_Book_First_Character; //Ancient_Sky_Book_empty
 					}
 					nbSkybooksPlaced++;
 					break;
 				case Item.Ancient_Sky_Book_First_Character:
-					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
-					{
-						item = Item.Ancient_Sky_Book_Completed;
-					}
-					else if (nbSkybooksPlaced > 5)
+					if (nbSkybooksPlaced > 5)
 					{
 						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
 					nbSkybooksPlaced++;
 					break;
 				case Item.Ancient_Sky_Book_Second_Character:
-					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
-					{
-						item = Item.Ancient_Sky_Book_Completed;
-					}
-					else if (nbSkybooksPlaced > 5)
+					if (nbSkybooksPlaced > 5)
 					{
 						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
 					nbSkybooksPlaced++;
 					break;
 				case Item.Ancient_Sky_Book_Third_Character:
-					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
-					{
-						item = Item.Ancient_Sky_Book_Completed;
-					}
-					else if (nbSkybooksPlaced > 5)
+					if (nbSkybooksPlaced > 5)
 					{
 						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
 					nbSkybooksPlaced++;
 					break;
 				case Item.Ancient_Sky_Book_Fourth_Character:
-					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
-					{
-						item = Item.Ancient_Sky_Book_Completed;
-					}
-					else if (nbSkybooksPlaced > 5)
+					if (nbSkybooksPlaced > 5)
 					{
 						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
 					nbSkybooksPlaced++;
 					break;
 				case Item.Ancient_Sky_Book_Fifth_Character:
-					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
+					if (nbSkybooksPlaced > 5)
 					{
-						item = Item.Ancient_Sky_Book_Completed;
+						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
-					else if (nbSkybooksPlaced > 5)
+					nbSkybooksPlaced++;
+					break;
+				case Item.Ancient_Sky_Book_Completed:
+					if (nbSkybooksPlaced > 5)
 					{
 						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
 					}
@@ -581,6 +583,8 @@ namespace tprandomizer_poc_main
 			RegionKeys.AddRange(Enumerable.Repeat(Item.Lakebed_Temple_Small_Key, 3));
 			RegionKeys.AddRange(Enumerable.Repeat(Item.Arbiters_Grounds_Small_Key, 5));
 			RegionKeys.AddRange(Enumerable.Repeat(Item.Snowpeak_Ruins_Small_Key, 4));
+			RegionKeys.Add(Item.Ordon_Pumpkin);
+			RegionKeys.Add(Item.Ordon_Goat_Cheese);
 			RegionKeys.AddRange(Enumerable.Repeat(Item.Temple_of_Time_Small_Key, 3));
 			RegionKeys.AddRange(Enumerable.Repeat(Item.City_in_The_Sky_Small_Key, 1));
 			RegionKeys.AddRange(Enumerable.Repeat(Item.Palace_of_Twilight_Small_Key, 7));

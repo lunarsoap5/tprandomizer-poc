@@ -3,7 +3,6 @@ using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 using System.IO;
-using Logic;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
@@ -16,13 +15,16 @@ namespace tprandomizer_poc_main
     public class Randomizer
     {
         LogicFunctions Logic = new LogicFunctions();
+        RoomFunctions Rooms = new RoomFunctions();
+        CheckFunctions Checks = new CheckFunctions();
+        public ScriptOptions options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("tprandomizer_poc_main");
         public void start()
         {
-            Singleton.getInstance().Checks.InitializeChecks();
-            Singleton.getInstance().Checks.deserializeChecks();
+            Checks.InitializeChecks();
+            deserializeChecks();
 
-            Singleton.getInstance().Rooms.InitializeRooms();
-            Singleton.getInstance().Rooms.deserializeRooms();
+            Rooms.InitializeRooms();
+            deserializeRooms();
             
             Singleton.getInstance().Items.generateItemPool();
 
@@ -39,9 +41,9 @@ namespace tprandomizer_poc_main
         public Room setupGraph()
         {
             resetAllRoomsVisited();
-            Room startingRoom = Singleton.getInstance().Rooms.RoomDict["Ordon Province"];
+            Room startingRoom = Rooms.RoomDict["Ordon Province"];
             startingRoom.isStartingRoom = true;
-            Singleton.getInstance().Rooms.RoomDict["Ordon Province"] = startingRoom;
+            Rooms.RoomDict["Ordon Province"] = startingRoom;
 
             List<string> roomChecks = new List<string>();
             List<Item> playthroughItems = new List<Item>();
@@ -58,27 +60,29 @@ namespace tprandomizer_poc_main
                     for (int i = 0; i < roomsToExplore[0].neighbours.Count(); i++)
                     {
                     //Parse the neighbour's requirements to find out if we can access it
-                        if ((Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]].visited == false))
+                        if ((Rooms.RoomDict[roomsToExplore[0].neighbours[i]].visited == false))
                         {
-                            Room currentNeighbour = Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]];
+                            Room currentNeighbour = Rooms.RoomDict[roomsToExplore[0].neighbours[i]];
                             currentNeighbour.visited = true;
                             Console.WriteLine("Neighbour: " + currentNeighbour.name + " added to room list.");
-                            currentNeighbour.accessRequirements = "(" + roomsToExplore[0].accessRequirements + ")" +  " && " +  "(" + roomsToExplore[0].neighbourRequirements[i] + ")";
+                            if (roomsToExplore[0].accessRequirements != null)
+                            {
+                                currentNeighbour.accessRequirements = "(" + roomsToExplore[0].accessRequirements + ")" +  " && " +  "(" + roomsToExplore[0].neighbourRequirements[i] + ")";
+                            }
+                            else
+                            {
+                                currentNeighbour.accessRequirements = "(" + roomsToExplore[0].neighbourRequirements[i] + ")";
+                            }
                             for (int j = 0; j < currentNeighbour.checks.Count(); j++)
                             {
                                 Check currentCheck;
-                                if (!Singleton.getInstance().Checks.CheckDict.TryGetValue(currentNeighbour.checks[j], out currentCheck)) 
+                                if (!Checks.CheckDict.TryGetValue(currentNeighbour.checks[j], out currentCheck)) 
                                 {
-                                    if (!(currentNeighbour.checks[j].ToString() == ""))
-                                    {
-                                        currentCheck.requirements = "(" + currentCheck.requirements + ")" +  " && " +  "(" + roomsToExplore[0].accessRequirements + ")";
-                                        Console.WriteLine("Check: " + currentCheck.checkName + " Requiremnts: " + currentCheck.requirements);
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Room has no checks, continuing on....");
-                                        break;
-                                    }
+                                    Console.WriteLine("Room has no checks, continuing on....");
+                                }
+                                if (!(currentNeighbour.checks[j].ToString() == ""))
+                                {
+                                    currentCheck.requirements = "(" + currentCheck.requirements + ")" +  " && " +  "(" + currentNeighbour.accessRequirements + ")";
                                 }
                                 
                             }
@@ -88,16 +92,33 @@ namespace tprandomizer_poc_main
                     roomsToExplore.Remove(roomsToExplore[0]);
                 }
             }
+            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
+            {
+                Check currentCheck = checkList.Value;
+                currentCheck.requirements = "(" + currentCheck.requirements + ")";
+                Checks.CheckDict[checkList.Key] = currentCheck;
+            }
             return startingRoom;
         }
 
         public void resetAllRoomsVisited()
         {
-            foreach (KeyValuePair<string, Room> roomList in Singleton.getInstance().Rooms.RoomDict.ToList())
+            foreach (KeyValuePair<string, Room> roomList in Rooms.RoomDict.ToList())
             {
                 Room currentRoom = roomList.Value;
                 currentRoom.visited = false;
-                Singleton.getInstance().Rooms.RoomDict[roomList.Key] = currentRoom;
+                Rooms.RoomDict[roomList.Key] = currentRoom;
+            }
+            return;
+        }
+
+        public void resetAllChecksVisited()
+        {
+            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
+            {
+                Check currentCheck = checkList.Value;
+                currentCheck.hasBeenReached = false;
+                Checks.CheckDict[checkList.Key] = currentCheck;
             }
             return;
         }
@@ -107,7 +128,7 @@ namespace tprandomizer_poc_main
             Console.WriteLine("Starting Over.");
             ItemFunctions.nbSkybooksPlaced = 0;
             Singleton.getInstance().Items.generateItemPool();
-            Singleton.getInstance().Checks.deserializeChecks();
+            deserializeChecks();
             placeItemsInWorld(startingRoom);
         }
 
@@ -124,7 +145,8 @@ namespace tprandomizer_poc_main
             Random rnd = new Random();
             List<string> availableChecks = new List<string>();
             Item itemToPlace;
-            string checkToReciveItem;
+            Check checkToReciveItem;
+            
 
             while (ItemsToBeRandomized.Count() > 0)
             {
@@ -133,11 +155,11 @@ namespace tprandomizer_poc_main
                 heldItems.Remove(itemToPlace);
                 ItemsToBeRandomized.Remove(itemToPlace);
                 availableChecks = listAllAvailableDungeonChecks(startingRoom, itemToPlace);
-                checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
+                checkToReciveItem = Checks.CheckDict[availableChecks[rnd.Next(availableChecks.Count()-1)].ToString()];
                 
-                Singleton.getInstance().Checks.placeItemInCheck(itemToPlace,checkToReciveItem);
+                placeItemInCheck(itemToPlace,checkToReciveItem);
 
-                availableChecks.Remove(checkToReciveItem);
+                availableChecks.Clear();
             }
             if (ItemsToBeRandomized.Count() > 0)
             {//no more available checks and still items to place, starting over
@@ -146,37 +168,39 @@ namespace tprandomizer_poc_main
             }
             return;
         }
-
-        public List<string> listAllAvailableDungeonChecks(Room startingRoom, Item itemToPlace)
+      public List<string> listAllAvailableDungeonChecks(Room startingRoom, Item itemToPlace)
         {
-            resetAllRoomsVisited();
+            resetAllChecksVisited();
             List<string> roomChecks = new List<string>();
             List<Item> playthroughItems = new List<Item>();
-            var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("tprandomizer_poc_main");
-
-            foreach (KeyValuePair<string, Check> checkList in Singleton.getInstance().Checks.CheckDict.ToList())
+    
+            restart: 
+            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
             {
+                //Parse through every check to see if an item has been placed in it
                 Check currentCheck = checkList.Value;
-                if (isDungeonCheck(itemToPlace.ToString(), currentCheck))
+                if (currentCheck.itemWasPlaced && (!currentCheck.hasBeenReached))
                 {
-                    Console.WriteLine("Checking for item randomized: " + currentCheck.checkName);
+                    //If the check has an item in it and has not been collected, we need to see if we can get the item.
                     var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
-                    //Confirms that we can get the check and checks to see if an item was placed in it.
-                    if (((bool)areCheckRequirementsMet == true) && currentCheck.itemWasPlaced)
+                    if ((bool)areCheckRequirementsMet == true)
                     {
+                        //If we can get the item, we add it to our inventory and restart our search since we may be able to get more placed items with our new item pool
                         Singleton.getInstance().Items.heldItems.Add(currentCheck.itemId);
                         playthroughItems.Add(currentCheck.itemId);
+                        currentCheck.hasBeenReached = true;
+                        GC.Collect();
+                        goto restart;
                     }
-                } 
+                }
             }
-            foreach (KeyValuePair<string, Check> checkList in Singleton.getInstance().Checks.CheckDict.ToList())
+            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
             {
                 Check currentCheck = checkList.Value;
                 //Confirms that we can get the check and checks to see if an item was placed in it.
                 if (isDungeonCheck(itemToPlace.ToString(), currentCheck))
                 {
                     var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
-                    Console.WriteLine("Checking for available item check: " + currentCheck.checkName);    
                     if (((bool)areCheckRequirementsMet == true) && (!currentCheck.itemWasPlaced))
                     {
                         roomChecks.Add(currentCheck.checkName);
@@ -196,7 +220,7 @@ namespace tprandomizer_poc_main
             Random rnd = new Random();
             List<string> availableChecks = new List<string>();
             Item itemToPlace;
-            string checkToReciveItem;
+            Check checkToReciveItem;
 
             while (ItemsToBeRandomized.Count() > 0)
             {
@@ -204,13 +228,13 @@ namespace tprandomizer_poc_main
                 Console.WriteLine("Item to place: " + itemToPlace);
                 heldItems.Remove(itemToPlace);
                 ItemsToBeRandomized.Remove(itemToPlace);
-                availableChecks = listAllAvailableChecks(startingRoom);
+                availableChecks = listAllAvailableChecks(startingRoom, itemToPlace);
                 
-                checkToReciveItem = availableChecks[rnd.Next(availableChecks.Count()-1)];
+                checkToReciveItem = Checks.CheckDict[availableChecks[rnd.Next(availableChecks.Count()-1)].ToString()];
+                placeItemInCheck(itemToPlace,checkToReciveItem);
 
-                Singleton.getInstance().Checks.placeItemInCheck(itemToPlace,checkToReciveItem);
-
-                availableChecks.Remove(checkToReciveItem);
+                availableChecks.Clear();
+                GC.Collect();
             }
             if (ItemsToBeRandomized.Count() > 0)
             {//no more available checks and still items to place, starting over
@@ -222,113 +246,138 @@ namespace tprandomizer_poc_main
 
         
         
-        public List<string> listAllAvailableChecks(Room startingRoom)
+        public List<string> listAllAvailableChecks(Room startingRoom, Item itemToPlace)
         {
-            resetAllRoomsVisited();
+            resetAllChecksVisited();
             List<string> roomChecks = new List<string>();
             List<Item> playthroughItems = new List<Item>();
-            List<Room> roomsToExplore = new List<Room>();
-            startingRoom.visited = true;
-            roomsToExplore.Add(startingRoom);
-            var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("tprandomizer_poc_main");
-                
-            while (roomsToExplore.Count() > 0)
+            var areCheckRequirementsMet = false;
+            Check currentCheck;
+    
+            restart: 
+            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
             {
-                if (roomsToExplore[0].visited)
+                //Parse through every check to see if an item has been placed in it
+                currentCheck = checkList.Value;
+                if (currentCheck.itemWasPlaced && (!currentCheck.hasBeenReached))
                 {
-                    Console.WriteLine("Currently exploring: " + roomsToExplore[0].name);
-                    for (int i = 0; i < roomsToExplore[0].checks.Count(); i++)
+                    //If the check has an item in it and has not been collected, we need to see if we can get the item.
+                    areCheckRequirementsMet = (bool)CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    if (areCheckRequirementsMet == true)
                     {
-                        //Create reference to the dictionary entry of the check whose logic we are evaluating
-                        Check currentCheck;
-                        if (!Singleton.getInstance().Checks.CheckDict.TryGetValue(roomsToExplore[0].checks[i], out currentCheck)) 
-                        {
-                            if (roomsToExplore[0].checks[i].ToString() == "")
-                            {
-                                Console.WriteLine("Room has no checks, continuing on....");
-                                break;
-                            }
-                            Console.WriteLine("Check: " + roomsToExplore[0].checks[i] + " does not exist.");
-                        }
-                        //Parse the requirements to see if we can get the check
-                        var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
-                        //Confirms that we can get the check and checks to see if an item was placed in it. If the check has an item that has already been placed in it, add the item to the inventory and continue on.
-                        if (((bool)areCheckRequirementsMet == true))
-                            {
-                                if (!currentCheck.itemWasPlaced)
-                                {
-                                    roomChecks.Add(currentCheck.checkName);
-                                }
-                                else
-                                {
-                                    Singleton.getInstance().Items.heldItems.Add(currentCheck.itemId);
-                                    playthroughItems.Add(currentCheck.itemId);
-                                }
-                            }
+                        //If we can get the item, we add it to our inventory and restart our search since we may be able to get more placed items with our new item pool
+                        Singleton.getInstance().Items.heldItems.Add(currentCheck.itemId);
+                        playthroughItems.Add(currentCheck.itemId);
+                        currentCheck.hasBeenReached = true;
+                        GC.Collect();
+                        goto restart;
                     }
-                    for (int i = 0; i < roomsToExplore[0].neighbours.Count(); i++)
-                    {
-                    //Parse the neighbour's requirements to find out if we can access it
-                        var areNeighbourRequirementsMet = CSharpScript.EvaluateAsync(roomsToExplore[0].neighbourRequirements[i], options).Result;
-                        //If you can access the neighbour and it hasnt been visited yet.
-                        if ((((bool)areNeighbourRequirementsMet == true)) &&  (Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]].visited == false))
-                        {
-                            Room currentNeighbour = Singleton.getInstance().Rooms.RoomDict[roomsToExplore[0].neighbours[i]];
-                            currentNeighbour.visited = true;
-                            Console.WriteLine("Neighbour: " + currentNeighbour.name + " added to room list.");
-                            roomsToExplore.Add(currentNeighbour);
-                        }
-                    }
-                    roomsToExplore.Remove(roomsToExplore[0]);
                 }
+            }
+            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
+            {
+                currentCheck = checkList.Value;
+                if (!currentCheck.itemWasPlaced)
+                {
+                    //If the check is empty, we want to see if we can get it
+                    areCheckRequirementsMet = (bool)CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    if (areCheckRequirementsMet == true)
+                    {
+                        //If we can get the check, we want to add it to the list of available checks
+                        roomChecks.Add(currentCheck.checkName);
+                    }
+                }
+                GC.Collect();
             }
             foreach (var newItem in playthroughItems)
             {
                 Singleton.getInstance().Items.heldItems.Remove(newItem);
             }
+            GC.Collect();
             return roomChecks;
-        }  
+        }
 
+        public void placeItemInCheck(Item item, Check check)
+        {
+            Console.WriteLine("Placing item in check.");
+            check.itemWasPlaced = true;
+            check.itemId = item;
+            Console.WriteLine("Placed " + check.itemId + " in check " + check.checkName);
+            return;
+        }
+
+        public void deserializeChecks()
+        {
+            foreach (string file in System.IO.Directory.GetFiles("./Checks/", "*",SearchOption.AllDirectories))
+            {
+                string contents = File.ReadAllText(file);
+                string fileName = Path.GetFileNameWithoutExtension(file);
+                Checks.CheckDict[fileName] = JsonConvert.DeserializeObject<Check>(contents);
+                Check currentCheck = Checks.CheckDict[fileName];
+                currentCheck.requirements = Regex.Replace(currentCheck.requirements, @"\bLogic\b", "LogicFunctions");
+                Checks.CheckDict[fileName] = currentCheck;
+                Console.WriteLine("Check File Loaded " + fileName);
+            }
+            return;
+        }
         
+
+        public void deserializeRooms()
+        {
+            foreach (string file in System.IO.Directory.GetFiles("./Assets/Rooms/", "*", SearchOption.AllDirectories))
+            {
+                string contents = File.ReadAllText(file);
+                string fileName = Path.GetFileNameWithoutExtension(file);
+                Rooms.RoomDict[fileName] = JsonConvert.DeserializeObject<Room>(contents);
+                Room currentRoom = Rooms.RoomDict[fileName];
+                var newList = currentRoom.neighbourRequirements.Select(s => s.Replace("Logic", "LogicFunctions")).ToList();
+                currentRoom.neighbourRequirements = newList;
+                Rooms.RoomDict[fileName] = currentRoom;
+                Console.WriteLine("Room File Loaded " + fileName);
+            }
+            return;
+        }
+
+
 
         Room getDungeonEntrance(string itemToPlace)
         {
             Room regionRoom = new Room();
             if (itemToPlace.Contains("Forest_Temple"))
             {
-                regionRoom = Singleton.getInstance().Rooms.RoomDict["Forest Temple 22"];
+                regionRoom = Rooms.RoomDict["Forest Temple 22"];
             }
             else if (itemToPlace.Contains("Goron_Mines"))
             {
-              regionRoom = Singleton.getInstance().Rooms.RoomDict["Goron Mines 01"];
+              regionRoom = Rooms.RoomDict["Goron Mines 01"];
             }
             else if (itemToPlace.Contains("Lakebed_Temple"))
             {
-                regionRoom = Singleton.getInstance().Rooms.RoomDict["Lakebed Temple 00 01"];
+                regionRoom = Rooms.RoomDict["Lakebed Temple 00 01"];
             }
             else if (itemToPlace.Contains("Arbiters_Grounds"))
             {
-                regionRoom = Singleton.getInstance().Rooms.RoomDict["Arbiters Grounds 00"];
+                regionRoom = Rooms.RoomDict["Arbiters Grounds 00"];
             }
             else if (itemToPlace.Contains("Snowpeak_Ruins"))
             {
-                regionRoom = Singleton.getInstance().Rooms.RoomDict["Snowpeak Ruins 00 01 02 03"];
+                regionRoom = Rooms.RoomDict["Snowpeak Ruins 00 01 02 03"];
             }
             else if (itemToPlace.Contains("Temple_of_Time"))
             {
-               regionRoom = Singleton.getInstance().Rooms.RoomDict["Temple of Time 00"];
+               regionRoom = Rooms.RoomDict["Temple of Time 00"];
             }
             else if (itemToPlace.Contains("City_in_The_Sky"))
             {
-                regionRoom = Singleton.getInstance().Rooms.RoomDict["City in The Sky 00 16"];
+                regionRoom = Rooms.RoomDict["City in The Sky 00 16"];
             }
             else if (itemToPlace.Contains("Palace_of_Twilight"))
             {
-                regionRoom = Singleton.getInstance().Rooms.RoomDict["Palace of Twilight 00 01"];
+                regionRoom = Rooms.RoomDict["Palace of Twilight 00 01"];
             }
             else if (itemToPlace.Contains("Hyrule_Castle"))
             {
-                regionRoom = Singleton.getInstance().Rooms.RoomDict["Hyrule Castle 11"];
+                regionRoom = Rooms.RoomDict["Hyrule Castle 11"];
             }
             return regionRoom;
         }
@@ -351,7 +400,7 @@ namespace tprandomizer_poc_main
             {
                 return true;
             }
-            else if (itemToPlace.Contains("Snowpeak_Ruins") && (currentCheck.category.Contains("Snowpeak Ruins")))
+            else if ((itemToPlace.Contains("Snowpeak_Ruins") || itemToPlace.Contains("Ordon_Pumpkin") || itemToPlace.Contains("Ordon_Goat_Cheese")) && (currentCheck.category.Contains("Snowpeak Ruins")))
             {
                 return true;
             }

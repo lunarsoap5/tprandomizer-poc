@@ -207,25 +207,5 @@ namespace tprandomizer_poc_main
             RoomDict.Add("Death Mountain Interiors", new Room());
             return;
         }
-
-        public void deserializeRooms()
-        {
-            foreach (string file in System.IO.Directory.GetFiles("./Assets/Rooms/", "*",SearchOption.AllDirectories))
-            {
-                string contents = File.ReadAllText(file);
-                string fileName = Path.GetFileNameWithoutExtension(file);
-                Singleton.getInstance().Rooms.RoomDict[fileName] = JsonConvert.DeserializeObject<Room>(contents);
-                Room currentRoom = Singleton.getInstance().Rooms.RoomDict[fileName];
-                var newList = currentRoom.neighbourRequirements.Select(s => s.Replace("Logic", "Logic.LogicFunctions")).ToList();
-                currentRoom.neighbourRequirements = newList;
-                Singleton.getInstance().Rooms.RoomDict[fileName] = currentRoom;
-                Console.WriteLine("Room File Loaded " + fileName);
-            }
-            return;
-        }
-
-        
-
-        
     }
 }

@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatStalfos()"
+        "canDefeatStalfos"
     ],
     "isStartingRoom": "false",
     "checks": 

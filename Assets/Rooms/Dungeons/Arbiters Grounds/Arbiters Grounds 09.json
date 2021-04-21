@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Clawshot)",
-        "Logic.canUse(Item.Spinner) && Logic.canUse(Item.Arbiters_Grounds_Big_Key)"
+        "Clawshot",
+        "Spinner and Arbiters_Grounds_Big_Key"
     ],
     "isStartingRoom": "false",
     "checks": 

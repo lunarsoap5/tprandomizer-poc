@@ -578,11 +578,11 @@ namespace tprandomizer_poc_main
 			heldItems.AddRange(Enumerable.Repeat(Item.Orange_Rupee, 44));
 			heldItems.AddRange(Enumerable.Repeat(Item.Silver_Rupee, 3));
 
-			RegionKeys.AddRange(Enumerable.Repeat(Item.Forest_Temple_Small_Key, 4));
+			/*RegionKeys.AddRange(Enumerable.Repeat(Item.Forest_Temple_Small_Key, 4));
 			RegionKeys.AddRange(Enumerable.Repeat(Item.Goron_Mines_Small_Key, 3));
-			RegionKeys.AddRange(Enumerable.Repeat(Item.Lakebed_Temple_Small_Key, 3));
+			RegionKeys.AddRange(Enumerable.Repeat(Item.Lakebed_Temple_Small_Key, 3));*/
 			RegionKeys.AddRange(Enumerable.Repeat(Item.Arbiters_Grounds_Small_Key, 5));
-			RegionKeys.AddRange(Enumerable.Repeat(Item.Snowpeak_Ruins_Small_Key, 4));
+			/*RegionKeys.AddRange(Enumerable.Repeat(Item.Snowpeak_Ruins_Small_Key, 4));
 			RegionKeys.Add(Item.Ordon_Pumpkin);
 			RegionKeys.Add(Item.Ordon_Goat_Cheese);
 			RegionKeys.AddRange(Enumerable.Repeat(Item.Temple_of_Time_Small_Key, 3));
@@ -600,9 +600,9 @@ namespace tprandomizer_poc_main
 			RegionKeys.Add(Item.City_in_The_Sky_Big_Key);
 			RegionKeys.Add(Item.Palace_of_Twilight_Big_Key);
 			RegionKeys.Add(Item.Hyrule_Castle_Big_Key);
-			regionItems.AddRange(RegionKeys);
 			heldItems.Add(Item.Gate_Keys);
-			heldItems.Add(Item.Small_Key_N_Faron_Gate);
+			heldItems.Add(Item.Small_Key_N_Faron_Gate);*/
+			regionItems.AddRange(RegionKeys);
 			heldItems.AddRange(ImportantItems);
 			heldItems.AddRange(RegionKeys);
 

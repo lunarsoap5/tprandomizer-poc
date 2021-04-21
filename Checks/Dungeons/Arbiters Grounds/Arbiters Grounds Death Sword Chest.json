@@ -1,6 +1,6 @@
 {
     "checkName": "Arbiters Grounds Death Sword Chest",
-    "requirements": "Logic.canDefeatDeathSword()",
+    "requirements": "Shadow_Crystal and hasSword and (Boomerang or Heros_Bow or Clawshot)",
     "hash": "8318",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Arbiters Grounds"],

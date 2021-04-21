@@ -1,6 +1,6 @@
 {
     "checkName": "Arbiters Grounds West Chandelier Chest",
-    "requirements": "(Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 4) && Logic.canDefeatRedeadKnight() && Logic.canDefeatStalchild() && Logic.canDefeatGhoulRat()",
+    "requirements": "(Arbiters_Grounds_Small_Key, 4) and hasDamagingItem and Shadow_Crystal",
     "hash": "B288",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Arbiters Grounds"],

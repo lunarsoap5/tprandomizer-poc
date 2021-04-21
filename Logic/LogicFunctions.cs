@@ -11,6 +11,8 @@ namespace tprandomizer_poc_main
 
 		public bool mdhComplete;
 
+        public Dictionary<Token, string> TokenDict = new Dictionary<Token, String>();
+
         
 
         public static bool canUse(Item item)
@@ -23,12 +25,12 @@ namespace tprandomizer_poc_main
 			return canUseItem;
 		}
 
-        public static bool canUseTest(Token item)
+        public static bool canUseTest(string item)
 		{
             bool canUseItem = false;
             foreach (var listItem in Singleton.getInstance().Items.heldItems)
             {
-                if (listItem.ToString() == item.ToString())
+                if (listItem.ToString() == item)
                 {
                     canUseItem = true;
                     break;
@@ -44,6 +46,17 @@ namespace tprandomizer_poc_main
 			return canUseItem;
 		}
 
+        public static bool hasDamagingItem()
+        {
+            return ( hasSword() ||
+                    canUse(Item.Ball_and_Chain) ||
+                    canUse(Item.Heros_Bow) ||
+                    hasBombs() ||
+                    canUse(Item.Iron_Boots) ||
+                    canUse(Item.Spinner) ||
+                    canUse(Item.Shadow_Crystal));
+        }
+
         public static bool hasSword()
         {
             return  (canUse(Item.Wooden_Sword) ||
@@ -55,20 +68,11 @@ namespace tprandomizer_poc_main
         public static bool canDefeatAeralfos()
         {
             return (canUse(Item.Clawshot) ||
-                    canUse(Item.Ball_and_Chain) ||
-                    hasSword() ||
-                    canUse(Item.Heros_Bow) ||
-                    hasBombs() ||
-                    canUse(Item.Iron_Boots) ||
-                    canUse(Item.Shadow_Crystal));
+                    hasDamagingItem());
         }
         public static bool canDefeatArmos()
         {
-            return (hasSword() ||
-            canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
-            canUse(Item.Iron_Boots) ||
-            canUse(Item.Spinner) ||
+            return (hasDamagingItem() ||
             canUse(Item.Clawshot));
         }
         public static bool canDefeatBabaSerpent()

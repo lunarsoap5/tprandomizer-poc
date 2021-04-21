@@ -1,6 +1,6 @@
 {
     "checkName": "Arbiters Grounds Spinner Room Lower North Chest",
-    "requirements": "Logic.canUse(Item.Spinner)",
+    "requirements": "Spinner",
     "hash": "8080",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Arbiters Grounds"],

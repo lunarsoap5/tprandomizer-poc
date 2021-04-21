@@ -2,11 +2,11 @@
     "name": "Stallord",
     "neighbours": 
     [
-        "Mirror Chamber"
+        "Arbiters Grounds 09"
     ],
     "neighbourRequirements":
     [
-        "Logic.canDefeatStallord()"
+        "canDefeatStallord"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

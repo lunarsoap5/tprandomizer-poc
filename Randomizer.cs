@@ -41,9 +41,9 @@ namespace tprandomizer_poc_main
         public Room setupGraph()
         {
             resetAllRoomsVisited();
-            Room startingRoom = Rooms.RoomDict["Ordon Province"];
+            Room startingRoom = Rooms.RoomDict["Arbiters Grounds 00"];
             startingRoom.isStartingRoom = true;
-            Rooms.RoomDict["Ordon Province"] = startingRoom;
+            Rooms.RoomDict["Arbiters Grounds 00"] = startingRoom;
 
             List<string> roomChecks = new List<string>();
             List<Item> playthroughItems = new List<Item>();
@@ -67,7 +67,7 @@ namespace tprandomizer_poc_main
                             Console.WriteLine("Neighbour: " + currentNeighbour.name + " added to room list.");
                             if (roomsToExplore[0].accessRequirements != null)
                             {
-                                currentNeighbour.accessRequirements = "(" + roomsToExplore[0].accessRequirements + ")" +  " && " +  "(" + roomsToExplore[0].neighbourRequirements[i] + ")";
+                                currentNeighbour.accessRequirements = "(" + roomsToExplore[0].accessRequirements + ")" +  " and " +  "(" + roomsToExplore[0].neighbourRequirements[i] + ")";
                             }
                             else
                             {
@@ -82,7 +82,7 @@ namespace tprandomizer_poc_main
                                 }
                                 if (!(currentNeighbour.checks[j].ToString() == ""))
                                 {
-                                    currentCheck.requirements = "(" + currentCheck.requirements + ")" +  " && " +  "(" + currentNeighbour.accessRequirements + ")";
+                                    currentCheck.requirements = "(" + currentCheck.requirements + ")" +  " and " +  "(" + currentNeighbour.accessRequirements + ")";
                                 }
                                 
                             }
@@ -182,7 +182,9 @@ namespace tprandomizer_poc_main
                 if (currentCheck.itemWasPlaced && (!currentCheck.hasBeenReached))
                 {
                     //If the check has an item in it and has not been collected, we need to see if we can get the item.
-                   var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    //var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    Console.WriteLine("Checking Logic for check: " + currentCheck.checkName);
+                    var areCheckRequirementsMet = evaluateRequirements(currentCheck.requirements);
                     if ((bool)areCheckRequirementsMet == true)
                     {
                         //If we can get the item, we add it to our inventory and restart our search since we may be able to get more placed items with our new item pool
@@ -200,7 +202,10 @@ namespace tprandomizer_poc_main
                 //Confirms that we can get the check and checks to see if an item was placed in it.
                 if (isDungeonCheck(itemToPlace.ToString(), currentCheck))
                 {
-                    var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    Console.WriteLine("Checking Logic for check: " + currentCheck.checkName);
+                    Console.WriteLine("Checking Logic...");
+                    //var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    var areCheckRequirementsMet = evaluateRequirements(currentCheck.requirements);
                     if (((bool)areCheckRequirementsMet == true) && (!currentCheck.itemWasPlaced))
                     {
                         roomChecks.Add(currentCheck.checkName);
@@ -423,18 +428,15 @@ namespace tprandomizer_poc_main
             return false;
         }
 
-        public bool evaluateRequirement (string checkRequirement)
+        public bool evaluateRequirements(string expression)
         {
-            bool isRequirementMet = false;
-
-            return isRequirementMet;
-        }
-
-        public bool CanParseSingleToken(string expression)
-        {
-            var tokens = new Tokenizer(expression).Tokenize();
-            var parser = new Parser(tokens);
-            return parser.Parse();
+            Parser parse = new Parser();
+            Console.WriteLine("Tokenizing Logic...");
+            
+            
+            Singleton.getInstance().Logic.TokenDict = new Tokenizer(expression).Tokenize();
+            Console.WriteLine("Parsing Logic...");
+            return parse.Parse();
         }
     }
 }

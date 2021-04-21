@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Linq;
 
 namespace tprandomizer_poc_main
 { 
@@ -9,52 +10,30 @@ namespace tprandomizer_poc_main
     // Boolean            := <BooleanConstant> | <Expression> | "(" <Expression> ")"
     // BooleanOperator    := "And" | "Or" 
     // BooleanConstant    := "True" | "False"
-
     
     public class Parser
     {
-        private readonly IEnumerator<Token> _tokens;
-        LogicFunctions Logic = new LogicFunctions();
-
-        public Parser(IEnumerable<Token> tokens)
-        {
-            _tokens = tokens.GetEnumerator();
-            _tokens.MoveNext();
-        }
-
+        public int tokenValue;
         public bool Parse()
         {
-            while (_tokens.Current != null)
+            while (Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key != null)
             {
+                Console.WriteLine("Parsing Token: " + Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key);
                 var boolean = ParseBoolean();
-                while (_tokens.Current is OperandToken)
-                {
-                    var operand = _tokens.Current;
-                    if (!_tokens.MoveNext())
-                    {
-                        throw new Exception("Missing expression after operand");
-                    }
-                    var nextBoolean = ParseBoolean();
-
-                    if (operand is AndToken)
-                        boolean = boolean && nextBoolean;
-                    else
-                        boolean = boolean || nextBoolean;
-
-                }
-
+                
                 return boolean;
             }
 
             throw new Exception("Empty expression");
         }
 
-        public bool ParseBoolean()
+        private bool ParseBoolean()
         {
-            if (_tokens.Current is BooleanValueToken)
+            
+            if (Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key is BooleanValueToken)
             {
-                var current = _tokens.Current;
-                _tokens.MoveNext();
+                var current = Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key;
+                tokenValue++;
 
                 if (current is TrueToken)
                     return true;
@@ -63,47 +42,62 @@ namespace tprandomizer_poc_main
             }
             var parseBool = false;
 
-            if (_tokens.Current is OpenParenthesisToken)
+            if (Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key is OpenParenthesisToken)
             {
-                _tokens.MoveNext();
+                tokenValue++;
 
-               
-                _tokens.MoveNext();
                 var expInPars = Parse();
 
-
-                if (!(_tokens.Current is ClosedParenthesisToken))
-                    throw new Exception("Expecting Closing Parenthesis");
+                //If there are no more characters and we have a hanging parenthesis, throw an error
+                if (!(Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key is ClosedParenthesisToken))
+                    throw new Exception("Expecting Closing Parenthesis but got: " + Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key);
                     
-                _tokens.MoveNext(); 
+                tokenValue++; 
 
                 return expInPars;
             }
-            if (_tokens.Current is ClosedParenthesisToken)
+            if (Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key is ClosedParenthesisToken)
             {
                 throw new Exception("Unexpected Closed Parenthesis");
             }
-            if (_tokens.Current is itemToken)
+            if (Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key is itemToken)
             {
-                Token evaluatedItem = _tokens.Current; 
-                _tokens.MoveNext();
-                if((_tokens.Current is CommaToken))
+                Console.WriteLine("Token is Item");
+                string evaluatedItem = Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Value; 
+                tokenValue++;
+                if((Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key is CommaToken))
                 {
-                    _tokens.MoveNext();
-                    parseBool = LogicFunctions.verifyItemQuantity(evaluatedItem.ToString(), Int16.Parse(_tokens.Current.ToString()));
+                    Console.WriteLine("Token is comma");
+                    tokenValue++;
+                    parseBool = LogicFunctions.verifyItemQuantity(evaluatedItem, Int16.Parse(Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Value));
                 }
                 else
                 {
                     parseBool = LogicFunctions.canUseTest(evaluatedItem);
                 }
-                _tokens.MoveNext(); 
             }
+            if (Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key is logicFunctionToken)
+            {
+                Console.WriteLine("Token is function:" + Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key.ToString());
+                parseBool = (bool)typeof(LogicFunctions).GetMethod(Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Value).Invoke(this, null);
+                tokenValue++;
+            }
+            while (Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key is OperandToken)
+            {
+                Console.WriteLine("Token is Operand");
+                var operand = Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key;
+                tokenValue++;
+                var nextBoolean = ParseBoolean();
 
+                if (operand is AndToken)
+                    parseBool = parseBool && nextBoolean;
+                else
+                    parseBool = parseBool || nextBoolean;
+            }
             // since its not a BooleanConstant or Expression in parenthesis, it must be a expression again
             var val = Parse();
             return val;
-
-        }
+        } 
     }
 
     public class Tokenizer
@@ -117,11 +111,13 @@ namespace tprandomizer_poc_main
             _reader = new StringReader(text);
         }
 
-        public IEnumerable<Token> Tokenize()
+        public Dictionary<Token, string> Tokenize()
         {
-            var tokens = new List<Token>();
+            Dictionary<Token, string> tokens = new Dictionary<Token, String>();
+            
             while (_reader.Peek() != -1)
             {
+                
                 while (Char.IsWhiteSpace((char) _reader.Peek()))
                 {
                     _reader.Read();
@@ -131,72 +127,89 @@ namespace tprandomizer_poc_main
                     break;
 
                 var c = (char) _reader.Peek();
+                Console.WriteLine("Current Token: " + c);
                 switch (c)
                 {
                     case '!':
-                        tokens.Add(new NegationToken());
+                        tokens.Add(new NegationToken(), c.ToString());
                         _reader.Read();
                         break;
                     case '(':
-                        tokens.Add(new OpenParenthesisToken());
+                        Console.WriteLine("New Open Parenthesis");
+                        tokens.Add(new OpenParenthesisToken(), c.ToString());
                         _reader.Read();
                         break;
                     case ')':
-                        tokens.Add(new ClosedParenthesisToken());
+                        Console.WriteLine("New Close Parenthesis");
+                        tokens.Add(new ClosedParenthesisToken(), c.ToString());
                         _reader.Read();
                         break;
                     case ',':
-                        tokens.Add(new CommaToken());
+                        tokens.Add(new CommaToken(), c.ToString());
                         _reader.Read();
                         break;
                     default:
-                        var token = ParseKeyword();
-                        tokens.Add(token);
+                        Console.WriteLine("Parsing Keyword");
+                        var text = new StringBuilder();
+                        if (Char.IsLetter((char) _reader.Peek()))
+                        {
+                            while ((Char.IsLetter((char) _reader.Peek()) || ((char) _reader.Peek() == '_') && ((char) _reader.Peek() != ')')))
+                            {
+                                text.Append((char) _reader.Read());
+                            }
+
+                            var potentialKeyword = text.ToString();
+
+                            switch (potentialKeyword)
+                            {
+                                case "true":
+                                    tokens.Add(new TrueToken(), potentialKeyword.ToString());
+                                    break;
+                                case "false":
+                                    tokens.Add(new FalseToken(), potentialKeyword.ToString());
+                                    break;
+                                case "and":
+                                    Console.WriteLine("New AndOperator");
+                                    tokens.Add(new AndToken(), potentialKeyword.ToString());
+                                    break;
+                                case "or":
+                                    Console.WriteLine("New OROperator");
+                                    tokens.Add(new OrToken(), potentialKeyword.ToString());
+                                    break;
+                                default:
+                                if (Enum.IsDefined(typeof(Item), potentialKeyword))
+                                {
+                                    tokens.Add(new itemToken(), potentialKeyword.ToString());
+                                    break;
+                                }
+                                //If it isnt a keyword, we assume that it is a logic function
+                                else
+                                {
+                                    Console.WriteLine("Function Token: " + potentialKeyword);
+                                    tokens.Add(new logicFunctionToken(), potentialKeyword.ToString());
+                                    break;
+                                }
+                            }
+                        }
+                        else if (Char.IsNumber((char) _reader.Peek()))
+                        {
+                            Console.WriteLine("Integer Token Added.");
+                            tokens.Add(new IntegerToken(), _reader.Peek().ToString());
+                        }
+                        else
+                        {
+                            var remainingText = _reader.ReadToEnd() ?? string.Empty;
+                            throw new Exception(string.Format("Unknown Grammar: " + remainingText));
+                        }
+                        _reader.Read();
                         break;
                 }
             }
+            foreach (KeyValuePair<Token, string> token in tokens)
+            {
+                Console.WriteLine(token.Value);
+            }
             return tokens;
-        }
-
-        private Token ParseKeyword()
-        {
-            var text = new StringBuilder();
-            if (!Char.IsNumber((char) _reader.Peek()))
-            {
-                while (Char.IsLetter((char) _reader.Peek()))
-                {
-                    text.Append((char) _reader.Read());
-                }
-
-                var potentialKeyword = text.ToString().ToLower();
-
-                switch (potentialKeyword)
-                {
-                    case "true":
-                        return new TrueToken();
-                    case "false":
-                        return new FalseToken();
-                    case "and":
-                        return new AndToken();
-                    case "or":
-                        return new OrToken();
-                    case "canUse(":
-                        return new canUseToken();
-                    default:
-                    if (Enum.IsDefined(typeof(Item), potentialKeyword))
-                    {
-                        return new itemToken();
-                    }
-                    else
-                    {
-                        throw new Exception("Unexpected Character");
-                    }
-                }
-            }
-            else
-            {
-                return new miscToken();
-            }
         }
     }
     public class OperandToken : Token
@@ -215,7 +228,12 @@ namespace tprandomizer_poc_main
         {
             
         }
-        public class miscToken : Token
+        public class logicFunctionToken : Token
+        {
+            
+        }
+
+        public class IntegerToken : Token
         {
             
         }

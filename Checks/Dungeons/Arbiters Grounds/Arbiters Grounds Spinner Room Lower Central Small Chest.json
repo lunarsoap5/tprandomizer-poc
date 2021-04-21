@@ -1,6 +1,6 @@
 {
     "checkName": "Arbiters Grounds Spinner Room Lower Central Small Chest",
-    "requirements": "Logic.canUse(Item.Spinner)",
+    "requirements": "Spinner",
     "hash": "8F23",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Arbiters Grounds"],

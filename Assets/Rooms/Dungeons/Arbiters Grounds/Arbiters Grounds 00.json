@@ -2,13 +2,11 @@
     "name": "Arbiters Grounds 00",
     "neighbours": 
     [
-        "Outside Arbiters Grounds", 
         "Arbiters Grounds 01"
     ],
     "neighbourRequirements": 
     [
-        "true",
-        "Logic.getItemCount(Item.Arbiters_Grounds_Small_Key) >= 1"
+        "(Arbiters_Grounds_Small_Key,1)"
     ],
     "isStartingRoom": "false",
     "checks": 

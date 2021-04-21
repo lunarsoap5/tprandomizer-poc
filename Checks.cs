@@ -20,6 +20,7 @@ namespace tprandomizer_poc_main
         public Item itemId { get; set;} //The original item id of the check. This allows us to make an array of all items in the item pool for randomization purposes. Also is useful for documentation purposes.
         public bool itemWasPlaced { get; set;} //Identifies if we already placed an item on this check.
         public bool hasBeenReached {get; set;} //indicates that we can get the current check. Prevents unneccesary repetitive parsing.
+        public Script<object> evaluatedLogic {get; set;}
     }
 
     public class CheckFunctions
@@ -328,8 +329,6 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Fishing Hole Heart Piece", new Check());
             CheckDict.Add("Cats Hide and Seek Minigame", new Check());
         }
-
-        
     } 
 
 }

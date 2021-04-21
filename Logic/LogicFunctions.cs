@@ -23,6 +23,20 @@ namespace tprandomizer_poc_main
 			return canUseItem;
 		}
 
+        public static bool canUseTest(Token item)
+		{
+            bool canUseItem = false;
+            foreach (var listItem in Singleton.getInstance().Items.heldItems)
+            {
+                if (listItem.ToString() == item.ToString())
+                {
+                    canUseItem = true;
+                    break;
+                }
+            }
+			return canUseItem;
+		}
+
         public static bool hasItem(int item)
 		{
 			bool canUseItem = false;
@@ -868,6 +882,25 @@ namespace tprandomizer_poc_main
 			}
             Console.WriteLine("Item: " + itemToBeCounted.ToString() + " Quantity: " + itemQuantity);
 			return itemQuantity;
+		}
+
+        public static bool verifyItemQuantity(string itemToBeCounted, int quantity)
+		{
+            List<Item> itemList = Singleton.getInstance().Items.heldItems;
+			int itemQuantity = 0;
+            bool isQuantity = false;
+			foreach (var item in itemList)
+			{
+				if (item.ToString() == itemToBeCounted)
+				{
+					itemQuantity++;
+				}
+			}
+            if (quantity >= itemQuantity)
+            {
+                isQuantity = true;
+            }
+			return isQuantity;
 		}
     }
 }

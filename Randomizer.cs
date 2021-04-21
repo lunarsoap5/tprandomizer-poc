@@ -182,7 +182,7 @@ namespace tprandomizer_poc_main
                 if (currentCheck.itemWasPlaced && (!currentCheck.hasBeenReached))
                 {
                     //If the check has an item in it and has not been collected, we need to see if we can get the item.
-                    var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                   var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
                     if ((bool)areCheckRequirementsMet == true)
                     {
                         //If we can get the item, we add it to our inventory and restart our search since we may be able to get more placed items with our new item pool
@@ -421,6 +421,20 @@ namespace tprandomizer_poc_main
                 return true;
             }
             return false;
+        }
+
+        public bool evaluateRequirement (string checkRequirement)
+        {
+            bool isRequirementMet = false;
+
+            return isRequirementMet;
+        }
+
+        public bool CanParseSingleToken(string expression)
+        {
+            var tokens = new Tokenizer(expression).Tokenize();
+            var parser = new Parser(tokens);
+            return parser.Parse();
         }
     }
 }

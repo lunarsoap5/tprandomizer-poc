@@ -206,6 +206,7 @@ namespace tprandomizer_poc_main
                     Console.WriteLine("Checking Logic...");
                     //var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
                     var areCheckRequirementsMet = evaluateRequirements(currentCheck.requirements);
+                    Console.WriteLine("Can get check: " + currentCheck.checkName + " " + areCheckRequirementsMet);
                     if (((bool)areCheckRequirementsMet == true) && (!currentCheck.itemWasPlaced))
                     {
                         roomChecks.Add(currentCheck.checkName);
@@ -432,8 +433,7 @@ namespace tprandomizer_poc_main
         {
             Parser parse = new Parser();
             Console.WriteLine("Tokenizing Logic...");
-            
-            
+            parse.ParserReset();
             Singleton.getInstance().Logic.TokenDict = new Tokenizer(expression).Tokenize();
             Console.WriteLine("Parsing Logic...");
             return parse.Parse();

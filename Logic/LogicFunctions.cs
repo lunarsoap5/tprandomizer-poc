@@ -890,6 +890,7 @@ namespace tprandomizer_poc_main
 
         public static bool verifyItemQuantity(string itemToBeCounted, int quantity)
 		{
+            Console.WriteLine("Checking for Item: " + itemToBeCounted.ToString() + " Quantity: " + quantity);
             List<Item> itemList = Singleton.getInstance().Items.heldItems;
 			int itemQuantity = 0;
             bool isQuantity = false;
@@ -900,10 +901,12 @@ namespace tprandomizer_poc_main
 					itemQuantity++;
 				}
 			}
-            if (quantity >= itemQuantity)
+            if (itemQuantity >= quantity)
             {
                 isQuantity = true;
             }
+            Console.WriteLine("Item: " + itemToBeCounted.ToString() + " Quantity: " + itemQuantity);
+            Console.WriteLine("Quantity met? " + isQuantity);
 			return isQuantity;
 		}
     }

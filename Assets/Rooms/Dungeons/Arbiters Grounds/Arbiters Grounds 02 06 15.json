@@ -13,7 +13,7 @@
         "true",
         "(Arbiters_Grounds_Small_Key, 4) and canDefeatRedeadKnight and canDefeatStalchild and canDefeatBubble and canDefeatGhoulRat",
         "Shadow_Crystal and Clawshot and canDefeatRedeadKnight",
-        "(Arbiters_Grounds_Small_Key, 2",
+        "(Arbiters_Grounds_Small_Key, 2)",
         "canDefeatPoe and Shadow_Crystal and Clawshot and canDefeatRedeadKnight and canDefeatStalchild and canDefeatBubble and canDefeatGhoulRat and canDefeatStalfos and (Arbiters_Grounds_Small_Key, 4)"
     ],
     "isStartingRoom": "false",

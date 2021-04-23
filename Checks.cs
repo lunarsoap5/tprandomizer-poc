@@ -28,7 +28,7 @@ namespace tprandomizer_poc_main
         public Dictionary<string, Check> CheckDict = new Dictionary<string, Check>();
         public void InitializeChecks()
         {
-            /*CheckDict.Add("Uli Cradle Delivery", new Check());
+            CheckDict.Add("Uli Cradle Delivery", new Check());
             CheckDict.Add("Sera Cat Fishing Reward", new Check());
             CheckDict.Add("Sera Shop Slingshot", new Check());
             CheckDict.Add("Gift From Rusl", new Check());
@@ -175,7 +175,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Gerudo Desert North Small Chest Before Bublin Camp", new Check());
             CheckDict.Add("Bublin Camp First Chest Under Tower At Entrance", new Check());
             CheckDict.Add("Bublin Camp Small Chest in Back of Camp", new Check());
-            CheckDict.Add("Outside Arbiters Grounds Lantern Chest", new Check());*/
+            CheckDict.Add("Outside Arbiters Grounds Lantern Chest", new Check());
             CheckDict.Add("Arbiters Grounds Lobby Chest", new Check());
             CheckDict.Add("Arbiters Grounds East Lower Turnable Redead Chest", new Check());
             CheckDict.Add("Arbiters Grounds Torch Room East Chest", new Check());
@@ -195,7 +195,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Arbiters Grounds Spinner Room Stalfos Alcove Chest", new Check());
             CheckDict.Add("Arbiters Grounds Spinner Room Lower North Chest", new Check());
             CheckDict.Add("Arbiters Grounds Big Key Chest", new Check());
-            /*CheckDict.Add("Lanayru Field Spinner Track Chest", new Check());
+            CheckDict.Add("Lanayru Field Spinner Track Chest", new Check());
             CheckDict.Add("Lanayru Field Stalfos Grotto Right Small Chest", new Check());
             CheckDict.Add("Lanayru Field Stalfos Grotto Left Small Chest", new Check());
             CheckDict.Add("Lanayru Field Stalfos Grotto Stalfos Chest", new Check());
@@ -327,7 +327,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Kakariko Gorge Spire Heart Piece", new Check());
             CheckDict.Add("Zant Heart Container", new Check());
             CheckDict.Add("Fishing Hole Heart Piece", new Check());
-            CheckDict.Add("Cats Hide and Seek Minigame", new Check());*/
+            CheckDict.Add("Cats Hide and Seek Minigame", new Check());
         }
     } 
 

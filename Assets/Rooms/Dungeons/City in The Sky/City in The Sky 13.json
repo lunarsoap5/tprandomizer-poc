@@ -7,7 +7,7 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canUse(Item.Double_Clawshot)",
+        "Double_Clawshot",
         "true"
     ],
     "visited": "false",

@@ -10,9 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Spinner) && (Logic.getItemCount(Item.City_in_The_Sky_Small_Key) >= 1)",
-        "Logic.canUse(Item.Clawshot)",
-        "Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatBabaSerpent() && Logic.canDefeatKargarok() && Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Iron_Boots)"
+        "Spinner and (City_in_The_Sky_Small_Key, 1)",
+        "Clawshot",
+        "Double_Clawshot and canDefeatBabaSerpent and canDefeatKargarok and Shadow_Crystal and Iron_Boots"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -2,6 +2,7 @@
     "name": "Arbiters Grounds 00",
     "neighbours": 
     [
+        "Outside Arbiters Grounds",
         "Arbiters Grounds 01"
     ],
     "neighbourRequirements": 

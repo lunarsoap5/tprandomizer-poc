@@ -7,7 +7,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatAeralfos() && Logic.canUse(Item.City_in_The_Sky_Big_Key)"
+        "Double_Clawshot and canDefeatAeralfos and City_in_The_Sky_Big_Key"
     ],
     "visited": "false",
     "checks": [""], 

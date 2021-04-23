@@ -29,7 +29,7 @@ namespace tprandomizer_poc_main
         public void InitializeRooms()
         {
             
-            /*RoomDict.Add("Lakebed Temple 00 01", new Room());
+            RoomDict.Add("Lakebed Temple 00 01", new Room());
             RoomDict.Add("Lakebed Temple 02 03", new Room());
             RoomDict.Add("Lakebed Temple 05", new Room());
             RoomDict.Add("Lakebed Temple 06", new Room());
@@ -119,7 +119,7 @@ namespace tprandomizer_poc_main
             RoomDict.Add("Hyrule Castle 13", new Room());
             RoomDict.Add("Hyrule Castle 14", new Room());
             RoomDict.Add("Hyrule Castle 15", new Room());
-            RoomDict.Add("Ganondorf Castle", new Room());*/
+            RoomDict.Add("Ganondorf Castle", new Room());
             RoomDict.Add("Arbiters Grounds 00", new Room());
             RoomDict.Add("Arbiters Grounds 01", new Room());
             RoomDict.Add("Arbiters Grounds 02 06 15", new Room());
@@ -137,7 +137,7 @@ namespace tprandomizer_poc_main
             RoomDict.Add("Arbiters Grounds 16", new Room());
             RoomDict.Add("Stallord", new Room());
             RoomDict.Add("Death Sword", new Room());
-            /*RoomDict.Add("Snowpeak Ruins 00 01 02 03", new Room());
+            RoomDict.Add("Snowpeak Ruins 00 01 02 03", new Room());
             RoomDict.Add("Snowpeak Ruins 04 E", new Room());
             RoomDict.Add("Snowpeak Ruins 04 W", new Room());
             RoomDict.Add("Snowpeak Ruins 05 Lower", new Room());
@@ -204,7 +204,7 @@ namespace tprandomizer_poc_main
             RoomDict.Add("Gerudo Desert", new Room());
             RoomDict.Add("Mirror Chamber", new Room());
             RoomDict.Add("Hidden Village", new Room());
-            RoomDict.Add("Death Mountain Interiors", new Room());*/
+            RoomDict.Add("Death Mountain Interiors", new Room());
             return;
         }
     }

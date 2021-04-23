@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canUse(Item.Double_Clawshot) && Logic.canDefeatAeralfos()"
+        "Double_Clawshot and canDefeatAeralfos"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.getItemCount(Item.Goron_Mines_Small_Key) >= 3",
-        "Logic.canUse(Item.Heros_Bow) && Logic.canUse(Item.Iron_Boots)"
+        "(Goron_Mines_Small_Key, 3)",
+        "Heros_Bow and Iron_Boots"
     ],
     "isStartingRoom": "false",
     "checks": 

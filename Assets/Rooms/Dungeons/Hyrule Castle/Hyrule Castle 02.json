@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatDarknut() && Logic.canUse(Item.Lantern) && Logic.canUse(Item.Boomerang)",
-        "Logic.canDefeatDarknut() && Logic.canUse(Item.Lantern) && Logic.canUse(Item.Boomerang)"
+        "canDefeatDarknut and Lantern and Boomerang",
+        "canDefeatDarknut and Lantern and Boomerang"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Boomerang) && Logic.canDefeatBokoblin() && Logic.canDefeatWalltula()",
-        "Logic.canUse(Item.Forest_Temple_Big_Key) && (Logic.canFreeAllMonkeys() || Logic.canUse(Item.Clawshot))"
+        "Boomerang && canDefeatBokoblin and canDefeatWalltula",
+        "Forest_Temple_Big_Key and (canFreeAllMonkeys or Clawshot)"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

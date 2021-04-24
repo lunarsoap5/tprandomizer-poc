@@ -9,7 +9,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Spinner)",
+        "Clawshot and Spinner",
         "true"
     ],
     "isStartingRoom": "false",

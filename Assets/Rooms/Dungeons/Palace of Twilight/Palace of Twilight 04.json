@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "(Logic.getItemCount(Item.Palace_of_Twilight_Small_Key) >= 3) && Logic.canDefeatZantHead() && Logic.canUse(Item.Clawshot)"
+        "(Palace_of_Twilight_Small_Key, 3) and canDefeatZantHead and Clawshot"
     ],
     "isStartingRoom": "false",
     "checks": 

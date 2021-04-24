@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canDefeatDarkhammer()"
+        "canDefeatDarkhammer"
     ],
     "isStartingRoom": "false",
     "checks": 

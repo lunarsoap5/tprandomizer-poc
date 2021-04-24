@@ -12,11 +12,11 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Ball_and_Chain)",
+        "Ball_and_Chain)",
         "true",
-        "Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain) && Logic.canDefeatChilfos() && Logic.canDefeatMiniFreezard() && Logic.canDefeatFreezard() && (Logic.getItemCount(Item.Snowpeak_Ruins_Small_Key) >= 4) && Logic.hasBombs()",
-        "Logic.canUse(Item.Ball_and_Chain) || ((Logic.getItemCount(Item.Snowpeak_Ruins_Small_Key) >= 4) && Logic.hasBombs())",
-        "Logic.canUse(Item.Ordon_Goat_Cheese) && Logic.canUse(Item.Ball_and_Chain) && Logic.canDefeatChilfos() && Logic.canDefeatMiniFreezard() && Logic.canDefeatFreezard() && (Logic.getItemCount(Item.Snowpeak_Ruins_Small_Key) >= 4) && Logic.hasBombs() && Logic.canUse(Item.Snowpeak_Ruins_Bedroom_Key)"
+        "Ordon_Goat_Cheese and Ball_and_Chain and canDefeatChilfos and canDefeatMiniFreezard and canDefeatFreezard and (Snowpeak_Ruins_Small_Key, 4) and hasBombs",
+        "Ball_and_Chain or ((Snowpeak_Ruins_Small_Key, 4) and hasBombs)",
+        "Ordon_Goat_Cheese and Ball_and_Chain and canDefeatChilfos and canDefeatMiniFreezard and canDefeatFreezard and (Snowpeak_Ruins_Small_Key, 4) and hasBombs andSnowpeak_Ruins_Bedroom_Key"
     ],
     "isStartingRoom": "false",
     "checks": 

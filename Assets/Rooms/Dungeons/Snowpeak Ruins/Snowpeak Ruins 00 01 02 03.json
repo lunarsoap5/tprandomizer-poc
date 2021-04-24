@@ -10,9 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Ordon_Goat_Cheese)",
-        "Logic.canUse(Item.Ordon_Pumpkin)",
-        "Logic.canUse(Item.Shadow_Crystal) || Logic.canUse(Item.Ball_and_Chain)"
+        "Ordon_Goat_Cheese",
+        "Ordon_Pumpkin",
+        "Shadow_Crystal or Ball_and_Chain"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -11,10 +11,10 @@
     "neighbourRequirements": 
     [
         "true",
-        "(Logic.canDefeatBombling() || Logic.canBurnWebs()) && (Logic.getItemCount(Item.Forest_Temple_Small_Key) >= 4)",
-        "Logic.canBurnWebs() && (((Logic.getItemCount(Item.Forest_Temple_Small_Key) >= 4) && Logic.canDefeatBokoblin()) || Logic.canUse(Item.Clawshot))",
-        "Logic.canDefeatBombling() || Logic.canBurnWebs()",
-        "Logic.canBurnWebs() && Logic.canDefeatBombling() && Logic.canDefeatWalltula() && Logic.canDefeatBigBaba() && Logic.canDefeatBokoblin() && Logic.canBreakMonkeyCage() && (Logic.getItemCount(Item.Forest_Temple_Small_Key) >= 4)"
+        "(canDefeatBombling or canBurnWebs) and (Forest_Temple_Small_Key, 4)",
+        "canBurnWebs and (((Forest_Temple_Small_Key, 4) and canDefeatBokoblin) or Clawshot)",
+        "canDefeatBombling or canBurnWebs",
+        "canBurnWebs and canDefeatBombling and canDefeatWalltula and canDefeatBigBaba and canDefeatBokoblin and canBreakMonkeyCage and (Forest_Temple_Small_Key, 4)"
     ],
     "isStartingRoom": "false",
     "checks": 

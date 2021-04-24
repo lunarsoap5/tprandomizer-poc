@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canDefeatDiababa()"
+        "canDefeatDiababa"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

@@ -9,7 +9,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Boomerang && canDefeatBokoblin and canDefeatWalltula",
+        "Boomerang and canDefeatBokoblin and canDefeatWalltula",
         "Forest_Temple_Big_Key and (canFreeAllMonkeys or Clawshot)"
     ],
     "isStartingRoom": "false",

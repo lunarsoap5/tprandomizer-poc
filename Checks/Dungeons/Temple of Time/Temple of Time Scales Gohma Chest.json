@@ -1,6 +1,6 @@
 {
     "checkName": "Temple of Time Scales Gohma Chest",
-    "requirements": "Logic.canDefeatYoungGohma() && Logic.canDefeatBabyGohma()",
+    "requirements": "canDefeatYoungGohma and canDefeatBabyGohma",
     "hash": "E586",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Temple of Time"],

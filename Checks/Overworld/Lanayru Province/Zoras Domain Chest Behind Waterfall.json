@@ -1,6 +1,6 @@
 {
     "checkName": "Zoras Domain Chest Behind Waterfall",
-    "requirements": "Logic.canUse(Item.Shadow_Crystal)",
+    "requirements": "Shadow_Crystal",
     "hash": "827A",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

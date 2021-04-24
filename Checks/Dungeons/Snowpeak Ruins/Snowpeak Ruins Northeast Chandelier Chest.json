@@ -1,6 +1,6 @@
 {
     "checkName": "Snowpeak Ruins Northeast Chandelier Chest",
-    "requirements": "Logic.canDefeatChilfos() && Logic.canUse(Item.Ball_and_Chain)",
+    "requirements": "canDefeatChilfos and Ball_and_Chain",
     "hash": "A485",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Snowpeak Ruins", "Small Key"],

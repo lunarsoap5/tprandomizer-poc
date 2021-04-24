@@ -1,6 +1,6 @@
 {
     "checkName": "Hyrule Castle Main Hall Northeast Chest",
-    "requirements": "Logic.canDefeatBokoblin() && Logic.canDefeatLizalfos() && Logic.canUse(Item.Clawshot)",
+    "requirements": "canDefeatBokoblin and canDefeatLizalfos and Clawshot",
     "hash": "3107",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Hyrule Castle", "Dungeon Items", "Compass"],

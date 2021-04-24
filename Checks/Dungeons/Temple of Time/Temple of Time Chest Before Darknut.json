@@ -1,6 +1,6 @@
 {
     "checkName": "Temple of Time Chest Before Darknut",
-    "requirements": "Logic.canDefeatArmos() && Logic.canDefeatBabyGohma() && Logic.canDefeatYoungGohma()",
+    "requirements": "canDefeatArmos and canDefeatBabyGohma and canDefeatYoungGohma",
     "hash": "1A52",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Temple of Time"],

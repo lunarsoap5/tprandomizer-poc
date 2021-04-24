@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "canDefeatKingBublin3"
+        "canDefeatKingBublinDesert"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -1,6 +1,6 @@
 {
     "checkName": "Lakebed Temple East Water Supply Small Chest",
-    "requirements": "Logic.getItemCount(Item.Lakebed_Temple_Small_Key) >= 3",
+    "requirements": "(Lakebed_Temple_Small_Key, 3)",
     "hash": "81F9",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Lakebed Temple"],

@@ -1,6 +1,6 @@
 {
     "checkName": "Lakebed Temple Deku Toad Chest",
-    "requirements": "Logic.canDefeatDekuToad()",
+    "requirements": "canDefeatDekuToad",
     "hash": "B9C7",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Lakebed Temple"],

@@ -1,6 +1,6 @@
 {
     "checkName": "Sacred Grove Baba Serpent Grotto Chest",
-    "requirements": "Logic.canDefeatBabaSerpent() && Logic.canKnockDownHangingBaba()",
+    "requirements": "canDefeatBabaSerpent and canKnockDownHangingBaba",
     "hash": "F29C",
     "isExcluded": false,
     "category": ["Chest", "Sacred Grove"],

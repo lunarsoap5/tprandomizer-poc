@@ -1,6 +1,6 @@
 {
     "checkName": "Forest Temple Central North Chest",
-    "requirements": "Logic.canUse(Item.Lantern)",
+    "requirements": "Lantern",
     "hash": "7C1C",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Forest Temple", "Dungeon Items", "Dungeon Map"],

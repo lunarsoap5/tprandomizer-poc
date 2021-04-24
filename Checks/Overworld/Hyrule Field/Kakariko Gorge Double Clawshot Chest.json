@@ -1,6 +1,6 @@
 {
     "checkName": "Kakariko Gorge Double Clawshot Chest",
-    "requirements": "Logic.canUse(Item.Double_Clawshot)",
+    "requirements": "Double_Clawshot",
     "hash": "BF8B",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

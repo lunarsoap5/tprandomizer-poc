@@ -1,6 +1,6 @@
 {
     "checkName": "Gerudo Desert Northwest Chest Behind Gates",
-    "requirements": "Logic.canDefeatBublin()",
+    "requirements": "canDefeatBublin",
     "hash": "9F29",
     "isExcluded": false,
     "category": ["Chest", "Gerudo Desert"],

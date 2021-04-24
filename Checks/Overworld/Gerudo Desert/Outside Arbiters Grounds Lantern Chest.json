@@ -1,6 +1,6 @@
 {
     "checkName": "Outside Arbiters Grounds Lantern Chest",
-    "requirements": "Logic.canUse(Item.Lantern)",
+    "requirements": "Lantern",
     "hash": "27B1",
     "isExcluded": false,
     "category": ["Chest", "Bublin Camp"],

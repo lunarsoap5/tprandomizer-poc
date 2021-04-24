@@ -1,6 +1,6 @@
 {
     "checkName": "Snowpeak Ruins West Cannon Room Corner Chest",
-    "requirements": "Logic.canSmash()",
+    "requirements": "canSmash",
     "hash": "98E8",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Snowpeak Ruins"],

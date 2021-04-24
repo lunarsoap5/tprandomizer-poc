@@ -1,6 +1,6 @@
 {
     "checkName": "Palace of Twilight Central Outdoor Chest",
-    "requirements": "Logic.canDefeatZantHead()",
+    "requirements": "canDefeatZantHead",
     "hash": "1F63",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Palace of Twilight", "Small Key"],

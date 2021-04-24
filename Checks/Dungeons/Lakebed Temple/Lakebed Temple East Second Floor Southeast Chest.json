@@ -1,6 +1,6 @@
 {
     "checkName": "Lakebed Temple East Second Floor Southeast Chest",
-    "requirements": "Logic.canLaunchBombs()",
+    "requirements": "canLaunchBombs",
     "hash": "E6CB",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Lakebed Temple", "Small Key"],

@@ -1,6 +1,6 @@
 {
     "checkName": "Lakebed Temple West Second Floor Southeast Chest",
-    "requirements": "Logic.canUse(Item.Clawshot)",
+    "requirements": "Clawshot",
     "hash": "AD57",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Lakebed Temple"],

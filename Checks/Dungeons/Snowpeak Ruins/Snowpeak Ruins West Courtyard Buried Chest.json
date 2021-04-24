@@ -1,6 +1,6 @@
 {
     "checkName": "Snowpeak Ruins West Courtyard Buried Chest",
-    "requirements": "Logic.canUse(Item.Shadow_Crystal)",
+    "requirements": "Shadow_Crystal",
     "hash": "FD69",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Snowpeak Ruins", "Small Key"],

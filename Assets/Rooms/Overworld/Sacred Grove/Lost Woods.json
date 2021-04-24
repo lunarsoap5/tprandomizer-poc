@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "canDefeatSkullKid2 and Shadow_Crystal"
+        "canDefeatSkullKid and Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -1,6 +1,6 @@
 {
     "checkName": "Hyrule Castle West Courtyard Central Small Chest",
-    "requirements": "Logic.canDefeatBokoblin()",
+    "requirements": "canDefeatBokoblin",
     "hash": "22F4",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Hyrule Castle"],

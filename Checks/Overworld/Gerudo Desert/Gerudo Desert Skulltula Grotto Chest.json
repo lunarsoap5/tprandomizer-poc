@@ -1,6 +1,6 @@
 {
     "checkName": "Gerudo Desert Skulltula Grotto Chest",
-    "requirements": "Logic.canDefeatSkulltula()",
+    "requirements": "canDefeatSkulltula",
     "hash": "421A",
     "isExcluded": false,
     "category": ["Chest", "Gerudo Desert"],

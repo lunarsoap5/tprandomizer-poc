@@ -1,6 +1,6 @@
 {
     "checkName": "Lanayru Spring West Double Clawshot Chest",
-    "requirements": "Logic.canUse(Item.Double_Clawshot)",
+    "requirements": "Double_Clawshot",
     "hash": "04BF",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

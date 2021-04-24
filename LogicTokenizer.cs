@@ -16,7 +16,6 @@ namespace tprandomizer_poc_main
         public int tokenValue;
         public void ParserReset()
         {
-            Console.WriteLine("Clearing Parser");
             tokenValue = 0;
             Singleton.getInstance().Logic.TokenDict.Clear();
         }
@@ -65,7 +64,13 @@ namespace tprandomizer_poc_main
 
                 //If there are no more characters and we have a hanging parenthesis, throw an error
                 if (!(Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key is ClosedParenthesisToken))
+                {
+                    for (int i = tokenValue; i < Singleton.getInstance().Logic.TokenDict.Count(); i++)
+                    {
+                        Console.WriteLine("Stack Trace: " + Singleton.getInstance().Logic.TokenDict.ElementAt(i).Value);
+                    }
                     throw new Exception("Expecting Closing Parenthesis but got: " + Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key);
+                }
 
                 tokenValue++; 
 
@@ -88,7 +93,6 @@ namespace tprandomizer_poc_main
                 else
                 {
                     parseBool = LogicFunctions.canUseTest(evaluatedItem);
-                    Console.WriteLine("Can Use Item?" + parseBool);  
                 }
                 return parseBool;
             }
@@ -146,7 +150,6 @@ namespace tprandomizer_poc_main
                         i++;
                         break;
                     default:
-                        Console.WriteLine("Parsing Keyword");
                         var text = new StringBuilder();
                         if (Char.IsLetter(_reader[i]))
                         {
@@ -198,10 +201,6 @@ namespace tprandomizer_poc_main
                         }
                         break;
                 }
-            }
-            foreach (KeyValuePair<Token, string> token in tokens)
-            {
-                Console.WriteLine(token.Value);
             }
             return tokens;
         }

@@ -1,6 +1,6 @@
 {
     "checkName": "Lake Hylia Bridge Cliff Chest",
-    "requirements": "Logic.canLaunchBombs() && Logic.canUse(Item.Clawshot)",
+    "requirements": "canLaunchBombs and Clawshot",
     "hash": "7216",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

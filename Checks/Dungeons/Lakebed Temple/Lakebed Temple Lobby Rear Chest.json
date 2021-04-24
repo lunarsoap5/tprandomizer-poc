@@ -1,6 +1,6 @@
 {
     "checkName": "Lakebed Temple Lobby Rear Chest",
-    "requirements": "Logic.canUse(Item.Zora_Armor)",
+    "requirements": "Zora_Armor",
     "hash": "92AC",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Lakebed Temple"],

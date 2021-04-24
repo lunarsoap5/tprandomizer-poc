@@ -1,6 +1,6 @@
 {
     "checkName": "Lake Hylia Underwater Chest",
-    "requirements": "Logic.canUse(Item.Iron_Boots)",
+    "requirements": "Iron_Boots",
     "hash": "9D4D",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

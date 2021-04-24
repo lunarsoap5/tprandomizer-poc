@@ -1,6 +1,6 @@
 {
     "checkName": "Forest Temple West Deku Like Chest",
-    "requirements": "Logic.canDefeatBombling()",
+    "requirements": "canDefeatBombling",
     "hash": "E3B3",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Forest Temple"],

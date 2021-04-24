@@ -1,6 +1,6 @@
 {
     "checkName": "Temple of Time Darknut Chest",
-    "requirements": "Logic.canDefeatDarknut()",
+    "requirements": "canDefeatDarknut",
     "hash": "DAD6",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Temple of Time"],

@@ -1,6 +1,6 @@
 {
     "checkName": "Gerudo Desert South Chest Behind Wooden Gates",
-    "requirements": "Logic.canDefeatBublin()",
+    "requirements": "canDefeatBublin",
     "hash": "577F",
     "isExcluded": false,
     "category": ["Chest", "Gerudo Desert"],

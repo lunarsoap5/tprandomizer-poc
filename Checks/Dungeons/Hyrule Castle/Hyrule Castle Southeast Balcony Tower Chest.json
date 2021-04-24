@@ -1,6 +1,6 @@
 {
     "checkName": "Hyrule Castle Southeast Balcony Tower Chest",
-    "requirements": "Logic.canDefeatAeralfos()",
+    "requirements": "canDefeatAeralfos",
     "hash": "8C2C",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Hyrule Castle"],

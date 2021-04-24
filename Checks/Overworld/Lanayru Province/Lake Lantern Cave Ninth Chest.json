@@ -1,6 +1,6 @@
 {
     "checkName": "Lake Lantern Cave Ninth Chest",
-    "requirements": "Logic.canSmash() && Logic.canUse(Item.Lantern)",
+    "requirements": "canSmash and Lantern",
     "hash": "DBF7",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

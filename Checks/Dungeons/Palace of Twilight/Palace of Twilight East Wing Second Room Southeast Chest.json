@@ -1,6 +1,6 @@
 {
     "checkName": "Palace of Twilight East Wing Second Room Southeast Chest",
-    "requirements": "Logic.canDefeatZantHead() && Logic.canDefeatShadowBeast() && Logic.canUse(Item.Double_Clawshot)",
+    "requirements": "canDefeatZantHead and canDefeatShadowBeast and Double_Clawshot",
     "hash": "1697",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Palace of Twilight", "Small Key"],

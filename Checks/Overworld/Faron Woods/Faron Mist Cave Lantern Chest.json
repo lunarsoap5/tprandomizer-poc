@@ -1,6 +1,6 @@
 {
     "checkName": "Faron Mist Cave Lantern Chest",
-    "requirements": "Logic.canUse(Item.Lantern)",
+    "requirements": "Lantern",
     "hash": "2247",
     "isExcluded": false,
     "category": ["Chest", "Faron Woods"],

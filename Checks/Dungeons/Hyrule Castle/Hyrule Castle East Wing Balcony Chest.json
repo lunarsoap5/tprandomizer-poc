@@ -1,6 +1,6 @@
 {
     "checkName": "Hyrule Castle East Wing Balcony Chest",
-    "requirements": "Logic.canUse(Item.Boomerang)",
+    "requirements": "Boomerang",
     "hash": "592C",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Hyrule Castle"],

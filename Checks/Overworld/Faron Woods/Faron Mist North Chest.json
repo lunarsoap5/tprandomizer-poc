@@ -1,6 +1,6 @@
 {
     "checkName": "Faron Mist North Chest",
-    "requirements": "Logic.canUse(Item.Lantern)",
+    "requirements": "Lantern",
     "hash": "BF66",
     "isExcluded": false,
     "category": ["Chest", "Faron Woods"],

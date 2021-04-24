@@ -1,6 +1,6 @@
 {
     "checkName": "Eldin Lantern Cave Second Chest",
-    "requirements": "Logic.canBurnWebs()",
+    "requirements": "canBurnWebs",
     "hash": "BAF6",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

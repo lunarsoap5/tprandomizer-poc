@@ -1,6 +1,6 @@
 {
     "checkName": "Gerudo Desert Campfire West Chest",
-    "requirements": "Logic.canDefeatBublin()",
+    "requirements": "canDefeatBublin",
     "hash": "3A41",
     "isExcluded": false,
     "category": ["Chest", "Gerudo Desert"],

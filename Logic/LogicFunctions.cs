@@ -650,19 +650,15 @@ namespace tprandomizer_poc_main
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
         }
-        public static bool canDefeatSkullKid1()
-        {
-            return canUse(Item.Shadow_Crystal);
-        }
-        public static bool canDefeatSkullKid2()
+        public static bool canDefeatSkullKid()
         {
             return canUse(Item.Heros_Bow);
         }
-        public static bool canDefeatKingBublin2()
+        public static bool canDefeatKingBublinBridge()
         {
             return canUse(Item.Heros_Bow);
         }
-        public static bool canDefeatKingBublin3()
+        public static bool canDefeatKingBublinDesert()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
@@ -671,7 +667,7 @@ namespace tprandomizer_poc_main
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
         }
-        public static bool canDefeatKingBublin4()
+        public static bool canDefeatKingBublinCastle()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
@@ -901,7 +897,6 @@ namespace tprandomizer_poc_main
 
         public static bool verifyItemQuantity(string itemToBeCounted, int quantity)
 		{
-            Console.WriteLine("Checking for Item: " + itemToBeCounted.ToString() + " Quantity: " + quantity);
             List<Item> itemList = Singleton.getInstance().Items.heldItems;
 			int itemQuantity = 0;
             bool isQuantity = false;
@@ -916,9 +911,7 @@ namespace tprandomizer_poc_main
             {
                 isQuantity = true;
             }
-            Console.WriteLine("Item: " + itemToBeCounted.ToString() + " Quantity: " + itemQuantity);
-            Console.WriteLine("Quantity met? " + isQuantity);
-			return isQuantity;
+            return isQuantity;
 		}
     }
 }

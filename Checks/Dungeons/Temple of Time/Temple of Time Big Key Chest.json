@@ -1,6 +1,6 @@
 {
     "checkName": "Temple of Time Big Key Chest",
-    "requirements": "Logic.canDefeatHelmasaur() && Logic.canUse(Item.Clawshot)",
+    "requirements": "canDefeatHelmasaur and Clawshot",
     "hash": "B704",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Temple of Time", "Boss Key"],

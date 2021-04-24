@@ -1,6 +1,6 @@
 {
     "checkName": "Goron Mines Entrance Chest",
-    "requirements": "Logic.canPressMinesSwitch()",
+    "requirements": "canPressMinesSwitch",
     "hash": "5FE5",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Goron Mines"],

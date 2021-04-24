@@ -1,6 +1,6 @@
 {
     "checkName": "Forest Temple Big Key Chest",
-    "requirements": "(Logic.canDefeatBombling() || Logic.canBurnWebs()) && Logic.canUse(Item.Boomerang)",
+    "requirements": "(canDefeatBombling or canBurnWebs) and Boomerang",
     "hash": "2C4F",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Forest Temple", "Big Key"],

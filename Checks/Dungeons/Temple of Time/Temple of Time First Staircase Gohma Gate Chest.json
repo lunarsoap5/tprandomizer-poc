@@ -1,6 +1,6 @@
 {
     "checkName": "Temple of Time First Staircase Gohma Gate Chest",
-    "requirements": "Logic.canDefeatYoungGohma()",
+    "requirements": "canDefeatYoungGohma",
     "hash": "298C",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Temple of Time"],

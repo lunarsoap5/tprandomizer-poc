@@ -41,9 +41,9 @@ namespace tprandomizer_poc_main
         public Room setupGraph()
         {
             resetAllRoomsVisited();
-            Room startingRoom = Rooms.RoomDict["Arbiters Grounds 00"];
+            Room startingRoom = Rooms.RoomDict["Ordon Province"];
             startingRoom.isStartingRoom = true;
-            Rooms.RoomDict["Arbiters Grounds 00"] = startingRoom;
+            Rooms.RoomDict["Ordon Province"] = startingRoom;
 
             List<string> roomChecks = new List<string>();
             List<Item> playthroughItems = new List<Item>();
@@ -183,7 +183,6 @@ namespace tprandomizer_poc_main
                 {
                     //If the check has an item in it and has not been collected, we need to see if we can get the item.
                     //var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
-                    Console.WriteLine("Checking Logic for check: " + currentCheck.checkName);
                     var areCheckRequirementsMet = evaluateRequirements(currentCheck.requirements);
                     if ((bool)areCheckRequirementsMet == true)
                     {
@@ -202,12 +201,9 @@ namespace tprandomizer_poc_main
                 //Confirms that we can get the check and checks to see if an item was placed in it.
                 if (isDungeonCheck(itemToPlace.ToString(), currentCheck))
                 {
-                    Console.WriteLine("Checking Logic for check: " + currentCheck.checkName);
-                    Console.WriteLine("Checking Logic...");
-                    //var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                   //var areCheckRequirementsMet = CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
                     var areCheckRequirementsMet = evaluateRequirements(currentCheck.requirements);
-                    Console.WriteLine("Can get check: " + currentCheck.checkName + " " + areCheckRequirementsMet);
-                    if (((bool)areCheckRequirementsMet == true) && (!currentCheck.itemWasPlaced))
+                     if (((bool)areCheckRequirementsMet == true) && (!currentCheck.itemWasPlaced))
                     {
                         roomChecks.Add(currentCheck.checkName);
                     }
@@ -257,7 +253,6 @@ namespace tprandomizer_poc_main
             resetAllChecksVisited();
             List<string> roomChecks = new List<string>();
             List<Item> playthroughItems = new List<Item>();
-            var areCheckRequirementsMet = false;
             Check currentCheck;
     
             restart: 
@@ -268,7 +263,8 @@ namespace tprandomizer_poc_main
                 if (currentCheck.itemWasPlaced && (!currentCheck.hasBeenReached))
                 {
                     //If the check has an item in it and has not been collected, we need to see if we can get the item.
-                    areCheckRequirementsMet = (bool)CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    //areCheckRequirementsMet = (bool)CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    var areCheckRequirementsMet = evaluateRequirements(currentCheck.requirements);
                     if (areCheckRequirementsMet == true)
                     {
                         //If we can get the item, we add it to our inventory and restart our search since we may be able to get more placed items with our new item pool
@@ -286,7 +282,8 @@ namespace tprandomizer_poc_main
                 if (!currentCheck.itemWasPlaced)
                 {
                     //If the check is empty, we want to see if we can get it
-                    areCheckRequirementsMet = (bool)CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    //areCheckRequirementsMet = (bool)CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                    var areCheckRequirementsMet = evaluateRequirements(currentCheck.requirements);
                     if (areCheckRequirementsMet == true)
                     {
                         //If we can get the check, we want to add it to the list of available checks
@@ -432,11 +429,9 @@ namespace tprandomizer_poc_main
         public bool evaluateRequirements(string expression)
         {
             Parser parse = new Parser();
-            Console.WriteLine("Tokenizing Logic...");
             parse.ParserReset();
             Singleton.getInstance().Logic.TokenDict = new Tokenizer(expression).Tokenize();
-            Console.WriteLine("Parsing Logic...");
             return parse.Parse();
         }
-    }
+    } 
 }

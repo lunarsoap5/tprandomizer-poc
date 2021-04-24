@@ -1,6 +1,6 @@
 {
     "checkName": "Eldin Stockcave Upper Chest",
-    "requirements": "Logic.canUse(Item.Iron_Boots)",
+    "requirements": "Iron_Boots",
     "hash": "B84B",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

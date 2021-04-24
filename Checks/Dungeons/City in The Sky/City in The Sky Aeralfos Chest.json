@@ -1,6 +1,6 @@
 {
     "checkName": "City in The Sky Aeralfos Chest",
-    "requirements": "Logic.canDefeatAeralfos() && Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Iron_Boots)",
+    "requirements": "canDefeatAeralfos and Clawshot and Iron_Boots",
     "hash": "26B5",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "City in The Sky"],

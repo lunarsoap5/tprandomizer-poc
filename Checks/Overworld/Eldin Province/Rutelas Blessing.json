@@ -1,6 +1,6 @@
 {
     "checkName": "Rutelas Blessing",
-    "requirements": "Logic.canUse(Item.Gate_Keys)",
+    "requirements": "Gate_Keys",
     "hash": "null",
     "isExcluded": false,
     "category": ["Chest", "Eldin Province"],

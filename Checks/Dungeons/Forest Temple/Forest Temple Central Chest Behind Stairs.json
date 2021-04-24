@@ -1,6 +1,6 @@
 {
     "checkName": "Forest Temple Central Chest Behind Stairs",
-    "requirements": "Logic.canUse(Item.Boomerang) && Logic.canDefeatBombling()",
+    "requirements": "Boomerang and canDefeatBombling",
     "hash": "E30F",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Forest Temple"],

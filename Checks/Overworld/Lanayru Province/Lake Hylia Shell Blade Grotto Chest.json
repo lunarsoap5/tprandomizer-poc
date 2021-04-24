@@ -1,6 +1,6 @@
 {
     "checkName": "Lake Hylia Shell Blade Grotto Chest",
-    "requirements": "Logic.canDefeatShellBlade()",
+    "requirements": "canDefeatShellBlade",
     "hash": "A6A6",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

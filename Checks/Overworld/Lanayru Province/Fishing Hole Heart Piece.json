@@ -1,6 +1,6 @@
 {
     "checkName": "Fishing Hole Heart Piece",
-    "requirements": "Logic.canUse(Item.Clawshot)",
+    "requirements": "Clawshot",
     "hash": "0FAA",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

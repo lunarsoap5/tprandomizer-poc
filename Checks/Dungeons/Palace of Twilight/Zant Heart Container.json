@@ -1,6 +1,6 @@
 {
     "checkName": "Zant Heart Container",
-    "requirements": "Logic.canDefeatZant()",
+    "requirements": "canDefeatZant",
     "hash": "93FC",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Palace of Twilight"],

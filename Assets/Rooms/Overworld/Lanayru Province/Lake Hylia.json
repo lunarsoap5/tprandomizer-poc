@@ -13,14 +13,14 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canUse(Item.Aurus_Memo) && Logic.canUse(Item.Shadow_Crystal)",
-        "Logic.canSmash()",
-        "Logic.canUse(Item.Shadow_Crystal)",
-        "Logic.canUse(Item.Shadow_Crystal)",
-        "Logic.canUse(Item.Iron_Boots) && Logic.hasBombs() && Logic.canUse(Item.Zora_Armor)",
-        "Logic.canUse(Item.Clawshot) && (ItemFunctions.nbSkybooksPlaced == 0)",
+        "Aurus_Memo and Shadow_Crystal",
+        "canSmash",
+        "Shadow_Crystal",
+        "Shadow_Crystal",
+        "Iron_Boots and hasBombs and Zora_Armor",
+        "Clawshot and hasCompletedSkyBook",
         "true",
-        "Logic.canUse(Item.Shadow_Crystal)"
+        "Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": 

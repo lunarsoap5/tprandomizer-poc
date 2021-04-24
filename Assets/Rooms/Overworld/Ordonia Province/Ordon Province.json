@@ -7,8 +7,8 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canUse(Item.Wooden_Sword)",
-        "Logic.canUse(Item.Shadow_Crystal)"
+        "Wooden_Sword",
+        "Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": 

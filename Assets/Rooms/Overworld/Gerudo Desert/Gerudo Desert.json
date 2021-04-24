@@ -9,10 +9,10 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canDefeatShadowBeast() && Logic.canUse(Item.Clawshot)",
-        "Logic.canDefeatBublin()",
-        "Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Clawshot)",
-        "Logic.canUse(Item.Shadow_Crystal)"
+        "canDefeatShadowBeast and Clawshot",
+        "canDefeatBublin",
+        "Shadow_Crystal and Clawshot",
+        "Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -12,7 +12,7 @@
         "true",
         "true",
         "true",
-        "Logic.hasBombs() && Logic.canUse(Item.Iron_Boots)"
+        "hasBombs and Iron_Boots"
     ],
     "isStartingRoom": "false",
     "checks": 

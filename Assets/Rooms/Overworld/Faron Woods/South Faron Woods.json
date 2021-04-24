@@ -10,9 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canLeaveForest()",
+        "canLeaveForest",
         "true",
-        "Logic.canSmash() && Logic.canUse(Item.Dominion_Rod) && Logic.canUse(Item.Shadow_Crystal)"
+        "canSmash and Dominion_Rod and Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": ["Coro Lantern"], 

@@ -65,6 +65,17 @@ namespace tprandomizer_poc_main
                     canUse(Item.Master_Sword_Light));
         }
 
+        public static bool hasCompletedSkyBook()
+        {
+            return (canUse(Item.Ancient_Sky_Book_Empty) &&
+                    canUse(Item.Ancient_Sky_Book_First_Character) &&
+                    canUse(Item.Ancient_Sky_Book_Second_Character) &&
+                    canUse(Item.Ancient_Sky_Book_Third_Character) &&
+                    canUse(Item.Ancient_Sky_Book_Fourth_Character) &&
+                    canUse(Item.Ancient_Sky_Book_Fifth_Character) &&
+                    canUse(Item.Ancient_Sky_Book_Completed));
+        }
+
         public static bool canDefeatAeralfos()
         {
             return (canUse(Item.Clawshot) ||

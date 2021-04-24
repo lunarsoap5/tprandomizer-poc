@@ -10,11 +10,11 @@
     ],
     "neighbourRequirements": 
     [
-        "Logic.canUse(Item.Gate_Keys)",
+        "Gate_Keys",
         "true",
-        "Logic.canSmash()",
+        "canSmash",
         "true",
-        "Logic.canUse(Item.Shadow_Crystal) && Logic.canLaunchBombs() && Logic.canUse(Item.Clawshot)"
+        "Shadow_Crystal and canLaunchBombs and Clawshot"
     ],
     "isStartingRoom": "false",
     "checks": 

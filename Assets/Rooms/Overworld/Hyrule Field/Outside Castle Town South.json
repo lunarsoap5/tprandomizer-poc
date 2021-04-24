@@ -11,7 +11,7 @@
     [
         "true",
         "true",
-        "Logic.canUse(Item.Shadow_Crystal)",
+        "Shadow_Crystal",
         "true"
     ],
     "isStartingRoom": "false",

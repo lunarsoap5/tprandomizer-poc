@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Coral_Earring) && Logic.canUse(Item.Shadow_Crystal)",
-        "Logic.canUse(Item.Coral_Earring) && Logic.canUse(Item.Shadow_Crystal)"
+        "Coral_Earring and Shadow_Crystal",
+        "Coral_Earring and Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

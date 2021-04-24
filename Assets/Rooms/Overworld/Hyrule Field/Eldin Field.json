@@ -12,13 +12,13 @@
     ],
     "neighbourRequirements": 
     [
-        "Logic.canSmash()",
+        "canSmash",
         "true",
-        "Logic.canUse(Item.Clawshot)",
-        "Logic.canUse(Item.Gate_Keys) || Logic.canSmash()",
-        "Logic.canSmash()",
-        "Logic.canUse(Item.Shadow_Crystal)",
-        "Logic.canUse(Item.Shadow_Crystal)"
+        "Clawshot",
+        "Gate_Keys or canSmash",
+        "canSmash",
+        "Shadow_Crystal",
+        "Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": 

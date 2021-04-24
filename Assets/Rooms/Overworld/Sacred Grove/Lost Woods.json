@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatSkullKid2() && Logic.canUse(Item.Shadow_Crystal) "
+        "canDefeatSkullKid2 and Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": 

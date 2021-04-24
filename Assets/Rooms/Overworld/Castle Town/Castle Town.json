@@ -12,7 +12,7 @@
         "true",
         "true",
         "true",
-        "Logic.canCompletePalaceofTwilight() && Logic.canCompleteLakebedTemple()"
+        "canCompletePalaceofTwilight and canCompleteLakebedTemple"
     ],
     "isStartingRoom": "false",
     "checks": 

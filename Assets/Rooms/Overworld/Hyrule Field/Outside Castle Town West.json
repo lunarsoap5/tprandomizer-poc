@@ -12,7 +12,7 @@
         "true",
         "true",
         "true",
-        "Logic.canUse(Item.Shadow_Crystal) && Logic.canUse(Item.Clawshot)"
+        "Shadow_Crystal and Clawshot"
     ],
     "isStartingRoom": "false",
     "checks": 

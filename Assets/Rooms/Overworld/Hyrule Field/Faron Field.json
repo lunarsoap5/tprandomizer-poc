@@ -11,10 +11,10 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Gate_Keys)",
+        "Gate_Keys",
         "true",
-        "Logic.canUse(Item.Gate_Keys)",
-        "Logic.canUse(Item.Shadow_Crystal)"
+        "Gate_Keys",
+        "Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatKingBublin3()"
+        "canDefeatKingBublin3"
     ],
     "isStartingRoom": "false",
     "checks": 

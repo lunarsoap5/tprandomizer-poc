@@ -1,0 +1,8 @@
+{
+    "checkName": "Talo Sharpshooting",
+    "requirements": "canCompleteGoronMines",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,8 @@
+{
+    "checkName": "Fishing Hole Bottle",
+    "requirements": "Fishing_Rod",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Empty_Bottle",
+    "itemWasPlaced": false
+}

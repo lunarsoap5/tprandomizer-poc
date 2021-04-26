@@ -1,0 +1,8 @@
+{
+    "checkName": "Coro Bottle",
+    "requirements": "true",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Coro_Bottle",
+    "itemWasPlaced": false
+}

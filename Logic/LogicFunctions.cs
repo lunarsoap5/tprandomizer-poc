@@ -875,6 +875,16 @@ namespace tprandomizer_poc_main
         {
             return ((getItemCount(Item.Lakebed_Temple_Small_Key) >=3) && canDefeatDekuToad() && canDefeatMorpheel() && canUse(Item.Clawshot) && canLaunchBombs() && canUseWaterBombs() && canUse(Item.Lakebed_Temple_Big_Key));
         }
+
+        public static bool canCompleteSnowpeakRuins()
+        {
+            return (canDefeatBlizzeta() && canUse(Item.Ordon_Goat_Cheese) && canUse(Item.Ordon_Pumpkin) && canUse(Item.Ball_and_Chain) && canDefeatChilfos() && canDefeatMiniFreezard() && canDefeatFreezard() && (getItemCount(Item.Snowpeak_Ruins_Small_Key) >= 4) && hasBombs() && canUse(Item.Snowpeak_Ruins_Bedroom_Key));
+        }
+
+        public static bool canCompleteTempleofTime()
+        {
+            return (canUse(Item.Dominion_Rod_Uncharged) && canUse(Item.Heros_Bow) && canUse(Item.Spinner) && canDefeatLizalfos() && canDefeatDinalfos() && canDefeatDarknut() && canDefeatArmogohma() && canUse(Item.Temple_of_Time_Big_Key) && (getItemCount(Item.Temple_of_Time_Small_Key >= 3)));
+        }
         public static bool canCompletePalaceofTwilight()
         {
             return ((getItemCount(Item.Palace_of_Twilight_Small_Key) >=7) && canUse(Item.Master_Sword_Light) && canDefeatZantHead() && canDefeatShadowBeast() && canUse(Item.Double_Clawshot) && canDefeatPhantomZant() && canDefeatZant() && canUse(Item.Shadow_Crystal) && canUse(Item.Palace_of_Twilight_Big_Key));

@@ -1,0 +1,8 @@
+{
+    "checkName": "Temple of Time Armogohma Heart Container",
+    "requirements": "canDefeatArmogohma",
+    "isExcluded": false,
+    "category": ["Heart Container"],
+    "itemId": "Heart_Container",
+    "itemWasPlaced": false
+}

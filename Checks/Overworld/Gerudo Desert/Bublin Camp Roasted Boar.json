@@ -1,0 +1,8 @@
+{
+    "checkName": "Bublin Camp Roasted Boar",
+    "requirements": "hasSword",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

@@ -1,9 +1,8 @@
 {
     "checkName": "Sera Cat Fishing Reward",
     "requirements": "Fishing_Rod",
-    "hash": "null",
     "isExcluded": false,
-    "category": ["Chest"],
+    "category": ["Npc"],
     "itemId": "Sera_Bottle",
     "itemWasPlaced": false
 }

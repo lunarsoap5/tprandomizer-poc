@@ -11,6 +11,7 @@
     "isStartingRoom": "false",
     "checks": 
     [
+        "Snowpeak Ruins Ball and Chain",
         "Snowpeak Ruins Chest After Darkhammer"
     ],
     "visited": "false",

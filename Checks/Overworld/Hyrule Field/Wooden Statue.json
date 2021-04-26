@@ -1,0 +1,8 @@
+{
+    "checkName": "Wooden Statue",
+    "requirements": "true",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Wooden_Statue",
+    "itemWasPlaced": false
+}

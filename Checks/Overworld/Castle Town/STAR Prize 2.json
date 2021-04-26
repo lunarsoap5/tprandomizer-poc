@@ -1,0 +1,8 @@
+{
+    "checkName": "STAR Prize 2",
+    "requirements": "Double_Clawshot",
+    "isExcluded": false,
+    "category": ["Chest"],
+    "itemId": "Giant_Quiver",
+    "itemWasPlaced": false
+}

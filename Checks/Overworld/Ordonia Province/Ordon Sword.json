@@ -1,0 +1,8 @@
+{
+    "checkName": "Ordon Sword",
+    "requirements": "Wooden_Sword and Lantern",
+    "isExcluded": false,
+    "category": ["Freestanding"],
+    "itemId": "Ordon_Sword",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,8 @@
+{
+    "checkName": "Lakebed Temple Morpheel Heart Container",
+    "requirements": "canDefeatMorpheel",
+    "isExcluded": false,
+    "category": ["Heart Container"],
+    "itemId": "Heart_Container",
+    "itemWasPlaced": false
+}

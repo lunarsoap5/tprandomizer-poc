@@ -1,0 +1,8 @@
+{
+    "checkName": "STAR Prize 1",
+    "requirements": "Clawshot",
+    "isExcluded": false,
+    "category": ["Chest"],
+    "itemId": "Big_Quiver",
+    "itemWasPlaced": false
+}

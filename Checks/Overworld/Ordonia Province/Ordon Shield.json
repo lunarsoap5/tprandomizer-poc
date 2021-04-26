@@ -1,0 +1,8 @@
+{
+    "checkName": "Ordon Shield",
+    "requirements": "Wooden_Sword and Lantern",
+    "isExcluded": false,
+    "category": ["Chest"],
+    "itemId": "Ordon_Shield",
+    "itemWasPlaced": false
+}

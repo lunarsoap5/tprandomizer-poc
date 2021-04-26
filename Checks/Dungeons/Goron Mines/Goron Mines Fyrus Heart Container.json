@@ -1,0 +1,8 @@
+{
+    "checkName": "Goron Mines Fyrus Heart Container",
+    "requirements": "canDefeatFyrus",
+    "isExcluded": false,
+    "category": ["Heart Container"],
+    "itemId": "Heart_Container",
+    "itemWasPlaced": false
+}

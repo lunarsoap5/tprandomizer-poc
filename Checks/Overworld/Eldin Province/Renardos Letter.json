@@ -1,0 +1,8 @@
+{
+    "checkName": "Renardos Letter",
+    "requirements": "canCompleteTempleofTime",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Renardos_Letter",
+    "itemWasPlaced": false
+}

@@ -1,0 +1,8 @@
+{
+    "checkName": "Forest Temple Big Baba Key",
+    "requirements": "canDefeatBigBaba",
+    "isExcluded": false,
+    "category": ["Chest"],
+    "itemId": "Forest_Temple_Small_Key",
+    "itemWasPlaced": false
+}

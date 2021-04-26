@@ -298,6 +298,7 @@ namespace tprandomizer_poc_main
             Item.Master_Sword,
             Item.Shadow_Crystal,
             Item.Aurus_Memo,
+			Item.Asheis_Sketch,
             Item.Spinner,
             Item.Coral_Earring,
             Item.Ball_and_Chain,

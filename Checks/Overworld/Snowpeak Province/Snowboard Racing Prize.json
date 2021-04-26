@@ -1,0 +1,8 @@
+{
+    "checkName": "Snowboard Racing Prize",
+    "requirements": "canCompleteSnowpeakRuins",
+    "isExcluded": false,
+    "category": ["Chest"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

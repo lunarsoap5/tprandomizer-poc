@@ -29,7 +29,7 @@ namespace tprandomizer_poc_main
         public void InitializeChecks()
         {
             CheckDict.Add("Uli Cradle Delivery", new Check());
-            CheckDict.Add("Sera Cat Fishing Reward", new Check());
+            CheckDict.Add("Ordon Cat Rescue", new Check());
             CheckDict.Add("Sera Shop Slingshot", new Check());
             CheckDict.Add("Gift From Rusl", new Check());
             CheckDict.Add("Coro Lantern", new Check());
@@ -38,6 +38,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Faron Mist Cave Lantern Chest", new Check());
             CheckDict.Add("North Faron Woods Deku Baba Chest", new Check());
             CheckDict.Add("Links Basement Chest", new Check());
+            CheckDict.Add("Ordon Shield", new Check());
             CheckDict.Add("Forest Temple Entrance Vines Chest", new Check());
             CheckDict.Add("Forest Temple Central Chest Behind Stairs", new Check());
             CheckDict.Add("Forest Temple Central North Chest", new Check());
@@ -47,6 +48,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Forest Temple West Tile Worm Room Vines Chest", new Check());
             CheckDict.Add("Forest Temple West Deku Like Chest", new Check());
             CheckDict.Add("Forest Temple West Tile Worm Chest Behind Stairs", new Check());
+            CheckDict.Add("Gale Boomerang", new Check());
             CheckDict.Add("Forest Temple Central Chest Hanging From Web", new Check());
             CheckDict.Add("Forest Temple Big Key Chest", new Check());
             CheckDict.Add("Forest Temple East Water Cave Chest", new Check());
@@ -136,6 +138,30 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Flight By Fowl Fourth Platform Chest", new Check());
             CheckDict.Add("Flight By Fowl Fifth Platform Chest", new Check());
             CheckDict.Add("Lake Hylia Shell Blade Grotto Chest", new Check());
+            CheckDict.Add("Agitha First Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Second Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Third Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Fourth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Fifth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Sixth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Seventh Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Eighth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Ninth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Tenth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Eleventh Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Final Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha First Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Second Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Third Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Fourth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Fifth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Sixth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Seventh Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Eighth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Ninth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Tenth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Eleventh Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Twelfth Single Bug Reward", new Check());
             CheckDict.Add("Zoras Domain Light All Torches Chest", new Check());
             CheckDict.Add("Zoras Domain Extinguish All Torches Chest", new Check());
             CheckDict.Add("Lanayru Field Skulltula Grotto Chest", new Check());
@@ -211,6 +237,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Snowpeak Ruins Wooden Beam Central Chest", new Check());
             CheckDict.Add("Snowpeak Ruins Wooden Beam Northwest Chest", new Check());
             CheckDict.Add("Snowpeak Ruins Courtyard Central Chest", new Check());
+            CheckDict.Add("Snowpeak Ruins Ball and Chain", new Check());
             CheckDict.Add("Snowpeak Ruins Chest After Darkhammer", new Check());
             CheckDict.Add("Snowpeak Ruins Broken Floor Chest", new Check());
             CheckDict.Add("Snowpeak Ruins Wooden Beam Chandelier Chest", new Check());

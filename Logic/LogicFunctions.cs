@@ -891,8 +891,119 @@ namespace tprandomizer_poc_main
 					itemQuantity++;
 				}
 			}
-            Console.WriteLine("Item: " + itemToBeCounted.ToString() + " Quantity: " + itemQuantity);
-			return itemQuantity;
+            return itemQuantity;
+		}
+
+        public static int getSingleBugCount()
+		{
+            List<Item> itemList = Singleton.getInstance().Items.heldItems;
+			int itemQuantity = 0;
+
+            if (itemList.Contains(Item.Male_Ant) || itemList.Contains(Item.Female_Ant))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Beetle) || itemList.Contains(Item.Female_Beetle))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Butterfly) || itemList.Contains(Item.Female_Butterfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Dayfly) || itemList.Contains(Item.Female_Dayfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Dragonfly) || itemList.Contains(Item.Female_Dragonfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Grasshopper) || itemList.Contains(Item.Female_Grasshopper))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Ladybug) || itemList.Contains(Item.Female_Ladybug))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Mantis) || itemList.Contains(Item.Female_Mantis))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Phasmid) || itemList.Contains(Item.Female_Phasmid))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Pill_Bug) || itemList.Contains(Item.Female_Pill_Bug))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Snail) || itemList.Contains(Item.Female_Snail))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Stag_Beetle) || itemList.Contains(Item.Female_Stag_Beetle))
+            {
+                itemQuantity++;
+            }
+            return itemQuantity;
+		}
+
+        public static int getBugPairCount()
+		{
+            List<Item> itemList = Singleton.getInstance().Items.heldItems;
+			int itemQuantity = 0;
+
+            if (itemList.Contains(Item.Male_Ant) && itemList.Contains(Item.Female_Ant))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Beetle) && itemList.Contains(Item.Female_Beetle))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Butterfly) && itemList.Contains(Item.Female_Butterfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Dayfly) && itemList.Contains(Item.Female_Dayfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Dragonfly) && itemList.Contains(Item.Female_Dragonfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Grasshopper) && itemList.Contains(Item.Female_Grasshopper))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Ladybug) && itemList.Contains(Item.Female_Ladybug))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Mantis) && itemList.Contains(Item.Female_Mantis))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Phasmid) && itemList.Contains(Item.Female_Phasmid))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Pill_Bug) && itemList.Contains(Item.Female_Pill_Bug))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Snail) && itemList.Contains(Item.Female_Snail))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Stag_Beetle) && itemList.Contains(Item.Female_Stag_Beetle))
+            {
+                itemQuantity++;
+            }
+            return itemQuantity;
 		}
 
         public static bool verifyItemQuantity(string itemToBeCounted, int quantity)
@@ -900,6 +1011,19 @@ namespace tprandomizer_poc_main
             List<Item> itemList = Singleton.getInstance().Items.heldItems;
 			int itemQuantity = 0;
             bool isQuantity = false;
+            foreach (Item bug in Singleton.getInstance().Items.goldenBugs)
+            {
+                if (bug.ToString() == itemToBeCounted)
+                {
+                    if (quantity == Singleton.getInstance().Items.bugCount)
+                    {
+                        isQuantity = true;
+                        return isQuantity;
+                    }
+                }
+
+            }
+            
 			foreach (var item in itemList)
 			{
 				if (item.ToString() == itemToBeCounted)

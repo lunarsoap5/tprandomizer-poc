@@ -20,26 +20,30 @@ namespace tprandomizer_poc_main
         public ScriptOptions options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("tprandomizer_poc_main");
         public void start()
         {
+            //Generate the dictionary that contains all of the checks.
             Checks.InitializeChecks();
+            //Read in the information from the .json files and place them into the classes defined in the dictionary.
             deserializeChecks();
 
+            //Generate the dictionary that contains all of the rooms.
             Rooms.InitializeRooms();
+            //Read in the information from the .json files and place them in to the classes defined in the dictionary.
             deserializeRooms();
-            
+
+            //Generate the item pool based on user settings/input.           
             Singleton.getInstance().Items.generateItemPool();
 
+            //Generate the world based on the room class values and their neighbour values. If we want to randomize entrances, we would do it before this step.
             Room startingRoom = setupGraph();
+
+            //Place the items in the world based on the starting room.
             placeItemsInWorld(startingRoom);
 
-            
-                
-                //myJsonObject.requirements = Regex.Replace(myJsonObject.requirements, @"\bLogic\b", "Logic.LogicFunctions");
-                //var options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("Assets.Items");
-                //var now = CSharpScript.EvaluateAsync(myJsonObject.requirements, options).Result;
         }
 
         public Room setupGraph()
         {
+            //We want to be safe and make sure that the room classes are prepped and ready to be linked together. Then we define our starting room.
             resetAllRoomsVisited();
             Room startingRoom = Rooms.RoomDict["Ordon Province"];
             startingRoom.isStartingRoom = true;
@@ -50,7 +54,9 @@ namespace tprandomizer_poc_main
             List<Room> roomsToExplore = new List<Room>();
             startingRoom.visited = true;
             roomsToExplore.Add(startingRoom);
-                
+
+            //Build the world by parsing through each room, linking their neighbours, and setting the logic for the checks in the room to reflect the world.
+            //This saves us from having to re-check the logic for each check every time we want to check if we can get it.  
             while (roomsToExplore.Count() > 0)
             {
                 if (roomsToExplore[0].visited)
@@ -134,9 +140,38 @@ namespace tprandomizer_poc_main
 
         void placeItemsInWorld(Room startingRoom)
         {
-            //First we want to replace items that are locked in their respective dungeon
+            //Any vanilla checks will be placed first for the sake of logic. Even if they aren't available to be randomized in the game yet, we may need to logically account for their placement.
+            placeVanillaChecks (Singleton.getInstance().Items.heldItems, Singleton.getInstance().Checks.vanillaChecks);
+            //Excluded checks are next and will just be filled with "junk" items (i.e. ammo refills, etc.)
+
+            //Shop Items
+
+            //Next we want to replace items that are locked in their respective region
             placeDungeonItems (startingRoom, Singleton.getInstance().Items.heldItems, Singleton.getInstance().Items.regionItems);
-            placeImportantItems(startingRoom, Singleton.getInstance().Items.heldItems, Singleton.getInstance().Items.ImportantItems);
+
+            //Next we want to place items that can lock locations
+            placeItemsUnrestricted(startingRoom, Singleton.getInstance().Items.heldItems, Singleton.getInstance().Items.ImportantItems);
+
+            //Next we will place the "always" items. Basically the constants in every seed, so Heart Pieces, Heart Containers, etc.
+            placeNonImpactItems(startingRoom, Singleton.getInstance().Items.heldItems, Singleton.getInstance().Items.alwaysItems);
+            
+            return;
+        }
+
+
+        void placeVanillaChecks (List<Item> heldItems, List<string> vanillaChecks)
+        {
+            Random rnd = new Random();
+            List<string> availableChecks = new List<string>();
+            Item itemToPlace;
+            Check checkToReciveItem;
+            
+            foreach (var check in vanillaChecks)
+            {
+                checkToReciveItem = Checks.CheckDict[check];
+                itemToPlace = checkToReciveItem.itemId;
+                placeItemInCheck(itemToPlace, checkToReciveItem);
+            }
             return;
         }
 
@@ -217,7 +252,7 @@ namespace tprandomizer_poc_main
         }  
 
 
-        void placeImportantItems (Room startingRoom, List<Item> heldItems, List<Item> ItemsToBeRandomized)
+        void placeItemsUnrestricted (Room startingRoom, List<Item> heldItems, List<Item> ItemsToBeRandomized)
         {
             Random rnd = new Random();
             List<string> availableChecks = new List<string>();
@@ -237,6 +272,34 @@ namespace tprandomizer_poc_main
 
                 availableChecks.Clear();
                 GC.Collect();
+            }
+            if (ItemsToBeRandomized.Count() > 0)
+            {//no more available checks and still items to place, starting over
+                //failsafe: assumed fill can fail, but rarely, so it is best to start over if it happens
+                startOver(startingRoom);
+            }
+            return;
+        }
+
+        void placeNonImpactItems (Room startingRoom, List<Item> heldItems, List<Item> ItemsToBeRandomized)
+        {
+            Random rnd = new Random();
+            List<string> availableChecks = new List<string>();
+            Item itemToPlace;
+            Check checkToReciveItem;
+
+            while (ItemsToBeRandomized.Count() > 0)
+            {
+                itemToPlace = Singleton.getInstance().Items.verifyItem(ItemsToBeRandomized[rnd.Next(ItemsToBeRandomized.Count()-1)], ItemsToBeRandomized);
+                Console.WriteLine("Item to place: " + itemToPlace);
+                heldItems.Remove(itemToPlace);
+                ItemsToBeRandomized.Remove(itemToPlace);
+                availableChecks = listNonPlacedChecks(startingRoom, itemToPlace);
+                
+                checkToReciveItem = Checks.CheckDict[availableChecks[rnd.Next(availableChecks.Count()-1)].ToString()];
+                placeItemInCheck(itemToPlace,checkToReciveItem);
+
+                availableChecks.Clear();
             }
             if (ItemsToBeRandomized.Count() > 0)
             {//no more available checks and still items to place, starting over
@@ -297,6 +360,24 @@ namespace tprandomizer_poc_main
                 Singleton.getInstance().Items.heldItems.Remove(newItem);
             }
             GC.Collect();
+            return roomChecks;
+        }
+
+        public List<string> listNonPlacedChecks(Room startingRoom, Item itemToPlace)
+        {
+            resetAllChecksVisited();
+            List<string> roomChecks = new List<string>();
+            List<Item> playthroughItems = new List<Item>();
+            Check currentCheck;
+    
+            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
+            {
+                currentCheck = checkList.Value;
+                if (!currentCheck.itemWasPlaced)
+                {
+                    roomChecks.Add(currentCheck.checkName);
+                }
+            }
             return roomChecks;
         }
 

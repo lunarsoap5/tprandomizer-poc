@@ -329,6 +329,34 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Fishing Hole Heart Piece", new Check());
             CheckDict.Add("Cats Hide and Seek Minigame", new Check());
         }
+
+        public List<string> vanillaChecks = new List<string>()
+        {
+            "Agitha First Bug Pair Reward",
+            "Agitha Second Bug Pair Reward",
+            "Agitha Third Bug Pair Reward",
+            "Agitha Fourth Bug Pair Reward",
+            "Agitha Fifth Bug Pair Reward",
+            "Agitha Sixth Bug Pair Reward",
+            "Agitha Seventh Bug Pair Reward",
+            "Agitha Eighth Bug Pair Reward",
+            "Agitha Ninth Bug Pair Reward",
+            "Agitha Tenth Bug Pair Reward",
+            "Agitha Eleventh Bug Pair Reward",
+            "Agitha Second Single Bug Reward",
+            "Agitha Third Single Bug Reward",
+            "Agitha Fourth Single Bug Reward",
+            "Agitha Fifth Single Bug Reward",
+            "Agitha Sixth Single Bug Reward",
+            "Agitha Seventh Single Bug Reward",
+            "Agitha Eighth Single Bug Reward",
+            "Agitha Ninth Single Bug Reward",
+            "Agitha Tenth Single Bug Reward",
+            "Agitha Eleventh Single Bug Reward",
+            "Agitha Twelfth Single Bug Reward",
+
+
+        };
     } 
 
 }

@@ -98,8 +98,25 @@ namespace tprandomizer_poc_main
             }
             if (Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key is logicFunctionToken)
             {
-                parseBool = (bool)typeof(LogicFunctions).GetMethod(Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Value).Invoke(this, null);
+                string evaluatedFunction = Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Value; 
                 tokenValue++;
+                //If a comma follows a function, we assume it is needing to be compared to an integer
+                if((Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Key is CommaToken))
+                {
+                    tokenValue++;
+                    int getQuantity = 0;
+                    getQuantity = (int)typeof(LogicFunctions).GetMethod(evaluatedFunction).Invoke(this, null);
+                    if (getQuantity >= Int16.Parse(Singleton.getInstance().Logic.TokenDict.ElementAt(tokenValue).Value))
+                    {
+                        parseBool = true;
+                    }
+                    tokenValue++;
+                }
+                //If there is no comma following the function, then it doesnt need to return an int value, and we can continue to evaluate it
+                else
+                {
+                    parseBool = (bool)typeof(LogicFunctions).GetMethod(evaluatedFunction).Invoke(this, null);
+                }
                 return parseBool;
             }
             
@@ -189,10 +206,16 @@ namespace tprandomizer_poc_main
                                 }
                             }
                         }
+                        //If the char is an integer, we need to see if it is a larger number (one that is more than one char)
                         else if (Char.IsNumber(_reader[i]))
                         {
-                            tokens.Add(new IntegerToken(), _reader[i].ToString());
-                            i++;
+                            var num = new StringBuilder();
+                            while (Char.IsNumber(_reader[i]))
+                            {
+                                num.Append(_reader[i]);   
+                                i++;
+                            }
+                            tokens.Add(new IntegerToken(), num.ToString());
                         }
                         else
                         {

@@ -280,6 +280,8 @@ namespace tprandomizer_poc_main
 
 		public static int nbSkybooksPlaced = 0;
 
+		public int bugCount = 0;
+
 		public List<Item> ImportantItems = new List<Item>()
         {
 			Item.Wooden_Sword,
@@ -312,12 +314,43 @@ namespace tprandomizer_poc_main
             Item.Master_Sword_Light
         };
 
+		public List<Item> goldenBugs = new List<Item>()
+		{
+			Item.Male_Ant,
+			Item.Female_Ant,
+			Item.Male_Beetle,
+			Item.Female_Beetle,
+			Item.Male_Pill_Bug,
+			Item.Female_Pill_Bug,
+			Item.Male_Phasmid,
+			Item.Female_Phasmid,
+			Item.Male_Grasshopper,
+			Item.Female_Grasshopper,
+			Item.Male_Stag_Beetle,
+			Item.Female_Stag_Beetle,
+			Item.Male_Butterfly,
+			Item.Female_Butterfly,
+			Item.Male_Ladybug,
+			Item.Female_Ladybug,
+			Item.Male_Mantis,
+			Item.Female_Mantis,
+			Item.Male_Dragonfly,
+			Item.Female_Dragonfly,
+			Item.Male_Dayfly,
+			Item.Female_Dayfly,
+			Item.Male_Snail,
+			Item.Female_Snail
+		};
+
+		public List<Item> alwaysItems = new List<Item>();
+
 
 		public List<Item> RegionKeys = new List<Item>();
 
 		public Item verifyItem (Item item, List<Item> itemList)
 		{
-			switch (item) //Make sure you place the items in the right order (from big to small)
+			//Make sure you place the items in the right order (from big to small)
+			switch (item) 
 			{
 				case Item.Ancient_Sky_Book_Empty:
 					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
@@ -549,6 +582,10 @@ namespace tprandomizer_poc_main
 					}
 					break;
 			}
+			if (Singleton.getInstance().Items.goldenBugs.Contains(item))
+			{
+				Singleton.getInstance().Items.bugCount++;
+			}
 			return item;
 		}
 		bool checkIfItemIsInList(Item item, List<Item> itemList)
@@ -568,15 +605,22 @@ namespace tprandomizer_poc_main
 		public void generateItemPool()
 		{
 			nbSkybooksPlaced = 0;
-			heldItems.AddRange(Enumerable.Repeat(Item.Piece_of_Heart, 45));
-			heldItems.AddRange(Enumerable.Repeat(Item.Heart_Container, 8));
-			heldItems.AddRange(Enumerable.Repeat(Item.Green_Rupee, 2));
-			heldItems.AddRange(Enumerable.Repeat(Item.Blue_Rupee, 3));
-			heldItems.AddRange(Enumerable.Repeat(Item.Yellow_Rupee, 20));
-			heldItems.AddRange(Enumerable.Repeat(Item.Red_Rupee, 49));
-			heldItems.AddRange(Enumerable.Repeat(Item.Purple_Rupee, 49));
-			heldItems.AddRange(Enumerable.Repeat(Item.Orange_Rupee, 44));
-			heldItems.AddRange(Enumerable.Repeat(Item.Silver_Rupee, 3));
+			alwaysItems.AddRange(Enumerable.Repeat(Item.Piece_of_Heart, 45));
+			alwaysItems.AddRange(Enumerable.Repeat(Item.Heart_Container, 8));
+			alwaysItems.AddRange(Enumerable.Repeat(Item.Green_Rupee, 2));
+			alwaysItems.AddRange(Enumerable.Repeat(Item.Blue_Rupee, 3));
+			alwaysItems.AddRange(Enumerable.Repeat(Item.Yellow_Rupee, 20));
+			alwaysItems.AddRange(Enumerable.Repeat(Item.Red_Rupee, 49));
+			alwaysItems.AddRange(Enumerable.Repeat(Item.Purple_Rupee, 49));
+			alwaysItems.AddRange(Enumerable.Repeat(Item.Orange_Rupee, 44));
+			alwaysItems.AddRange(Enumerable.Repeat(Item.Silver_Rupee, 3));
+			alwaysItems.Add(Item.Bomb_Bag_And_Bombs);
+			alwaysItems.Add(Item.Bomb_Bag_And_Bombs);
+			alwaysItems.Add(Item.Giant_Bomb_Bag);
+			alwaysItems.Add(Item.Big_Quiver);
+			alwaysItems.Add(Item.Giant_Quiver);
+			alwaysItems.Add(Item.Big_Wallet);
+			alwaysItems.Add(Item.Giant_Wallet);
 
 			RegionKeys.AddRange(Enumerable.Repeat(Item.Forest_Temple_Small_Key, 4));
 			RegionKeys.AddRange(Enumerable.Repeat(Item.Goron_Mines_Small_Key, 3));
@@ -605,6 +649,7 @@ namespace tprandomizer_poc_main
 			regionItems.AddRange(RegionKeys);
 			heldItems.AddRange(ImportantItems);
 			heldItems.AddRange(RegionKeys);
+			heldItems.AddRange(alwaysItems);
 
 			Singleton.getInstance().Items.heldItems = heldItems;
 			Singleton.getInstance().Items.regionItems = regionItems;

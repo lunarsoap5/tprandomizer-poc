@@ -154,6 +154,15 @@ namespace tprandomizer_poc_main
 
             //Next we will place the "always" items. Basically the constants in every seed, so Heart Pieces, Heart Containers, etc.
             placeNonImpactItems(startingRoom, Singleton.getInstance().Items.heldItems, Singleton.getInstance().Items.alwaysItems);
+
+            foreach (KeyValuePair<string, Check> check in  Checks.CheckDict)
+            {
+                Check currentCheck = check.Value;
+                if (currentCheck.itemWasPlaced)
+                {
+                    Console.WriteLine(currentCheck.checkName + ": " + currentCheck.itemId);
+                }
+            }
             
             return;
         }

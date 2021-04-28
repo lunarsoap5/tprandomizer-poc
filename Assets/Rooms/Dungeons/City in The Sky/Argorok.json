@@ -9,7 +9,7 @@
         "canDefeatArgorok"
     ],
     "isStartingRoom": "false",
-    "checks": [""], 
+    "checks": ["City in The Sky Argorok Heart Container"], 
     "visited": "false",
     "region": "City in The Sky"
 }

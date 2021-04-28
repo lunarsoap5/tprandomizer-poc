@@ -13,7 +13,8 @@
     "isStartingRoom": "false",
     "checks": 
     [
-        "Snowpeak Cave Ice Lantern Chest"
+        "Snowpeak Cave Ice Lantern Chest",
+        "Snowboard Racing Prize"
     ],
     "visited": "false",
     "region": "Snowpeak Province"

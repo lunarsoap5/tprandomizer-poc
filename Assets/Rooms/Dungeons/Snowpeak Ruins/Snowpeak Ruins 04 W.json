@@ -16,7 +16,7 @@
         "true",
         "Ordon_Goat_Cheese and Ball_and_Chain and canDefeatChilfos and canDefeatMiniFreezard and canDefeatFreezard and (Snowpeak_Ruins_Small_Key, 4) and hasBombs",
         "Ball_and_Chain or ((Snowpeak_Ruins_Small_Key, 4) and hasBombs)",
-        "Ordon_Goat_Cheese and Ball_and_Chain and canDefeatChilfos and canDefeatMiniFreezard and canDefeatFreezard and (Snowpeak_Ruins_Small_Key, 4) and hasBombs andSnowpeak_Ruins_Bedroom_Key"
+        "Ordon_Goat_Cheese and Ball_and_Chain and canDefeatChilfos and canDefeatMiniFreezard and canDefeatFreezard and (Snowpeak_Ruins_Small_Key, 4) and hasBombs and Snowpeak_Ruins_Bedroom_Key"
     ],
     "isStartingRoom": "false",
     "checks": 

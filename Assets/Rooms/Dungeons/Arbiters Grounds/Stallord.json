@@ -11,7 +11,7 @@
         "canDefeatStallord"
     ],
     "isStartingRoom": "false",
-    "checks": [""], 
+    "checks": ["Arbiters Grounds Stallord Heart Container"], 
     "visited": "false",
     "region": "Arbiters Grounds"
 }

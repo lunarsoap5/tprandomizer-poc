@@ -883,7 +883,7 @@ namespace tprandomizer_poc_main
 
         public static bool canCompleteTempleofTime()
         {
-            return (canUse(Item.Dominion_Rod_Uncharged) && canUse(Item.Heros_Bow) && canUse(Item.Spinner) && canDefeatLizalfos() && canDefeatDinalfos() && canDefeatDarknut() && canDefeatArmogohma() && canUse(Item.Temple_of_Time_Big_Key) && (getItemCount(Item.Temple_of_Time_Small_Key >= 3)));
+            return (canUse(Item.Dominion_Rod_Uncharged) && canUse(Item.Heros_Bow) && canUse(Item.Spinner) && canDefeatLizalfos() && canDefeatDinalfos() && canDefeatDarknut() && canDefeatArmogohma() && canUse(Item.Temple_of_Time_Big_Key) && (getItemCount(Item.Temple_of_Time_Small_Key) >= 3));
         }
         public static bool canCompletePalaceofTwilight()
         {

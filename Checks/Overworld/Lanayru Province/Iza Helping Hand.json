@@ -1,6 +1,6 @@
 {
     "checkName": "Iza Helping Hand",
-    "requirements": "Heros_Bow and canUseBombs",
+    "requirements": "Heros_Bow and hasBombs",
     "isExcluded": false,
     "category": ["Npc"],
     "itemId": "Bomb_Bag_And_Bombs",

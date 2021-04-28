@@ -15,7 +15,7 @@
         "canSmash and Dominion_Rod and Shadow_Crystal"
     ],
     "isStartingRoom": "false",
-    "checks": ["Coro Lantern"], 
+    "checks": ["Coro Lantern", "Coro Bottle"], 
     "visited": "false",
     "region": "Faron Woods"
 }

@@ -39,6 +39,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("North Faron Woods Deku Baba Chest", new Check());
             CheckDict.Add("Links Basement Chest", new Check());
             CheckDict.Add("Ordon Shield", new Check());
+            CheckDict.Add("Ordon Sword", new Check());
             CheckDict.Add("Forest Temple Entrance Vines Chest", new Check());
             CheckDict.Add("Forest Temple Central Chest Behind Stairs", new Check());
             CheckDict.Add("Forest Temple Central North Chest", new Check());
@@ -48,7 +49,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Forest Temple West Tile Worm Room Vines Chest", new Check());
             CheckDict.Add("Forest Temple West Deku Like Chest", new Check());
             CheckDict.Add("Forest Temple West Tile Worm Chest Behind Stairs", new Check());
-            CheckDict.Add("Gale Boomerang", new Check());
+            CheckDict.Add("Forest Temple Gale Boomerang", new Check());
             CheckDict.Add("Forest Temple Central Chest Hanging From Web", new Check());
             CheckDict.Add("Forest Temple Big Key Chest", new Check());
             CheckDict.Add("Forest Temple East Water Cave Chest", new Check());
@@ -109,6 +110,15 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Lakebed Temple East Lower Waterwheel Bridge Chest", new Check());
             CheckDict.Add("Sacred Grove Baba Serpent Grotto Chest", new Check());
             CheckDict.Add("West Hyrule Field Helmasaur Grotto Chest", new Check());
+            CheckDict.Add("STAR Prize 1", new Check());
+            CheckDict.Add("STAR Prize 2", new Check());
+            CheckDict.Add("Forest Temple Diababa Heart Container", new Check());
+            CheckDict.Add("Goron Mines Fyrus Heart Container", new Check());
+            CheckDict.Add("Lakebed Temple Morpheel Heart Container", new Check());
+            CheckDict.Add("Arbiters Grounds Stallord Heart Container", new Check());
+            CheckDict.Add("Snowpeak Ruins Blizzeta Heart Container", new Check());
+            CheckDict.Add("Temple of Time Armogohma Heart Container", new Check());
+            CheckDict.Add("City in The Sky Argorok Heart Container", new Check());
             CheckDict.Add("Lake Lantern Cave First Chest", new Check());
             CheckDict.Add("Lake Lantern Cave Second Chest", new Check());
             CheckDict.Add("Lake Lantern Cave Third Chest", new Check());
@@ -352,9 +362,28 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Kakariko Village Bomb Rock Spire Heart Piece", new Check());
             CheckDict.Add("Faron Field Tree Heart Piece", new Check());
             CheckDict.Add("Kakariko Gorge Spire Heart Piece", new Check());
-            CheckDict.Add("Zant Heart Container", new Check());
+            CheckDict.Add("Palace of Twilight Zant Heart Container", new Check());
             CheckDict.Add("Fishing Hole Heart Piece", new Check());
             CheckDict.Add("Cats Hide and Seek Minigame", new Check());
+            CheckDict.Add("Iza Raging Rapids Minigame", new Check());
+            CheckDict.Add("Auru Gift To Fyer", new Check());
+            CheckDict.Add("Ashei Sketch", new Check());
+            CheckDict.Add("Renardos Letter", new Check());
+            CheckDict.Add("Telma Invoice", new Check());
+            CheckDict.Add("Wooden Statue", new Check());
+            CheckDict.Add("Ilia Charm", new Check());
+            CheckDict.Add("Ilia Memory Reward", new Check());
+            CheckDict.Add("Coro Bottle", new Check());
+            CheckDict.Add("Fishing Hole Bottle", new Check());
+            CheckDict.Add("Talo Sharpshooting", new Check());
+            CheckDict.Add("Charlo Donation Blessing", new Check());
+            CheckDict.Add("Goron Springwater Rush", new Check());
+            CheckDict.Add("Plumm Fruit Balloon Minigame", new Check());
+            CheckDict.Add("Bublin Camp Roasted Boar", new Check());
+            CheckDict.Add("Snowpeak Ruins Mansion Map", new Check());
+            CheckDict.Add("Snowboard Racing Prize", new Check());
+            CheckDict.Add("Hyrule Castle King Bublin Key", new Check());
+            CheckDict.Add("Forest Temple Big Baba Key", new Check());
         }
 
         public List<string> vanillaChecks = new List<string>()

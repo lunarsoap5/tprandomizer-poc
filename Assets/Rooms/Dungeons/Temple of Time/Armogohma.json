@@ -9,7 +9,7 @@
         "canDefeatArmogohma"
     ],
     "isStartingRoom": "false",
-    "checks": [""], 
+    "checks": ["Temple of Time Armogohma Heart Container"], 
     "visited": "false",
     "region": "Temple of Time"
 }

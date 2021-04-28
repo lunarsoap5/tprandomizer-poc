@@ -605,6 +605,9 @@ namespace tprandomizer_poc_main
 
 		public void generateItemPool()
 		{
+			alwaysItems.Clear();
+			RegionKeys.Clear();
+			heldItems.Clear();
 			nbSkybooksPlaced = 0;
 			alwaysItems.AddRange(Enumerable.Repeat(Item.Piece_of_Heart, 45));
 			alwaysItems.AddRange(Enumerable.Repeat(Item.Heart_Container, 8));
@@ -654,6 +657,7 @@ namespace tprandomizer_poc_main
 
 			Singleton.getInstance().Items.heldItems = heldItems;
 			Singleton.getInstance().Items.regionItems = regionItems;
+			Singleton.getInstance().Items.alwaysItems = alwaysItems;
 			return;
 		}
 	}

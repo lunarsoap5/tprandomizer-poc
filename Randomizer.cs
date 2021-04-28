@@ -4,6 +4,7 @@ using System.Reflection;
 using Newtonsoft.Json;
 using System.IO;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
 using System.Text.RegularExpressions;
@@ -20,13 +21,13 @@ namespace tprandomizer_poc_main
         public ScriptOptions options = ScriptOptions.Default.AddReferences(typeof(LogicFunctions).Assembly).AddImports("tprandomizer_poc_main");
         public void start()
         {
+            begin:
             //Generate the dictionary that contains all of the checks.
             Checks.InitializeChecks();
-            //Read in the information from the .json files and place them into the classes defined in the dictionary.
-            deserializeChecks();
-
             //Generate the dictionary that contains all of the rooms.
             Rooms.InitializeRooms();
+            //Read in the information from the .json files and place them into the classes defined in the dictionary.
+            deserializeChecks();
             //Read in the information from the .json files and place them in to the classes defined in the dictionary.
             deserializeRooms();
 
@@ -36,9 +37,30 @@ namespace tprandomizer_poc_main
             //Generate the world based on the room class values and their neighbour values. If we want to randomize entrances, we would do it before this step.
             Room startingRoom = setupGraph();
 
+            try 
+            {
             //Place the items in the world based on the starting room.
             placeItemsInWorld(startingRoom);
+            }
+            
+            catch (ArgumentOutOfRangeException a)
+            {
+                Console.WriteLine("No checks remaining, starting over..");
+                startOver();
+                goto begin;
+            }
 
+            using (StreamWriter file = new("SpoilerLog.txt"))
+            {
+                foreach (KeyValuePair<string, Check> check in  Checks.CheckDict)
+                {
+                    Check currentCheck = check.Value;
+                    if (currentCheck.itemWasPlaced)
+                    {
+                        file.WriteLine(currentCheck.checkName + ": " + currentCheck.itemId);
+                    }
+                }
+            }
         }
 
         public Room setupGraph()
@@ -117,6 +139,11 @@ namespace tprandomizer_poc_main
             }
             return;
         }
+        public void resetAllRooms()
+        {
+            Rooms.RoomDict.Clear();
+            return;
+        }
 
         public void resetAllChecksVisited()
         {
@@ -129,13 +156,20 @@ namespace tprandomizer_poc_main
             return;
         }
 
-        void startOver(Room startingRoom)
+        public void resetAllChecks()
+        {
+            Checks.CheckDict.Clear();
+            return;
+        }
+
+        void startOver()
         {
             Console.WriteLine("Starting Over.");
             ItemFunctions.nbSkybooksPlaced = 0;
-            Singleton.getInstance().Items.generateItemPool();
-            deserializeChecks();
-            placeItemsInWorld(startingRoom);
+            Singleton.getInstance().Items.heldItems.Clear();
+            Singleton.getInstance().Items.regionItems.Clear();
+            resetAllChecks();
+            resetAllRooms();
         }
 
         void placeItemsInWorld(Room startingRoom)
@@ -154,15 +188,6 @@ namespace tprandomizer_poc_main
 
             //Next we will place the "always" items. Basically the constants in every seed, so Heart Pieces, Heart Containers, etc.
             placeNonImpactItems(startingRoom, Singleton.getInstance().Items.heldItems, Singleton.getInstance().Items.alwaysItems);
-
-            foreach (KeyValuePair<string, Check> check in  Checks.CheckDict)
-            {
-                Check currentCheck = check.Value;
-                if (currentCheck.itemWasPlaced)
-                {
-                    Console.WriteLine(currentCheck.checkName + ": " + currentCheck.itemId);
-                }
-            }
             
             return;
         }
@@ -191,6 +216,8 @@ namespace tprandomizer_poc_main
             Item itemToPlace;
             Check checkToReciveItem;
             
+            
+
 
             while (ItemsToBeRandomized.Count() > 0)
             {
@@ -204,11 +231,6 @@ namespace tprandomizer_poc_main
                 placeItemInCheck(itemToPlace,checkToReciveItem);
 
                 availableChecks.Clear();
-            }
-            if (ItemsToBeRandomized.Count() > 0)
-            {//no more available checks and still items to place, starting over
-                //failsafe: assumed fill can fail, but rarely, so it is best to start over if it happens
-                startOver(startingRoom);
             }
             return;
         }
@@ -268,25 +290,20 @@ namespace tprandomizer_poc_main
             Item itemToPlace;
             Check checkToReciveItem;
 
-            while (ItemsToBeRandomized.Count() > 0)
-            {
-                itemToPlace = Singleton.getInstance().Items.verifyItem(ItemsToBeRandomized[rnd.Next(ItemsToBeRandomized.Count()-1)], ItemsToBeRandomized);
-                Console.WriteLine("Item to place: " + itemToPlace);
-                heldItems.Remove(itemToPlace);
-                ItemsToBeRandomized.Remove(itemToPlace);
-                availableChecks = listAllAvailableChecks(startingRoom, itemToPlace);
-                
-                checkToReciveItem = Checks.CheckDict[availableChecks[rnd.Next(availableChecks.Count()-1)].ToString()];
-                placeItemInCheck(itemToPlace,checkToReciveItem);
+                while (ItemsToBeRandomized.Count() > 0)
+                {
+                    itemToPlace = Singleton.getInstance().Items.verifyItem(ItemsToBeRandomized[rnd.Next(ItemsToBeRandomized.Count()-1)], ItemsToBeRandomized);
+                    Console.WriteLine("Item to place: " + itemToPlace);
+                    heldItems.Remove(itemToPlace);
+                    ItemsToBeRandomized.Remove(itemToPlace);
+                    availableChecks = listAllAvailableChecks(startingRoom, itemToPlace);
+                    
+                    checkToReciveItem = Checks.CheckDict[availableChecks[rnd.Next(availableChecks.Count()-1)].ToString()];
+                    placeItemInCheck(itemToPlace,checkToReciveItem);
 
-                availableChecks.Clear();
-                GC.Collect();
-            }
-            if (ItemsToBeRandomized.Count() > 0)
-            {//no more available checks and still items to place, starting over
-                //failsafe: assumed fill can fail, but rarely, so it is best to start over if it happens
-                startOver(startingRoom);
-            }
+                    availableChecks.Clear();
+                    GC.Collect();
+                }
             return;
         }
 
@@ -309,11 +326,6 @@ namespace tprandomizer_poc_main
                 placeItemInCheck(itemToPlace,checkToReciveItem);
 
                 availableChecks.Clear();
-            }
-            if (ItemsToBeRandomized.Count() > 0)
-            {//no more available checks and still items to place, starting over
-                //failsafe: assumed fill can fail, but rarely, so it is best to start over if it happens
-                startOver(startingRoom);
             }
             return;
         }
@@ -429,50 +441,6 @@ namespace tprandomizer_poc_main
                 Console.WriteLine("Room File Loaded " + fileName);
             }
             return;
-        }
-
-
-
-        Room getDungeonEntrance(string itemToPlace)
-        {
-            Room regionRoom = new Room();
-            if (itemToPlace.Contains("Forest_Temple"))
-            {
-                regionRoom = Rooms.RoomDict["Forest Temple 22"];
-            }
-            else if (itemToPlace.Contains("Goron_Mines"))
-            {
-              regionRoom = Rooms.RoomDict["Goron Mines 01"];
-            }
-            else if (itemToPlace.Contains("Lakebed_Temple"))
-            {
-                regionRoom = Rooms.RoomDict["Lakebed Temple 00 01"];
-            }
-            else if (itemToPlace.Contains("Arbiters_Grounds"))
-            {
-                regionRoom = Rooms.RoomDict["Arbiters Grounds 00"];
-            }
-            else if (itemToPlace.Contains("Snowpeak_Ruins"))
-            {
-                regionRoom = Rooms.RoomDict["Snowpeak Ruins 00 01 02 03"];
-            }
-            else if (itemToPlace.Contains("Temple_of_Time"))
-            {
-               regionRoom = Rooms.RoomDict["Temple of Time 00"];
-            }
-            else if (itemToPlace.Contains("City_in_The_Sky"))
-            {
-                regionRoom = Rooms.RoomDict["City in The Sky 00 16"];
-            }
-            else if (itemToPlace.Contains("Palace_of_Twilight"))
-            {
-                regionRoom = Rooms.RoomDict["Palace of Twilight 00 01"];
-            }
-            else if (itemToPlace.Contains("Hyrule_Castle"))
-            {
-                regionRoom = Rooms.RoomDict["Hyrule Castle 11"];
-            }
-            return regionRoom;
         }
 
         bool isDungeonCheck( string itemToPlace, Check currentCheck)

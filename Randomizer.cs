@@ -43,24 +43,15 @@ namespace tprandomizer_poc_main
             placeItemsInWorld(startingRoom);
             }
             
+            //If for some reason the assumed fill fails, we want to dump everything and start over.
             catch (ArgumentOutOfRangeException a)
             {
-                Console.WriteLine("No checks remaining, starting over..");
+                Console.WriteLine(a + " No checks remaining, starting over..");
                 startOver();
                 goto begin;
             }
 
-            using (StreamWriter file = new("SpoilerLog.txt"))
-            {
-                foreach (KeyValuePair<string, Check> check in  Checks.CheckDict)
-                {
-                    Check currentCheck = check.Value;
-                    if (currentCheck.itemWasPlaced)
-                    {
-                        file.WriteLine(currentCheck.checkName + ": " + currentCheck.itemId);
-                    }
-                }
-            }
+            generateSpoilerLog();
         }
 
         public Room setupGraph()
@@ -135,7 +126,7 @@ namespace tprandomizer_poc_main
             {
                 Room currentRoom = roomList.Value;
                 currentRoom.visited = false;
-                Rooms.RoomDict[roomList.Key] = currentRoom;
+                Rooms.RoomDict[currentRoom.name] = currentRoom;
             }
             return;
         }
@@ -151,7 +142,7 @@ namespace tprandomizer_poc_main
             {
                 Check currentCheck = checkList.Value;
                 currentCheck.hasBeenReached = false;
-                Checks.CheckDict[checkList.Key] = currentCheck;
+                Checks.CheckDict[currentCheck.checkName] = currentCheck;
             }
             return;
         }
@@ -168,6 +159,10 @@ namespace tprandomizer_poc_main
             ItemFunctions.nbSkybooksPlaced = 0;
             Singleton.getInstance().Items.heldItems.Clear();
             Singleton.getInstance().Items.regionItems.Clear();
+            Singleton.getInstance().Items.alwaysItems.Clear();
+            Singleton.getInstance().Items.miscItems.Clear();
+            resetAllChecksVisited();
+            resetAllRoomsVisited();
             resetAllChecks();
             resetAllRooms();
         }
@@ -189,13 +184,14 @@ namespace tprandomizer_poc_main
             //Next we will place the "always" items. Basically the constants in every seed, so Heart Pieces, Heart Containers, etc.
             placeNonImpactItems(startingRoom, Singleton.getInstance().Items.heldItems, Singleton.getInstance().Items.alwaysItems);
             
+            placeNonImpactItems(startingRoom, Singleton.getInstance().Items.heldItems, Singleton.getInstance().Items.miscItems);
+
             return;
         }
 
 
         void placeVanillaChecks (List<Item> heldItems, List<string> vanillaChecks)
         {
-            Random rnd = new Random();
             List<string> availableChecks = new List<string>();
             Item itemToPlace;
             Check checkToReciveItem;
@@ -204,6 +200,7 @@ namespace tprandomizer_poc_main
             {
                 checkToReciveItem = Checks.CheckDict[check];
                 itemToPlace = checkToReciveItem.itemId;
+                heldItems.Remove(itemToPlace);
                 placeItemInCheck(itemToPlace, checkToReciveItem);
             }
             return;
@@ -490,6 +487,28 @@ namespace tprandomizer_poc_main
             parse.ParserReset();
             Singleton.getInstance().Logic.TokenDict = new Tokenizer(expression).Tokenize();
             return parse.Parse();
+        }
+
+        public void generateSpoilerLog()
+        {
+            Random rnd = new Random();
+            string fileHash = "TPR - v1.0 - " + HashAssets.hashAdjectives[rnd.Next(HashAssets.hashAdjectives.Count()-1)] + " " + HashAssets.characterNames[rnd.Next(HashAssets.characterNames.Count()-1)] + ".txt";
+            //Once everything is complete, we want to write the results to a spoiler log.
+            using (StreamWriter file = new(fileHash))
+            {
+                foreach (KeyValuePair<string, Check> check in  Checks.CheckDict)
+                {
+                    Check currentCheck = check.Value;
+                    if (currentCheck.itemWasPlaced)
+                    {
+                        file.WriteLine(currentCheck.checkName + ": " + currentCheck.itemId);
+                    }
+                    else 
+                    {
+                        Console.WriteLine("Check: " + currentCheck.checkName + " has no item.");
+                    }
+                }
+            }
         }
     } 
 }

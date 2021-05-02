@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "(Palace_of_Twilight_Small_Key, 6) and canDefeatZantHead and Master_Sword_Light"
+        "(Palace_of_Twilight_Small_Key, 6) and canDefeatZantHead and (Progressive_Sword, 4)"
     ],
     "isStartingRoom": "false",
     "checks": 

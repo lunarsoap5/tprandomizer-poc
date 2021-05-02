@@ -156,7 +156,6 @@ namespace tprandomizer_poc_main
         void startOver()
         {
             Console.WriteLine("Starting Over.");
-            ItemFunctions.nbSkybooksPlaced = 0;
             Singleton.getInstance().Items.heldItems.Clear();
             Singleton.getInstance().Items.regionItems.Clear();
             Singleton.getInstance().Items.alwaysItems.Clear();
@@ -184,7 +183,7 @@ namespace tprandomizer_poc_main
             //Next we will place the "always" items. Basically the constants in every seed, so Heart Pieces, Heart Containers, etc.
             placeNonImpactItems(startingRoom, Singleton.getInstance().Items.heldItems, Singleton.getInstance().Items.alwaysItems);
             
-            placeNonImpactItems(startingRoom, Singleton.getInstance().Items.heldItems, Singleton.getInstance().Items.miscItems);
+            placeMiscItems(startingRoom, Singleton.getInstance().Items.heldItems, Singleton.getInstance().Items.miscItems);
 
             return;
         }
@@ -323,6 +322,22 @@ namespace tprandomizer_poc_main
                 placeItemInCheck(itemToPlace,checkToReciveItem);
 
                 availableChecks.Clear();
+            }
+            return;
+        }
+
+        void placeMiscItems (Room startingRoom, List<Item> heldItems, List<Item> ItemsToBeRandomized)
+        {
+            Random rnd = new Random();
+            List<string> availableChecks = new List<string>();
+            List<Check> remainingChecks = new List<Check>();
+            foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict.ToList())
+            {
+                Check currentCheck = checkList.Value;
+                if (!currentCheck.itemWasPlaced)
+                {
+                    placeItemInCheck(ItemsToBeRandomized[rnd.Next(ItemsToBeRandomized.Count()-1)],currentCheck);
+                }
             }
             return;
         }

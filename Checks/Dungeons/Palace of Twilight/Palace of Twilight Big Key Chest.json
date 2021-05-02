@@ -1,6 +1,6 @@
 {
     "checkName": "Palace of Twilight Big Key Chest",
-    "requirements": "Master_Sword_Light and Double_Clawshot",
+    "requirements": "(Progressive_Sword, 4) and Double_Clawshot",
     "hash": "1BCC",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Palace of Twilight"],

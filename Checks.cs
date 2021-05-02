@@ -384,6 +384,10 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Snowboard Racing Prize", new Check());
             CheckDict.Add("Hyrule Castle King Bublin Key", new Check());
             CheckDict.Add("Forest Temple Big Baba Key", new Check());
+            CheckDict.Add("Iza Helping Hand", new Check());
+            CheckDict.Add("Zoras Domain Underwater Goron", new Check());
+            CheckDict.Add("Gift From Ralis", new Check());
+            CheckDict.Add("Rutelas Blessing", new Check());
         }
 
         public List<string> vanillaChecks = new List<string>()

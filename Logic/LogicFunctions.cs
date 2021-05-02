@@ -59,10 +59,7 @@ namespace tprandomizer_poc_main
 
         public static bool hasSword()
         {
-            return  (canUse(Item.Wooden_Sword) ||
-                    canUse(Item.Ordon_Sword) ||
-                    canUse(Item.Master_Sword) ||
-                    canUse(Item.Master_Sword_Light));
+            return  ((getItemCount(Item.Progressive_Sword) >= 1));
         }
 
         public static bool hasCompletedSkyBook()
@@ -271,10 +268,7 @@ namespace tprandomizer_poc_main
         }
         public static bool canDefeatFireToadpoli()
         {
-            return (canUse(Item.Wooden_Sword) ||
-            canUse(Item.Ordon_Sword) ||
-            canUse(Item.Master_Sword) ||
-            canUse(Item.Master_Sword_Light) ||
+            return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
             canUse(Item.Heros_Bow) ||
             canUse(Item.Shadow_Crystal));
@@ -285,10 +279,7 @@ namespace tprandomizer_poc_main
         }
         public static bool canDefeatGoron()
         {
-            return (canUse(Item.Wooden_Sword) ||
-            canUse(Item.Ordon_Sword) ||
-            canUse(Item.Master_Sword) ||
-            canUse(Item.Master_Sword_Light) ||
+            return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
             canUse(Item.Heros_Bow) ||
             canUse(Item.Iron_Boots) ||
@@ -742,13 +733,11 @@ namespace tprandomizer_poc_main
         {
             return (canUse(Item.Double_Clawshot) &&
             canUse(Item.Iron_Boots) &&
-            (canUse(Item.Master_Sword_Light) ||
-            canUse(Item.Master_Sword)));
+            (getItemCount(Item.Progressive_Sword) >= 3));
         }
         public static bool canDefeatZant()
         {
-            return ((canUse(Item.Master_Sword) ||
-            canUse(Item.Master_Sword_Light)) &&
+            return ((getItemCount(Item.Progressive_Sword) >= 3) &&
             (canUse(Item.Boomerang) &&
             canUse(Item.Clawshot) &&
             canUse(Item.Iron_Boots) &&
@@ -758,7 +747,7 @@ namespace tprandomizer_poc_main
         public static bool canDefeatGanondorf()
         {
             return (canUse(Item.Shadow_Crystal) &&
-            canUse(Item.Master_Sword) &&
+            (getItemCount(Item.Progressive_Sword) >= 3) &&
             canUse(Item.Ending_Blow) );
         }
 
@@ -887,7 +876,7 @@ namespace tprandomizer_poc_main
         }
         public static bool canCompletePalaceofTwilight()
         {
-            return ((getItemCount(Item.Palace_of_Twilight_Small_Key) >=7) && canUse(Item.Master_Sword_Light) && canDefeatZantHead() && canDefeatShadowBeast() && canUse(Item.Double_Clawshot) && canDefeatPhantomZant() && canDefeatZant() && canUse(Item.Shadow_Crystal) && canUse(Item.Palace_of_Twilight_Big_Key));
+            return ((getItemCount(Item.Palace_of_Twilight_Small_Key) >=7) && (getItemCount(Item.Progressive_Sword) >= 4) && canDefeatZantHead() && canDefeatShadowBeast() && canUse(Item.Double_Clawshot) && canDefeatPhantomZant() && canDefeatZant() && canUse(Item.Shadow_Crystal) && canUse(Item.Palace_of_Twilight_Big_Key));
         }
 
         public static int getItemCount(Item itemToBeCounted)

@@ -7,7 +7,7 @@
     ],
     "neighbourRequirements":
     [
-        "Wooden_Sword",
+        "(Progressive_Sword, 1)",
         "Shadow_Crystal"
     ],
     "isStartingRoom": "false",

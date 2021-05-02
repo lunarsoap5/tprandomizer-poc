@@ -76,7 +76,7 @@ namespace tprandomizer_poc_main
 		/*?	=	0x3C,*/
 		Coral_Earring	=	0x3D,
 		Hawkeye	=	0x3E,
-		Wooden_Sword	=	0x3F,
+		Progressive_Sword	=	0x3F,
 		Boomerang	=	0x40,
 		Spinner	=	0x41,
 		Ball_and_Chain	=	0x42,
@@ -427,36 +427,6 @@ namespace tprandomizer_poc_main
 						item = Item.Big_Quiver; //Big_Quiver
 					}
 					break;
-				case Item.Master_Sword:
-					if (itemList.Contains(Item.Master_Sword_Light))
-					{
-						item = Item.Master_Sword_Light; //Light_Sword
-					}
-					break;
-				case Item.Ordon_Sword:
-					if (itemList.Contains(Item.Master_Sword_Light))
-					{
-						item = Item.Master_Sword_Light; //Light_Sword
-					}
-					else if (itemList.Contains(Item.Master_Sword))
-					{
-						item = Item.Master_Sword; //Master_Sword
-					}
-					break;
-				case Item.Wooden_Sword:
-					if (itemList.Contains(Item.Master_Sword_Light))
-					{
-						item = Item.Master_Sword_Light; //Light_Sword
-					}
-					else if (itemList.Contains(Item.Master_Sword))
-					{
-						item = Item.Master_Sword; //Master_Sword
-					}
-					else if (itemList.Contains(Item.Ordon_Sword))
-					{
-						item = Item.Ordon_Sword; //Ordon_Sword
-					}
-					break;
 				case Item.Jump_Strike:
 					if (itemList.Contains(Item.Great_Spin))
 					{
@@ -579,40 +549,38 @@ namespace tprandomizer_poc_main
 			alwaysItems.Clear();
 			RegionKeys.Clear();
 			heldItems.Clear();
+			ImportantItems.Clear();
 			nbSkybooksPlaced = 0;
-			heldItems.Add(Item.Wooden_Sword);
-			heldItems.Add(Item.Boomerang);
-			heldItems.Add(Item.Lantern);
-			heldItems.Add(Item.Slingshot);
-            heldItems.Add(Item.Fishing_Rod);
-            heldItems.Add(Item.Ordon_Sword);
-            heldItems.Add(Item.Iron_Boots);
-            heldItems.Add(Item.Heros_Bow);
-            heldItems.Add(Item.Empty_Bomb_Bag);
-            heldItems.Add(Item.Zora_Armor);
-            heldItems.Add(Item.Clawshot);
-            heldItems.Add(Item.Master_Sword);
-            heldItems.Add(Item.Shadow_Crystal);
-            heldItems.Add(Item.Aurus_Memo);
-			heldItems.Add(Item.Asheis_Sketch);
-            heldItems.Add(Item.Spinner);
-            heldItems.Add(Item.Coral_Earring);
-            heldItems.Add(Item.Ball_and_Chain);
-            heldItems.Add(Item.Dominion_Rod_Uncharged);
-            heldItems.Add(Item.Dominion_Rod);
-            heldItems.Add(Item.Ancient_Sky_Book_Empty);
-            heldItems.Add(Item.Ancient_Sky_Book_First_Character);
-            heldItems.Add(Item.Ancient_Sky_Book_Second_Character);
-            heldItems.Add(Item.Ancient_Sky_Book_Third_Character);
-            heldItems.Add(Item.Ancient_Sky_Book_Fourth_Character);
-            heldItems.Add(Item.Ancient_Sky_Book_Fifth_Character);
-            heldItems.Add(Item.Ancient_Sky_Book_Completed);
-            heldItems.Add(Item.Double_Clawshot);
-            heldItems.Add(Item.Master_Sword_Light);
-			heldItems.Add(Item.Renardos_Letter);
-			heldItems.Add(Item.Invoice);
-			heldItems.Add(Item.Ilias_Charm);
-			heldItems.Add(Item.Horse_Call);
+			ImportantItems.AddRange(Enumerable.Repeat(Item.Progressive_Sword, 4));
+			ImportantItems.Add(Item.Boomerang);
+			ImportantItems.Add(Item.Lantern);
+			ImportantItems.Add(Item.Slingshot);
+            ImportantItems.Add(Item.Fishing_Rod);
+            ImportantItems.Add(Item.Iron_Boots);
+            ImportantItems.Add(Item.Heros_Bow);
+            ImportantItems.Add(Item.Empty_Bomb_Bag);
+            ImportantItems.Add(Item.Zora_Armor);
+            ImportantItems.Add(Item.Clawshot);
+            ImportantItems.Add(Item.Shadow_Crystal);
+            ImportantItems.Add(Item.Aurus_Memo);
+			ImportantItems.Add(Item.Asheis_Sketch);
+            ImportantItems.Add(Item.Spinner);
+            ImportantItems.Add(Item.Coral_Earring);
+            ImportantItems.Add(Item.Ball_and_Chain);
+            ImportantItems.Add(Item.Dominion_Rod_Uncharged);
+            ImportantItems.Add(Item.Dominion_Rod);
+            ImportantItems.Add(Item.Ancient_Sky_Book_Empty);
+            ImportantItems.Add(Item.Ancient_Sky_Book_First_Character);
+            ImportantItems.Add(Item.Ancient_Sky_Book_Second_Character);
+            ImportantItems.Add(Item.Ancient_Sky_Book_Third_Character);
+            ImportantItems.Add(Item.Ancient_Sky_Book_Fourth_Character);
+            ImportantItems.Add(Item.Ancient_Sky_Book_Fifth_Character);
+            ImportantItems.Add(Item.Ancient_Sky_Book_Completed);
+            ImportantItems.Add(Item.Double_Clawshot);
+			ImportantItems.Add(Item.Renardos_Letter);
+			ImportantItems.Add(Item.Invoice);
+			ImportantItems.Add(Item.Ilias_Charm);
+			ImportantItems.Add(Item.Horse_Call);
 			alwaysItems.AddRange(Enumerable.Repeat(Item.Piece_of_Heart, 45));
 			alwaysItems.AddRange(Enumerable.Repeat(Item.Heart_Container, 8));
 			alwaysItems.AddRange(Enumerable.Repeat(Item.Green_Rupee, 2));
@@ -679,6 +647,7 @@ namespace tprandomizer_poc_main
 			heldItems.AddRange(miscItems);
 
 			Singleton.getInstance().Items.heldItems = heldItems;
+			Singleton.getInstance().Items.ImportantItems = ImportantItems;
 			Singleton.getInstance().Items.regionItems = regionItems;
 			Singleton.getInstance().Items.alwaysItems = alwaysItems;
 			Singleton.getInstance().Items.miscItems = miscItems;

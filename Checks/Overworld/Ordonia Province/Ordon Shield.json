@@ -1,6 +1,6 @@
 {
     "checkName": "Ordon Shield",
-    "requirements": "Wooden_Sword and Lantern",
+    "requirements": "(Progressive_Sword, 1) and Lantern",
     "isExcluded": false,
     "category": ["Chest"],
     "itemId": "Ordon_Shield",

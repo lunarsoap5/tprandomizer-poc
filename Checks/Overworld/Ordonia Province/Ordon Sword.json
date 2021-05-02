@@ -1,8 +1,8 @@
 {
     "checkName": "Ordon Sword",
-    "requirements": "Wooden_Sword and Lantern",
+    "requirements": "(Progressive_Sword, 1) and Lantern",
     "isExcluded": false,
     "category": ["Freestanding"],
-    "itemId": "Ordon_Sword",
+    "itemId": "Progressive_Sword",
     "itemWasPlaced": false
 }

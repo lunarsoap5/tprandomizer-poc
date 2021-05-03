@@ -1,6 +1,6 @@
 {
     "checkName": "City in The Sky Chest Behind North Fan",
-    "requirements": "canDefeatHelmasaurus and canDefeatDinalfos and canDefeatWalltula and canDefeatKargarok and Shadow_Crystal and Double_Clawshot and Iron_Boots",
+    "requirements": "canDefeatHelmasaurus and canDefeatDinalfos and canDefeatWalltula and canDefeatKargarok and Shadow_Crystal and (Progressive_Clawshot, 2) and Iron_Boots",
     "hash": "7B61",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "City in The Sky"],

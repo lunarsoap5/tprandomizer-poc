@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Dominion_Rod_Uncharged and Temple_of_Time_Big_Key"
+        "(Progressive_Dominion_Rod, 1) and Temple_of_Time_Big_Key"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

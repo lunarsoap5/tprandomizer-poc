@@ -63,10 +63,10 @@ namespace tprandomizer_poc_main
 		Heros_Clothes	=	0x2F,
 		Magic_Armor	=	0x30,
 		Zora_Armor	=	0x31,
-		/*does notting*/Shadow_Crystal	=	0x32,
+		Shadow_Crystal	=	0x32,
 		Ooccoo_Dungeon	=	0x33,
 		/*unused*/Small_Wallet	=	0x34,
-		Big_Wallet	=	0x35,
+		Progressive_Wallet	=	0x35,
 		Giant_Wallet	=	0x36,
 		/*Piece_of_Heart_2?	=	0x37,*/
 		/*Piece_of_Heart_3?	=	0x38,*/
@@ -80,14 +80,14 @@ namespace tprandomizer_poc_main
 		Boomerang	=	0x40,
 		Spinner	=	0x41,
 		Ball_and_Chain	=	0x42,
-		Heros_Bow	=	0x43,
-		Clawshot	=	0x44,
+		Progressive_Bow	=	0x43,
+		Progressive_Clawshot	=	0x44,
 		Iron_Boots	=	0x45,
-		Dominion_Rod = 0x46,
+		Progressive_Dominion_Rod = 0x46,
 		Double_Clawshot	=	0x47,
 		Lantern	=	0x48,
 		Master_Sword_Light	=	0x49,
-		Fishing_Rod	=	0x4A,
+		Progressive_Fishing_Rod	=	0x4A,
 		Slingshot	=	0x4B,
 		Dominion_Rod_Uncharged = 0x4C,
 		/*?	=	0x4D,*/
@@ -246,7 +246,7 @@ namespace tprandomizer_poc_main
 		Jump_Strike	=	0xE6,
 		Great_Spin	=	0xE7,
 		/*?	=	0xE8,*/
-		Ancient_Sky_Book_Empty	=	0xE9,
+		Progressive_Sky_Book	=	0xE9,
 		Ancient_Sky_Book_Partly_Filled	=	0xEA,
 		Ancient_Sky_Book_Completed	=	0xEB,
 		Ooccoo_CitS	=	0xEC,
@@ -268,7 +268,7 @@ namespace tprandomizer_poc_main
 		/*Key?	=	0xFC,*/
 		Goron_Mines_Big_Key	=	0xFD,
 		Coro_Key	=	0xFE,
-		/*Gives_Vanilla*/NullItem	=	0xFF
+		/*Gives_Vanilla*/Ganon_Defeated	=	0xFF
 	};
 
 	public class ItemFunctions
@@ -280,9 +280,7 @@ namespace tprandomizer_poc_main
 
 		public List<Item> miscItems = new List<Item>();
 
-		public static int nbSkybooksPlaced = 0;
 
-		public int bugCount = 0;
 
 		public List<Item> ImportantItems = new List<Item>();
 
@@ -319,217 +317,6 @@ namespace tprandomizer_poc_main
 
 		public List<Item> RegionKeys = new List<Item>();
 
-		public Item verifyItem (Item item, List<Item> itemList)
-		{
-			//Make sure you place the items in the right order (from big to small)
-			switch (item) 
-			{
-				case Item.Ancient_Sky_Book_Empty:
-					if (itemList.Contains(Item.Ancient_Sky_Book_Completed))
-					{
-						item = Item.Ancient_Sky_Book_Completed; //Ancient_Sky_Book_empty
-					}
-					else if (itemList.Contains(Item.Ancient_Sky_Book_Fifth_Character))
-					{
-						item = Item.Ancient_Sky_Book_Fifth_Character; //Ancient_Sky_Book_empty
-					}
-					else if (itemList.Contains(Item.Ancient_Sky_Book_Fourth_Character))
-					{
-						item = Item.Ancient_Sky_Book_Fourth_Character; //Ancient_Sky_Book_empty
-					}
-					else if (itemList.Contains(Item.Ancient_Sky_Book_Third_Character))
-					{
-						item = Item.Ancient_Sky_Book_Third_Character; //Ancient_Sky_Book_empty
-					}
-					else if (itemList.Contains(Item.Ancient_Sky_Book_Second_Character))
-					{
-						item = Item.Ancient_Sky_Book_Second_Character; //Ancient_Sky_Book_empty
-					}
-					else if (itemList.Contains(Item.Ancient_Sky_Book_First_Character))
-					{
-						item = Item.Ancient_Sky_Book_First_Character; //Ancient_Sky_Book_empty
-					}
-					nbSkybooksPlaced++;
-					break;
-				case Item.Ancient_Sky_Book_First_Character:
-					if (nbSkybooksPlaced > 5)
-					{
-						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
-					}
-					nbSkybooksPlaced++;
-					break;
-				case Item.Ancient_Sky_Book_Second_Character:
-					if (nbSkybooksPlaced > 5)
-					{
-						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
-					}
-					nbSkybooksPlaced++;
-					break;
-				case Item.Ancient_Sky_Book_Third_Character:
-					if (nbSkybooksPlaced > 5)
-					{
-						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
-					}
-					nbSkybooksPlaced++;
-					break;
-				case Item.Ancient_Sky_Book_Fourth_Character:
-					if (nbSkybooksPlaced > 5)
-					{
-						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
-					}
-					nbSkybooksPlaced++;
-					break;
-				case Item.Ancient_Sky_Book_Fifth_Character:
-					if (nbSkybooksPlaced > 5)
-					{
-						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
-					}
-					nbSkybooksPlaced++;
-					break;
-				case Item.Ancient_Sky_Book_Completed:
-					if (nbSkybooksPlaced > 5)
-					{
-						item = Item.Ancient_Sky_Book_Empty; //Ancient_Sky_Book_empty
-					}
-					nbSkybooksPlaced++;
-					break;
-				case Item.Clawshot:
-					if (itemList.Contains(Item.Double_Clawshot))
-					{
-						item = Item.Double_Clawshot; //Double_Clawshot
-					}
-					break;
-				case Item.Dominion_Rod_Uncharged:
-					if (itemList.Contains(Item.Dominion_Rod))
-					{
-						item = Item.Dominion_Rod; //Charged_Dominion_Rod
-					}
-					break;
-				case Item.Big_Wallet:
-					if (itemList.Contains(Item.Giant_Wallet))
-					{
-						item = Item.Giant_Wallet; //Giant_Wallet
-					}
-					break;
-				case Item.Big_Quiver:
-					if (itemList.Contains(Item.Giant_Quiver))
-					{
-						item = Item.Giant_Quiver; //Giant_Quiver
-					}
-					break;
-				case Item.Heros_Bow:
-					if (itemList.Contains(Item.Giant_Quiver))
-					{
-						item = Item.Giant_Quiver; //Giant_Quiver
-					}
-					else if (itemList.Contains(Item.Big_Quiver))
-					{
-						item = Item.Big_Quiver; //Big_Quiver
-					}
-					break;
-				case Item.Jump_Strike:
-					if (itemList.Contains(Item.Great_Spin))
-					{
-						item = Item.Great_Spin; //Great_Spin
-					}
-					break;
-				case Item.Mortal_Draw:
-					if (itemList.Contains(Item.Great_Spin))
-					{
-						item = Item.Great_Spin; //Great_Spin
-					}
-					else if (itemList.Contains(Item.Jump_Strike))
-					{
-						item = Item.Jump_Strike; //Jump_Strike
-					}
-					break;
-				case Item.Helm_Splitter:
-					if (itemList.Contains(Item.Great_Spin))
-					{
-						item = Item.Great_Spin; //Great_Spin
-					}
-					else if (itemList.Contains(Item.Jump_Strike))
-					{
-						item = Item.Jump_Strike; //Jump_Strike
-					}
-					else if (itemList.Contains(Item.Mortal_Draw))
-					{
-						item = Item.Mortal_Draw; //Mortal_Draw
-					}
-					break;
-				case Item.Back_Slice:
-					if (itemList.Contains(Item.Great_Spin))
-					{
-						item = Item.Great_Spin; //Great_Spin
-					}
-					else if (itemList.Contains(Item.Jump_Strike))
-					{
-						item = Item.Jump_Strike; //Jump_Strike
-					}
-					else if (itemList.Contains(Item.Mortal_Draw))
-					{
-						item = Item.Mortal_Draw; //Mortal_Draw
-					}
-					else if (itemList.Contains(Item.Helm_Splitter))
-					{
-						item = Item.Helm_Splitter; //Helm_Splitter
-					}
-					break;
-				case Item.Shield_Attack:
-					if (itemList.Contains(Item.Great_Spin))
-					{
-						item = Item.Great_Spin; //Great_Spin
-					}
-					else if (itemList.Contains(Item.Jump_Strike))
-					{
-						item = Item.Jump_Strike; //Jump_Strike
-					}
-					else if (itemList.Contains(Item.Mortal_Draw))
-					{
-						item = Item.Mortal_Draw; //Mortal_Draw
-					}
-					else if (itemList.Contains(Item.Helm_Splitter))
-					{
-						item = Item.Helm_Splitter; //Helm_Splitter
-					}
-					else if (itemList.Contains(Item.Back_Slice))
-					{
-						item = Item.Back_Slice; //Back_Slice
-					}
-					break;
-				case Item.Ending_Blow:
-					if (itemList.Contains(Item.Great_Spin))
-					{
-						item = Item.Great_Spin; //Great_Spin
-					}
-					else if (itemList.Contains(Item.Jump_Strike))
-					{
-						item = Item.Jump_Strike; //Jump_Strike
-					}
-					else if (itemList.Contains(Item.Mortal_Draw))
-					{
-						item = Item.Mortal_Draw; //Mortal_Draw
-					}
-					else if (itemList.Contains(Item.Helm_Splitter))
-					{
-						item = Item.Helm_Splitter; //Helm_Splitter
-					}
-					else if (itemList.Contains(Item.Back_Slice))
-					{
-						item = Item.Back_Slice; //Back_Slice
-					}
-					else if (itemList.Contains(Item.Shield_Attack))
-					{
-						item = Item.Shield_Attack; //Shield_Attack
-					}
-					break;
-			}
-			if (Singleton.getInstance().Items.goldenBugs.Contains(item))
-			{
-				Singleton.getInstance().Items.bugCount++;
-			}
-			return item;
-		}
 		bool checkIfItemIsInList(Item item, List<Item> itemList)
 		{
 			bool isItemPresent = true;
@@ -550,33 +337,23 @@ namespace tprandomizer_poc_main
 			RegionKeys.Clear();
 			heldItems.Clear();
 			ImportantItems.Clear();
-			nbSkybooksPlaced = 0;
 			ImportantItems.AddRange(Enumerable.Repeat(Item.Progressive_Sword, 4));
 			ImportantItems.Add(Item.Boomerang);
 			ImportantItems.Add(Item.Lantern);
 			ImportantItems.Add(Item.Slingshot);
-            ImportantItems.Add(Item.Fishing_Rod);
+            ImportantItems.AddRange(Enumerable.Repeat(Item.Progressive_Fishing_Rod, 2));
             ImportantItems.Add(Item.Iron_Boots);
-            ImportantItems.Add(Item.Heros_Bow);
+            ImportantItems.AddRange(Enumerable.Repeat(Item.Progressive_Bow, 3));
             ImportantItems.Add(Item.Empty_Bomb_Bag);
             ImportantItems.Add(Item.Zora_Armor);
-            ImportantItems.Add(Item.Clawshot);
+            ImportantItems.AddRange(Enumerable.Repeat(Item.Progressive_Clawshot, 2));
             ImportantItems.Add(Item.Shadow_Crystal);
             ImportantItems.Add(Item.Aurus_Memo);
 			ImportantItems.Add(Item.Asheis_Sketch);
             ImportantItems.Add(Item.Spinner);
-            ImportantItems.Add(Item.Coral_Earring);
             ImportantItems.Add(Item.Ball_and_Chain);
-            ImportantItems.Add(Item.Dominion_Rod_Uncharged);
-            ImportantItems.Add(Item.Dominion_Rod);
-            ImportantItems.Add(Item.Ancient_Sky_Book_Empty);
-            ImportantItems.Add(Item.Ancient_Sky_Book_First_Character);
-            ImportantItems.Add(Item.Ancient_Sky_Book_Second_Character);
-            ImportantItems.Add(Item.Ancient_Sky_Book_Third_Character);
-            ImportantItems.Add(Item.Ancient_Sky_Book_Fourth_Character);
-            ImportantItems.Add(Item.Ancient_Sky_Book_Fifth_Character);
-            ImportantItems.Add(Item.Ancient_Sky_Book_Completed);
-            ImportantItems.Add(Item.Double_Clawshot);
+            ImportantItems.AddRange(Enumerable.Repeat(Item.Progressive_Dominion_Rod, 2));
+            ImportantItems.AddRange(Enumerable.Repeat(Item.Progressive_Sky_Book, 7));
 			ImportantItems.Add(Item.Renardos_Letter);
 			ImportantItems.Add(Item.Invoice);
 			ImportantItems.Add(Item.Ilias_Charm);
@@ -590,16 +367,14 @@ namespace tprandomizer_poc_main
 			alwaysItems.AddRange(Enumerable.Repeat(Item.Purple_Rupee, 49));
 			alwaysItems.AddRange(Enumerable.Repeat(Item.Orange_Rupee, 44));
 			alwaysItems.AddRange(Enumerable.Repeat(Item.Silver_Rupee, 3));
-			alwaysItems.Add(Item.Bomb_Bag_And_Bombs);
-			alwaysItems.Add(Item.Bomb_Bag_And_Bombs);
-			alwaysItems.Add(Item.Giant_Bomb_Bag);
-			alwaysItems.Add(Item.Big_Quiver);
-			alwaysItems.Add(Item.Giant_Quiver);
-			alwaysItems.Add(Item.Big_Wallet);
-			alwaysItems.Add(Item.Giant_Wallet);
+			ImportantItems.Add(Item.Bomb_Bag_And_Bombs);
+			ImportantItems.Add(Item.Bomb_Bag_And_Bombs);
+			ImportantItems.Add(Item.Giant_Bomb_Bag);
+			alwaysItems.AddRange(Enumerable.Repeat(Item.Progressive_Wallet, 2));
 			alwaysItems.Add(Item.Empty_Bottle);
 			alwaysItems.Add(Item.Sera_Bottle);
 			alwaysItems.Add(Item.Coro_Bottle);
+			heldItems.Add(Item.Ganon_Defeated);
 
 
 			miscItems.AddRange(Enumerable.Repeat(Item.Bombs_5, 8));
@@ -638,8 +413,8 @@ namespace tprandomizer_poc_main
 			RegionKeys.Add(Item.City_in_The_Sky_Big_Key);
 			RegionKeys.Add(Item.Palace_of_Twilight_Big_Key);
 			RegionKeys.Add(Item.Hyrule_Castle_Big_Key);
-			heldItems.Add(Item.Gate_Keys);
-			heldItems.Add(Item.Small_Key_N_Faron_Gate);
+			ImportantItems.Add(Item.Gate_Keys);
+			ImportantItems.Add(Item.Small_Key_N_Faron_Gate);
 			regionItems.AddRange(RegionKeys);
 			heldItems.AddRange(ImportantItems);
 			heldItems.AddRange(RegionKeys);

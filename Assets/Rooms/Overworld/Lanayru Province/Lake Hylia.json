@@ -18,7 +18,7 @@
         "Shadow_Crystal",
         "Shadow_Crystal",
         "Iron_Boots and hasBombs and Zora_Armor",
-        "Clawshot and hasCompletedSkyBook",
+        "(Progressive_Clawshot, 1) and (Progressive_Sky_Book, 7)",
         "true",
         "Shadow_Crystal"
     ],

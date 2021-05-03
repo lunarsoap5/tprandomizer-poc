@@ -1,6 +1,6 @@
 {
     "checkName": "Temple of Time Big Key Chest",
-    "requirements": "canDefeatHelmasaur and Clawshot",
+    "requirements": "canDefeatHelmasaur and (Progressive_Clawshot, 1)",
     "hash": "B704",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Temple of Time", "Boss Key"],

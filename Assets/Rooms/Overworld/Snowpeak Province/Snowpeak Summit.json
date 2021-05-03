@@ -1,0 +1,21 @@
+{ 
+    "name": "Snowpeak Summit",
+    "neighbours": 
+    [
+        "Snowpeak Climb", 
+        "Snowpeak Ruins 00 01 02 03"
+    ],
+    "neighbourRequirements":
+    [
+        "Shadow_Crystal",
+        "canDefeatShadowBeast"
+    ],
+    "isStartingRoom": "false",
+    "checks": 
+    [
+        "Snowpeak Cave Ice Lantern Chest",
+        "Snowboard Racing Prize"
+    ],
+    "visited": "false",
+    "region": "Snowpeak Province"
+}

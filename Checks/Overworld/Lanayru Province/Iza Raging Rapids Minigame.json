@@ -1,6 +1,6 @@
 {
     "checkName": "Iza Raging Rapids Minigame",
-    "requirements": "Heros_Bow and hasBombs",
+    "requirements": "(Progressive_Bow, 1) and hasBombs",
     "isExcluded": false,
     "category": ["Npc"],
     "itemId": "Giant_Bomb_Bag",

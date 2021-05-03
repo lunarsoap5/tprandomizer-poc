@@ -1,6 +1,6 @@
 {
     "checkName": "City in The Sky West Wing Tile Worm Chest",
-    "requirements": "Double_Clawshot",
+    "requirements": "(Progressive_Clawshot, 2)",
     "hash": "F48A",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "City in The Sky"],

@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Heros_Bow and canDefeatBublin and Goron_Mines_Big_Key"
+        "(Progressive_Bow, 1) and canDefeatBublin and Goron_Mines_Big_Key"
     ],
     "isStartingRoom": "false",
     "checks": [""],

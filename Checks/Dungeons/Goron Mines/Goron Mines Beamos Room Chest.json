@@ -1,6 +1,6 @@
 {
     "checkName": "Goron Mines Beamos Room Chest",
-    "requirements": "Heros_Bow",
+    "requirements": "(Progressive_Bow, 1)",
     "hash": "49BD",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Goron Mines", "Dungeon Items", "Compass"],

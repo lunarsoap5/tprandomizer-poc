@@ -1,9 +1,9 @@
 {
     "checkName": "City in The Sky Aeralfos Chest",
-    "requirements": "canDefeatAeralfos and Clawshot and Iron_Boots",
+    "requirements": "canDefeatAeralfos and (Progressive_Clawshot, 1) and Iron_Boots",
     "hash": "26B5",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "City in The Sky"],
-    "itemId": "Double_Clawshot",
+    "itemId": "Progressive_Clawshot",
     "itemWasPlaced": false
 }

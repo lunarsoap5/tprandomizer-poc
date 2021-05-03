@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Iron_Boots and Heros_Bow"
+        "Iron_Boots and (Progressive_Bow, 1)"
     ],
     "isStartingRoom": "false",
     "checks": [""],

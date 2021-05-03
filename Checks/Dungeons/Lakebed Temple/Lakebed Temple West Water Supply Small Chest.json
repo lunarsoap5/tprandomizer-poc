@@ -1,6 +1,6 @@
 {
     "checkName": "Lakebed Temple West Water Supply Small Chest",
-    "requirements": "Clawshot",
+    "requirements": "(Progressive_Clawshot, 1)",
     "hash": "BAF9",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Lakebed Temple"],

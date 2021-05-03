@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "(Hyrule_Castle_Small_Key, 3) and Spinner and Double_Clawshot and canDefeatDarknut and canDefeatLizalfos",
-        "Spinner and Double_Clawshot and canDefeatDarknut and canDefeatLizalfos and Hyrule_Castle_Big_Key"
+        "(Hyrule_Castle_Small_Key, 3) and Spinner and (Progressive_Clawshot, 2) and canDefeatDarknut and canDefeatLizalfos",
+        "Spinner and (Progressive_Clawshot, 2) and canDefeatDarknut and canDefeatLizalfos and Hyrule_Castle_Big_Key"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

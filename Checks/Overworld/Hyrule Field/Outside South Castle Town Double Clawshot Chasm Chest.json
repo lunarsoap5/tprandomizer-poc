@@ -1,6 +1,6 @@
 {
     "checkName": "Outside South Castle Town Double Clawshot Chasm Chest",
-    "requirements": "Double_Clawshot",
+    "requirements": "(Progressive_Clawshot, 2)",
     "hash": "293A",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

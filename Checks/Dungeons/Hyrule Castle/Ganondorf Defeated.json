@@ -1,0 +1,9 @@
+{
+    "checkName": "Ganondorf Defeated",
+    "requirements": "canDefeatGanondorf",
+    "hash": "null",
+    "isExcluded": false,
+    "category": ["Dungeon"],
+    "itemId": "Ganon_Defeated",
+    "itemWasPlaced": false
+}

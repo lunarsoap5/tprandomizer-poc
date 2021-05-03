@@ -1,6 +1,6 @@
 {
     "checkName": "Ordon Cat Rescue",
-    "requirements": "Fishing_Rod",
+    "requirements": "(Progressive_Fishing_Rod, 1)",
     "isExcluded": false,
     "category": ["Npc"],
     "itemId": "Sera_Bottle",

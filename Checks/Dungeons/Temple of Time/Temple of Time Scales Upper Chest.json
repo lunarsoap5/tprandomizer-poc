@@ -1,6 +1,6 @@
 {
     "checkName": "Temple of Time Scales Upper Chest",
-    "requirements": "Clawshot and Spinner",
+    "requirements": "(Progressive_Clawshot, 1) and Spinner",
     "hash": "BD60",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Temple of Time"],

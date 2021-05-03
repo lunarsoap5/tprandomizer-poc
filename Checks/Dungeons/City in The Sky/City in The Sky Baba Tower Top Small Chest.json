@@ -1,6 +1,6 @@
 {
     "checkName": "City in The Sky Baba Tower Top Small Chest",
-    "requirements": "canDefeatBabaSerpent and canDefeatBigBaba and Double_Clawshot",
+    "requirements": "canDefeatBabaSerpent and canDefeatBigBaba and (Progressive_Clawshot, 2)",
     "hash": "2DD1",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "City in The Sky"],

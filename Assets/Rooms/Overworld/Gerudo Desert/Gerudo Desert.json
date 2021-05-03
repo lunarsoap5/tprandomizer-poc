@@ -9,9 +9,9 @@
     ],
     "neighbourRequirements":
     [
-        "canDefeatShadowBeast and Clawshot",
+        "canDefeatShadowBeast and (Progressive_Clawshot, 1)",
         "canDefeatBublin",
-        "Shadow_Crystal and Clawshot",
+        "Shadow_Crystal and (Progressive_Clawshot, 1)",
         "Shadow_Crystal"
     ],
     "isStartingRoom": "false",

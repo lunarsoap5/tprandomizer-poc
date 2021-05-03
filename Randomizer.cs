@@ -51,7 +51,7 @@ namespace tprandomizer_poc_main
                 goto begin;
             }
 
-            generateSpoilerLog();
+            generateSpoilerLog(startingRoom);
         }
 
         public Room setupGraph()
@@ -171,7 +171,7 @@ namespace tprandomizer_poc_main
             //Any vanilla checks will be placed first for the sake of logic. Even if they aren't available to be randomized in the game yet, we may need to logically account for their placement.
             placeVanillaChecks (Singleton.getInstance().Items.heldItems, Singleton.getInstance().Checks.vanillaChecks);
             //Excluded checks are next and will just be filled with "junk" items (i.e. ammo refills, etc.)
-
+            
             //Shop Items
 
             //Next we want to replace items that are locked in their respective region
@@ -217,7 +217,7 @@ namespace tprandomizer_poc_main
 
             while (ItemsToBeRandomized.Count() > 0)
             {
-                itemToPlace = Singleton.getInstance().Items.verifyItem(ItemsToBeRandomized[rnd.Next(ItemsToBeRandomized.Count()-1)], ItemsToBeRandomized);
+                itemToPlace = ItemsToBeRandomized[rnd.Next(ItemsToBeRandomized.Count()-1)];
                 Console.WriteLine("Item to place: " + itemToPlace);
                 heldItems.Remove(itemToPlace);
                 ItemsToBeRandomized.Remove(itemToPlace);
@@ -288,7 +288,7 @@ namespace tprandomizer_poc_main
 
                 while (ItemsToBeRandomized.Count() > 0)
                 {
-                    itemToPlace = Singleton.getInstance().Items.verifyItem(ItemsToBeRandomized[rnd.Next(ItemsToBeRandomized.Count()-1)], ItemsToBeRandomized);
+                    itemToPlace = ItemsToBeRandomized[rnd.Next(ItemsToBeRandomized.Count()-1)];
                     Console.WriteLine("Item to place: " + itemToPlace);
                     heldItems.Remove(itemToPlace);
                     ItemsToBeRandomized.Remove(itemToPlace);
@@ -312,7 +312,7 @@ namespace tprandomizer_poc_main
 
             while (ItemsToBeRandomized.Count() > 0)
             {
-                itemToPlace = Singleton.getInstance().Items.verifyItem(ItemsToBeRandomized[rnd.Next(ItemsToBeRandomized.Count()-1)], ItemsToBeRandomized);
+                itemToPlace = ItemsToBeRandomized[rnd.Next(ItemsToBeRandomized.Count()-1)];
                 Console.WriteLine("Item to place: " + itemToPlace);
                 heldItems.Remove(itemToPlace);
                 ItemsToBeRandomized.Remove(itemToPlace);
@@ -504,8 +504,9 @@ namespace tprandomizer_poc_main
             return parse.Parse();
         }
 
-        public void generateSpoilerLog()
+        public void generateSpoilerLog(Room startingRoom)
         {
+            Check currentCheck;
             Random rnd = new Random();
             string fileHash = "TPR - v1.0 - " + HashAssets.hashAdjectives[rnd.Next(HashAssets.hashAdjectives.Count()-1)] + " " + HashAssets.characterNames[rnd.Next(HashAssets.characterNames.Count()-1)] + ".txt";
             //Once everything is complete, we want to write the results to a spoiler log.
@@ -513,7 +514,7 @@ namespace tprandomizer_poc_main
             {
                 foreach (KeyValuePair<string, Check> check in  Checks.CheckDict)
                 {
-                    Check currentCheck = check.Value;
+                    currentCheck = check.Value;
                     if (currentCheck.itemWasPlaced)
                     {
                         file.WriteLine(currentCheck.checkName + ": " + currentCheck.itemId);
@@ -522,6 +523,46 @@ namespace tprandomizer_poc_main
                     {
                         Console.WriteLine("Check: " + currentCheck.checkName + " has no item.");
                     }
+                }
+                file.WriteLine("");
+                file.WriteLine("");
+                file.WriteLine("");
+                file.WriteLine("Playthrough: ");
+                resetAllChecksVisited();
+                Singleton.getInstance().Items.generateItemPool();
+                Singleton.getInstance().Items.heldItems.Clear();
+                Singleton.getInstance().Items.ImportantItems.Add(Item.Ganon_Defeated);
+                List<Item> playthroughItems = new List<Item>();
+                int sphereCount = 0;
+                while (!Singleton.getInstance().Items.heldItems.Contains(Item.Ganon_Defeated))
+                {
+                    file.WriteLine("Sphere: " + sphereCount);
+                    foreach (KeyValuePair<string, Check> checkList in Checks.CheckDict)
+                    {
+                        //Parse through every check to see if an item has been placed in it
+                        currentCheck = checkList.Value;
+                        if (!currentCheck.hasBeenReached)
+                        {
+                            //If the check has an item in it and has not been collected, we need to see if we can get the item.
+                            //areCheckRequirementsMet = (bool)CSharpScript.EvaluateAsync(currentCheck.requirements, options).Result;
+                            var areCheckRequirementsMet = evaluateRequirements(currentCheck.requirements);
+                            if (areCheckRequirementsMet == true)
+                            {
+                                //If we can get the item, we add it to our inventory and restart our search since we may be able to get more placed items with our new item pool
+                                playthroughItems.Add(currentCheck.itemId);
+                                currentCheck.hasBeenReached = true;
+                                if (Singleton.getInstance().Items.ImportantItems.Contains(currentCheck.itemId) || Singleton.getInstance().Items.RegionKeys.Contains(currentCheck.itemId))
+                                {
+                                    file.WriteLine("    " + currentCheck.checkName + ": " + currentCheck.itemId);
+                                }
+                            }
+                        }
+                    }
+                    foreach (var newItem in playthroughItems)
+                    {
+                        Singleton.getInstance().Items.heldItems.Add(newItem);
+                    }
+                    sphereCount++; 
                 }
             }
         }

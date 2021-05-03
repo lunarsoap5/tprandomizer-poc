@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "canDefeatArmos and Double_Clawshot and canDefeatBokoblin and canDefeatBabaSerpent and canDefeatLizalfos and canDefeatBublin and canDefeatDinalfos and canDefeatPoe and canDefeatRedeadKnight and canDefeatChu and canDefeatFreezard and canDefeatChilfos and canDefeatGhoulRat and canDefeatRat and canDefeatStalchild and canDefeatAeralfos and canDefeatDarknut"
+        "canDefeatArmos and (Progressive_Clawshot, 2) and canDefeatBokoblin and canDefeatBabaSerpent and canDefeatLizalfos and canDefeatBublin and canDefeatDinalfos and canDefeatPoe and canDefeatRedeadKnight and canDefeatChu and canDefeatFreezard and canDefeatChilfos and canDefeatGhoulRat and canDefeatRat and canDefeatStalchild and canDefeatAeralfos and canDefeatDarknut"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

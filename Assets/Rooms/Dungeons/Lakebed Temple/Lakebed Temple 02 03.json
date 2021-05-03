@@ -13,7 +13,7 @@
         "(Lakebed_Temple_Small_Key, 1)", 
         "true",
         "(Lakebed_Temple_Small_Key, 3) and canLaunchBombs",
-        "(Lakebed_Temple_Small_Key, 3) and canLaunchBombs and Clawshot and Lakebed_Temple_Big_Key"
+        "(Lakebed_Temple_Small_Key, 3) and canLaunchBombs and (Progressive_Clawshot, 1) and Lakebed_Temple_Big_Key"
     ],
     "isStartingRoom": "false",
     "checks": 

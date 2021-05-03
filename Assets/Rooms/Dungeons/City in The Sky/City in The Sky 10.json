@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Double_Clawshot"
+        "(Progressive_Clawshot, 2)"
     ],
     "isStartingRoom": "false",
     "checks": 

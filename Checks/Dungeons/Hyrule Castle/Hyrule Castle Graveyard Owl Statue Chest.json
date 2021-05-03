@@ -1,6 +1,6 @@
 {
     "checkName": "Hyrule Castle Graveyard Owl Statue Chest",
-    "requirements": "canSmash and Lantern and Dominion_Rod",
+    "requirements": "canSmash and Lantern and (Progressive_Dominion_Rod, 2)",
     "hash": "87FB",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Hyrule Castle", "Small Key"],

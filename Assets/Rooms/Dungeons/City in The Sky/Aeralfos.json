@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Double_Clawshot and canDefeatAeralfos"
+        "(Progressive_Clawshot, 2) and canDefeatAeralfos"
     ],
     "isStartingRoom": "false",
     "checks": 

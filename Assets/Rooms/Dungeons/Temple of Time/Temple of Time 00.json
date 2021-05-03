@@ -10,7 +10,7 @@
     [
         "true",
         "(Temple_of_Time_Small_Key, 1)",
-        "Dominion_Rod_Uncharged and Heros_Bow and Spinner and canDefeatLizalfos and canDefeatDinalfos and canDefeatDarknut and (Temple_of_Time_Small_Key, 3)"
+        "(Progressive_Dominion_Rod, 1) and (Progressive_Bow, 1) and Spinner and canDefeatLizalfos and canDefeatDinalfos and canDefeatDarknut and (Temple_of_Time_Small_Key, 3)"
     ],
     "isStartingRoom": "false",
     "checks": 

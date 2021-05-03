@@ -1,6 +1,6 @@
 {
     "checkName": "Palace of Twilight East Wing First Room East Alcove",
-    "requirements": "(Palace_of_Twilight_Small_Key, 4) and canDefeatZantHead and canDefeatShadowBeast and Clawshot and canDefeatPhantomZant",
+    "requirements": "(Palace_of_Twilight_Small_Key, 4) and canDefeatZantHead and canDefeatShadowBeast and (Progressive_Clawshot, 1) and canDefeatPhantomZant",
     "hash": "A2E3",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Palace of Twilight"],

@@ -388,6 +388,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Zoras Domain Underwater Goron", new Check());
             CheckDict.Add("Gift From Ralis", new Check());
             CheckDict.Add("Rutelas Blessing", new Check());
+            CheckDict.Add("Ganondorf Defeated", new Check());
         }
 
         public List<string> vanillaChecks = new List<string>()
@@ -414,8 +415,7 @@ namespace tprandomizer_poc_main
             "Agitha Tenth Single Bug Reward",
             "Agitha Eleventh Single Bug Reward",
             "Agitha Twelfth Single Bug Reward",
-
-
+            "Ganondorf Defeated"
         };
     } 
 

@@ -1,6 +1,6 @@
 {
     "checkName": "Kakariko Gorge Double Clawshot Chest",
-    "requirements": "Double_Clawshot",
+    "requirements": "(Progressive_Clawshot, 2)",
     "hash": "BF8B",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

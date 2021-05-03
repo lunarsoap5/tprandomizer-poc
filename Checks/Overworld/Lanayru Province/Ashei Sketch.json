@@ -1,0 +1,8 @@
+{
+    "checkName": "Ashei Sketch",
+    "requirements": "true",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Asheis_Sketch",
+    "itemWasPlaced": false
+}

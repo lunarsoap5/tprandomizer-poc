@@ -8,7 +8,7 @@
     ],
     "neighbourRequirements":
     [
-        "Double_Clawshot",
+        "(Progressive_Clawshot, 2)",
         "true",
         "true"
     ],

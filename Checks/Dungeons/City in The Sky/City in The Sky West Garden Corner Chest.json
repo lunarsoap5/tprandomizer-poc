@@ -1,6 +1,6 @@
 {
     "checkName": "City in The Sky West Garden Corner Chest",
-    "requirements": "Double_Clawshot",
+    "requirements": "(Progressive_Clawshot, 2)",
     "hash": "13EF",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "City in The Sky"],

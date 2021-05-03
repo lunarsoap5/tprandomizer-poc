@@ -1,6 +1,6 @@
 {
     "checkName": "Gerudo Desert Peahat Ledge Chest",
-    "requirements": "Clawshot",
+    "requirements": "(Progressive_Clawshot, 1)",
     "hash": "CA80",
     "isExcluded": false,
     "category": ["Chest", "Gerudo Desert"],

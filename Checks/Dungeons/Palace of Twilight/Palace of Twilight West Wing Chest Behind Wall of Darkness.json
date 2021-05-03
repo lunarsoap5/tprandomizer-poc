@@ -1,6 +1,6 @@
 {
     "checkName": "Palace of Twilight West Wing Chest Behind Wall of Darkness",
-    "requirements": "(Progressive_Sword, 4) and Clawshot",
+    "requirements": "(Progressive_Sword, 4) and (Progressive_Clawshot, 1)",
     "hash": "893A",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Palace of Twilight"],

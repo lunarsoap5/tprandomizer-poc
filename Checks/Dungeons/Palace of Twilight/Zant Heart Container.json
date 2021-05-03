@@ -1,0 +1,9 @@
+{
+    "checkName": "Zant Heart Container",
+    "requirements": "canDefeatZant",
+    "hash": "93FC",
+    "isExcluded": false,
+    "category": ["Chest", "Dungeon", "Palace of Twilight"],
+    "itemId": "Heart_Container",
+    "itemWasPlaced": false
+}

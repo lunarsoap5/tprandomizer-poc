@@ -1,6 +1,6 @@
 {
     "checkName": "Hyrule Castle Main Hall Northeast Chest",
-    "requirements": "canDefeatBokoblin and canDefeatLizalfos and Clawshot",
+    "requirements": "canDefeatBokoblin and canDefeatLizalfos and (Progressive_Clawshot, 1)",
     "hash": "3107",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Hyrule Castle", "Dungeon Items", "Compass"],

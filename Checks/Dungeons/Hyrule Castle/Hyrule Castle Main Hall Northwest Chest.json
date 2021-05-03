@@ -1,6 +1,6 @@
 {
     "checkName": "Hyrule Castle Main Hall Northwest Chest",
-    "requirements": "canKnockDownHCPainting and canDefeatLizalfos and canDefeatDarknut and Boomerang and Lantern and Double_Clawshot",
+    "requirements": "canKnockDownHCPainting and canDefeatLizalfos and canDefeatDarknut and Boomerang and Lantern and (Progressive_Clawshot, 2)",
     "hash": "A782",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Hyrule Castle"],

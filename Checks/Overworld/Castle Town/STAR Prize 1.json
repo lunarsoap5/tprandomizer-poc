@@ -1,8 +1,8 @@
 {
     "checkName": "STAR Prize 1",
-    "requirements": "Clawshot",
+    "requirements": "(Progressive_Clawshot, 1)",
     "isExcluded": false,
     "category": ["Chest"],
-    "itemId": "Big_Quiver",
+    "itemId": "Progressive_Bow",
     "itemWasPlaced": false
 }

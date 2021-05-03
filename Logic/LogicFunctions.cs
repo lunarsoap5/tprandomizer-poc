@@ -50,7 +50,7 @@ namespace tprandomizer_poc_main
         {
             return ( hasSword() ||
                     canUse(Item.Ball_and_Chain) ||
-                    canUse(Item.Heros_Bow) ||
+                    (getItemCount(Item.Progressive_Bow) >= 1) ||
                     hasBombs() ||
                     canUse(Item.Iron_Boots) ||
                     canUse(Item.Spinner) ||
@@ -62,32 +62,21 @@ namespace tprandomizer_poc_main
             return  ((getItemCount(Item.Progressive_Sword) >= 1));
         }
 
-        public static bool hasCompletedSkyBook()
-        {
-            return (canUse(Item.Ancient_Sky_Book_Empty) &&
-                    canUse(Item.Ancient_Sky_Book_First_Character) &&
-                    canUse(Item.Ancient_Sky_Book_Second_Character) &&
-                    canUse(Item.Ancient_Sky_Book_Third_Character) &&
-                    canUse(Item.Ancient_Sky_Book_Fourth_Character) &&
-                    canUse(Item.Ancient_Sky_Book_Fifth_Character) &&
-                    canUse(Item.Ancient_Sky_Book_Completed));
-        }
-
         public static bool canDefeatAeralfos()
         {
-            return (canUse(Item.Clawshot) ||
+            return ((getItemCount(Item.Progressive_Clawshot) >= 1) ||
                     hasDamagingItem());
         }
         public static bool canDefeatArmos()
         {
             return (hasDamagingItem() ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatBabaSerpent()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -96,28 +85,28 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatBari()
         {
             return (canUseWaterBombs() ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatBeamos()
         {
             return (canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             hasBombs());
         }
         public static bool canDefeatBigBaba()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -126,7 +115,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -135,7 +124,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot));
@@ -147,13 +136,13 @@ namespace tprandomizer_poc_main
             canUse(Item.Ordon_Shield) ||
             canUse(Item.Wooden_Shield)  ||
             canUse(Item.Hylian_Shield)  ||
-            canUse(Item.Clawshot)));
+            (getItemCount(Item.Progressive_Clawshot) >= 1)));
         }
         public static bool canDefeatBombling()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -162,7 +151,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -171,7 +160,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -180,7 +169,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -189,7 +178,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -198,12 +187,12 @@ namespace tprandomizer_poc_main
         {
             return ((hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal)) &&
             (hasBombs() ||
-            canUse(Item.Clawshot)));
+            (getItemCount(Item.Progressive_Clawshot) >= 1)));
             
         }
         public static bool canDefeatDarknut()
@@ -214,19 +203,19 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shield_Attack) ||
             canUse(Item.Slingshot) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatDekuLike()
         {    
             return (hasBombs() ||
             hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -235,7 +224,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -251,7 +240,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -260,7 +249,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
@@ -270,7 +259,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Shadow_Crystal));
         }
         public static bool canDefeatFreezard()
@@ -281,13 +270,13 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shield_Attack) ||
             canUse(Item.Slingshot) ||
             canUse(Item.Lantern) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatGhoulRat()
         {
@@ -297,7 +286,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -306,7 +295,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -315,7 +304,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -324,7 +313,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -333,7 +322,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
@@ -347,7 +336,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -356,7 +345,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
@@ -366,7 +355,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -375,7 +364,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -384,7 +373,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -393,7 +382,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -402,7 +391,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Lantern) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -411,7 +400,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -420,7 +409,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
@@ -430,7 +419,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -444,7 +433,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -453,12 +442,12 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shield_Attack) ||
             canUse(Item.Slingshot) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatShadowInsect()
         {
@@ -468,7 +457,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -477,7 +466,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
@@ -487,7 +476,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -502,7 +491,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -511,7 +500,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -524,7 +513,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -533,7 +522,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -542,7 +531,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -551,7 +540,7 @@ namespace tprandomizer_poc_main
         {
             return ((hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Shadow_Crystal)) &&
             canUse(Item.Boomerang));
         }
@@ -559,7 +548,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
         }
@@ -567,29 +556,29 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() || 
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Shadow_Crystal));
         }
         public static bool canDefeatTorchSlug()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Shadow_Crystal));
         }
         public static bool canDefeatWalltula()
         {
             return (canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             hasBombs() ||
             canUse(Item.Boomerang) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatWhiteWolfos()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -598,7 +587,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -612,7 +601,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -636,24 +625,24 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
         }
         public static bool canDefeatSkullKid()
         {
-            return canUse(Item.Heros_Bow);
+            return (getItemCount(Item.Progressive_Bow) >= 1);
         }
         public static bool canDefeatKingBublinBridge()
         {
-            return canUse(Item.Heros_Bow);
+            return (getItemCount(Item.Progressive_Bow) >= 1);
         }
         public static bool canDefeatKingBublinDesert()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -662,7 +651,7 @@ namespace tprandomizer_poc_main
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -674,15 +663,15 @@ namespace tprandomizer_poc_main
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner)) &&
             (canUse(Item.Boomerang) ||
-            canUse(Item.Heros_Bow) ||
-            canUse(Item.Clawshot)) &&
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
+            (getItemCount(Item.Progressive_Clawshot) >= 1)) &&
             canUse(Item.Shadow_Crystal));
         }
         public static bool canDefeatDarkhammer()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -696,7 +685,7 @@ namespace tprandomizer_poc_main
         {
             return ((canUse(Item.Boomerang) ||
             (hasBombs() &&
-            canUse(Item.Heros_Bow))) &&
+            (getItemCount(Item.Progressive_Bow) >= 1))) &&
             hasSword() ||
             canUse(Item.Ball_and_Chain) ||
             canUse(Item.Iron_Boots) ||
@@ -705,7 +694,7 @@ namespace tprandomizer_poc_main
         }
         public static bool canDefeatFyrus()
         {
-            return (canUse(Item.Heros_Bow) &&
+            return ((getItemCount(Item.Progressive_Bow) >= 1) &&
             canUse(Item.Iron_Boots) &&
             hasSword());
         }
@@ -726,12 +715,12 @@ namespace tprandomizer_poc_main
         }
         public static bool canDefeatArmogohma()
         {
-            return (canUse(Item.Heros_Bow) &&
-            canUse(Item.Dominion_Rod));
+            return ((getItemCount(Item.Progressive_Bow) >= 1) &&
+            (getItemCount(Item.Progressive_Dominion_Rod) >= 1));
         }
         public static bool canDefeatArgorok()
         {
-            return (canUse(Item.Double_Clawshot) &&
+            return ((getItemCount(Item.Progressive_Clawshot) >= 2) &&
             canUse(Item.Iron_Boots) &&
             (getItemCount(Item.Progressive_Sword) >= 3));
         }
@@ -739,7 +728,7 @@ namespace tprandomizer_poc_main
         {
             return ((getItemCount(Item.Progressive_Sword) >= 3) &&
             (canUse(Item.Boomerang) &&
-            canUse(Item.Clawshot) &&
+            (getItemCount(Item.Progressive_Clawshot) >= 1) &&
             canUse(Item.Iron_Boots) &&
             canUse(Item.Zora_Armor) &&
             canUse(Item.Ball_and_Chain)));
@@ -747,8 +736,7 @@ namespace tprandomizer_poc_main
         public static bool canDefeatGanondorf()
         {
             return (canUse(Item.Shadow_Crystal) &&
-            (getItemCount(Item.Progressive_Sword) >= 3) &&
-            canUse(Item.Ending_Blow) );
+            (getItemCount(Item.Progressive_Sword) >= 3) );
         }
 
         public static bool canSmash()
@@ -768,8 +756,8 @@ namespace tprandomizer_poc_main
         {
             return (canUse(Item.Ball_and_Chain) ||
             canUse(Item.Slingshot) ||
-            canUse(Item.Heros_Bow) ||
-            canUse(Item.Clawshot) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
+            (getItemCount(Item.Progressive_Clawshot) >= 1) ||
             canUse(Item.Boomerang));
         }
 
@@ -782,20 +770,20 @@ namespace tprandomizer_poc_main
         public static bool canLaunchBombs()
         {
             return ((canUse(Item.Boomerang) ||
-            canUse(Item.Heros_Bow)) &&
+            (getItemCount(Item.Progressive_Bow) >= 1)) &&
             hasBombs());
         }
 
         public static bool canCutHangingWeb()
         {
-            return (canUse(Item.Clawshot) ||
-            canUse(Item.Heros_Bow) ||
+            return ((getItemCount(Item.Progressive_Clawshot) >= 1) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Boomerang) ||
             canUse(Item.Ball_and_Chain));
         }
         public static bool canKnockDownHCPainting()
         {
-            return (canUse(Item.Heros_Bow) ||
+            return ((getItemCount(Item.Progressive_Bow) >= 1) ||
             hasBombs());
         } 
         public static bool canBreakMonkeyCage()
@@ -805,8 +793,8 @@ namespace tprandomizer_poc_main
             canUse(Item.Spinner) ||
             canUse(Item.Ball_and_Chain) ||
             canUse(Item.Shadow_Crystal) ||
-            canUse(Item.Heros_Bow) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canPressMinesSwitch()
         {
@@ -821,8 +809,8 @@ namespace tprandomizer_poc_main
         }
         public static bool canKnockDownHangingBaba()
         {
-            return (canUse(Item.Heros_Bow) ||
-            canUse(Item.Clawshot) ||
+            return ((getItemCount(Item.Progressive_Bow) >= 1) ||
+            (getItemCount(Item.Progressive_Clawshot) >= 1) ||
             canUse(Item.Boomerang));
         }
         
@@ -852,17 +840,17 @@ namespace tprandomizer_poc_main
 
         public static bool canCompleteForestTemple()
         {
-            return ((getItemCount(Item.Forest_Temple_Small_Key) >=4) && canUse(Item.Boomerang) && canBreakMonkeyCage() && canDefeatWalltula() && canDefeatBigBaba() && canBurnWebs() && canDefeatOok() && canDefeatDiababa() && canUse(Item.Forest_Temple_Big_Key));
+            return ((getItemCount(Item.Forest_Temple_Small_Key) >=4) && canUse(Item.Boomerang) && canUse(Item.Small_Key_N_Faron_Gate) && canBreakMonkeyCage() && canDefeatWalltula() && canDefeatBigBaba() && canBurnWebs() && canDefeatOok() && canDefeatDiababa() && canUse(Item.Forest_Temple_Big_Key));
         }
 
         public static bool canCompleteGoronMines()
         {
-            return ((getItemCount(Item.Goron_Mines_Small_Key) >=3) && canDefeatDangoro() && canDefeatFyrus() && canUse(Item.Heros_Bow) && canUse(Item.Iron_Boots) && hasSword() && canUse(Item.Goron_Mines_Big_Key));
+            return ((getItemCount(Item.Goron_Mines_Small_Key) >=3) && canDefeatDangoro() && canDefeatFyrus() && (getItemCount(Item.Progressive_Bow) >= 1) && canUse(Item.Iron_Boots) && hasSword() && canUse(Item.Goron_Mines_Big_Key));
         }
 
         public static bool canCompleteLakebedTemple()
         {
-            return ((getItemCount(Item.Lakebed_Temple_Small_Key) >=3) && canDefeatDekuToad() && canDefeatMorpheel() && canUse(Item.Clawshot) && canLaunchBombs() && canUseWaterBombs() && canUse(Item.Lakebed_Temple_Big_Key));
+            return ((getItemCount(Item.Lakebed_Temple_Small_Key) >=3) && canDefeatDekuToad() && canDefeatMorpheel() && (getItemCount(Item.Progressive_Clawshot) >= 1) && canLaunchBombs() && canUseWaterBombs() && canUse(Item.Lakebed_Temple_Big_Key));
         }
 
         public static bool canCompleteSnowpeakRuins()
@@ -872,11 +860,11 @@ namespace tprandomizer_poc_main
 
         public static bool canCompleteTempleofTime()
         {
-            return (canUse(Item.Dominion_Rod_Uncharged) && canUse(Item.Heros_Bow) && canUse(Item.Spinner) && canDefeatLizalfos() && canDefeatDinalfos() && canDefeatDarknut() && canDefeatArmogohma() && canUse(Item.Temple_of_Time_Big_Key) && (getItemCount(Item.Temple_of_Time_Small_Key) >= 3));
+            return ((getItemCount(Item.Progressive_Dominion_Rod) >= 1) && (getItemCount(Item.Progressive_Bow) >= 1) && canUse(Item.Spinner) && canDefeatLizalfos() && canDefeatDinalfos() && canDefeatDarknut() && canDefeatArmogohma() && canUse(Item.Temple_of_Time_Big_Key) && (getItemCount(Item.Temple_of_Time_Small_Key) >= 3));
         }
         public static bool canCompletePalaceofTwilight()
         {
-            return ((getItemCount(Item.Palace_of_Twilight_Small_Key) >=7) && (getItemCount(Item.Progressive_Sword) >= 4) && canDefeatZantHead() && canDefeatShadowBeast() && canUse(Item.Double_Clawshot) && canDefeatPhantomZant() && canDefeatZant() && canUse(Item.Shadow_Crystal) && canUse(Item.Palace_of_Twilight_Big_Key));
+            return ((getItemCount(Item.Palace_of_Twilight_Small_Key) >=7) && (getItemCount(Item.Progressive_Sword) >= 4) && canDefeatZantHead() && canDefeatShadowBeast() && (getItemCount(Item.Progressive_Clawshot) >= 2) && canDefeatPhantomZant() && canDefeatZant() && canUse(Item.Shadow_Crystal) && canUse(Item.Palace_of_Twilight_Big_Key));
         }
 
         public static int getItemCount(Item itemToBeCounted)
@@ -1010,18 +998,6 @@ namespace tprandomizer_poc_main
             List<Item> itemList = Singleton.getInstance().Items.heldItems;
 			int itemQuantity = 0;
             bool isQuantity = false;
-            foreach (Item bug in Singleton.getInstance().Items.goldenBugs)
-            {
-                if (bug.ToString() == itemToBeCounted)
-                {
-                    if (quantity == Singleton.getInstance().Items.bugCount)
-                    {
-                        isQuantity = true;
-                        return isQuantity;
-                    }
-                }
-
-            }
             
 			foreach (var item in itemList)
 			{

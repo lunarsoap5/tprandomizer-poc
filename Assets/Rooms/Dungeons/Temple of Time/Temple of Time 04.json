@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Heros_Bow and canDefeatLizalfos and canDefeatDinalfos"
+        "(Progressive_Bow, 1) and canDefeatLizalfos and canDefeatDinalfos"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -3,6 +3,6 @@
     "requirements": "(getSingleBugCount, 1)",
     "isExcluded": false,
     "category": ["Chest", "Castle Town"],
-    "itemId": "Big_Wallet",
+    "itemId": "Progressive_Wallet",
     "itemWasPlaced": false
 }

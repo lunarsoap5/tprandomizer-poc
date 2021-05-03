@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "canDefeatDarknut and Dominion_Rod_Uncharged"
+        "canDefeatDarknut and (Progressive_Dominion_Rod, 1)"
     ],
     "isStartingRoom": "false",
     "checks": 

@@ -10,9 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "(Palace_of_Twilight_Small_Key, 1) and canDefeatZantHead and Clawshot",
-        "canDefeatPhantomZant and Clawshot and canDefeatZantHead and (Palace_of_Twilight_Small_Key, 2)",
-        "canDefeatPhantomZant and Clawshot and canDefeatZantHead and Shadow_Crystal and (Palace_of_Twilight_Small_Key, 4) and (Progressive_Sword, 4)"
+        "(Palace_of_Twilight_Small_Key, 1) and canDefeatZantHead and (Progressive_Clawshot, 1)",
+        "canDefeatPhantomZant and (Progressive_Clawshot, 1) and canDefeatZantHead and (Palace_of_Twilight_Small_Key, 2)",
+        "canDefeatPhantomZant and (Progressive_Clawshot, 1) and canDefeatZantHead and Shadow_Crystal and (Palace_of_Twilight_Small_Key, 4) and (Progressive_Sword, 4)"
     ],
     "isStartingRoom": "false",
     "checks": 

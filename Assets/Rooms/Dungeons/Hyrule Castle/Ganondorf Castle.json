@@ -9,7 +9,7 @@
         "true"
     ],
     "isStartingRoom": "false",
-    "checks": [""], 
+    "checks": ["Ganondorf Defeated"], 
     "visited": "false",
     "region": "Ganondorf"
 }

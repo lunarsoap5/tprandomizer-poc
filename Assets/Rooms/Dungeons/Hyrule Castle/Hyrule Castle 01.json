@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "canDefeatBokoblin and  canDefeatLizalfos and Double_Clawshot"
+        "canDefeatBokoblin and  canDefeatLizalfos and (Progressive_Clawshot, 2)"
     ],
     "isStartingRoom": "false",
     "checks": 

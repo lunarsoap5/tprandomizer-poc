@@ -1,6 +1,6 @@
 {
     "checkName": "Lanayru Spring East Double Clawshot Chest",
-    "requirements": "Double_Clawshot",
+    "requirements": "(Progressive_Clawshot, 2)",
     "hash": "A2E9",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

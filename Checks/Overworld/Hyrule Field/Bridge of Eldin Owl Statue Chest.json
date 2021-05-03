@@ -1,6 +1,6 @@
 {
     "checkName": "Bridge of Eldin Owl Statue Chest",
-    "requirements": "Dominion_Rod",
+    "requirements": "(Progressive_Dominion_Rod, 2)",
     "hash": "04B8",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

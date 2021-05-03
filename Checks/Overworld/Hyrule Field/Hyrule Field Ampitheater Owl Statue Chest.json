@@ -1,6 +1,6 @@
 {
     "checkName": "Hyrule Field Ampitheater Owl Statue Chest",
-    "requirements": "Dominion_Rod",
+    "requirements": "(Progressive_Dominion_Rod, 2)",
     "hash": "DE51",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

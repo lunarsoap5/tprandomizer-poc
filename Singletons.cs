@@ -1,4 +1,4 @@
-using Logic;
+
 
 namespace tprandomizer_poc_main
 { 
@@ -7,6 +7,8 @@ namespace tprandomizer_poc_main
         public ItemFunctions Items = new ItemFunctions();
         public CheckFunctions Checks = new CheckFunctions();
         public RoomFunctions Rooms = new RoomFunctions();
+
+        public LogicFunctions Logic = new LogicFunctions();
         
         private static Singleton instance;
         

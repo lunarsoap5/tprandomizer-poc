@@ -1,6 +1,6 @@
 {
     "checkName": "Lakebed Temple East Lower Waterwheel Bridge Chest",
-    "requirements": "Logic.canUse(Item.Clawshot) && (Logic.getItemCount(Item.Lakebed_Temple_Small_Key) >= 3) && Logic.canLaunchBombs()",
+    "requirements": "(Progressive_Clawshot, 1) and (Lakebed_Temple_Small_Key, 3) and canLaunchBombs",
     "hash": "CF36",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Lakebed Temple"],

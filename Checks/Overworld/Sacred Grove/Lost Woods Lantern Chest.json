@@ -1,6 +1,6 @@
 {
     "checkName": "Lost Woods Lantern Chest",
-    "requirements": "Logic.canUse(Item.Lantern)",
+    "requirements": "Lantern",
     "hash": "A7D3",
     "isExcluded": false,
     "category": ["Chest", "Sacred Grove"],

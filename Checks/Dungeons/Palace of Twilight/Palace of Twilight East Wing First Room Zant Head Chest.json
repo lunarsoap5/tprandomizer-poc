@@ -1,6 +1,6 @@
 {
     "checkName": "Palace of Twilight East Wing First Room Zant Head Chest",
-    "requirements": "Logic.canDefeatZantHead() && Logic.canUse(Item.Clawshot)",
+    "requirements": "canDefeatZantHead and (Progressive_Clawshot, 1)",
     "hash": "F92E",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Palace of Twilight", "Small Key"],

@@ -1,6 +1,6 @@
 {
     "checkName": "Palace of Twilight Central First Room Chest",
-    "requirements": "Logic.canDefeatZantHead() && Logic.canUse(Item.Master_Sword_Light)",
+    "requirements": "canDefeatZantHead and (Progressive_Sword, 4)",
     "hash": "8F8C",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Palace of Twilight", "Small Key"],

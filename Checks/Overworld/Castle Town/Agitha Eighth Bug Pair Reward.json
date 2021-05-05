@@ -1,0 +1,8 @@
+{
+    "checkName": "Agitha Eighth Bug Pair Reward",
+    "requirements": "(getBugPairCount, 8)",
+    "isExcluded": false,
+    "category": ["Chest", "Castle Town"],
+    "itemId": "Orange_Rupee",
+    "itemWasPlaced": false
+}

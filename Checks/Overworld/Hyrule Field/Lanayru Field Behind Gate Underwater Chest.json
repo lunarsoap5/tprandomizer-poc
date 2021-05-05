@@ -1,6 +1,6 @@
 {
     "checkName": "Lanayru Field Behind Gate Underwater Chest",
-    "requirements": "Logic.canUse(Item.Iron_Boots)",
+    "requirements": "Iron_Boots",
     "hash": "FC21",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

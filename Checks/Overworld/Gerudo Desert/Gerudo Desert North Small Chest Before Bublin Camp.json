@@ -1,6 +1,6 @@
 {
     "checkName": "Gerudo Desert North Small Chest Before Bublin Camp",
-    "requirements": "Logic.canDefeatBublin()",
+    "requirements": "canDefeatBublin",
     "hash": "F2F6",
     "isExcluded": false,
     "category": ["Chest", "Gerudo Desert"],

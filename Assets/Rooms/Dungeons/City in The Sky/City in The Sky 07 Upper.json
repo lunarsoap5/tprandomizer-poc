@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Clawshot)"
+        "(Progressive_Clawshot, 1)"
     ],
     "isStartingRoom": "false",
     "checks": 

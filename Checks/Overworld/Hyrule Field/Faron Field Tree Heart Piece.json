@@ -1,6 +1,6 @@
 {
     "checkName": "Faron Field Tree Heart Piece",
-    "requirements": "Logic.canUse(Item.Ball_and_Chain) || Logic.canUse(Item.Boomerang) || Logic.canUse(Item.Clawshot)",
+    "requirements": "Ball_and_Chain or Boomerang or (Progressive_Clawshot, 1)",
     "hash": "7E86",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

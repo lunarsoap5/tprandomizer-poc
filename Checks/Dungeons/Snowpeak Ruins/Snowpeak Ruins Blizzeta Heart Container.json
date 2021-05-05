@@ -1,0 +1,8 @@
+{
+    "checkName": "Snowpeak Ruins Blizzeta Heart Container",
+    "requirements": "canDefeatBlizzeta",
+    "isExcluded": false,
+    "category": ["Heart Container"],
+    "itemId": "Heart_Container",
+    "itemWasPlaced": false
+}

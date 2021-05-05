@@ -15,6 +15,7 @@ namespace tprandomizer_poc_main
 			public string name { get; set;} //Name we give the room to identify it (it can be a series of rooms that don't have requirements between each other to make the algorithm go faster)
 			public List<string> neighbours { get; set;} //Refers to the rooms of the same stage that can be accesed from this room
 			public List<string> neighbourRequirements { get; set;} //List of list of requirements to enter each neighbouring room
+            public string accessRequirements { get; set;}
 			public bool isStartingRoom { get; set;} //Defines if it is the stage you start the game in
 			public List<string> checks { get; set;} //Checks contained inside the room
 			public bool visited { get; set;}
@@ -204,42 +205,6 @@ namespace tprandomizer_poc_main
             RoomDict.Add("Mirror Chamber", new Room());
             RoomDict.Add("Hidden Village", new Room());
             RoomDict.Add("Death Mountain Interiors", new Room());
-            return;
-        }
-
-        public void deserializeRooms()
-        {
-            foreach (string file in System.IO.Directory.GetFiles("./Assets/Rooms/", "*",SearchOption.AllDirectories))
-            {
-                string contents = File.ReadAllText(file);
-                string fileName = Path.GetFileNameWithoutExtension(file);
-                Singleton.getInstance().Rooms.RoomDict[fileName] = JsonConvert.DeserializeObject<Room>(contents);
-                Room currentRoom = Singleton.getInstance().Rooms.RoomDict[fileName];
-                var newList = currentRoom.neighbourRequirements.Select(s => s.Replace("Logic", "Logic.LogicFunctions")).ToList();
-                currentRoom.neighbourRequirements = newList;
-                Singleton.getInstance().Rooms.RoomDict[fileName] = currentRoom;
-                Console.WriteLine("Room File Loaded " + fileName);
-            }
-            return;
-        }
-
-        public Room setupGraph()
-        {
-            resetAllRoomsVisited();
-            Room startingRoom = RoomDict["Ordon Province"];
-            startingRoom.isStartingRoom = true;
-            RoomDict["Ordon Province"] = startingRoom;
-            return startingRoom;
-        }
-
-        public void resetAllRoomsVisited()
-        {
-            foreach (KeyValuePair<string, Room> roomList in RoomDict.ToList())
-            {
-                Room currentRoom = roomList.Value;
-                currentRoom.visited = false;
-                RoomDict[roomList.Key] = currentRoom;
-            }
             return;
         }
     }

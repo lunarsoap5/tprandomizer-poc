@@ -1,6 +1,6 @@
 {
     "checkName": "Temple of Time First Staircase Armos Chest",
-    "requirements": "Logic.canDefeatArmos() && Logic.hasRangedItem()",
+    "requirements": "canDefeatArmos and hasRangedItem",
     "hash": "C637",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Temple of Time", "Dungeon Items", "Dungeon Map"],

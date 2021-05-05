@@ -1,6 +1,6 @@
 {
     "checkName": "Lake Lantern Cave Fifth Chest",
-    "requirements": "Logic.canSmash() && Logic.canUse(Item.Lantern)",
+    "requirements": "canSmash and Lantern",
     "hash": "BA10",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

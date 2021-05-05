@@ -1,6 +1,6 @@
 {
     "checkName": "Zoras Domain Light All Torches Chest",
-    "requirements": "Logic.canUse(Item.Lantern)",
+    "requirements": "Lantern",
     "hash": "CB68",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

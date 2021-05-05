@@ -1,6 +1,6 @@
 {
     "checkName": "Arbiters Grounds West Stalfos Southeast Chest",
-    "requirements": "Logic.canBreakWoodenDoor()",
+    "requirements": "Shadow_Crystal or hasSword or Ball_and_Chain or hasBombs",
     "hash": "36DB",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Arbiters Grounds"],

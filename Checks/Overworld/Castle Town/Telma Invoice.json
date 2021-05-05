@@ -1,0 +1,8 @@
+{
+    "checkName": "Telma Invoice",
+    "requirements": "Renardos_Letter",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Invoice",
+    "itemWasPlaced": false
+}

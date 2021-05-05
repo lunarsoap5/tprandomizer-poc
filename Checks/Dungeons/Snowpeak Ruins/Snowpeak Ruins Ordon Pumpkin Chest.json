@@ -1,6 +1,6 @@
 {
     "checkName": "Snowpeak Ruins Ordon Pumpkin Chest",
-    "requirements": "Logic.canDefeatChilfos()",
+    "requirements": "canDefeatChilfos",
     "hash": "F5CA",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Snowpeak Ruins", "Dungeon Items", "Ordon Pumpkin"],

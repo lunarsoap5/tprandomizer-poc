@@ -7,18 +7,21 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canUse(Item.Wooden_Sword)",
-        "Logic.canUse(Item.Shadow_Crystal)"
+        "(Progressive_Sword, 1)",
+        "Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": 
     [
         "Uli Cradle Delivery",
-        "Sera Cat Fishing Reward",
+        "Ordon Cat Rescue",
         "Sera Shop Slingshot",
         "Gift From Rusl",
         "Links Basement Chest",
-        "Wrestling With Bo"
+        "Ordon Shield",
+        "Ordon Sword",
+        "Wrestling With Bo",
+        "Herding Goats Reward"
     ],
     "visited": "false",
     "region": "Ordonia Province"

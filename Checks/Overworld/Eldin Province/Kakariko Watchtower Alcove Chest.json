@@ -1,6 +1,6 @@
 {
     "checkName": "Kakariko Watchtower Alcove Chest",
-    "requirements": "Logic.canSmash()",
+    "requirements": "canSmash",
     "hash": "0C13",
     "isExcluded": false,
     "category": ["Chest", "Kakariko Village"],

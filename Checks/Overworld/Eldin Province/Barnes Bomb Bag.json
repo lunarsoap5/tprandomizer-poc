@@ -1,6 +1,6 @@
 {
     "checkName": "Barnes Bomb Bag",
-    "requirements": "(Logic.canCompleteGoronMines())",
+    "requirements": "canCompleteGoronMines",
     "hash": "null",
     "isExcluded": false,
     "category": ["Chest", "Eldin Province"],

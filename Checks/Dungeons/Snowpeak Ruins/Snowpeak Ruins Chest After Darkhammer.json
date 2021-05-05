@@ -1,6 +1,6 @@
 {
     "checkName": "Snowpeak Ruins Chest After Darkhammer",
-    "requirements": "Logic.canDefeatDarkhammer() && Logic.canUse(Item.Ball_and_Chain)",
+    "requirements": "canDefeatDarkhammer and Ball_and_Chain",
     "hash": "5786",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Snowpeak Ruins"],

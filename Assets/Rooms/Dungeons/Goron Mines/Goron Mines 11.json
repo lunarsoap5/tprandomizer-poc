@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Heros_Bow)",
-        "Logic.canUse(Item.Heros_Bow)"
+        "(Progressive_Bow, 1)",
+        "(Progressive_Bow, 1)"
     ],
     "isStartingRoom": "false",
     "checks": 

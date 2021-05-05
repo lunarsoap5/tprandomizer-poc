@@ -10,9 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatBombling()",
-        "Logic.canDefeatBombling()", 
-        "Logic.canUse(Item.Boomerang)"
+        "canDefeatBombling",
+        "canDefeatBombling", 
+        "Boomerang"
     ],
     "isStartingRoom": "false",
     "checks": 

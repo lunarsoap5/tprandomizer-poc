@@ -6,10 +6,10 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canDefeatOok() && Logic.canUse(Item.Boomerang)"
+        "canDefeatOok and Boomerang"
     ],
     "isStartingRoom": "false",
-    "checks": ["Gale Boomerang"], 
+    "checks": ["Forest Temple Gale Boomerang"], 
     "visited": "false",
     "region": "Forest Temple"
 }

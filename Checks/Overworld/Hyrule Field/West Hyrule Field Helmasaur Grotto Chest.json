@@ -1,6 +1,6 @@
 {
     "checkName": "West Hyrule Field Helmasaur Grotto Chest",
-    "requirements": "Logic.canDefeatHelmasaur()",
+    "requirements": "canDefeatHelmasaur",
     "hash": "4904",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

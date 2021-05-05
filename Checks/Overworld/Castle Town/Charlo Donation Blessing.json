@@ -1,0 +1,8 @@
+{
+    "checkName": "Charlo Donation Blessing",
+    "requirements": "true",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

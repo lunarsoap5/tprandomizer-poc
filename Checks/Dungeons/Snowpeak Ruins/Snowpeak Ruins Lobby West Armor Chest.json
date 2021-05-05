@@ -1,6 +1,6 @@
 {
     "checkName": "Snowpeak Ruins Lobby West Armor Chest",
-    "requirements": "Logic.canUse(Item.Ball_and_Chain)",
+    "requirements": "Ball_and_Chain",
     "hash": "E95B",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Snowpeak Ruins"],

@@ -1,6 +1,6 @@
 {
     "checkName": "Forest Temple East Water Cave Chest",
-    "requirements": "Logic.canDefeatBombling() || Logic.canBurnWebs()",
+    "requirements": "canDefeatBombling and canBurnWebs",
     "hash": "FAE5",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Forest Temple"],

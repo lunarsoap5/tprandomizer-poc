@@ -13,14 +13,14 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canUse(Item.Aurus_Memo) && Logic.canUse(Item.Shadow_Crystal)",
-        "Logic.canSmash()",
-        "Logic.canUse(Item.Shadow_Crystal)",
-        "Logic.canUse(Item.Shadow_Crystal)",
-        "Logic.canUse(Item.Iron_Boots) && Logic.hasBombs() && Logic.canUse(Item.Zora_Armor)",
-        "Logic.canUse(Item.Clawshot) && (ItemFunctions.nbSkybooksPlaced == 0)",
+        "Aurus_Memo and Shadow_Crystal",
+        "canSmash",
+        "Shadow_Crystal",
+        "Shadow_Crystal",
+        "Iron_Boots and hasBombs and Zora_Armor",
+        "(Progressive_Clawshot, 1) and (Progressive_Sky_Book, 7)",
         "true",
-        "Logic.canUse(Item.Shadow_Crystal)"
+        "Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": 
@@ -39,7 +39,10 @@
         "Flight By Fowl Fourth Platform Chest",
         "Flight By Fowl Fifth Platform Chest",
         "Lanayru Spring East Double Clawshot Chest",
-        "Lanayru Spring West Double Clawshot Chest"
+        "Lanayru Spring West Double Clawshot Chest",
+        "Iza Helping Hand",
+        "Iza Raging Rapids Minigame",
+        "Auru Gift To Fyer"
      ],
     "visited": "false",
     "region": "Lanayru Province"

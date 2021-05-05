@@ -1,0 +1,8 @@
+{
+    "checkName": "Agitha Final Bug Pair Reward",
+    "requirements": "(getBugPairCount, 12)",
+    "isExcluded": false,
+    "category": ["Chest", "Castle Town"],
+    "itemId": "Progressive_Wallet",
+    "itemWasPlaced": false
+}

@@ -1,6 +1,6 @@
 {
     "checkName": "Snowpeak Ruins Chapel Chest",
-    "requirements": "Logic.canDefeatChilfos()",
+    "requirements": "canDefeatChilfos",
     "hash": "9C1C",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Snowpeak Ruins", "Boss Key"],

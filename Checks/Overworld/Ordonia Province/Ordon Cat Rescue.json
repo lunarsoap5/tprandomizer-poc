@@ -1,0 +1,8 @@
+{
+    "checkName": "Ordon Cat Rescue",
+    "requirements": "(Progressive_Fishing_Rod, 1)",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Sera_Bottle",
+    "itemWasPlaced": false
+}

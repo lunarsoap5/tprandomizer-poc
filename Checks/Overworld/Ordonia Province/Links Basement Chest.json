@@ -1,6 +1,6 @@
 {
     "checkName": "Links Basement Chest",
-    "requirements": "Logic.canUse(Item.Lantern)",
+    "requirements": "Lantern",
     "hash": "E723",
     "isExcluded": false,
     "category": ["Chest"],

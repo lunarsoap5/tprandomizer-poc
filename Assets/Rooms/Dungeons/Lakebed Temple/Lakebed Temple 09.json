@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "(Logic.getItemCount(Item.Lakebed_Temple_Small_Key) >= 3) && Logic.canUse(Item.Zora_Armor) && Logic.hasBombs()"
+        "(Lakebed_Temple_Small_Key, 3) and Zora_Armor and hasBombs"
     ],
     "isStartingRoom": "false",
     "checks": 

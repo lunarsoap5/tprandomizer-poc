@@ -1,6 +1,6 @@
 {
     "checkName": "Lanayru Spring Back Room Right Chest",
-    "requirements": "Logic.canUse(Item.Clawshot)",
+    "requirements": "(Progressive_Clawshot, 1)",
     "hash": "8036",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

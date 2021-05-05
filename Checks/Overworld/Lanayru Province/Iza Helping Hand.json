@@ -1,0 +1,8 @@
+{
+    "checkName": "Iza Helping Hand",
+    "requirements": "(Progressive_Bow, 1) and hasBombs",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Bomb_Bag_And_Bombs",
+    "itemWasPlaced": false
+}

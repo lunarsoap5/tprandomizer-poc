@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Master_Sword)"
+        "(Progressive_Sword, 3)"
     ],
     "isStartingRoom": "false",
     "checks": 

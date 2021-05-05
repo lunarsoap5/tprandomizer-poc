@@ -1,6 +1,6 @@
 {
     "checkName": "Gale Boomerang",
-    "requirements": "Logic.canDefeatOok()",
+    "requirements": "canDefeatOok",
     "hash": "null",
     "isExcluded": false,
     "category": ["Forest Temple", "Dungeon"],

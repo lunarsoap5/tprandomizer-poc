@@ -1,0 +1,8 @@
+{
+    "checkName": "Gift From Ralis",
+    "requirements": "Asheis_Sketch",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Progressive_Fishing_Rod",
+    "itemWasPlaced": false
+}

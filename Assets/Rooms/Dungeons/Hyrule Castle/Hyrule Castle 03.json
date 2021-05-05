@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canKnockDownHCPainting() && Logic.canDefeatLizalfos()"
+        "canKnockDownHCPainting and canDefeatLizalfos"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

@@ -1,6 +1,6 @@
 {
     "checkName": "Hyrule Castle Lantern Staircase Chest",
-    "requirements": "Logic.canDefeatDarknut() && Logic.canUse(Item.Lantern) && Logic.canUse(Item.Boomerang)",
+    "requirements": "canDefeatDarknut and Lantern and Boomerang",
     "hash": "09D2",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Hyrule Castle"],

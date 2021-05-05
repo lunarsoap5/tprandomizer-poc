@@ -1,6 +1,6 @@
 {
     "checkName": "Forest Temple West Tile Worm Chest Behind Stairs",
-    "requirements": "Logic.canUse(Item.Boomerang)",
+    "requirements": "Boomerang",
     "hash": "B39E",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Forest Temple"],

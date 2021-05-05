@@ -1,6 +1,6 @@
 {
     "checkName": "Zoras Domain Extinguish All Torches Chest",
-    "requirements": "Logic.canUse(Item.Boomerang)",
+    "requirements": "Boomerang",
     "hash": "827F",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

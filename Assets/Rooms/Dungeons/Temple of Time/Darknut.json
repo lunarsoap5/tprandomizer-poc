@@ -6,7 +6,7 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canDefeatDarknut() && Logic.canUse(Item.Dominion_Rod_Uncharged)"
+        "canDefeatDarknut and (Progressive_Dominion_Rod, 1)"
     ],
     "isStartingRoom": "false",
     "checks": 

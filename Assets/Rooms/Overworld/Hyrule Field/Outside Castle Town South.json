@@ -11,7 +11,7 @@
     [
         "true",
         "true",
-        "Logic.canUse(Item.Shadow_Crystal)",
+        "Shadow_Crystal",
         "true"
     ],
     "isStartingRoom": "false",
@@ -19,7 +19,8 @@
     [
         "Outside South Castle Town Tightrope Chest",
         "Outside South Castle Town Fountain Chest",
-        "Outside South Castle Town Double Clawshot Chasm Chest"
+        "Outside South Castle Town Double Clawshot Chasm Chest",
+        "Wooden Statue"
     ],
     "visited": "false",
     "region": "Hyrule Field"

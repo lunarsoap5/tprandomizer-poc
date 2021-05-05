@@ -12,19 +12,20 @@
     ],
     "neighbourRequirements": 
     [
-        "Logic.canSmash()",
+        "canSmash",
         "true",
-        "Logic.canUse(Item.Clawshot)",
-        "Logic.canUse(Item.Gate_Keys) || Logic.canSmash()",
-        "Logic.canSmash()",
-        "Logic.canUse(Item.Shadow_Crystal)",
-        "Logic.canUse(Item.Shadow_Crystal)"
+        "(Progressive_Clawshot, 1)",
+        "Gate_Keys or canSmash",
+        "canSmash",
+        "Shadow_Crystal",
+        "Shadow_Crystal"
     ],
     "isStartingRoom": "false",
     "checks": 
     [
         "Eldin Field Bomb Rock Chest",
-        "Bridge of Eldin Owl Statue Chest"
+        "Bridge of Eldin Owl Statue Chest",
+        "Goron Springwater Rush"
     ],
     "visited": "false",
     "region": "Hyrule Field"

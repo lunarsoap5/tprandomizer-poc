@@ -6,10 +6,10 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canDefeatBlizzeta()"
+        "canDefeatBlizzeta"
     ],
     "isStartingRoom": "false",
-    "checks": [""], 
+    "checks": ["Snowpeak Ruins Blizzeta Heart Container"], 
     "visited": "false",
     "region": "Snowpeak Ruins"
 }

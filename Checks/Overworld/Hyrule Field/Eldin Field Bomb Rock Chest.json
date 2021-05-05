@@ -1,6 +1,6 @@
 {
     "checkName": "Eldin Field Bomb Rock Chest",
-    "requirements": "Logic.canSmash()",
+    "requirements": "canSmash",
     "hash": "BBAC",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

@@ -6,10 +6,10 @@
     ],
     "neighbourRequirements": 
     [
-        "Logic.canDefeatFyrus()"
+        "canDefeatFyrus"
     ],
     "isStartingRoom": "false",
-    "checks": [""], 
+    "checks": ["Goron Mines Fyrus Heart Container"], 
     "visited": "false",
     "region": "Goron Mines"
 }

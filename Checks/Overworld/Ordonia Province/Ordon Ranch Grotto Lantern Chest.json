@@ -1,6 +1,6 @@
 {
     "checkName": "Ordon Ranch Grotto Lantern Chest",
-    "requirements": "Logic.canUse(Item.Lantern)",
+    "requirements": "Lantern",
     "hash": "0BE9",
     "isExcluded": false,
     "category": ["Chest"],

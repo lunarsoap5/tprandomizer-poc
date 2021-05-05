@@ -1,6 +1,6 @@
 {
     "checkName": "Lakebed Temple Central Room Spire Chest",
-    "requirements": "(Logic.getItemCount(Item.Lakebed_Temple_Small_Key) >= 3) && Logic.canUse(Item.Iron_Boots) && Logic.canLaunchBombs()",
+    "requirements": "(Lakebed_Temple_Small_Key, 3) and Iron_Boots and canLaunchBombs",
     "hash": "7F1C",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Lakebed Temple"],

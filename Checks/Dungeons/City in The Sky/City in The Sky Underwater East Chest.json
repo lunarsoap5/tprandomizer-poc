@@ -1,6 +1,6 @@
 {
     "checkName": "City in The Sky Underwater East Chest",
-    "requirements": "Logic.canUse(Item.Iron_Boots)",
+    "requirements": "Iron_Boots",
     "hash": "DF0C",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "City in The Sky"],

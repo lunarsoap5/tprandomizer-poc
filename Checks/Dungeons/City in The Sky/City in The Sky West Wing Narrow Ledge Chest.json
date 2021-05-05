@@ -1,6 +1,6 @@
 {
     "checkName": "City in The Sky West Wing Narrow Ledge Chest",
-    "requirements": "Logic.canUse(Item.Double_Clawshot)",
+    "requirements": "(Progressive_Clawshot, 2)",
     "hash": "C5A9",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "City in The Sky"],

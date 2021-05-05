@@ -1,0 +1,8 @@
+{
+    "checkName": "Agitha First Single Bug Reward",
+    "requirements": "(getSingleBugCount, 1)",
+    "isExcluded": false,
+    "category": ["Chest", "Castle Town"],
+    "itemId": "Progressive_Wallet",
+    "itemWasPlaced": false
+}

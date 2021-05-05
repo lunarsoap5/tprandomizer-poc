@@ -6,10 +6,10 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canDefeatDiababa()"
+        "canDefeatDiababa"
     ],
     "isStartingRoom": "false",
-    "checks": [""], 
+    "checks": ["Forest Temple Diababa Heart Container"], 
     "visited": "false",
     "region": "Forest Temple"
 }

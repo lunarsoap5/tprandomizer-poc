@@ -1,0 +1,8 @@
+{
+    "checkName": "Agitha Fifth Single Bug Reward",
+    "requirements": "(getSingleBugCount, 5)",
+    "isExcluded": false,
+    "category": ["Chest", "Castle Town"],
+    "itemId": "Purple_Rupee",
+    "itemWasPlaced": false
+}

@@ -1,6 +1,6 @@
 {
     "checkName": "Lakebed Temple East Lower Waterwheel Stalactite Chest",
-    "requirements": "Logic.canLaunchBombs()",
+    "requirements": "canLaunchBombs",
     "hash": "2AF4",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Lakebed Temple", "Small Key"],

@@ -1,0 +1,8 @@
+{
+    "checkName": "Ilia Charm",
+    "requirements": "(Progressive_Bow, 1)",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Ilias_Charm",
+    "itemWasPlaced": false
+}

@@ -1,6 +1,6 @@
 {
     "checkName": "Lake Lantern Cave End Lantern Chest",
-    "requirements": "Logic.canSmash() && Logic.canUse(Item.Lantern)",
+    "requirements": "canSmash and Lantern",
     "hash": "34C1",
     "isExcluded": false,
     "category": ["Chest", "Lanayru Province"],

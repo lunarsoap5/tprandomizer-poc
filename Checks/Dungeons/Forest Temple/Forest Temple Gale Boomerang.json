@@ -1,0 +1,9 @@
+{
+    "checkName": "Forest Temple Gale Boomerang",
+    "requirements": "canDefeatOok",
+    "hash": "null",
+    "isExcluded": false,
+    "category": ["Forest Temple", "Dungeon"],
+    "itemId": "Boomerang",
+    "itemWasPlaced": false
+}

@@ -1,6 +1,6 @@
 {
     "checkName": "Death Mountain Alcove Chest",
-    "requirements": "Logic.canCompleteGoronMines() || (Logic.canUse(Item.Clawshot) && Logic.canUse(Item.Iron_Boots))",
+    "requirements": "canCompleteGoronMines or ((Progressive_Clawshot, 1) and Iron_Boots)",
     "hash": "6C2E",
     "isExcluded": false,
     "category": ["Chest", "Eldin Province"],

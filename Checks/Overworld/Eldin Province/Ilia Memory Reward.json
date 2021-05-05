@@ -1,0 +1,8 @@
+{
+    "checkName": "Ilia Memory Reward",
+    "requirements": "Ilias_Charm",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Horse_Call",
+    "itemWasPlaced": false
+}

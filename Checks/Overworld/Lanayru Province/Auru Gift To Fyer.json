@@ -1,0 +1,8 @@
+{
+    "checkName": "Auru Gift To Fyer",
+    "requirements": "true",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Aurus_Memo",
+    "itemWasPlaced": false
+}

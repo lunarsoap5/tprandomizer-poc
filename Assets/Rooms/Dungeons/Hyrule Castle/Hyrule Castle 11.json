@@ -10,9 +10,9 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.getItemCount(Item.Hyrule_Castle_Small_Key) >= 1",
-        "Logic.canDefeatBokoblin() && Logic.canDefeatKargarok()",
-        "Logic.canDefeatBokoblin() && Logic.canDefeatKargarok()"
+        "(Hyrule_Castle_Small_Key, 1)",
+        "canDefeatBokoblin and canDefeatKargarok",
+        "canDefeatBokoblin and canDefeatKargarok"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

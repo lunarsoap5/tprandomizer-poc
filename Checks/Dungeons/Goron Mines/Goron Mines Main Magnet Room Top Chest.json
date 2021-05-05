@@ -1,6 +1,6 @@
 {
     "checkName": "Goron Mines Main Magnet Room Top Chest",
-    "requirements": "Logic.canUse(Item.Heros_Bow) && Logic.canUse(Item.Iron_Boots) && Logic.canDefeatDangoro() && (Logic.getItemCount(Item.Goron_Mines_Small_Key) >= 3)",
+    "requirements": "(Progressive_Bow, 1) and Iron_Boots and canDefeatDangoro and (Goron_Mines_Small_Key, 3)",
     "hash": "4262",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Goron Mines"],

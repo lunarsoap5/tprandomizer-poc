@@ -1,6 +1,6 @@
 {
     "checkName": "Arbiters Grounds Spinner Room Stalfos Alcove Chest",
-    "requirements": "Logic.canUse(Item.Spinner)",
+    "requirements": "Spinner",
     "hash": "0EF4",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Arbiters Grounds"],

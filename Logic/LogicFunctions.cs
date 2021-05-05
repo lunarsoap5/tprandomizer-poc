@@ -2,7 +2,7 @@ using System;
 using tprandomizer_poc_main;
 using System.Collections.Generic;
 
-namespace Logic
+namespace tprandomizer_poc_main
 {
     public class LogicFunctions
     {
@@ -10,6 +10,8 @@ namespace Logic
 		public int mirrorShardCount = 0;
 
 		public bool mdhComplete;
+
+        public Dictionary<Token, string> TokenDict = new Dictionary<Token, String>();
 
         
 
@@ -23,6 +25,20 @@ namespace Logic
 			return canUseItem;
 		}
 
+        public static bool canUseTest(string item)
+		{
+            bool canUseItem = false;
+            foreach (var listItem in Singleton.getInstance().Items.heldItems)
+            {
+                if (listItem.ToString() == item)
+                {
+                    canUseItem = true;
+                    break;
+                }
+            }
+			return canUseItem;
+		}
+
         public static bool hasItem(int item)
 		{
 			bool canUseItem = false;
@@ -30,38 +46,37 @@ namespace Logic
 			return canUseItem;
 		}
 
+        public static bool hasDamagingItem()
+        {
+            return ( hasSword() ||
+                    canUse(Item.Ball_and_Chain) ||
+                    (getItemCount(Item.Progressive_Bow) >= 1) ||
+                    hasBombs() ||
+                    canUse(Item.Iron_Boots) ||
+                    canUse(Item.Spinner) ||
+                    canUse(Item.Shadow_Crystal));
+        }
+
         public static bool hasSword()
         {
-            return  (canUse(Item.Wooden_Sword) ||
-                    canUse(Item.Ordon_Sword) ||
-                    canUse(Item.Master_Sword) ||
-                    canUse(Item.Master_Sword_Light));
+            return  ((getItemCount(Item.Progressive_Sword) >= 1));
         }
 
         public static bool canDefeatAeralfos()
         {
-            return (canUse(Item.Clawshot) ||
-                    canUse(Item.Ball_and_Chain) ||
-                    hasSword() ||
-                    canUse(Item.Heros_Bow) ||
-                    hasBombs() ||
-                    canUse(Item.Iron_Boots) ||
-                    canUse(Item.Shadow_Crystal));
+            return ((getItemCount(Item.Progressive_Clawshot) >= 1) ||
+                    hasDamagingItem());
         }
         public static bool canDefeatArmos()
         {
-            return (hasSword() ||
-            canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
-            canUse(Item.Iron_Boots) ||
-            canUse(Item.Spinner) ||
-            canUse(Item.Clawshot));
+            return (hasDamagingItem() ||
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatBabaSerpent()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -70,28 +85,28 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatBari()
         {
             return (canUseWaterBombs() ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatBeamos()
         {
             return (canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             hasBombs());
         }
         public static bool canDefeatBigBaba()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -100,7 +115,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -109,7 +124,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot));
@@ -121,13 +136,13 @@ namespace Logic
             canUse(Item.Ordon_Shield) ||
             canUse(Item.Wooden_Shield)  ||
             canUse(Item.Hylian_Shield)  ||
-            canUse(Item.Clawshot)));
+            (getItemCount(Item.Progressive_Clawshot) >= 1)));
         }
         public static bool canDefeatBombling()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -136,7 +151,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -145,7 +160,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -154,7 +169,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -163,7 +178,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -172,12 +187,12 @@ namespace Logic
         {
             return ((hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal)) &&
             (hasBombs() ||
-            canUse(Item.Clawshot)));
+            (getItemCount(Item.Progressive_Clawshot) >= 1)));
             
         }
         public static bool canDefeatDarknut()
@@ -188,19 +203,19 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shield_Attack) ||
             canUse(Item.Slingshot) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatDekuLike()
         {    
             return (hasBombs() ||
             hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -209,7 +224,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -225,7 +240,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -234,7 +249,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
@@ -242,12 +257,9 @@ namespace Logic
         }
         public static bool canDefeatFireToadpoli()
         {
-            return (canUse(Item.Wooden_Sword) ||
-            canUse(Item.Ordon_Sword) ||
-            canUse(Item.Master_Sword) ||
-            canUse(Item.Master_Sword_Light) ||
+            return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Shadow_Crystal));
         }
         public static bool canDefeatFreezard()
@@ -256,18 +268,15 @@ namespace Logic
         }
         public static bool canDefeatGoron()
         {
-            return (canUse(Item.Wooden_Sword) ||
-            canUse(Item.Ordon_Sword) ||
-            canUse(Item.Master_Sword) ||
-            canUse(Item.Master_Sword_Light) ||
+            return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shield_Attack) ||
             canUse(Item.Slingshot) ||
             canUse(Item.Lantern) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatGhoulRat()
         {
@@ -277,7 +286,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -286,7 +295,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -295,7 +304,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -304,7 +313,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -313,7 +322,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
@@ -327,7 +336,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -336,7 +345,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
@@ -346,7 +355,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -355,7 +364,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -364,7 +373,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -373,7 +382,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -382,7 +391,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Lantern) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -391,7 +400,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -400,7 +409,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
@@ -410,7 +419,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -424,7 +433,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -433,12 +442,12 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shield_Attack) ||
             canUse(Item.Slingshot) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatShadowInsect()
         {
@@ -448,7 +457,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -457,7 +466,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Slingshot) ||
@@ -467,7 +476,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -482,7 +491,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -491,7 +500,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -504,7 +513,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -513,7 +522,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -522,7 +531,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -531,7 +540,7 @@ namespace Logic
         {
             return ((hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Shadow_Crystal)) &&
             canUse(Item.Boomerang));
         }
@@ -539,7 +548,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
         }
@@ -547,29 +556,29 @@ namespace Logic
         {
             return (hasSword() || 
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Shadow_Crystal));
         }
         public static bool canDefeatTorchSlug()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Shadow_Crystal));
         }
         public static bool canDefeatWalltula()
         {
             return (canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             hasBombs() ||
             canUse(Item.Boomerang) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canDefeatWhiteWolfos()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -578,7 +587,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -592,7 +601,7 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -616,37 +625,33 @@ namespace Logic
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
         }
-        public static bool canDefeatSkullKid1()
+        public static bool canDefeatSkullKid()
         {
-            return canUse(Item.Shadow_Crystal);
+            return (getItemCount(Item.Progressive_Bow) >= 1);
         }
-        public static bool canDefeatSkullKid2()
+        public static bool canDefeatKingBublinBridge()
         {
-            return canUse(Item.Heros_Bow);
+            return (getItemCount(Item.Progressive_Bow) >= 1);
         }
-        public static bool canDefeatKingBublin2()
-        {
-            return canUse(Item.Heros_Bow);
-        }
-        public static bool canDefeatKingBublin3()
+        public static bool canDefeatKingBublinDesert()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
         }
-        public static bool canDefeatKingBublin4()
+        public static bool canDefeatKingBublinCastle()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -658,15 +663,15 @@ namespace Logic
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner)) &&
             (canUse(Item.Boomerang) ||
-            canUse(Item.Heros_Bow) ||
-            canUse(Item.Clawshot)) &&
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
+            (getItemCount(Item.Progressive_Clawshot) >= 1)) &&
             canUse(Item.Shadow_Crystal));
         }
         public static bool canDefeatDarkhammer()
         {
             return (hasSword() ||
             canUse(Item.Ball_and_Chain) ||
-            canUse(Item.Heros_Bow) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Iron_Boots) ||
             canUse(Item.Spinner) ||
             canUse(Item.Shadow_Crystal));
@@ -680,7 +685,7 @@ namespace Logic
         {
             return ((canUse(Item.Boomerang) ||
             (hasBombs() &&
-            canUse(Item.Heros_Bow))) &&
+            (getItemCount(Item.Progressive_Bow) >= 1))) &&
             hasSword() ||
             canUse(Item.Ball_and_Chain) ||
             canUse(Item.Iron_Boots) ||
@@ -689,7 +694,7 @@ namespace Logic
         }
         public static bool canDefeatFyrus()
         {
-            return (canUse(Item.Heros_Bow) &&
+            return ((getItemCount(Item.Progressive_Bow) >= 1) &&
             canUse(Item.Iron_Boots) &&
             hasSword());
         }
@@ -710,22 +715,20 @@ namespace Logic
         }
         public static bool canDefeatArmogohma()
         {
-            return (canUse(Item.Heros_Bow) &&
-            canUse(Item.Dominion_Rod));
+            return ((getItemCount(Item.Progressive_Bow) >= 1) &&
+            (getItemCount(Item.Progressive_Dominion_Rod) >= 1));
         }
         public static bool canDefeatArgorok()
         {
-            return (canUse(Item.Double_Clawshot) &&
+            return ((getItemCount(Item.Progressive_Clawshot) >= 2) &&
             canUse(Item.Iron_Boots) &&
-            (canUse(Item.Master_Sword_Light) ||
-            canUse(Item.Master_Sword)));
+            (getItemCount(Item.Progressive_Sword) >= 3));
         }
         public static bool canDefeatZant()
         {
-            return ((canUse(Item.Master_Sword) ||
-            canUse(Item.Master_Sword_Light)) &&
+            return ((getItemCount(Item.Progressive_Sword) >= 3) &&
             (canUse(Item.Boomerang) &&
-            canUse(Item.Clawshot) &&
+            (getItemCount(Item.Progressive_Clawshot) >= 1) &&
             canUse(Item.Iron_Boots) &&
             canUse(Item.Zora_Armor) &&
             canUse(Item.Ball_and_Chain)));
@@ -733,8 +736,7 @@ namespace Logic
         public static bool canDefeatGanondorf()
         {
             return (canUse(Item.Shadow_Crystal) &&
-            canUse(Item.Master_Sword) &&
-            canUse(Item.Ending_Blow) );
+            (getItemCount(Item.Progressive_Sword) >= 3) );
         }
 
         public static bool canSmash()
@@ -754,8 +756,8 @@ namespace Logic
         {
             return (canUse(Item.Ball_and_Chain) ||
             canUse(Item.Slingshot) ||
-            canUse(Item.Heros_Bow) ||
-            canUse(Item.Clawshot) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
+            (getItemCount(Item.Progressive_Clawshot) >= 1) ||
             canUse(Item.Boomerang));
         }
 
@@ -768,20 +770,20 @@ namespace Logic
         public static bool canLaunchBombs()
         {
             return ((canUse(Item.Boomerang) ||
-            canUse(Item.Heros_Bow)) &&
+            (getItemCount(Item.Progressive_Bow) >= 1)) &&
             hasBombs());
         }
 
         public static bool canCutHangingWeb()
         {
-            return (canUse(Item.Clawshot) ||
-            canUse(Item.Heros_Bow) ||
+            return ((getItemCount(Item.Progressive_Clawshot) >= 1) ||
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
             canUse(Item.Boomerang) ||
             canUse(Item.Ball_and_Chain));
         }
         public static bool canKnockDownHCPainting()
         {
-            return (canUse(Item.Heros_Bow) ||
+            return ((getItemCount(Item.Progressive_Bow) >= 1) ||
             hasBombs());
         } 
         public static bool canBreakMonkeyCage()
@@ -791,8 +793,8 @@ namespace Logic
             canUse(Item.Spinner) ||
             canUse(Item.Ball_and_Chain) ||
             canUse(Item.Shadow_Crystal) ||
-            canUse(Item.Heros_Bow) ||
-            canUse(Item.Clawshot));
+            (getItemCount(Item.Progressive_Bow) >= 1) ||
+            (getItemCount(Item.Progressive_Clawshot) >= 1));
         }
         public static bool canPressMinesSwitch()
         {
@@ -807,8 +809,8 @@ namespace Logic
         }
         public static bool canKnockDownHangingBaba()
         {
-            return (canUse(Item.Heros_Bow) ||
-            canUse(Item.Clawshot) ||
+            return ((getItemCount(Item.Progressive_Bow) >= 1) ||
+            (getItemCount(Item.Progressive_Clawshot) >= 1) ||
             canUse(Item.Boomerang));
         }
         
@@ -838,21 +840,31 @@ namespace Logic
 
         public static bool canCompleteForestTemple()
         {
-            return ((getItemCount(Item.Forest_Temple_Small_Key) >=4) && canUse(Item.Boomerang) && canBreakMonkeyCage() && canDefeatWalltula() && canDefeatBigBaba() && canBurnWebs() && canDefeatOok() && canDefeatDiababa() && canUse(Item.Forest_Temple_Big_Key));
+            return ((getItemCount(Item.Forest_Temple_Small_Key) >=4) && canUse(Item.Boomerang) && canUse(Item.Small_Key_N_Faron_Gate) && canBreakMonkeyCage() && canDefeatWalltula() && canDefeatBigBaba() && canBurnWebs() && canDefeatOok() && canDefeatDiababa() && canUse(Item.Forest_Temple_Big_Key));
         }
 
         public static bool canCompleteGoronMines()
         {
-            return ((getItemCount(Item.Goron_Mines_Small_Key) >=3) && canDefeatDangoro() && canDefeatFyrus() && canUse(Item.Heros_Bow) && canUse(Item.Iron_Boots) && hasSword() && canUse(Item.Goron_Mines_Big_Key));
+            return ((getItemCount(Item.Goron_Mines_Small_Key) >=3) && canDefeatDangoro() && canDefeatFyrus() && (getItemCount(Item.Progressive_Bow) >= 1) && canUse(Item.Iron_Boots) && hasSword() && canUse(Item.Goron_Mines_Big_Key));
         }
 
         public static bool canCompleteLakebedTemple()
         {
-            return ((getItemCount(Item.Lakebed_Temple_Small_Key) >=3) && canDefeatDekuToad() && canDefeatMorpheel() && canUse(Item.Clawshot) && canLaunchBombs() && canUseWaterBombs() && canUse(Item.Lakebed_Temple_Big_Key));
+            return ((getItemCount(Item.Lakebed_Temple_Small_Key) >=3) && canDefeatDekuToad() && canDefeatMorpheel() && (getItemCount(Item.Progressive_Clawshot) >= 1) && canLaunchBombs() && canUseWaterBombs() && canUse(Item.Lakebed_Temple_Big_Key));
+        }
+
+        public static bool canCompleteSnowpeakRuins()
+        {
+            return (canDefeatBlizzeta() && canUse(Item.Ordon_Goat_Cheese) && canUse(Item.Ordon_Pumpkin) && canUse(Item.Ball_and_Chain) && canDefeatChilfos() && canDefeatMiniFreezard() && canDefeatFreezard() && (getItemCount(Item.Snowpeak_Ruins_Small_Key) >= 4) && hasBombs() && canUse(Item.Snowpeak_Ruins_Bedroom_Key));
+        }
+
+        public static bool canCompleteTempleofTime()
+        {
+            return ((getItemCount(Item.Progressive_Dominion_Rod) >= 1) && (getItemCount(Item.Progressive_Bow) >= 1) && canUse(Item.Spinner) && canDefeatLizalfos() && canDefeatDinalfos() && canDefeatDarknut() && canDefeatArmogohma() && canUse(Item.Temple_of_Time_Big_Key) && (getItemCount(Item.Temple_of_Time_Small_Key) >= 3));
         }
         public static bool canCompletePalaceofTwilight()
         {
-            return ((getItemCount(Item.Palace_of_Twilight_Small_Key) >=7) && canUse(Item.Master_Sword_Light) && canDefeatZantHead() && canDefeatShadowBeast() && canUse(Item.Double_Clawshot) && canDefeatPhantomZant() && canDefeatZant() && canUse(Item.Shadow_Crystal) && canUse(Item.Palace_of_Twilight_Big_Key));
+            return ((getItemCount(Item.Palace_of_Twilight_Small_Key) >=7) && (getItemCount(Item.Progressive_Sword) >= 4) && canDefeatZantHead() && canDefeatShadowBeast() && (getItemCount(Item.Progressive_Clawshot) >= 2) && canDefeatPhantomZant() && canDefeatZant() && canUse(Item.Shadow_Crystal) && canUse(Item.Palace_of_Twilight_Big_Key));
         }
 
         public static int getItemCount(Item itemToBeCounted)
@@ -866,8 +878,139 @@ namespace Logic
 					itemQuantity++;
 				}
 			}
-            Console.WriteLine("Item: " + itemToBeCounted.ToString() + " Quantity: " + itemQuantity);
-			return itemQuantity;
+            return itemQuantity;
+		}
+
+        public static int getSingleBugCount()
+		{
+            List<Item> itemList = Singleton.getInstance().Items.heldItems;
+			int itemQuantity = 0;
+
+            if (itemList.Contains(Item.Male_Ant) || itemList.Contains(Item.Female_Ant))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Beetle) || itemList.Contains(Item.Female_Beetle))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Butterfly) || itemList.Contains(Item.Female_Butterfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Dayfly) || itemList.Contains(Item.Female_Dayfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Dragonfly) || itemList.Contains(Item.Female_Dragonfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Grasshopper) || itemList.Contains(Item.Female_Grasshopper))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Ladybug) || itemList.Contains(Item.Female_Ladybug))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Mantis) || itemList.Contains(Item.Female_Mantis))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Phasmid) || itemList.Contains(Item.Female_Phasmid))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Pill_Bug) || itemList.Contains(Item.Female_Pill_Bug))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Snail) || itemList.Contains(Item.Female_Snail))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Stag_Beetle) || itemList.Contains(Item.Female_Stag_Beetle))
+            {
+                itemQuantity++;
+            }
+            return itemQuantity;
+		}
+
+        public static int getBugPairCount()
+		{
+            List<Item> itemList = Singleton.getInstance().Items.heldItems;
+			int itemQuantity = 0;
+
+            if (itemList.Contains(Item.Male_Ant) && itemList.Contains(Item.Female_Ant))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Beetle) && itemList.Contains(Item.Female_Beetle))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Butterfly) && itemList.Contains(Item.Female_Butterfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Dayfly) && itemList.Contains(Item.Female_Dayfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Dragonfly) && itemList.Contains(Item.Female_Dragonfly))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Grasshopper) && itemList.Contains(Item.Female_Grasshopper))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Ladybug) && itemList.Contains(Item.Female_Ladybug))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Mantis) && itemList.Contains(Item.Female_Mantis))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Phasmid) && itemList.Contains(Item.Female_Phasmid))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Pill_Bug) && itemList.Contains(Item.Female_Pill_Bug))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Snail) && itemList.Contains(Item.Female_Snail))
+            {
+                itemQuantity++;
+            }
+            if (itemList.Contains(Item.Male_Stag_Beetle) && itemList.Contains(Item.Female_Stag_Beetle))
+            {
+                itemQuantity++;
+            }
+            return itemQuantity;
+		}
+
+        public static bool verifyItemQuantity(string itemToBeCounted, int quantity)
+		{
+            List<Item> itemList = Singleton.getInstance().Items.heldItems;
+			int itemQuantity = 0;
+            bool isQuantity = false;
+            
+			foreach (var item in itemList)
+			{
+				if (item.ToString() == itemToBeCounted)
+				{
+					itemQuantity++;
+				}
+			}
+            if (itemQuantity >= quantity)
+            {
+                isQuantity = true;
+            }
+            return isQuantity;
 		}
     }
 }

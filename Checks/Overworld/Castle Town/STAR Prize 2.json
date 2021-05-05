@@ -1,0 +1,8 @@
+{
+    "checkName": "STAR Prize 2",
+    "requirements": "(Progressive_Clawshot, 2)",
+    "isExcluded": false,
+    "category": ["Chest"],
+    "itemId": "Progressive_Bow",
+    "itemWasPlaced": false
+}

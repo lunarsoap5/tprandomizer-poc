@@ -3,7 +3,6 @@ using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 using System.IO;
-using Logic;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
@@ -20,6 +19,8 @@ namespace tprandomizer_poc_main
         public List<string> category { get; set;} //Allows grouping of checks to make it easier to randomize them based on their type, region, exclusion status, etc.
         public Item itemId { get; set;} //The original item id of the check. This allows us to make an array of all items in the item pool for randomization purposes. Also is useful for documentation purposes.
         public bool itemWasPlaced { get; set;} //Identifies if we already placed an item on this check.
+        public bool hasBeenReached {get; set;} //indicates that we can get the current check. Prevents unneccesary repetitive parsing.
+        public Script<object> evaluatedLogic {get; set;}
     }
 
     public class CheckFunctions
@@ -28,7 +29,7 @@ namespace tprandomizer_poc_main
         public void InitializeChecks()
         {
             CheckDict.Add("Uli Cradle Delivery", new Check());
-            CheckDict.Add("Sera Cat Fishing Reward", new Check());
+            CheckDict.Add("Ordon Cat Rescue", new Check());
             CheckDict.Add("Sera Shop Slingshot", new Check());
             CheckDict.Add("Gift From Rusl", new Check());
             CheckDict.Add("Coro Lantern", new Check());
@@ -37,6 +38,8 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Faron Mist Cave Lantern Chest", new Check());
             CheckDict.Add("North Faron Woods Deku Baba Chest", new Check());
             CheckDict.Add("Links Basement Chest", new Check());
+            CheckDict.Add("Ordon Shield", new Check());
+            CheckDict.Add("Ordon Sword", new Check());
             CheckDict.Add("Forest Temple Entrance Vines Chest", new Check());
             CheckDict.Add("Forest Temple Central Chest Behind Stairs", new Check());
             CheckDict.Add("Forest Temple Central North Chest", new Check());
@@ -46,6 +49,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Forest Temple West Tile Worm Room Vines Chest", new Check());
             CheckDict.Add("Forest Temple West Deku Like Chest", new Check());
             CheckDict.Add("Forest Temple West Tile Worm Chest Behind Stairs", new Check());
+            CheckDict.Add("Forest Temple Gale Boomerang", new Check());
             CheckDict.Add("Forest Temple Central Chest Hanging From Web", new Check());
             CheckDict.Add("Forest Temple Big Key Chest", new Check());
             CheckDict.Add("Forest Temple East Water Cave Chest", new Check());
@@ -106,6 +110,15 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Lakebed Temple East Lower Waterwheel Bridge Chest", new Check());
             CheckDict.Add("Sacred Grove Baba Serpent Grotto Chest", new Check());
             CheckDict.Add("West Hyrule Field Helmasaur Grotto Chest", new Check());
+            CheckDict.Add("STAR Prize 1", new Check());
+            CheckDict.Add("STAR Prize 2", new Check());
+            CheckDict.Add("Forest Temple Diababa Heart Container", new Check());
+            CheckDict.Add("Goron Mines Fyrus Heart Container", new Check());
+            CheckDict.Add("Lakebed Temple Morpheel Heart Container", new Check());
+            CheckDict.Add("Arbiters Grounds Stallord Heart Container", new Check());
+            CheckDict.Add("Snowpeak Ruins Blizzeta Heart Container", new Check());
+            CheckDict.Add("Temple of Time Armogohma Heart Container", new Check());
+            CheckDict.Add("City in The Sky Argorok Heart Container", new Check());
             CheckDict.Add("Lake Lantern Cave First Chest", new Check());
             CheckDict.Add("Lake Lantern Cave Second Chest", new Check());
             CheckDict.Add("Lake Lantern Cave Third Chest", new Check());
@@ -135,6 +148,30 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Flight By Fowl Fourth Platform Chest", new Check());
             CheckDict.Add("Flight By Fowl Fifth Platform Chest", new Check());
             CheckDict.Add("Lake Hylia Shell Blade Grotto Chest", new Check());
+            CheckDict.Add("Agitha First Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Second Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Third Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Fourth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Fifth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Sixth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Seventh Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Eighth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Ninth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Tenth Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Eleventh Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha Final Bug Pair Reward", new Check());
+            CheckDict.Add("Agitha First Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Second Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Third Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Fourth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Fifth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Sixth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Seventh Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Eighth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Ninth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Tenth Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Eleventh Single Bug Reward", new Check());
+            CheckDict.Add("Agitha Twelfth Single Bug Reward", new Check());
             CheckDict.Add("Zoras Domain Light All Torches Chest", new Check());
             CheckDict.Add("Zoras Domain Extinguish All Torches Chest", new Check());
             CheckDict.Add("Lanayru Field Skulltula Grotto Chest", new Check());
@@ -210,6 +247,7 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Snowpeak Ruins Wooden Beam Central Chest", new Check());
             CheckDict.Add("Snowpeak Ruins Wooden Beam Northwest Chest", new Check());
             CheckDict.Add("Snowpeak Ruins Courtyard Central Chest", new Check());
+            CheckDict.Add("Snowpeak Ruins Ball and Chain", new Check());
             CheckDict.Add("Snowpeak Ruins Chest After Darkhammer", new Check());
             CheckDict.Add("Snowpeak Ruins Broken Floor Chest", new Check());
             CheckDict.Add("Snowpeak Ruins Wooden Beam Chandelier Chest", new Check());
@@ -324,37 +362,61 @@ namespace tprandomizer_poc_main
             CheckDict.Add("Kakariko Village Bomb Rock Spire Heart Piece", new Check());
             CheckDict.Add("Faron Field Tree Heart Piece", new Check());
             CheckDict.Add("Kakariko Gorge Spire Heart Piece", new Check());
-            CheckDict.Add("Zant Heart Container", new Check());
+            CheckDict.Add("Palace of Twilight Zant Heart Container", new Check());
             CheckDict.Add("Fishing Hole Heart Piece", new Check());
             CheckDict.Add("Cats Hide and Seek Minigame", new Check());
+            CheckDict.Add("Iza Raging Rapids Minigame", new Check());
+            CheckDict.Add("Auru Gift To Fyer", new Check());
+            CheckDict.Add("Ashei Sketch", new Check());
+            CheckDict.Add("Renardos Letter", new Check());
+            CheckDict.Add("Telma Invoice", new Check());
+            CheckDict.Add("Wooden Statue", new Check());
+            CheckDict.Add("Ilia Charm", new Check());
+            CheckDict.Add("Ilia Memory Reward", new Check());
+            CheckDict.Add("Coro Bottle", new Check());
+            CheckDict.Add("Fishing Hole Bottle", new Check());
+            CheckDict.Add("Talo Sharpshooting", new Check());
+            CheckDict.Add("Charlo Donation Blessing", new Check());
+            CheckDict.Add("Goron Springwater Rush", new Check());
+            CheckDict.Add("Plumm Fruit Balloon Minigame", new Check());
+            CheckDict.Add("Bublin Camp Roasted Boar", new Check());
+            CheckDict.Add("Snowpeak Ruins Mansion Map", new Check());
+            CheckDict.Add("Snowboard Racing Prize", new Check());
+            CheckDict.Add("Hyrule Castle King Bublin Key", new Check());
+            CheckDict.Add("Forest Temple Big Baba Key", new Check());
+            CheckDict.Add("Iza Helping Hand", new Check());
+            CheckDict.Add("Zoras Domain Underwater Goron", new Check());
+            CheckDict.Add("Gift From Ralis", new Check());
+            CheckDict.Add("Rutelas Blessing", new Check());
+            CheckDict.Add("Ganondorf Defeated", new Check());
         }
 
-        public void deserializeChecks()
+        public List<string> vanillaChecks = new List<string>()
         {
-            foreach (string file in System.IO.Directory.GetFiles("./Checks/", "*",SearchOption.AllDirectories))
-            {
-                string contents = File.ReadAllText(file);
-                string fileName = Path.GetFileNameWithoutExtension(file);
-                Singleton.getInstance().Checks.CheckDict[fileName] = JsonConvert.DeserializeObject<Check>(contents);
-                Check currentCheck = Singleton.getInstance().Checks.CheckDict[fileName];
-                currentCheck.requirements = Regex.Replace(currentCheck.requirements, @"\bLogic\b", "Logic.LogicFunctions");
-                Singleton.getInstance().Checks.CheckDict[fileName] = currentCheck;
-                Console.WriteLine("Check File Loaded " + fileName);
-            }
-            return;
-        }
-
-        public void placeItemInCheck(Item item, string check)
-        {
-            Console.WriteLine("Placing item in check.");
-            //Create reference to the current check, tell the program that it was placed, set the item id of the check, and then save the changes to the check.
-            Check currentCheck = Singleton.getInstance().Checks.CheckDict[check];
-            currentCheck.itemWasPlaced = true;
-            currentCheck.itemId = item;
-            Singleton.getInstance().Checks.CheckDict[check] = currentCheck;
-            Console.WriteLine("Placed " + currentCheck.itemId + " in check " + currentCheck.checkName);
-            return;
-        }
+            "Agitha First Bug Pair Reward",
+            "Agitha Second Bug Pair Reward",
+            "Agitha Third Bug Pair Reward",
+            "Agitha Fourth Bug Pair Reward",
+            "Agitha Fifth Bug Pair Reward",
+            "Agitha Sixth Bug Pair Reward",
+            "Agitha Seventh Bug Pair Reward",
+            "Agitha Eighth Bug Pair Reward",
+            "Agitha Ninth Bug Pair Reward",
+            "Agitha Tenth Bug Pair Reward",
+            "Agitha Eleventh Bug Pair Reward",
+            "Agitha Second Single Bug Reward",
+            "Agitha Third Single Bug Reward",
+            "Agitha Fourth Single Bug Reward",
+            "Agitha Fifth Single Bug Reward",
+            "Agitha Sixth Single Bug Reward",
+            "Agitha Seventh Single Bug Reward",
+            "Agitha Eighth Single Bug Reward",
+            "Agitha Ninth Single Bug Reward",
+            "Agitha Tenth Single Bug Reward",
+            "Agitha Eleventh Single Bug Reward",
+            "Agitha Twelfth Single Bug Reward",
+            "Ganondorf Defeated"
+        };
     } 
 
 }

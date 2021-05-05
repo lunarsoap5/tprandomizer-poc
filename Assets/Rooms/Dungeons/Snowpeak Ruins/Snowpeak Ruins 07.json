@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canUse(Item.Ball_and_Chain) && (Logic.getItemCount(Item.Snowpeak_Ruins_Small_Key) >= 4)",
-        "Logic.canUse(Item.Ball_and_Chain)"
+        "Ball_and_Chain and (Snowpeak_Ruins_Small_Key, 4)",
+        "Ball_and_Chain"
     ],
     "isStartingRoom": "false",
     "checks": 

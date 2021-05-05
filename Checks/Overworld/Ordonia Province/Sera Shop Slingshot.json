@@ -1,7 +1,6 @@
 {
     "checkName": "Sera Shop Slingshot",
-    "requirements": "Logic.canUse(Item.Fishing_Rod)",
-    "hash": "null",
+    "requirements": "(Progressive_Fishing_Rod, 1)",
     "isExcluded": false,
     "category": ["Chest"],
     "itemId": "Slingshot",

@@ -8,9 +8,9 @@
     ],
     "neighbourRequirements": 
     [
-        "Logic.canUse(Item.Clawshot) && Logic.canLaunchBombs()",
+        "(Progressive_Clawshot, 1) and canLaunchBombs",
         "true",
-        "Logic.canUse(Item.Clawshot) && Logic.canLaunchBombs()"
+        "(Progressive_Clawshot, 1) and canLaunchBombs"
     ],
     "isStartingRoom": "false",
     "checks": 

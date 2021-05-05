@@ -1,6 +1,6 @@
 {
     "checkName": "Arbiters Grounds Lobby Chest",
-    "requirements": "Logic.canBreakWoodenDoor()",
+    "requirements": "Shadow_Crystal or hasSword or Ball_and_Chain or hasBombs",
     "hash": "FC38",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Arbiters Grounds", "Small Key"],

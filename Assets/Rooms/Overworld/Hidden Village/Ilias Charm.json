@@ -1,0 +1,8 @@
+{
+    "checkName": "Ilias Charm",
+    "requirements": "Heros_Bow",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Ilias_Charm",
+    "itemWasPlaced": false
+}

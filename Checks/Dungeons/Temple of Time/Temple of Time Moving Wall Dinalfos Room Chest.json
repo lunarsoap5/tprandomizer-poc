@@ -1,6 +1,6 @@
 {
     "checkName": "Temple of Time Moving Wall Dinalfos Room Chest",
-    "requirements": "Logic.canDefeatDinalfos() && Logic.canUse(Item.Dominion_Rod_Uncharged)",
+    "requirements": "canDefeatDinalfos and (Progressive_Dominion_Rod, 1)",
     "hash": "D3B5",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Temple of Time"],

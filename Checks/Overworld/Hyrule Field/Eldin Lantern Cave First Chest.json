@@ -1,6 +1,6 @@
 {
     "checkName": "Eldin Lantern Cave First Chest",
-    "requirements": "Logic.canBurnWebs()",
+    "requirements": "canBurnWebs",
     "hash": "6168",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

@@ -1,0 +1,8 @@
+{
+    "checkName": "Ordon Shield",
+    "requirements": "(Progressive_Sword, 1) and Lantern",
+    "isExcluded": false,
+    "category": ["Chest"],
+    "itemId": "Ordon_Shield",
+    "itemWasPlaced": false
+}

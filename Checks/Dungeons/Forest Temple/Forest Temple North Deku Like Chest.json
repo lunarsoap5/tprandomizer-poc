@@ -1,6 +1,6 @@
 {
     "checkName": "Forest Temple North Deku Like Chest",
-    "requirements": "Logic.canUse(Item.Boomerang)",
+    "requirements": "Boomerang or hasBombs",
     "hash": "80A2",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Forest Temple"],

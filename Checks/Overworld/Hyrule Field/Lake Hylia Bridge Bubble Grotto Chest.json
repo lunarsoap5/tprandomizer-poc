@@ -1,6 +1,6 @@
 {
     "checkName": "Lake Hylia Bridge Bubble Grotto Chest",
-    "requirements": "Logic.canDefeatBubble() && Logic.canDefeatFireBubble() && Logic.canDefeatIceBubble()",
+    "requirements": "canDefeatBubble and canDefeatFireBubble and canDefeatIceBubble",
     "hash": "6D05",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

@@ -1,6 +1,6 @@
 {
     "checkName": "Outside South Castle Town Tetike Grotto Chest",
-    "requirements": "Logic.canDefeatTetike()",
+    "requirements": "canDefeatTetike",
     "hash": "0245",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

@@ -1,6 +1,6 @@
 {
     "checkName": "Faron Mist Stump Chest",
-    "requirements": "Logic.canUse(Item.Lantern)",
+    "requirements": "Lantern",
     "hash": "411C",
     "isExcluded": false,
     "category": ["Chest", "Faron Woods"],

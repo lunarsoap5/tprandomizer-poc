@@ -1,6 +1,6 @@
 {
     "checkName": "Cats Hide and Seek Minigame",
-    "requirements": "Logic.canUse(Item.Ilias_Charm)",
+    "requirements": "Ilias_Charm",
     "hash": "9E3C",
     "isExcluded": false,
     "category": ["Chest", "Hidden Village"],

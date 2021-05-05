@@ -1,6 +1,6 @@
 {
     "checkName": "Goron Mines After Crystal Switch Room Magnet Wall Chest",
-    "requirements": "Logic.canUse(Item.Iron_Boots)",
+    "requirements": "Iron_Boots",
     "hash": "3CD3",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Goron Mines"],

@@ -1,6 +1,6 @@
 {
     "checkName": "Snowpeak Ruins Broken Floor Chest",
-    "requirements": "Logic.canSmash()",
+    "requirements": "canSmash",
     "hash": "569D",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Snowpeak Ruins"],

@@ -1,6 +1,6 @@
 {
     "checkName": "Hyrule Castle Graveyard Grave Switch Room Front Left Chest",
-    "requirements": "Logic.canSmash()",
+    "requirements": "canSmash",
     "hash": "BF0D",
     "isExcluded": false,
     "category": ["Chest", "Dungeon", "Hyrule Castle"],

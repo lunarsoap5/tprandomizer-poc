@@ -8,7 +8,7 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.hasRangedItem() && Logic.canDefeatYoungGohma() && Logic.canDefeatLizalfos()"
+        "hasRangedItem and canDefeatYoungGohma and canDefeatLizalfos"
     ],
     "isStartingRoom": "false",
     "checks": 

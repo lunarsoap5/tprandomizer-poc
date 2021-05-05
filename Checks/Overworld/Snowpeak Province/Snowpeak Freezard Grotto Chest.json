@@ -1,6 +1,6 @@
 {
     "checkName": "Snowpeak Freezard Grotto Chest",
-    "requirements": "Logic.canDefeatIceKeese() && Logic.canDefeatFreezard() && Logic.canUse(Item.Ball_and_Chain)",
+    "requirements": "canDefeatIceKeese and canDefeatFreezard and Ball_and_Chain",
     "hash": "4584",
     "isExcluded": false,
     "category": ["Chest", "Snowpeak Province"],

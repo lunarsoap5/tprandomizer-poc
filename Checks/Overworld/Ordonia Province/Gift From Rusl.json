@@ -1,9 +1,9 @@
 {
     "checkName": "Gift From Rusl",
-    "requirements": "Logic.canUse(Item.Fishing_Rod)",
+    "requirements": "(Progressive_Fishing_Rod, 1)",
     "hash": "8BA3",
     "isExcluded": false,
     "category": ["Chest"],
-    "itemId": "Wooden_Sword",
+    "itemId": "Progressive_Sword",
     "itemWasPlaced": false
 }

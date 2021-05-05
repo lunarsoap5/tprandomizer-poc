@@ -1,0 +1,8 @@
+{
+    "checkName": "Plumm Fruit Balloon Minigame",
+    "requirements": "Shadow_Crystal",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}

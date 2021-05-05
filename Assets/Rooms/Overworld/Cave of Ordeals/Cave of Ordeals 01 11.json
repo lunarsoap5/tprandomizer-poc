@@ -7,8 +7,8 @@
     ],
     "neighbourRequirements":
     [
-        "Logic.canUse(Item.Clawshot)",
-        "Logic.canDefeatBokoblin() && Logic.canDefeatKeese() && Logic.canDefeatRat() && Logic.canDefeatBabaSerpent() && Logic.canDefeatSkulltula() && Logic.canDefeatBublin() && Logic.canDefeatTorchSlug() && Logic.canDefeatFireKeese() && Logic.canDefeatDodongo() && Logic.canDefeatTetike() && Logic.canDefeatLizalfos()"
+        "(Progressive_Clawshot, 1)",
+        "canDefeatBokoblin and canDefeatKeese and canDefeatRat and canDefeatBabaSerpent and canDefeatSkulltula and canDefeatBublin and canDefeatTorchSlug and canDefeatFireKeese and canDefeatDodongo and canDefeatTetike and canDefeatLizalfos"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

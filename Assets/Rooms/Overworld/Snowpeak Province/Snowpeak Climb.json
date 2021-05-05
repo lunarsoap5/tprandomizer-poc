@@ -1,0 +1,19 @@
+{ 
+    "name": "Snowpeak Climb",
+    "neighbours": 
+    [
+        "Zoras Domain", 
+        "Snowpeak Summit", 
+        "Grotto 4 2"
+    ],
+    "neighbourRequirements": 
+    [
+        "true",
+        "(Progressive_Fishing_Rod, 2) and Shadow_Crystal",
+        "(Progressive_Fishing_Rod, 2) and Shadow_Crystal"
+    ],
+    "isStartingRoom": "false",
+    "checks": ["Ashei Sketch"], 
+    "visited": "false",
+    "region": "Snowpeak Province"
+}

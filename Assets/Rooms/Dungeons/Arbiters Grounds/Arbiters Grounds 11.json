@@ -9,8 +9,8 @@
     "neighbourRequirements": 
     [
         "true",
-        "Logic.canDefeatStalfos() && Logic.canDefeatPoisonMite()",
-        "Logic.canDefeatStalfos() && Logic.canDefeatPoisonMite() && Logic.canUse(Item.Spinner)"
+        "canDefeatStalfos and canDefeatPoisonMite",
+        "canDefeatStalfos and canDefeatPoisonMite and Spinner"
     ],
     "isStartingRoom": "false",
     "checks": [""], 

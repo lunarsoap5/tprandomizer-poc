@@ -1,6 +1,6 @@
 {
     "checkName": "Lake Hylia Bridge Owl Statue Chest",
-    "requirements": "Logic.canUse(Item.Dominion_Rod) && Logic.canUse(Item.Clawshot)",
+    "requirements": "(Progressive_Dominion_Rod, 2) and (Progressive_Clawshot, 1)",
     "hash": "0ADD",
     "isExcluded": false,
     "category": ["Chest", "Hyrule Field"],

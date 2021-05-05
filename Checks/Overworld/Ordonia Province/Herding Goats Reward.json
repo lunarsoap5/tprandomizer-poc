@@ -1,0 +1,8 @@
+{
+    "checkName": "Herding Goats Reward",
+    "requirements": "canLeaveForest",
+    "isExcluded": false,
+    "category": ["Npc"],
+    "itemId": "Piece_of_Heart",
+    "itemWasPlaced": false
+}
